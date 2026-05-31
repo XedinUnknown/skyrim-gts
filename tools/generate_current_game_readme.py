@@ -1,5 +1,11 @@
 #!/usr/bin/env python3
-"""Generate a current-game overview from the active mod metadata index."""
+"""Generate a current-game overview from the active mod metadata index.
+
+Pattern: AI summaries in the DB are lightweight hooks — enough to identify a
+mod's purpose at a glance. For targeted deep-dives, query the full
+description_text field directly; it holds the raw Nexus page content and is
+far richer than the summary. The ai_summary is not a replacement for the
+source data."""
 
 from __future__ import annotations
 
