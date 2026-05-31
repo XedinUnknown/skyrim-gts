@@ -12,6 +12,13 @@ MOD_METADATA_STAMP := cache/gts-index/mod-metadata.stamp
 
 help:
 	@printf '%s\n' \
+	  'make gateway-start         Start MCP gateway (logs to /tmp/skyrim-gateway.log)' \
+	  'make gateway-stop          Stop MCP gateway' \
+	  'make gateway-status        Check if gateway is running' \
+	  'make gateway-logs          Tail gateway logs' \
+	  'make poller-start          Start progress poller' \
+	  'make poller-stop           Stop progress poller' \
+	  'make poller-logs           Tail poller logs' \
 	  'make index                 Build/update the SQLite recipe index' \
 	  'make rebuild               Force rebuild the SQLite recipe index' \
 	  'make search Q=backpack     Search craftable item recipes' \
@@ -125,14 +132,15 @@ current-game: game-readme
 GATEWAY_HOST ?= 127.0.0.1
 GATEWAY_PORT ?= 8765
 GATEWAY_PID_FILE := .gateway.pid
+GATEWAY_LOG ?= /tmp/skyrim-gateway.log
 
-.PHONY: gateway-start gateway-stop gateway-status poller-start poller-stop poller-logs
+.PHONY: gateway-start gateway-stop gateway-status gateway-logs poller-start poller-stop poller-logs
 
 gateway-start:
 	@echo "Starting MCP gateway on $(GATEWAY_HOST):$(GATEWAY_PORT)..."
-	@python3 scripts/mcp-gateway/gateway.py --host $(GATEWAY_HOST) --port $(GATEWAY_PORT) &
+	@setsid python3 scripts/mcp-gateway/gateway.py --host $(GATEWAY_HOST) --port $(GATEWAY_PORT) > "$(GATEWAY_LOG)" 2>&1 &
 	@echo $$! > "$(GATEWAY_PID_FILE)"
-	@echo "Gateway started (PID $$!). View with: make gateway-status"
+	@echo "Gateway started (PID $$!). Logs: make gateway-logs"
 
 gateway-stop:
 	@if [ -f "$(GATEWAY_PID_FILE)" ]; then \
@@ -148,6 +156,9 @@ gateway-status:
 	else \
 	  echo "Gateway not running."; \
 	fi
+
+gateway-logs:
+	@tail -f "$(GATEWAY_LOG)"
 
 poller-start:
 	@echo "Starting progress poller..."
