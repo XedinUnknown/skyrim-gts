@@ -7,3 +7,4 @@ tools/__pycache__/
 tools/GtsItemRecipeExporter/bin/
 tools/GtsItemRecipeExporter/obj/
 gts-progress
+.gateway.pid
