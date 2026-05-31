@@ -1,5 +1,11 @@
 # Project Context
 
+> **CRITICAL: NEVER run `rm -rf .git` or delete/move `.git` directories.**
+> The main repo's git history was accidentally destroyed by an agent doing exactly this.
+> The user lost 2 days of commit history. This must never happen again.
+> `gts-progress/` has its own git repo — always `cd` into it explicitly before running git commands there.
+> Never run git cleanup commands from the project root.
+
 This project is for working with a Gate to Sovngarde (GTS) Skyrim Special Edition install.
 
 The user's GTS install was installed with Wabbajack, not Vortex.
