@@ -1,0 +1,8701 @@
+# Current Gate to Sovngarde Game Overview
+
+Generated: `2026-05-31T12:23:08+00:00`
+
+This document is generated from the current MO2 profile metadata cache, the local GTS project config, and the local recipe index. It is a working reference, not an official GTS support document.
+
+## Source And Caveats
+
+- Active metadata DB: `cache/gts-index/gts.sqlite`
+- Recipe DB: `cache/gts-index/gts.sqlite`
+- Active mods indexed: `1962` enabled, `0` disabled entries present in MO2 modlist
+- Most descriptions come from MO2 `meta.ini` cached `nexusDescription`, comments, and notes. Run `make mod-metadata-enrich` with `NEXUS_API_KEY` set to enrich the central cache with Nexus API detail fields.
+- GTS is curated. When this document says a mod provides a feature, GTS patches, MCMs, INIs, hidden files, or priority overrides may alter or disable parts of it.
+- Recipe truth comes from plugin data and the generated recipe DB; mod description truth comes from cached metadata and should be checked against xEdit/MO2 for exact conflict winners.
+
+## High-Level GTS Behavior
+
+- GTS uses Alternate Perspective instead of the vanilla intro, with traits/background choices and Story Mode options.
+- Combat is more lethal than vanilla, with stronger resource management pressure and many enemy/combat overhauls.
+- Survival, stress/fear, injuries, travel restrictions, Campfire-style systems, and no-menu-pause style immersion systems are expected parts of the experience.
+- Adamant/Hand to Hand, Mysticism, Mundus, Aetherius, Pilgrim, Blade and Blunt, Apothecary, Gourmet, Thaumaturgy, Artificer, and many JaySerpa/GTS-specific patches appear as major gameplay pillars in this active profile.
+
+## Generated Recipe Index Snapshot
+
+- Winning crafting recipes indexed: `14558`
+- Ingredient rows indexed: `26164`
+- Distinct workbench keywords: `263`
+- Top workbenches:
+  - `CraftingSmithingForge`: 2715 recipes
+  - `CraftingSmithingArmorTable`: 2610 recipes
+  - `CraftingSmithingSharpeningWheel`: 1834 recipes
+  - `DLC2StaffEnchanter`: 1460 recipes
+  - `MAG_TableScrollEnchanter`: 953 recipes
+  - `zzzCHCraftZenithar`: 640 recipes
+  - `_Camp_CraftingSurvival`: 531 recipes
+  - `_Camp_CraftingCampfire`: 496 recipes
+  - `MCE_CraftingLoom`: 433 recipes
+  - `CraftingSmithingSkyforge`: 416 recipes
+  - `CraftingCookpot`: 342 recipes
+  - `CraftingTanningRack`: 279 recipes
+
+## Major Systems By Active Mod Metadata
+
+### Gameplay, Combat, Magic, Perks
+
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - GTS-Specific Patches** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - GTS - Equip Item Fix** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - DAK Helper** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - Left Scabbards Output for IED** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - GtS - ELFX Patch** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - ESLified Patches** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **The Pigeon's Nest** `1.8.4.0` modid=154661
+  - Collection of QoL patches, fixes, and small mods for GTS including gather‑branches for Skills of the Wild, dynamic race lich, wounds splinted limbs, hand‑to‑hand training on dummies, animated potions, movement and Hearthfire house patches, Interesting NPCs integration, and various bug fixes with specified dependencies
+- **GATE TO SOVNGARDE (GTS) - Small Mods and Resources - Additional Seasonal Stuff** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Nordic Leather Armor** `2.0.0.0` modid=59296
+  - Adds Nordic Leather Armor set (Cuirass 32 armor 6 weight, Helmet 14.5 armor 3 weight, Gauntlets 9 armor 1.5 weight, Boots 9 armor 1.5 weight, Circlet 13 armor 1 weight); craftable with Advanced Armors; CBBBodyslide included; recommended aMidianBorn Book of Silence SE.
+- **Andrealphus' Exploit Fixes** `1.2.19.2` modid=46753
+  - Compilation of exploit fixes for followers, duplicate items, looting, player grab stealing, backward power attacks, etc.
+  - Includes fixes for horse exploits, elder scrolls reading, etc.
+  - ESL flagged
+- **PapyrusUtil SE - Modders Scripting Utility Functions** `4.6.0.0` modid=13048
+  - SKSE plugin adding scripting utility functions for data storage, including global/int/float/form variables, list support, JsonUtil for external JSON files, StorageUtil for key‑value storage, and various utility scripts, requiring up‑to‑date SKSE and Address Library for AE compatibility.
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - GtS Paper Maps for FWMF** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Soul Cairn Paper Map for FWMF** `1.8.0.0` modid=55387
+  - Adds handmade Soul Cairn map to map menu for Flat World Map Framework; requires FWMF and must be installed last; compatible only with FMWF; recommend Atlas Map Markers; future plan for better gamma and isometric ruins
+- **Forgotten Vale Paper Map for FWMF** `1.9.1.0` modid=54628
+  - Implements handmade Forgotten Vale map in map menu; requires Flat World Map Framework; adds marker with editorID DLC01FalmerValley; config tweaks; compatible with Flat Map Markers; soft compatibility.
+- **Flat World Map Framework (FWMF) Lite** `1.9.5.0` modid=29932
+  - Changes default 3D map to flat paper‑like maps with marked/clean variants, compatibility selector, optional FOV settings; requires Baka World Map FOV for FOV adjustments; compatible with many worldspaces
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - Texgen Output** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - DynDOLOD Output** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - xLod Terrain** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - Grass** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Majestic Mountains Main - DynDoLod V 3.0 Lod pack (all versions)** `f4.02` modid=11052
+  - Redesigns mountain textures with single 8k map, improved LOD, snow shader, optional packs; requires DynDoLOD for proper LOD generation
+- **S.T.A.R. (So This Aint Right) - Patches by Missile** `1.0.8.0` modid=121047
+  - Collection of assorted patches fixing conflicts like carriage drivers, ferry addons, NPC placements, etc., most ESL flagged.
+- **lilebonymace's patches** `2.45.0.0` modid=36042
+  - Compilation of compatibility patches and xEdit scripts for mods like USSEP, AOS, RDO, and others, with automatic installer options and load‑order guidance
+- **Weapon Armor Attribute Tweaks** `1.0.0.0` modid=59951
+  - Rebalances weapon and armor attributes: aligns Dwarven/Elven/Orcish weapons with armor tier progression, makes Dragonplate tier higher than Daedric, standardizes non‑unique weapon traits by type, categorizes bows into light/medium/heavy, rebalances faction gear, and includes bug fixes from USSEP and WACCF.
+- **Arcane Accessories - Rebalance Patch - Adamant + Mysticism** `1.6.0.0` modid=61559
+  - Rebalances Arcane Accessories spells to vanilla/Mysticism levels, offering Rebalance and Adamant versions; adjusts magnitudes, costs, and effects while preserving unique mechanics; compatible with Mysticism and latest Arcane Accessories.
+- **Creation Club - Adjustments, Rebalancing, and Variants** `1.0.0.0` modid=59370
+  - Reduces stat bloat of Creation Club items, adds flavor and nostalgic effects while balancing stats.
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - No Random Books in Crypts and Dwemer Ruins** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Burning Bodies Always Trigger Oil Traps** `1.1.0.0` modid=115830
+  - Script change that forces burning NPCs to trigger oil trap hazards universally, compatible with Improved Traps
+- **Rain Extinguishes Fires** `5.0.3.0` modid=80419
+  - Makes fires extinguishable by rain, snow, or frost spells and relightable by fire spells, configurable via JSON, ESL flagged, performance friendly.
+- **Alternate Perspective - Alternate Start Version 3.1.1 - RS Children Patch** `3.1.1.0` modid=50307
+  - New Alternate Start experience
+  - Spawns in Helgen inn, choose from various scenarios (roadside ambush, bounty hunter, etc.)
+  - Preserves Helgen as functional town until main quest
+  - Safe mid-game, expands gameplay options
+  - ESL flagged
+- **RS Children Patch Compendium - AI Overhaul patch AE ONLY** `1.0.0.0` modid=13409
+  - Collection of RS Children patches for many mods requiring RS Children Overhaul, may conflict as intended (ESLified Patch).
+- **RS Children Patch Compendium - 3DNPC** `1.0.0.0` modid=13409
+  - Collection of RS Children patches for many mods requiring RS Children Overhaul, may conflict as intended (ESLified Patch).
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - Redguard Facegen Workaround** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Tragedian's Fabulous Followers AIO** `f1.05` modid=57284
+  - Redesigns follower appearances and grants them new combat perks, allowing them to level up to 60 and improve gear.
+- **Housecarl Companions Refine Add-on** `1.1.0.0` modid=38405
+  - Adds appearance packages and unique buffs for housecarl followers, each with named perks (e.g., Sworn To Carry Burdens +25 carry weight) and optional visual enhancements
+- **Filling In The Blanks - Unique Faces For Bandits and Guards - New Guards Recruits - EFM Version** `1.1.0.0` modid=51174
+  - Adds unique faces for bandits, generic NPCs, and guards; expands guard pool with 72 new Nord faces and female guards; offers EFM and Vanilla morph versions; requires USSEP; optional patches for AI Overhaul, OBIS, etc.; reduces face repetition
+- **Better Skyrim Parties - Choice is yours Patch Da05** `2.3.0.0` modid=102594
+  - Overhauls weddings, funerals, and crowd events, adding detail and attendees while remaining compatible with major mods
+- **Better Skyrim Parties - Weddings - Funerals - Crowd Events Overhaul** `2.3.0.0` modid=102594
+  - Overhauls weddings, funerals, and crowd events, adding detail and attendees while remaining compatible with major mods
+- **Immersive Aggressive Opponents - Armor-Based Opposite Faction Aggression** `1.18.0.0` modid=70236
+  - Causes NPCs of opposing factions to attack when player wears opposite faction armor, checking body/head/circlet/hands/feet slots; optional Forsworn module; no direct conflicts, requires Papyrus Extender
+- **Sleeping Expanded - Animations and NPC reactions - Reduced Version** `1.23.0.0` modid=59250
+  - Adds NPC wake‑up reactions, breathing animations, and bed transition details, providing subtle immersion for sleeping.
+- **Fishermen Fish - Whispers of the Depths Patch** `1.4.0.0` modid=134408
+  - Adds new fishing animations to NPCs such as lake fishermen, standing stones fisher, Riften docks; uses OAR; adds fishing furniture; .ESL flagged
+- **Fishermen Fish** `1.4.0.0` modid=134408
+  - Adds new fishing animations to NPCs such as lake fishermen, standing stones fisher, Riften docks; uses OAR; adds fishing furniture; .ESL flagged
+- **Smart NPC Potions - Enemies Use Potions and Poisons** `1.30.0.0` modid=40102
+  - Gives enemies a chance to carry and use potions or poisons, with probabilities based on NPC type, voiced reactions, and compatibility with SKSE.
+- **NPC Loots in Combat** `2.1.0.0` modid=57855
+  - Allows NPCs to loot items from dead bodies, with configurable gold/item limits
+- **Neutral Whiterun Guards** `4.6.0.0` modid=70197
+  - Makes Whiterun guards neutral to both Stormcloak and Imperial factions before battle; dynamically changes factions; requires Papyrus Extender, Spell Perk Item Distributor, USSEP; compatible with patches.
+- **Don't Stay in The Water - NPC Water AI Fix** `5.1.0.0` modid=52164
+  - SKSE64 plugin fixes NPCs stuck in water by correcting AI flag; safe, no esp; install via mod manager.
+- **GATE TO SOVNGARDE (GTS) - Small Mods and Resources - NPCs Always React to Healing Spells** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **NPCs React To Necromancy (And More)** `f1.03` modid=70428
+  - Adds ~150 vanilla‑spliced reactions to necromancy; NPCs react shocked or hostile to undead summons, can lower relationship rank to -1, guards may warn or arrest; no vanilla edits, ESL, safe mid‑game, fully compatible.
+- **NPCs React To Invisibility - Apothecary Ethereal Potion Patch** `1.11.0.0` modid=91480
+  - Adds ~300+ voiced reactions to invisibility; NPCs react when you disappear or appear, e.g., "Ahh!! Where did you come from?!", spliced from vanilla lines; only sensible NPCs react; ESL, safe mid‑game, no vanilla edits, fully compatible.
+- **NPCs React To Invisibility - CC Bow of Shadows Patch** `1.11.0.0` modid=91480
+  - Adds ~300+ voiced reactions to invisibility; NPCs react when you disappear or appear, e.g., "Ahh!! Where did you come from?!", spliced from vanilla lines; only sensible NPCs react; ESL, safe mid‑game, no vanilla edits, fully compatible.
+- **NPCs React To Invisibility** `1.11.0.0` modid=91480
+  - Adds ~300+ voiced reactions to invisibility; NPCs react when you disappear or appear, e.g., "Ahh!! Where did you come from?!", spliced from vanilla lines; only sensible NPCs react; ESL, safe mid‑game, no vanilla edits, fully compatible.
+- **NPCs Take Cover - Smarter Anti-Cheese AI** `f1.01` modid=111890
+  - Improves NPC AI to seek cover and relocate when players exploit unreachable positions; includes 200+ voiced reactions like "Fight me like a warrior!" or "Take cover!". Dynamic AI, super lite, compatible with most mods.
+- **AI Overhaul SSE** `1.9.0.0` modid=21654
+  - Overhauls vanilla NPC AI for realistic behavior
+  - Adds radiant AI, varied schedules, scripted scenes
+  - Improves companion behavior, theft detection, etc.
+  - Optional script usage, compatible with many mods
+  - ESL flagged
+- **Considerate Followers - Followers are Silent During Dialogue** `1.3.0.0` modid=133659
+  - Prevents followers from speaking during player dialogue or while others are speaking.
+- **Arch-Curate Vyrthur Revoiced** `1.0.0.0` modid=145795
+  - Revoices Arch‑Curate Vyrthur with unique voice acting; requires Skyrim and Dawnguard; provides loose audio files; safe to add/remove; load after voice‑modifying mods.
+- **Simply Knock SE** `1.0.3.0` modid=14098
+  - Adds knock functionality on locked doors, offering knock, leave, unlock choices, NPC reactions, optional friend entry, and configurable settings.
+- **Remote Interactions** `f1.06` modid=89676
+  - Enables remote NPC interactions (shout, command, taunt, surrender) with contextual animations; ESL flagged and requires Taunt Your Enemies.
+- **Sinding's Werewolf Voice Overhaul- Mihail NPCs and Followers** `1.0.0.0` modid=88230
+  - Replaces Sinding's human voice with proper werewolf voice and sound effects when transformed, adding immersive audio and compatibility with Mihail NPCs.
+- **GATE TO SOVNGARDE (GTS) - Small Mods and Resources - Additional Healing Reactions** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Honed Metal -NPC Crafting and Enchanting Services-** `1.26.1.0` modid=61015
+  - Provides NPC blacksmiths and mages to craft, temper, and enchant gear; fully customizable via MCM; blacksmith/enchanter skill determines perks, equipment type, cost, and item stats
+  - Uses own materials and charges go to their inventory; players can adjust skill via MCM; generally compatible but may conflict with perk‑tree or container‑modifying mods like Requiem or Dynamic Things
+- **Relationship Dialogue Overhaul Lite** `1.69.0.0SE` modid=42068
+  - Lightweight port of RDO adding dialogue overhaul features.
+- **Dialogue Tweak - Civil War Quartermasters** `1.0.0.0` modid=91087
+  - Modifies vendor greetings for Eorlund Gray‑Mane and Civil War quartermasters to be more natural.
+- **Brawl Lines Expansion and Fixes** `f1.02` modid=94070
+  - Repairs brawl dialogue bugs and adds new contextual lines, including cheer animations and repeat‑prevention for bystanders
+- **R.A.S.S. - Rain Ash And Snow Shaders** `3.5.1.0` modid=22780
+  - Adds visual effects such as ash, wetness, frost, bubbles, camera lens, and immersion effects to player and NPCs under certain weather conditions, toggleable via MCM.
+- **Tamrielic Distribution** `1.4.1.0` modid=71372
+  - Framework that integrates modules such as Alternative Armors (Ebony, Elven Hunter, Iron, Leather, Silver, Steel) and other content via selectable FOMOD options.
+- **Nostromo79's Earrings - Integrated** `1.1.0.0` modid=29064
+  - Integrates earrings into leveled lists and NPC outfits; visible/invisible based on headgear; compatible with Wearable Lanterns and Bandolier; patches for many mods.
+- **Detailed NPCs - Scarves for NPCs (SPID)** `2.0.0.0` modid=67464
+  - Distributes scarves to NPCs via Spell Perk Item Distributor with configurable NPCs and textures.
+- **Family-man Sinding SE** `6.7.5.0` modid=33517
+  - Transforms Sinding into a fully voiced follower with 200+ lines; requires ESPFE conversion; offers unique dialogue and marriage option.
+- **Teldryn Sero Dialogue Expansion - Unofficial Update** `1.1.0.1` modid=141729
+  - Tweaks dialogue frequency and adds conditions, reducing line repetition and adjusting location triggers.
+- **A Serious Wedding - Teldryn Sero Marriage Mod SSE** `2.1.0.0` modid=10238
+  - 105-line Dunmeri wedding quest
+  - Free hugs grant +10% XP boost
+  - Allows marriage to Teldryn (any gender)
+  - Safe mid-game, no vanilla edits
+  - Requires day in Raven Rock, alive priests
+- **Authentic Civil War Followers Hadvar and Ralof - Hearthfire Update** `2.3.0.0` modid=72000
+  - Makes Hadvar and Ralof recruitable as followers after Civil War; marriageable; attend final battle; optional high‑poly faces; compatible with Alternate Start.
+- **FDE Jenassa Auri Patch** `7.0.0.0` modid=120255
+  - Expands Jenassa with 1785 AI‑voiced lines; quest awareness for all guilds, main, DLC, Daedric quests; romance quest, marriage lines, approval system, location & weather awareness; 100% compatible; includes Inigo & Elysium Estate patches.
+  - Personality: cynical mercenary with tragic past, values rewards.
+- **Follower Dialogue Expansion - Jenassa - Inigo Patch** `7.0.0.0` modid=120255
+  - Expands Jenassa with 1785 AI‑voiced lines; quest awareness for all guilds, main, DLC, Daedric quests; romance quest, marriage lines, approval system, location & weather awareness; 100% compatible; includes Inigo & Elysium Estate patches.
+  - Personality: cynical mercenary with tragic past, values rewards.
+- **Follower Dialogue Expansion - Aela the Huntress - Auri Patch** `9.0.0.0` modid=114801
+  - Expands Aela with 2743 voiced lines, quest and location awareness, romance options, combat lines, ESL flagged; fully compatible with other mods
+- **Follower Dialogue Expansion - Aela the Huntress - Inigo Patch** `9.0.0.0` modid=114801
+  - Expands Aela with 2743 voiced lines, quest and location awareness, romance options, combat lines, ESL flagged; fully compatible with other mods
+- **Follower Dialogue Expansion - Aela the Huntress - Lucien Patch** `9.0.0.0` modid=114801
+  - Expands Aela with 2743 voiced lines, quest and location awareness, romance options, combat lines, ESL flagged; fully compatible with other mods
+- **Follower Dialogue Expansion - Aela the Huntress - Remiel Patch** `9.0.0.0` modid=114801
+  - Expands Aela with 2743 voiced lines, quest and location awareness, romance options, combat lines, ESL flagged; fully compatible with other mods
+- **Follower Dialogue Expansion - Aela the Huntress - Xelzaz Patch** `9.0.0.0` modid=114801
+  - Expands Aela with 2743 voiced lines, quest and location awareness, romance options, combat lines, ESL flagged; fully compatible with other mods
+- **Follower Dialogue Expansion - Marcurio (FDE)** `1.0.2.0` modid=174725
+  - Expands Marcurio with 210 AI‑voiced lines; arrogant wizard, quest awareness for College of Winterhold, Dark Brotherhood, main & DLC; romance; location awareness; 100% compatible.
+- **Extended Hireling Dialogue - Teldryn** `1.0.0.0` modid=167886
+  - Expands Teldryn Sero's dialogue with ~770 new lines plus ~300 for other NPCs, ESL‑flagged.
+- **Authentic Sinding Follower** `6.7.5.0` modid=33517
+  - Transforms Sinding into a fully voiced follower with 200+ lines; requires ESPFE conversion; offers unique dialogue and marriage option.
+- **Teldryn Sero Dialogue Expansion** `1.0.0.0` modid=42434
+  - Adds ~210 unique Teldryn dialogue lines with conditional commentary and player options, built on synthetic xVASynth lines.
+- **Less Generic Housecarls - Argis (Markarth) Dialogue Expansion and Quest** `1.3.0.0` modid=48194
+  - Fix that adds dialogue expansion and personal quest for Argis the Bulwark, your Markarth housecarl.
+- **Serana Dialogue Edit - Skyrim Special Edition** `f1.02` modid=16222
+  - Overhauls Serana's dialogue with bug fixes, custom branches, expanded radiant dialogue, and expansions into Hearthfire and Dragonborn
+- **Authentic Civil War Followers Hadvar and Ralof** `2.3.0.0` modid=72000
+  - Makes Hadvar and Ralof recruitable as followers after Civil War; marriageable; attend final battle; optional high‑poly faces; compatible with Alternate Start.
+- **Vanilla Follower Expansion - Illia (VFE)** `1.2.0.0` modid=92333
+  - Adds new dialogue and idle animations to Illia, the ex-witch from Darklight Tower, with lore-friendly backstory and location-specific comments.
+- **Vanilla Follower Expansion - Brelyna (VFE)** `1.0.0.0` modid=93973
+  - Adds new dialogue and idle comments for Brelyna, a vanilla follower at the College of Winterhold.
+- **Follower Dialogue Expansion - Eola** `1.0.0.0` modid=157012
+  - Expands Eola, a Namira cultist, with 233 new lore‑friendly dialogue lines and quest awareness.
+- **Follower Dialogue Expansion - Rayya** `3.0.0.0` modid=143288
+  - Expands Rayya with 740 immersive voiced lines; desert warrior redemption backstory; quest awareness for main, DLC, Dark Brotherhood, Thieves Guild, Companions, In My Time of Need, Ansilvund; romance lines, approval system, location & weather awareness, banter with Erik; explores Redguard culture; 100% compatible; notes synergy with Shezarrine.
+- **Follower Dialogue Expansion - Uthgerd the Unbroken** `2.0.0.0` modid=122487
+  - Expands Uthgerd the Unbroken with 233 voiced lines, adds quest awareness for Dark Brotherhood, main quest, Companions, DLC, new story‑driven interactions, romance, location awareness, banter with Aela the Huntress; lore‑friendly; safe mid‑save.
+- **Follower Dialogue Expansion - Mjoll the Lioness** `2.0.0.0` modid=116025
+  - Expands Mjoll with 451 AI‑voiced lines; courageous heroine, quest awareness, romance arc, personal quest; location awareness; combat lines; 100% compatible; recruit after sword retrieval; lore‑friendly.
+- **Follower Dialogue Expansion - Lydia** `1.5.0.0` modid=119226
+  - Expands Lydia with 300 AI‑voiced lines; quest awareness for Companions, main & DLC; romance lines; location awareness; lore‑friendly; 100% compatible; includes comments on other followers, banter with Jenassa & Erik; safe mid‑save.
+- **Follower Dialogue Expansion - Jordis the Sword-Maiden** `1.1.3.0` modid=117930
+  - Expands Jordis with 191 AI‑voiced lines; quest awareness for Dark Brotherhood, main & DLC; romance options; location awareness; lore‑friendly; 100% compatible.
+- **Follower Dialogue Expansion - Jenassa** `7.0.0.0` modid=120255
+  - Expands Jenassa with 1785 AI‑voiced lines; quest awareness for all guilds, main, DLC, Daedric quests; romance quest, marriage lines, approval system, location & weather awareness; 100% compatible; includes Inigo & Elysium Estate patches.
+  - Personality: cynical mercenary with tragic past, values rewards.
+- **Follower Dialogue Expansion - Faendal** `1.1.0.0` modid=130418
+  - Expands Faendal with 240 AI‑voiced lines; quest awareness for Thieves Guild, Dark Brotherhood, Companions, main & DLC quests; romance lines with Camilla; location awareness; 100% compatible.
+  - Features include humorous Bosmer archer backstory, sarcasm, down‑to‑earth perspective.
+- **Follower Dialogue Expansion - Erik the Slayer** `2.0.1.1` modid=116719
+  - Expands Erik the Slayer with 222 AI‑voiced lines; quest & location awareness; romance options; marriageable; 100% compatible.
+  - Features: 222 voiced lines, quest awareness for vanilla main quest, DLC, guilds, new story‑driven interactions, marriage lines, location awareness, lore‑friendly expansion.
+- **Follower Dialogue Expansion - Aela the Huntress** `9.0.0.0` modid=114801
+  - Expands Aela with 2743 voiced lines, quest and location awareness, romance options, combat lines, ESL flagged; fully compatible with other mods
+- **Lawless Simonrim** `2.1.0.0` modid=88080
+  - Overhauls bandit enemies with multiple tiers, new archetypes, enhanced stats, perks, spells, gold scaling and unique loot
+- **Madmen - A Forsworn Overhaul - Patch FOMOD** `2.0.1.0` modid=98579
+  - Overhauls Forsworn, Hagraven and Witch enemies with multiple tiers, unique magic, stats, perks, and expanded loot
+- **Lawless - A Bandit Overhaul - Patches FOMOD** `2.1.0.0` modid=88080
+  - Overhauls bandit enemies with multiple tiers, new archetypes, enhanced stats, perks, spells, gold scaling and unique loot
+- **Lawless - A Bandit Overhaul** `2.1.0.0` modid=88080
+  - Overhauls bandit enemies with multiple tiers, new archetypes, enhanced stats, perks, spells, gold scaling and unique loot
+- **Madmen - A Forsworn Overhaul** `2.0.1.0` modid=98579
+  - Overhauls Forsworn, Hagraven and Witch enemies with multiple tiers, unique magic, stats, perks, and expanded loot
+- **ArteFakes - Unique Artifacts Replacer - Updated Plug-In** `2.0.0.0` modid=41254
+  - Replaces models of many unique artifacts with higher‑detail versions using vanilla textures; includes updates like shine fixes and forging recipes; optional compatibility patches.
+- **Artificer - An Artifact Overhaul - Unique Utopia Patch** `1.0.11.0` modid=99619
+  - Overhauls artifacts to distribute Thaumaturgy and Mysticism enchantments; adds powerful artifacts with unique bonuses; requires Mysticism and Thaumaturgy; balances stats and adds new enchantments.
+- **Artificer - An Artifact Overhaul - Ahzidal Armor Patch** `1.0.11.0` modid=99619
+  - Overhauls artifacts to distribute Thaumaturgy and Mysticism enchantments; adds powerful artifacts with unique bonuses; requires Mysticism and Thaumaturgy; balances stats and adds new enchantments.
+- **Artificer - An Artifact Overhaul - USSEP Patch** `1.0.11.0` modid=99619
+  - Overhauls artifacts to distribute Thaumaturgy and Mysticism enchantments; adds powerful artifacts with unique bonuses; requires Mysticism and Thaumaturgy; balances stats and adds new enchantments.
+- **Artificer - An Artifact Overhaul - Dragon Priest Staves** `1.0.11.0` modid=99619
+  - Overhauls artifacts to distribute Thaumaturgy and Mysticism enchantments; adds powerful artifacts with unique bonuses; requires Mysticism and Thaumaturgy; balances stats and adds new enchantments.
+- **Daedric Voices - Hircine** `0.5.0.0` modid=32090
+  - Adds Daedric Prince voice lines triggered when using their artifacts, with configurable chances and console commands.
+- **ArteFakes - Unique Artifacts Replacer** `2.0.0.0` modid=41254
+  - Replaces models of many unique artifacts with higher‑detail versions using vanilla textures; includes updates like shine fixes and forging recipes; optional compatibility patches.
+- **Artificer - An Artifact Overhaul** `1.0.11.0` modid=99619
+  - Overhauls artifacts to distribute Thaumaturgy and Mysticism enchantments; adds powerful artifacts with unique bonuses; requires Mysticism and Thaumaturgy; balances stats and adds new enchantments.
+- **King-Priest - Enhanced Dragon Priests** `4.0.1.0` modid=59652
+  - Increases difficulty of Dragon Priest encounters, balancing them for high‑level play
+- **Falmer 'Dialogue' Overhaul - Echolocation - Standalone Version** `1.1.0.0` modid=114625
+  - Overhauls Falmer sounds to echolocation, adds new idle, alert, and taunt lines; script‑free, feral atmosphere, ESL flagged, compatible with custom creature mods
+- **Doge Cheems Sploot DAR OAR Randomizer SE** `1.2.0.0` modid=125043
+  - Modifies dog idle animations.
+- **Talkative Hagravens - 2023 Halloween Special** `1.1.0.0` modid=103488
+  - adds 12 new immersive dialogue lines for Hagravens, featuring combat taunts and unique lines for named Hagravens, compatible with most Hagraven mods, voice by Elizabeth Plant, uses .lip/.wav fusion
+- **Talkative Dragon Priests- Mihail Monsters and Animals** `1.0.0.0` modid=83735
+  - Adds 32 custom Dragon Priest dialogue lines for epic battles; part of Mihail Monsters and Animals series; compatible with most Dragon Priest mods.
+- **Animals Swim (Sort of)** `1.0.0.0` modid=78267
+  - Makes rabbits, deer, etc. float near surface instead of walking underwater
+  - Slows movement in water, simple ESL flagged mod
+  - ESL flagged
+- **Dragon Random Stagger Animation** `1.0.0.0` modid=155346
+  - Adds three extra random stagger animations for dragons on ground, rock, wall, and tower surfaces, totaling four including the original
+- **DCA - Dragon Combat Animations** `1.0.0.0` modid=123113
+  - Overhauls dragon attack animations for more balanced combat.
+- **Dragons Fall Down - Immersive Airborne Death** `1.0.3.0` modid=56317
+  - Makes dragons ragdoll and plummet instantly when they die mid‑air, enhancing immersion.
+- **Infinite Dragon Variants** `2.0.1.0` modid=74983
+  - Provides unique colorful visual variants for dragons.
+- **Dragon War - A Dragon Overhaul** `4.1.6.0` modid=51310
+  - Overhauls dragons with new AI, elemental shouts (Shock, Poison, Sun, Coldfire), tiered levels, injury system, and enhanced loot, increasing difficulty and altering progression.
+- **Horsepower - Skills of the Wild Horse Speed Patch** `1.2.0.0` modid=169335
+  - Adds directional horse animations for walk, trot, run, sprint, swim, jump, and land; improves handling, speed, turning, and instant jumps; introduces follow‑up attacks chainable with left/right variants and power attacks; adds rear‑up jump with increased height; supports in‑place turning up to 180° and interruptible turns; adds ragdoll for horses, reduces fall damage, sprint swimming, and petting idle; requires SKSE/Address Library, Animation Motion Revolution, Nemesis or Pandora; compatible with most horse mods but conflicts with those editing horse race or behavior hkx
+- **HorsePower - Modernized Horse Riding (Total Riding Overhaul)** `1.2.0.0` modid=169335
+  - Adds directional horse animations for walk, trot, run, sprint, swim, jump, and land; improves handling, speed, turning, and instant jumps; introduces follow‑up attacks chainable with left/right variants and power attacks; adds rear‑up jump with increased height; supports in‑place turning up to 180° and interruptible turns; adds ragdoll for horses, reduces fall damage, sprint swimming, and petting idle; requires SKSE/Address Library, Animation Motion Revolution, Nemesis or Pandora; compatible with most horse mods but conflicts with those editing horse race or behavior hkx
+- **Animated Mounted Casting - Cast Spells On Horseback And Dismiss Horse** `2.22.0.0` modid=81270
+  - Cast spells while on horseback, animated spell casting
+  - Adds summon horse spell, dismisses regular horse, compatible with SKSE, ESL flagged
+- **Obscure's College of Winterhold Loot Rebalancing** `1.0.0.0` modid=89173
+  - Replaces placed loot with leveled variants to scale with player; halves gold, changes Ancano's dagger; must install before visiting College; not to be uninstalled mid‑playthrough.
+- **JKs Guild HQ Interiors Patch Collection** `1.23.0.0` modid=61416
+  - Offers separate patches for JK's Interiors Guild HQs with optional compatibility patches for various mods like Bards College, Castle Dour, and others.
+- **Obscure's College of Winterhold** `1.6.1.0` modid=20514
+  - Expands College of Winterhold with new towers, reimagined Arcanaeum, Hall of Elements, revised set dressing, dynamic changes; aims for immersion and compatibility.
+- **Immersive Fort Dawnguard** `1.2.0.0` modid=40436
+  - Overhauls Dayspring Canyon with new fortifications, interior spaces, greenhouses, library, bathhouse, JIT lighting, additional areas and quest integrations, compatible with many texture and performance mods, requires back‑up and load order adjustments
+- **RedBag's Dragonsreach - SE** `1.5.0.0` modid=41870
+  - Adds custom 3D objects to Dragonsreach interior.
+- **GATE TO SOVNGARDE (GTS) - Small Mods and Resources - Juniper's Frostflow Lighthouse GtS Patch** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Dungeons - Revisited** `1.1.1.0` modid=51798
+  - Overhauls Skyrim dungeons, doubles size, adds new paths, rooms, enemies; lore‑friendly; install via mod manager; compatible with lighting mods.
+- **No Alchemical Ingredients in Vanilla Player Homes** `1.0.0.0` modid=91382
+  - Disables all alchemical ingredients in vanilla player homes.
+- **CC Myrwatch - Tweaks and Enhancements - Sorcerer Patch** `1.5.5.0` modid=97659
+  - Adds stairway, vestibule, balcony; removes staff enchanter & forge; adds carpenter workbench for crafting stations; acquire via College of Winterhold, Shalidor’s Maze, or hard persuasion; price adjustable
+- **CC Myrwatch - Tweaks and Enhancements - CC Fishing Patch** `1.5.5.0` modid=97659
+  - Adds stairway, vestibule, balcony; removes staff enchanter & forge; adds carpenter workbench for crafting stations; acquire via College of Winterhold, Shalidor’s Maze, or hard persuasion; price adjustable
+- **CC Myrwatch - Tweaks and Enhancements** `1.5.5.0` modid=97659
+  - Adds stairway, vestibule, balcony; removes staff enchanter & forge; adds carpenter workbench for crafting stations; acquire via College of Winterhold, Shalidor’s Maze, or hard persuasion; price adjustable
+- **Skyfall's Sleeping Hist Tree Overhaul - Seasonal Patch** `1.4.0.0` modid=116792
+  - Overhauls the Sleeping Tree area with an ancient Hist tree, vines, lanterns, fog, ambient sounds, and lore‑friendly details.
+- **Skyfall's Sleeping Hist Tree Overhaul - Xelzaz Patch** `1.4.0.0` modid=116792
+  - Overhauls the Sleeping Tree area with an ancient Hist tree, vines, lanterns, fog, ambient sounds, and lore‑friendly details.
+- **Environs - Whiterun Watchtower Doesn't Stay Broken - Northern Roads Patch** `f3.00` modid=76261
+  - Gradually rebuilds Western Watchtower after dragon attack with time‑based stages, adds walls, workers, guards.
+- **Environs - Kolskeggr - Patch Collection** `f3.03` modid=78477
+  - Overhauls Kolskeggr Mine area with dynamic post‑quest changes—rebuilding house, adding miners/guards, time‑based stages, improves immersion.
+- **Environs - Abandoned Abodes - Patch Collection** `1.0.4.0` modid=82410
+  - Adds dynamic NPCs to previously empty interiors after quests, affects 7 locations, gradual changes over ~15 days, adds furniture and voice lines, compatible with many city overhauls.
+- **Environs - The Greenwood Shack - Alternative Perspective New Beginnings Patch** `3.0.1.0` modid=73732
+  - Dynamic changes to Greenwood Shack over time—intact start, dragon‑attack destruction, rebuilding stages, configurable triggers, lightweight immersion mod.
+- **Environs - The Ruined Tundra Farmhouse - Patch Collection** `3.0.2.0` modid=72981
+  - Dynamic changes to ruined farmhouse near Whiterun with stages from intact to rebuilt, time‑based progression, optional versions, lightweight.
+- **Skyfall's Sleeping Hist Tree Overhaul** `1.4.0.0` modid=116792
+  - Overhauls the Sleeping Tree area with an ancient Hist tree, vines, lanterns, fog, ambient sounds, and lore‑friendly details.
+- **Environs - Kolskeggr** `f3.03` modid=78477
+  - Overhauls Kolskeggr Mine area with dynamic post‑quest changes—rebuilding house, adding miners/guards, time‑based stages, improves immersion.
+- **Environs - Abandoned Abodes** `1.0.4.0` modid=82410
+  - Adds dynamic NPCs to previously empty interiors after quests, affects 7 locations, gradual changes over ~15 days, adds furniture and voice lines, compatible with many city overhauls.
+- **Environs - Whiterun Watchtower Doesn't Stay Broken** `f3.00` modid=76261
+  - Gradually rebuilds Western Watchtower after dragon attack with time‑based stages, adds walls, workers, guards.
+- **Environs - The Greenwood Shack** `3.0.1.0` modid=73732
+  - Dynamic changes to Greenwood Shack over time—intact start, dragon‑attack destruction, rebuilding stages, configurable triggers, lightweight immersion mod.
+- **Environs - The Ruined Tundra Farmhouse** `3.0.2.0` modid=72981
+  - Dynamic changes to ruined farmhouse near Whiterun with stages from intact to rebuilt, time‑based progression, optional versions, lightweight.
+- **Skybound Underhang Camp - Lawbringer Patch** `7.0.0.0` modid=54993
+  - Expands the bandit camp southeast of Riverwood with additional bandits, structures, easter eggs, and optional quest integration.
+- **Skybound Underhang Camp - Arena Consistency Patch** `7.0.0.0` modid=54993
+  - Expands the bandit camp southeast of Riverwood with additional bandits, structures, easter eggs, and optional quest integration.
+- **Ryn's Karthspire Patches - CC Spell Knight Armor Patch** `f1.01` modid=82657
+  - Provides patches for Spell Knight Armor and Requiem balancing in Ryn's Karthspire.
+- **New Embershard Miners - With Voiced Dialogue** `2.1.0.0` modid=35031
+  - Adds Stalgar and Goronk miners to Embershard Mine after clearing bandits; they set up camp, have repeatable quest, optional voiced dialogue; safe mid‑game, compatible.
+- **Bards College Excavation** `1.0.0.0` modid=36950
+  - Adds a bard excavation at Dead Men's Respite post‑“Tending the Flames” with two fully voiced NPCs and a repeatable quest to clear the site
+- **Skybound Underhang Camp** `7.0.0.0` modid=54993
+  - Expands the bandit camp southeast of Riverwood with additional bandits, structures, easter eggs, and optional quest integration.
+- **The Stumbling Sabrecat** `1.2.1.0` modid=35969
+  - Overhauls radiant Thieves Guild quests with selectable hold jobs, concurrent tasks, targets in all holds, fixed failure conditions, compatible with stock locations and mods
+- **Nordic Ruins of Skyrim SSE** `2.0.0.0` modid=20382
+  - Overhauls exteriors of Nordic ruins (Forelhost, High Gate Ruins, etc.) for better aesthetics; recommends LOD generator; interiors unchanged.
+- **Orc Strongholds - Narzulbur** `2.5.4.0` modid=88809
+  - Exterior overhaul of Narzulbur stronghold, expanding and upgrading its exterior with new meshes and clutter.
+- **Orc Strongholds - Largashbur** `2.1.3.0` modid=89354
+  - Exterior overhaul of Largashbur stronghold, redesigning it as a fortified stronghold with a unique visual personality.
+- **Orc Strongholds - Dushnikh Yal** `2.5.0.0` modid=92485
+  - Exterior overhaul of Dushnikh Yal stronghold, redesigning it as a fortified encampment.
+- **Orc Strongholds - Mor Khazgur** `1.6.0.0` modid=94796
+  - Exterior overhaul of Mor Khazgur stronghold, redesigning it as a fortified stronghold, the final entry in the series.
+- **The Great Village of Mixwater Mill SSE - 3DNPC Patch** `1.1.0.0` modid=36350
+  - Transforms Mixwater Mill into a custom Nordic lumber mill with new meshes and foliage, compatible with texture overhauls.
+- **Tel Mithryn Overhaul - USSEP Patch** `1.0.0.0` modid=104813
+  - Exterior and interior overhaul of Tel Mithryn with unique objects, clutter, high-quality models, and magical clutter, flagged as ESL.
+- **The Great Village of Mixwater Mill SSE** `1.1.0.0` modid=36350
+  - Transforms Mixwater Mill into a custom Nordic lumber mill with new meshes and foliage, compatible with texture overhauls.
+- **Half-Moon Mill - Cities of the North Addon** `1.5.0.0` modid=64360
+  - Edits Half-Moon Mill to use custom assets from Cities of the North Falkreath, recommended with that mod
+- **Tel Mithryn Overhaul - Exterior and Interior Improvements** `1.0.0.0` modid=104813
+  - Exterior and interior overhaul of Tel Mithryn with unique objects, clutter, high-quality models, and magical clutter, flagged as ESL.
+- **Pseudoloaddoors for Walled Cities** `1.4.0.0` modid=135112
+  - Adds pseudoloaddoors to city borders, transporting players inside; compatible with flying and traversal mods.
+- **The Great City of Winterhold Patch Collection** `2.9.2.0` modid=74560
+  - AI Overhaul SSE shifts placed idle markers; Alternate Start adjusts markers; Ambriel moves house; Amulets of Skyrim moves amulets; Animated Armoury shifts books; Artifacts of Skyrim shifts objects; Atlas Map Markers updates map markers; At Your Own Pace shifts thieves guild records; BadGremlin moves fish; Birds of Skyrim adjusts bird ground position; Blowing in the Wind applies CR on ELFX items; The Brotherhood shifts NPC and chest; Carriage and Ferry Travel Overhaul moves carriage; Carriage Stops modifies stops; Citizens of Tamriel Complete SSE shifts NPC/idle; Cathedral 3D Mountain Flowers resolves conflicts; Cheesemod shifts cheese; Cidhna Mine Expanded moves NPC; Cities of the North changes layout; Cloaks of Skyrim moves cloaks; Clockwork provides navmesh CR; College of Winterhold patches wolves; Complete Alchemy and Cooking repositions vegetables; Cooking Adventures adjusts references; Creation Club Nchuanthumz adjusts journal; Curse of Akavir shifts NPC/headings; Dawnguard Sentires Plus modifies spawns; Distinct Interiors resolves conflicts; DootY moves outhouses; Drunks of Skyrim shifts marker/NPC; Dwemer Colosseum shifts anchor/teleport; DX Ursine Armor shifts book; etc.
+- **The Great City Of Winterhold SSE Edition** `4.2.3.0` modid=17127
+  - Adds grand ruins of an ancient city with detailed lore and visuals.
+- **Capital Windhelm Expansion - USSEP Patch** `1.3.0.0` modid=42990
+  - Expands Windhelm with new buildings, shops, NPCs, and quests, adding extensive city overhaul features.
+- **Capital Windhelm Expansion - AI Overhaul Patch** `1.3.0.0` modid=42990
+  - Expands Windhelm with new buildings, shops, NPCs, and quests, adding extensive city overhaul features.
+- **Capital Windhelm Expansion - Normal Version** `1.3.0.0` modid=42990
+  - Expands Windhelm with new buildings, shops, NPCs, and quests, adding extensive city overhaul features.
+- **Capital Whiterun Expansion - Realistic RS Children Patch** `1.5.0.0` modid=37982
+  - Expands Whiterun with new districts, buildings, shops, merchants, NPCs, a player home, and quests.
+- **Capital Whiterun Expansion - Normal Version** `1.5.0.0` modid=37982
+  - Expands Whiterun with new districts, buildings, shops, merchants, NPCs, a player home, and quests.
+- **Skyfall's Blue Palace Courtyard** `1.3.1.0` modid=130890
+  - Reworks the Blue Palace entrance with a grand staircase, organized garden, banners, wishing wells, and ESL flagging for immersion.
+- **The Great City of Solitude SSE** `f2.02` modid=22243
+  - Expands Solitude port with new homes, shops, vendors, guards, reshapes stone arch, improves exterior, low in load order.
+- **COTN Morthal Patch Collection** `3.6.1.0` modid=34228
+  - Patch suite adjusting object placements in Morthal interiors; resolves conflicts with numerous mods (AI Overhaul, Book Covers, etc); ESL flagged
+- **Cities of the North - Falkreath - Ladder Animations Add-on** `1.3.0.0` modid=56731
+  - Adds unique building designs, giving Falkreath its own distinct architecture.
+- **Cities of the North - Falkreath - Custom Doors Add-on** `1.3.0.0` modid=56731
+  - Adds unique building designs, giving Falkreath its own distinct architecture.
+- **Cities of the North - Falkreath** `1.3.0.0` modid=56731
+  - Adds unique building designs, giving Falkreath its own distinct architecture.
+- **Cities of the North - Dawnstar Patch Collection - CC Vigil Enforcer Patch** `5.9.0.0` modid=30885
+  - Collection of patches that relocate objects to match new interiors for the Cities of the North - Dawnstar mod.
+- **Cities of the North - Dawnstar Patch Collection** `5.9.0.0` modid=30885
+  - Collection of patches that relocate objects to match new interiors for the Cities of the North - Dawnstar mod.
+- **Cities of the North - Dawnstar** `1.4.0.0` modid=28952
+  - Adds unique building designs, giving Dawnstar its own distinct architecture.
+- **The Great Cities- Resources** `1.1.1.0` modid=104373
+  - Provides base files and assets required for overhauling The Great Cities series.
+- **Headhunter - Bounties Redone** `1.60.0.0` modid=51847
+  - Expands bounty system with proof requirement (head loss on loot), captures bandit giants/dragons, integrates with Missives, AllGUD, SRC; allows prisoner capture, giant forgiveness, up to 7‑8 prison slots, visible decapitations, optional backpack display via AllGUD, configurable rewards via MCM, supports notice board and other patches
+- **Infiltration - Quest Expansion - Lawless Patch** `f1.02` modid=114054
+  - Expands vanilla Infiltration quest into an epic choice‑driven quest, fully voiced, restores cut content, fixes lever‑activation exploit, adds dynamic NPC comments, warns about mid‑game install restrictions, includes patches for compatibility.
+- **The Heart of Dibella - Quest Expansion - RS Children Patch** `f1.07` modid=94863
+  - Adds optional pathway to start the Dibella quest without breaking in, new voiced dialogue, choice of blessing effects (extra damage vs same sex, both sexes, or none), preserves vanilla path, optional customization, fully voiced, ESL, compatible with most mods, requires load after quest‑modifying mods.
+- **Caught Red Handed - Quest expansion patch for navigate VR or Even Better Quest Objectives** `1.0.0.0a` modid=112430
+  - Tweaks quest objectives with specific locations; ideal for Navigate VR or EVQO
+- **Peryite's Fetid Dead - Eye Glow Patch** `1.0.0.0` modid=133253
+  - Adds Fetid Skeleton Daedra (three tiers) to Bthardamz, summonable via spells, compatible with other Daedra mods.
+- **Peryite's Fetid Dead** `1.0.0.0` modid=133253
+  - Adds Fetid Skeleton Daedra (three tiers) to Bthardamz, summonable via spells, compatible with other Daedra mods.
+- **A Steward for Dawnstar** `1.0.1.0` modid=129588
+  - Adds Dawnstar's housecarls as stewards to handle bounty quests in the Pale.
+- **Miscellaneous Quests are Favors** `1.2.1.0` modid=121610
+  - Adds disposition increases to miscellaneous quests, contributing to Thane progression
+- **Forgemaster's Fingers Quest for Orcs and Blood-Kin** `0.1.0.0` modid=145145
+  - Enables The Forgemaster's Fingers quest for Orcs/Blood‑Kin by talking to a guard; quest proceeds normally with dialogue tweaks and a small gold reward.
+- **Camilla Gets Married** `1.0.2.0` modid=138804
+  - Allows Camilla Valerius to become engaged after completing a quest, send a wedding invitation, and marry the player.
+- **A Lovely Letter Alternate Routes** `1.0.0.0` modid=21916
+  - Provides alternate quest routes for "A Lovely Letter" allowing you to reject letters, expose both parties, and gain Camilla's favor.
+- **Quests Are In Skyrim USSEP Version** `1.3.0.0` modid=18416
+  - Prevents radiant quests from sending players to locations outside Skyrim's nine holds.
+- **Mehrunes Dagon's Shrine Unlocked - Pieces of the Past Alternate Ending** `4.4.0.0` modid=119502
+  - Allows entering shrine without helping Silus; adds journal, key, talk options; enables reforge Razer without Dagon (master smith, Daedric perks); provides alternate quest ending
+- **Save the Icerunner - Lights Out Alternate Routes** `1.1.2.0` modid=34681
+  - Adds alternate routes and choices for the Icerunner side quest, allowing players to avoid forced outcomes.
+- **Boethiah's Calling - Alternate Questline** `2.3.0.0a` modid=121499
+  - Adds a fully voiced alternate quest to acquire the Ebony Mail, involving a deceptive sacrifice and optional ambush
+- **Mephala's Curse - Whispering Door Quest Addon** `2.6.0.0` modid=120650
+  - Adds curse to Ebony Blade causing stress, summons Spider Daedra, introduces madness system, new encounters
+- **The Taste of Death - Quest Addon** `4.0.0.0a` modid=123173
+  - Adds over 50 voiced dialogue lines and new enemies to the quest, with optional modular installs.
+- **Finding Derkeethus** `1.1.0.0` modid=19550
+  - Fixes Derkeethus quest by moving cell key, moving quest out of Misc, adding journal info and optional marker, expands dialog options, compatible with USSEP and Better Quest Objectives; ESP‑FE format
+- **Finding Helgi and Laelette** `1.1.0.0` modid=28973
+  - Overhauls Laid to Rest quest with investigative beats, new scenes and dialogues, expanded narrative, optional patches for lights and grass, safe to install pre‑Morthal; ESP‑FE format
+- **Bring Meeko To Lod** `1.2.0.0` modid=25246
+  - Adds a dialogue option to give Meeko to Lod in Falkreath, unlocked when Meeko follows the player and prior quests are completed
+- **Caught Red Handed - Quest Expansion** `f1.07` modid=65708
+  - Expands Riften misc quest with new choices; voiced outcomes; protect Haelga, confront Tythis; optional rewards like Mark of Dibella
+- **Nilheim - Misc Quest Expansion** `1.14.0.0` modid=53792
+  - Expands Nilheim quest with additional dialogue choices, roleplay options, optional consequences; fixes bandit behavior and quest flow.
+- **The Heart of Dibella - Quest Expansion** `f1.07` modid=94863
+  - Adds optional pathway to start the Dibella quest without breaking in, new voiced dialogue, choice of blessing effects (extra damage vs same sex, both sexes, or none), preserves vanilla path, optional customization, fully voiced, ESL, compatible with most mods, requires load after quest‑modifying mods.
+- **The Only Cure - Quest Expansion** `f1.05` modid=57683
+  - COMPLETELY VOICED: Every option explained with new voiced lines
+  - VANILLA PATH AVAILABLE: Vanilla path still there, expanded with options
+  - ATTACK KESH: New dialogue to start combat after learning Kesh worships Peryite
+  - KESH'S JOURNAL: Journal explains motives at Bthardamz; can be looted
+  - NO CAVORTING!: Can destroy altar at any time, choose outcomes
+  - OPTIONS: Accept Spellbreaker, mock, refuse, destroy altar, burn tree
+  - CONSEQUENCES: Betraying Peryite after accepting Spellbreaker curses shield with poison
+- **The Whispering Door - Quest Expansion** `1.15.0.0` modid=76606
+  - Expands Mephala's Daedric quest with a longer storyline, additional dialogue, and darker choices.
+- **Infiltration - Quest Expansion** `f1.02` modid=114054
+  - Expands vanilla Infiltration quest into an epic choice‑driven quest, fully voiced, restores cut content, fixes lever‑activation exploit, adds dynamic NPC comments, warns about mid‑game install restrictions, includes patches for compatibility.
+- **House of Horrors - Quest Expansion** `1.13.0.0` modid=57285
+  - Expands Molag Bal’s daedric quest with an optional good‑guy path, new fully voiced scenes, a custom follower reward, and alternative altar destruction mechanics
+- **Thieves' Night On the Town - CotN Dawnstar Patch** `1.0.8.0` modid=42069
+  - Overhauls radiant Thieves Guild quests with hold‑selectable jobs, concurrent tasks, fixed failure conditions, targets in all holds, compatible with stock locations and mods
+- **Thieves' Night On the Town** `1.0.8.0` modid=42069
+  - Overhauls radiant Thieves Guild quests with hold‑selectable jobs, concurrent tasks, fixed failure conditions, targets in all holds, compatible with stock locations and mods
+- **Thieves Guild Alternative Endings** `2.1.1.0` modid=114558
+  - Adds 4 new voice‑acted endings to the Thieves Guild questline with new story, rewards, boss fights, including defy Nocturnal, exploit key, exorcise key, refuse nightingale, modular install
+- **WWwW - Savos Aren's Regrets Patch** `1.0.1.0` modid=164328
+  - Allows access to Saarthal and Labyrinthian, their bosses, unique artifacts and word walls, without joining the College of Winterhold.
+- **Word Walls without Winterhold - Saarthal and Labyrinthian for Non-Mages** `1.0.1.0` modid=164328
+  - Allows access to Saarthal and Labyrinthian, their bosses, unique artifacts and word walls, without joining the College of Winterhold.
+- **GATE TO SOVNGARDE (GTS) - Small Mods and Resources - Ilas-Tei doesn't Evaporate** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - College of Winterhold Fee Tuition** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **OMEAR Addition - CoW Quest Expansion** `1.8.2.0` modid=67968
+  - Replaces frequent OnMagicEffectApply calls to reduce VM overstress; supports many scripts and optional fixes for popular mods.
+- **College of Winterhold - Quest Expansion - Easy Mode (Show Direct Quest Markers)** `1.16.0.0` modid=66666
+  - 7 new apprentice quests teaching each magic school – ALTERATION (Waterbreathing, Dwemer artifact), DESTRUCTION (Firebolt, kill enemy), ILLUSION (Fury, confuse skeevers), ENCHANTING (enchant weapon for client), CONJURATION (familiar summoning), RESTORATION (turn undead), KNOWLEDGE (analyze books); fully voiced, journal markers guide, compatible with most college mods.
+- **College of Winterhold - Quest Expansion** `1.16.0.0` modid=66666
+  - 7 new apprentice quests teaching each magic school – ALTERATION (Waterbreathing, Dwemer artifact), DESTRUCTION (Firebolt, kill enemy), ILLUSION (Fury, confuse skeevers), ENCHANTING (enchant weapon for client), CONJURATION (familiar summoning), RESTORATION (turn undead), KNOWLEDGE (analyze books); fully voiced, journal markers guide, compatible with most college mods.
+- **Misc. College of Winterhold Tweaks** `1.5.1.0` modid=22653
+  - Restores Augur lines, fixes light pillars, improves gate behavior, adds waiting option, corrects cadaver placement
+- **Vittorias Alternate Wedding Patches** `1.4.0.0` modid=72240
+  - Provides additional patches for the Vittorias Alternate Wedding mod.
+- **Vittorias Alternate Wedding** `1.3.3.0` modid=62466
+  - Allows the player to attend Vittoria’s wedding after destroying the Dark Brotherhood.
+- **Penitus Oculatus** `0.18.4.0` modid=21061
+  - Adds a Penitus Oculatus questline after the Dark Brotherhood quest, offering radiant missions, unique artifacts, and access to DB sanctuaries.
+- **Restoring the Aretino Residence SE** `1.1.0.0` modid=30447
+  - Restores and upgrades Aretino residence into a player home with multiple upgrade paths and voiced quest.
+- **Listen - Dark Brotherhood Radiant Quests** `1.0.1.0` modid=59659
+  - Adds radiant contracts from Night Mother with up to five quests per talk, 60 targets, configurable payment, and MCM customization
+- **Destroy The Dark Brotherhood - Quest Expansion** `f1.03` modid=118229
+  - Introduces new kidnapping mechanics and expands DB destruction quest with dialogue, choices, and memorable fights.
+- **The Innocence Lost - Quest Expansion** `1.11.0.0` modid=80974
+  - Introduces two distinct paths (hitman or arrest) to complete the Dark Brotherhood first quest, fully voiced with spliced lines, includes options to poison, push, pay bribe, arrest Grelod, new dialogue and easter eggs, locks DB joining unless paired with Destroy The Dark Brotherhood mod, provides markers and outcomes.
+- **HOUSE OF WARRIORS - Immersive Dialogue Expansion - Jorrvaskr (Companions)** `1.0.0.0` modid=173134
+  - Enhances Jorrvaskr with immersive dialogue, interactions, and banter for Companions
+- **At Your Own Pace - Companions** `3.0.4.0CP` modid=52704
+  - Overhauls questlines to provide breaks and role‑playing opportunities; slows progression; adds options to skip or delay quests; compatible with Alternate Start and other mods.
+- **CC Gallows Hall - Tweaks and Enhancements (GHTE) - CC Fishing Patch** `1.0.6.0` modid=163783
+  - Hardened entry via persuasion/pay Wuunferth; cryptic escape‑room quest; nerfed & renamed artifacts; new Bone Forge crafting (skeleton summons, Staff of Worms tiers with shock damage, stamina/magicka absorb, soul‑gem fill); portal to Soul Cairn; crafting recipes for stations; detailed artifact tier effects
+- **CC Gallows Hall - Tweaks and Enhancements (GHTE) - CC Necro Patch** `1.0.6.0` modid=163783
+  - Hardened entry via persuasion/pay Wuunferth; cryptic escape‑room quest; nerfed & renamed artifacts; new Bone Forge crafting (skeleton summons, Staff of Worms tiers with shock damage, stamina/magicka absorb, soul‑gem fill); portal to Soul Cairn; crafting recipes for stations; detailed artifact tier effects
+- **CC Gallows Hall - Tweaks and Enhancements (GHTE) - No Entry Reqs** `1.0.6.0` modid=163783
+  - Hardened entry via persuasion/pay Wuunferth; cryptic escape‑room quest; nerfed & renamed artifacts; new Bone Forge crafting (skeleton summons, Staff of Worms tiers with shock damage, stamina/magicka absorb, soul‑gem fill); portal to Soul Cairn; crafting recipes for stations; detailed artifact tier effects
+- **CC Gallows Hall - Tweaks and Enhancements (GHTE) - Sorcerer Patch** `1.0.6.0` modid=163783
+  - Hardened entry via persuasion/pay Wuunferth; cryptic escape‑room quest; nerfed & renamed artifacts; new Bone Forge crafting (skeleton summons, Staff of Worms tiers with shock damage, stamina/magicka absorb, soul‑gem fill); portal to Soul Cairn; crafting recipes for stations; detailed artifact tier effects
+- **CC Gallows Hall - Tweaks and Enhancements (GHTE) - Undeath Patch** `1.0.6.0` modid=163783
+  - Hardened entry via persuasion/pay Wuunferth; cryptic escape‑room quest; nerfed & renamed artifacts; new Bone Forge crafting (skeleton summons, Staff of Worms tiers with shock damage, stamina/magicka absorb, soul‑gem fill); portal to Soul Cairn; crafting recipes for stations; detailed artifact tier effects
+- **CC Gallows Hall - Tweaks and Enhancements (GHTE)** `1.0.6.0` modid=163783
+  - Hardened entry via persuasion/pay Wuunferth; cryptic escape‑room quest; nerfed & renamed artifacts; new Bone Forge crafting (skeleton summons, Staff of Worms tiers with shock damage, stamina/magicka absorb, soul‑gem fill); portal to Soul Cairn; crafting recipes for stations; detailed artifact tier effects
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - GTS - Anniversary Edition Full Upgrade Patch** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Stendarr's Chosen - Possible Site Expansion - Wyrmstooth** `2.0.0.0` modid=110617
+  - Places Stendarr's Hammer in world with level 15 requirement, random impact sites, drops in crater; requires divine worthiness; disables museum spawn
+- **Stendarr's Chosen - Possible Site Expansion - Beyond Skyrim Bruma** `2.0.0.0` modid=110617
+  - Places Stendarr's Hammer in world with level 15 requirement, random impact sites, drops in crater; requires divine worthiness; disables museum spawn
+- **Stendarr's Chosen - Disable Skyrim Sites** `2.0.0.0` modid=110617
+  - Places Stendarr's Hammer in world with level 15 requirement, random impact sites, drops in crater; requires divine worthiness; disables museum spawn
+- **Stendarr's Chosen - Stendarr's Hammer Reintegration** `2.0.0.0` modid=110617
+  - Places Stendarr's Hammer in world with level 15 requirement, random impact sites, drops in crater; requires divine worthiness; disables museum spawn
+- **Wearable Ayleid Wight Armor (The Cause CC - AE)** `1.0.0.0` modid=109330
+  - Adds wearable Ayleid Wight armor (light elven equivalent) craftable after completing The Cause, ESL‑flagged, with optional ESP for looting and using CC textures.
+- **SKYBLIVION Umbra - Tweaks and Fixes** `1.0.0.0` modid=105532
+  - Fixes unused cell, adjusts enchantment, corrects stats, adds missing tempering recipe.
+- **SKYBLIVION - Umbra CC ESL** `4.0.0.0` modid=98487
+  - Standalone/replacer for Creation Club Umbra weapon stand with new enchant animation and textures.
+- **GATE TO SOVNGARDE (GTS) - Small Mods and Resources - CC Plug-ins Universal Start Fix** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Creation Club Farming - Tweaks Enhancements and Quest Expansion - RS Children** `1.0.0.0` modid=69822
+  - Adds compatibility for Rin child from CC Farming with RS Children; install via Data folder or MO2; ANNIVERSARY EDITION upgrade; patch conflicts.
+- **Jewels of the Nords - Nordic Jewelry Reintegration - Bruma Patch** `1.0.1.0` modid=81500
+  - Adds Nordic-style jewelry to loot, crafting and keyword system; separates Nordic from other categories and enables crafting via console command Set MAKCircletCraftingEnabled to 0
+- **Jewels of the Nords - Nordic Jewelry Reintegration** `1.0.1.0` modid=81500
+  - Adds Nordic-style jewelry to loot, crafting and keyword system; separates Nordic from other categories and enables crafting via console command Set MAKCircletCraftingEnabled to 0
+- **Voiced Narrative - Bloodchill Manor (Creation Club)** `1.1.0.0` modid=107987
+  - Improves narrative of Guests for Dinner quest from Bloodchill Manor with new voiced dialogue generated by ElevenLabs.
+- **Extended Cut - Saints and Seducers - Mysticism Rebalance** `2.2.0.0` modid=81950
+  - Adept
+  - - Conjure Golden Saint Hunter (summons Golden Saint Hunter for 60s)
+  - - Conjure Dark Seducer Soldier (summons Dark Seducer Soldier for 60s)
+  - Expert
+  - - Conjure Golden Saint Champion (summons Golden Saint Champion for 60s)
+  - Master
+  - - Conjure Dark Seducer Assassin (summons Dark Seducer Assassin for 60s)
+  - - Conjure Staada (summons Staada for 60s)
+- **Skyrim Extended Cut - Saints and Seducers** `1.1.0.0` modid=72772
+  - Reimagines the Saints and Seducers quest with a fully voiced new adventure in the Shivering Isles, new dungeons, items, and multiple endings.
+- **CC Hendraheim - Tweaks and Enhancements - CC Fishing Patch** `2.1.5.0` modid=98688
+  - Removes alchemy lab & arcane enchanter, repurposes cellar as servant rooms, removes high‑level items, buffs Eydvina Shield‑Hearth, adds steward hire and 2nd/3rd floors for up to 15 followers, adds carpenter workbench for crafting stations, price adjustable via console, patches for fishing, necro, etc
+- **CC Hendraheim - Tweaks and Enhancements** `2.1.5.0` modid=98688
+  - Removes alchemy lab & arcane enchanter, repurposes cellar as servant rooms, removes high‑level items, buffs Eydvina Shield‑Hearth, adds steward hire and 2nd/3rd floors for up to 15 followers, adds carpenter workbench for crafting stations, price adjustable via console, patches for fishing, necro, etc
+- **The Cause - Mysticism Rebalance** `1.0.0.0` modid=82203
+  - Anniversary Edition upgrade for The Cause.
+- **FPS Boost for Quest Mods - The Cause** `1.1.0.0` modid=122050
+  - Provides occlusion plane patches for quest mods to improve FPS on low‑end systems; .ESL flagged; compatible with many mods; optional VR settings; safe to install mid‑game
+- **The Cause - Reduced Cut** `1.0.1.1` modid=66676
+  - Removes Cause questline, retains dungeons and adds dormant Oblivion gate to Shrine of Mehrunes Dagon, compatible with related mods.
+- **Necromantic Grimoire - Thaumaturgy Robes** `1.2.1.0` modid=78651
+  - Rebalances spells and enchantments of Necromantic Grimoire using Mysticism magic overhaul; marked as Anniversary Edition upgrade.
+- **Necromantic Grimoire - Mysticism Rebalance** `1.2.1.0` modid=78651
+  - Rebalances spells and enchantments of Necromantic Grimoire using Mysticism magic overhaul; marked as Anniversary Edition upgrade.
+- **Ghosts of the Tribunal Occlusion addon** `1.1.0.0` modid=122050
+  - Provides occlusion plane patches for quest mods to improve FPS on low‑end systems; .ESL flagged; compatible with many mods; optional VR settings; safe to install mid‑game
+- **Civil War Champions - Reduced Cut** `2.0.0.0` modid=94999
+  - Removes the Battle of Champions quest, granting champion sets before the final siege.
+- **CC Staves - Mysticism Consistency Patch** `1.7.0.0` modid=78659
+  - Provides variable visual styles for Mysticism staves using new unique models, integrates them into leveled lists, adjusts spell scaling, and removes nonsensical unique staves.
+- **CC Pets Addon - Spiders Spin Webs** `1.1.3.0` modid=83201
+  - Applies spider‑web trap to all spiders; paralyzes victim 5 s and weakens to fire; immunity 5 s; patches for Echatere SE and PPB Updated
+- **Ayleid Lich Crown - Cut Content Restored (Anniversary Edition - The Cause)** `1.0.0.0` modid=58398
+  - Implements the cut Ayleid Lich crown as a dropable wearable model adapted for all races; requires Anniversary Edition or The Cause.
+- **CC Arcane Archer - Tweaks and Enhancements - Bound Quiver Tweaks** `1.1.3.0` modid=95716
+  - Fixes Arcane Archer issues, adjusts arrow damage, crafting requirements, and enhances telekinesis arrow mechanics
+- **CC Arcane Archer - Tweaks and Enhancements** `1.1.3.0` modid=95716
+  - Fixes Arcane Archer issues, adjusts arrow damage, crafting requirements, and enhances telekinesis arrow mechanics
+- **Morihaus' Refuge - Lord's Mail Reintegration** `1.0.0.0` modid=68558
+  - Replaces Lord's Mail quest with new dungeon, boss fight to obtain the mail
+- **Knight of the North - Divine Crusader Reworked** `3.0.1.0` modid=45869
+  - Reworks Relics of the Crusader quest with an Honor ranking system (Peerless to Infamous) and Pilgrimage mechanic for relic usage
+- **Dawnguard - Tweaks and Enhancements - Serana Necro Dialogue** `0.2.0.0` modid=53364
+  - Expands Dawnguard and Vampire questlines with radiant progression, extra dialogue, and configurable siege scaling via globals.
+- **Thwack - Crossbow Collection Reworked** `3.0.0.0` modid=42653
+  - Overhauls crossbows, rewards new high‑level variants after final Ancient Technology quest, ties to The Night Hunter, integrates with Anniversary Edition, requires perks.
+- **AFDI - TG Alternative Endings Patch** `1.7.1.0` modid=114021
+  - Enables item destruction by dropping them into the Aetherium Forge lava.
+- **AFDI - Aetherium Forge Destroys Items** `1.7.1.0` modid=114021
+  - Enables item destruction by dropping them into the Aetherium Forge lava.
+- **Old Blood** `1.2.0.0` modid=89554
+  - Post‑Dawnguard expansion quest adding new story, characters, and factions; ~3+ hours of voiced dialogue; dark, morally grey path; exclusive to Volkihar.
+- **Varona Nelas Lives Longer - Reluctant Steward Delayed - Mysticism Patch** `1.1.0.0` modid=145593
+  - Delays Varona Nelas’s death until required favor quests are completed.
+- **Varona Nelas Lives Longer - Reluctant Steward Delayed** `1.1.0.0` modid=145593
+  - Delays Varona Nelas’s death until required favor quests are completed.
+- **Solstheim without Miraak - Timing is Everything Patch** `1.0.3.0` modid=145694
+  - Defers Miraak's influence on Solstheim until after Main Quest Dragon Rising, with staged corruption after each milestone; cultist attacks 5% chance after Level 25 and Dragonslayer; configurable via Timing is Everything; compatible with Standing Stones, sleepwalking, and related patches; edits scripts of DLC2MQ02, DLC2MQ07 and related NPCs
+- **Solstheim without Miraak - Pilgrim (Go to Bed) Patch** `1.0.3.0` modid=145694
+  - Defers Miraak's influence on Solstheim until after Main Quest Dragon Rising, with staged corruption after each milestone; cultist attacks 5% chance after Level 25 and Dragonslayer; configurable via Timing is Everything; compatible with Standing Stones, sleepwalking, and related patches; edits scripts of DLC2MQ02, DLC2MQ07 and related NPCs
+- **Solstheim without Miraak - Sensible Sleepwalking Patch** `1.0.3.0` modid=145694
+  - Defers Miraak's influence on Solstheim until after Main Quest Dragon Rising, with staged corruption after each milestone; cultist attacks 5% chance after Level 25 and Dragonslayer; configurable via Timing is Everything; compatible with Standing Stones, sleepwalking, and related patches; edits scripts of DLC2MQ02, DLC2MQ07 and related NPCs
+- **Solstheim without Miraak - Skyrim Landscape and Water Fixes Patch** `1.0.3.0` modid=145694
+  - Defers Miraak's influence on Solstheim until after Main Quest Dragon Rising, with staged corruption after each milestone; cultist attacks 5% chance after Level 25 and Dragonslayer; configurable via Timing is Everything; compatible with Standing Stones, sleepwalking, and related patches; edits scripts of DLC2MQ02, DLC2MQ07 and related NPCs
+- **Solstheim without Miraak - DLC2PillarBuilderActorScript Replacer** `1.0.3.0` modid=145694
+  - Defers Miraak's influence on Solstheim until after Main Quest Dragon Rising, with staged corruption after each milestone; cultist attacks 5% chance after Level 25 and Dragonslayer; configurable via Timing is Everything; compatible with Standing Stones, sleepwalking, and related patches; edits scripts of DLC2MQ02, DLC2MQ07 and related NPCs
+- **Solstheim without Miraak - Dragonborn DLC for Non-Dragonborn** `1.0.3.0` modid=145694
+  - Defers Miraak's influence on Solstheim until after Main Quest Dragon Rising, with staged corruption after each milestone; cultist attacks 5% chance after Level 25 and Dragonslayer; configurable via Timing is Everything; compatible with Standing Stones, sleepwalking, and related patches; edits scripts of DLC2MQ02, DLC2MQ07 and related NPCs
+- **Black Book Quest Tweaks** `1.0.0.0` modid=145689
+  - Renames Black Book quests, adds dedicated quests for Waking Dreams and Epistolary Acumen, and improves location naming and clearing
+- **Destroy the Acolyte Priests** `1.0.0.0` modid=145580
+  - Adds quest to locate and kill three Solstheim Dragon Priests (Ahzidal, Dukaan, Zahkriisos) before Miraak, triggered by a courier note.
+- **Cult of the True Dragonborn - Immersive Miraak Difficulty** `1.0.1.0` modid=83458
+  - Alduin gains massive buffs (−3500 health, 6 HP/s heal, 90% magic resistance) that are removed by killing named Dragon Priests
+  - - Morokei (Labyrinthian): 20% magic resistance
+  - - Nahkriin (Skuldafn): 500 health
+  - - Krosis (Shearpoint): 2 HP/s heal
+  - - Hevnoraak (Valthume): 2 HP/s heal
+  - - Otar the Mad (Ragnvald): 2 HP/s heal
+  - - Rahgot (Forelhost): 1500 health
+  - - Vokun (High Gate Ruins): 20% magic resistance
+  - - Volsung (Volskygge): 1500 health
+- **Severin Manor Has A price** `1.0.0.0` modid=62165
+  - Makes Severin Manor purchasable after Served Cold quest, instead of free
+- **GATE TO SOVNGARDE (GTS) - Small Mods and Resources - Delay Bleak Falls Barrow Voiced** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Call of Valor - Tweaks - DS reqs - PQE Patch** `1.1.6.0` modid=113754
+  - Call of Valor summons all 3 heroes; duration 120 s; buffed stats/outfits; optional Dragonsoul cost to unlock words; patches for USSEP and Stormcrown
+- **Paarthurnax - Quest Expansion** `1.12.0.0` modid=51711
+  - Fully voiced quest expansion that reimagines the Paarthurnax quest, giving both the Blades and Paarthurnax compelling reasons for their stances and presenting the Dragonborn with the final moral choice.
+- **Andrealphus' Harder Quests - Malborn Container Limiter** `1.2.9.0` modid=27939
+  - Increases quest objectives (e.g., 30 pamphlets, 40 nirnroot, 100k debt)
+  - Adds weight limits for Malborn containers
+  - Adjusts thaneship requirements, removes shortcuts
+  - ESL flagged
+- **Cult of the World Eater - Dragon Priests Buff Alduin SPID** `1.3.0.0` modid=83274
+  - Increases Alduin's stats with buffs removed by killing named Dragon Priests
+  - - Morokei (Labyrinthian): 20% magic resistance
+  - - Nahkriin (Skuldafn): 500 health
+  - - Krosis (Shearpoint): 2 HP/s heal
+  - - Hevnoraak (Valthume): 2 HP/s heal
+  - - Otar the Mad (Ragnvald): 2 HP/s heal
+  - - Rahgot (Forelhost): 1500 health
+  - - Vokun (High Gate Ruins): 20% magic resistance
+  - - Volsung (Volskygge): 1500 health
+  - Base magic resistance 50% plus 40% from priests = 90% total.
+- **Defeat the Dragon Cult** `1.0.0.0` modid=86625
+  - Adds quests to hunt and kill Dragon Priests before facing Alduin, complementing Cult of the True Dragonborn.
+- **Dungeon Quests are not Miscellaneous** `1.0.0.0` modid=123559
+  - Converts most miscellaneous dungeon quests into full side quests with journal entries for titles such as Angarvunde, Ansilvund, Blind Cliff Bastion, etc.
+- **Timing is Everything SE** `2.2.0.0` modid=25464
+  - Lets you delay or expedite quest starts (Dragonborn, Dawnguard, Hearthfire) and lower level requirements to begin quests earlier.
+- **GATE TO SOVNGARDE (GTS) - Small Mods and Resources - Alcoholic Lite Effects** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Skyrim on Skooma** `69.69.0.0c` modid=80975
+  - Transforms skooma into a drug with 69 trip scenarios, addiction mechanics, console‑customizable effects, and visual/audio variations.
+- **Dova Jump** `0.6.1.0` modid=125550
+  - Custom unisex jump animations for Dragonborn; under active development; animation variety may change.
+- **Jump Behavior Overhaul SE** `1.5.0.0` modid=36889
+  - Overhauls jumping with new animations, height‑based landing variations, motion adjustments, and Nemesis patches; script‑free
+- **Container Weight Restrictions** `4.1.0.0` modid=13826
+  - Adds weight limits to containers and displays current/max weight in the menu.
+- **Dapper Deliveries - A Courier Overhaul** `1.0.0.0` modid=64057
+  - Improves courier appearance and behavior, adding better clothing, gear, and realistic deliveries.
+- **Fancy Fishing - Minigame and Tweaks** `1.5.0.0` modid=89352
+  - Adds fishing config options and an optional Stardew‑style minigame with VR support, configurable via MCM, compatible with numerous fishing mods.
+- **Simple Fishing Overhaul - FLM Addon** `1.2.0.0` modid=104569
+  - Makes various ingredients usable as bait for Simple Fishing Overhaul via FormList Manipulator, without direct conflicts
+- **Campfire - Script Optimization - Go to bed Patch** `1.0.0.0` modid=149913
+  - Fixes Papyrus script errors; improves script handling; patch for Campfire Script Optimization - Go to bed Patch
+- **Rent a room for 12 hours** `1.0.0.0` modid=96135
+  - Minor tweak which changes the amount of hours you rent a room in an inn for 12 hours instead of 24.
+- **Journeyman - A Fast Travel Overhaul** `1.1.5.0` modid=92220
+  - Fast travel overhaul requiring crafted travel packs (1L,2LS,2FW,1T); integrates with Survival Mode and Gourmet; conflicts with Obsidian Weathers
+- **Civil War Overhaul - Redux** `1.1.1.0` modid=37906
+  - Rebuilds civil war questline with radiant missions, diverse enemy troops (spellcasters, archers, monsters), configurable siege outcomes and unique weapons via MCM; requires frequent saving and includes 'Get CWO Unstuck' option
+- **Serious Civil War Consequences for Jarl Balgruuf - Jarl Balgruuf Dilemma Extended** `1.2.0.0` modid=81554
+  - Extends Jarl Balgruuf Dilemma, allowing Balgruuf to join Imperials or Stormcloaks and adding Whiterun Defense quest and extra dialogue
+- **Serious Civil War Fort Commanders** `1.1.0.0` modid=81541
+  - Fort commanders wear officer armor, have double level, must be killed in fort sieges, and retain faction titles.
+- **Campfire - Reskin Skill Tree** `1.0.0.0` modid=160163
+  - Reskin of Campfire skill tree with journal‑style UI; credit to Chesko; install over original
+- **Igniting Animation for Campfire** `1.2.0.0` modid=83142
+  - Adds animated fire‑lighting interaction to campfires; flagged as ESL and updated to version 82
+- **Hearth Craft** `1.0.3.0` modid=6601
+  - Adds craftable placeable furniture, clutter, and buildings via Campfire framework
+  - Includes Rustic/Fine/Noble furniture, breakdown recipes, MCM toggle, integrates with Campfire and other mods.
+- **Campfire - Pilgrim Patch - Halved Version** `1.0.0.0` modid=57888
+  - Adjusts amulet backpack effects to mirror Pilgrim mod
+- **Campfire Camping Synergy** `1.1.0.0` modid=98872
+  - Patch enabling CC Camping Expansion integration; version 1 places unlit fire, version 2 adds Scroll/Staff Enchanter; optional fire‑out refund
+- **Campfire - Script Optimization** `1.0.0.0` modid=149913
+  - Fixes Papyrus script errors; improves script handling; patch for Campfire Script Optimization - Go to bed Patch
+- **Campfire and Frostfall - Unofficial SSE Update - Campfire only** `f1.02` modid=17925
+  - Restores MCM, Interface widgets; full functional Campfire & Frostfall; requires SKSE, PapyrusUtil; install overwrite
+- **Campfire - Use Straw for Tinder** `1.2.0.0` modid=101113
+  - Breaks straw bundles into tinder to light campfires; requires Campfire
+- **Campfire Cabin** `1.0.0.0` modid=13372
+  - Buildable cabin with see‑through windows/skylight; includes bed, table, containers, stove, alchemy workstation; can be moved
+- **Campfire - Complete Camping System** `1.12.1.0SEVR` modid=667
+  - Full survival camping with fire building, cooking, skill tree; no persistent scripts; skill gain bonuses; integrates with Frostfall; extensive crafting
+- **Dynamic Lowered Hoods** `1.0.0.0` modid=65964
+  - Enables hoods to be raised/lowered dynamically for player and NPCs using Dynamic Armor Variants, with optional hidden‑helmet add‑on via config mapping.
+- **Tales of Skyrim - Berserkyr Patch Collection** `1.8.0.0` modid=103318
+  - Patch collection for JPSteel's Berserkyr including Artificer,
+  - Fabled Forests,
+  - Gourmet,
+  - Manbeast,
+  - Pilgrim,
+  - Rare Curios (CC),
+  - SkyTEST,
+  - Survival Mode (CC),
+  - and other compatibility patches.
+- **Tales of Skyrim - Berserkyr - Book Covers Skyrim Add-on** `1.3.0.0` modid=103559
+  - Adds werebear transformation and perk tree with Bestial Resistance (25‑90% phys dmg reduction),
+  - Thick Skin (arrow/bolt immunity),
+  - Chilling Roar (frost stun),
+  - Ice Claws (freeze chance),
+  - Frenzied Warrior (axebuff),
+  - Sweet Tooth (disease cure),
+  - Bear Kinship (summon bear),
+  - Berserker Rage (triple dmg); new Berserker enemies, shamans, quests Curse of the Berserker/Berserksgangr, Bear Fur Helmet/Armor, absorption, silence, fear, etc.
+- **Tales of Skyrim - Berserkyr** `1.3.0.0` modid=103559
+  - Adds werebear transformation and perk tree with Bestial Resistance (25‑90% phys dmg reduction),
+  - Thick Skin (arrow/bolt immunity),
+  - Chilling Roar (frost stun),
+  - Ice Claws (freeze chance),
+  - Frenzied Warrior (axebuff),
+  - Sweet Tooth (disease cure),
+  - Bear Kinship (summon bear),
+  - Berserker Rage (triple dmg); new Berserker enemies, shamans, quests Curse of the Berserker/Berserksgangr, Bear Fur Helmet/Armor, absorption, silence, fear, etc.
+- **Werewolf Hunger** `2.3.1.0` modid=28209
+  - Adds werewolf hunger tracking with periodic notifications and four hunger levels (Sated, Restless, Ravenous, Famished) that modify HP, stamina, magicka regen and other stats, with bonuses linked to perks, totems, moon phase, and optional lesser beast form mechanics.
+- **Canis Hysteria - The Werewolf Disease** `1.0.7.0` modid=52397
+  - New contractible lycanthrope disease; morphs to lycanthropy if untreated; lore book; cure quest; recommend with More Werewolves mods
+- **Manbeast - A Werewolf Overhaul** `2.1.1.0` modid=44746
+  - Overhauls werewolf system, balances mechanics, adds new lycanthropic abilities
+- **Scion - A Vampire Overhaul** `2.2.2.0` modid=41639
+  - Complete overhaul of Skyrim's Vampire system, balancing mechanics and adding new vampiric abilities
+- **DVA - Dynamic Vampire Appearance** `1.3.0.0` modid=96817
+  - Visually alters vampire appearance based on blood hunger, with configurable effects via MCM.
+- **Vampire Feeding Tweaks** `1.13.0.0` modid=47225
+  - Adds three vampire feeding options — feed on kneeling, unaware, or recently killed enemies via Shift+Activate, restores HP, lightweight standalone mod
+- **Sun Affects NPC Vampires** `2.1.0.0` modid=47277
+  - Makes NPC vampires take sun damage (2HP/s) outdoors 6AM‑8PM not in shadows; configurable for player/NPCs/both, can exclude Serana or nullify with helmet; damage scales with vampirism stage
+- **Mundus - A Standing Stone Overhaul** `1.14.2.0` modid=33411
+  - Overhauls Standing Stones with balanced passive abilities, replaces powers, adds new stone effects
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - Teleport Only In Tamriel - Pilgrim** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Pilgrim - A Religion Overhaul** `1.2.2.0` modid=54099
+  - Adds many new deities with Restoration perks, shrine effects, prayer ability, priest vendors selling themed items, and standing stone bonuses.
+- **Sanctified Stolen Goods** `1.0.1.0` modid=128597
+  - Allows fences to clear stolen flag from items for a price
+- **Turn in Contraband** `1.2.0.0` modid=124767
+  - allows turning in drugs (skooma, moon sugar, etc.) to guards for gold rewards (100 gold for skooma, 50 for moon sugar, 200 for double-distilled skooma, redwater skooma, or sleeping tree sap); configure reward via console command set aaa_GoldReward to x; no MCM; simple dialogue option added
+- **Thugs Not Assassins** `1.1.1.0` modid=34028
+  - Prevents thugs from killing, adds conversation options (fight, surrender, bribe, persuade), may take gold/items instead, escape via stealth/persuasion, victim opinion worsens unless bribed/persuaded.
+- **Locked Chests Have Keys - Patches - 3DNPC** `f1.00` modid=74718
+  - ESL patches for Locked Chests Have Keys integrating with mods like Inigo, JK's Interiors, and others
+- **Locked Chests Have Keys - Patches - Inigo** `f1.00` modid=74718
+  - ESL patches for Locked Chests Have Keys integrating with mods like Inigo, JK's Interiors, and others
+- **Crime Bounty Decay SE - Bruma Compatibility** `1.1.0.0` modid=25457
+  - Bounties decay over time when away from a hold, configurable via MCM.
+- **Stealth Detection Fixes - Light** `2.2.0.0` modid=145336
+  - Fixes sleeping NPC detection, stealth kill detection radius, attack detection, sneak spell light, and killmove detection; configurable via MCM; requires SPID, MCM Helper, Papyrus Extender, Scrambled Bugs; generally compatible
+- **Stealth Detection Fixes** `2.2.0.0` modid=145336
+  - Fixes sleeping NPC detection, stealth kill detection radius, attack detection, sneak spell light, and killmove detection; configurable via MCM; requires SPID, MCM Helper, Papyrus Extender, Scrambled Bugs; generally compatible
+- **Take a Peek - New Stealth Mechanic - Simply Knock Mini Patch** `1.30.0.0` modid=66908
+  - Peek through keyholes to see behind doors, MCM configurable, Shift+E activation, NPC reactions, compatible with SKSE/DAR
+- **Take a Peek - New Stealth Mechanic** `1.30.0.0` modid=66908
+  - Peek through keyholes to see behind doors, MCM configurable, Shift+E activation, NPC reactions, compatible with SKSE/DAR
+- **Gourmet Patch Page - 3DNPC** `1.0.0.0` modid=97050
+  - Library of patches for Gourmet; includes patches for Beyond Skyrim, AI Overhaul, Rare Curios, and many other mods; soft requirements.
+- **Gourmet Patch Page - AI Overhaul** `1.0.0.0` modid=97050
+  - Library of patches for Gourmet; includes patches for Beyond Skyrim, AI Overhaul, Rare Curios, and many other mods; soft requirements.
+- **Gourmet Patch Page - Bruma** `1.0.0.0` modid=97050
+  - Library of patches for Gourmet; includes patches for Beyond Skyrim, AI Overhaul, Rare Curios, and many other mods; soft requirements.
+- **Gourmet - Eating Animations and Sounds Patch** `2.0.0.0` modid=98185
+  - Adds eating animations and sounds for all Gourmet foods; includes combo patches for Survival, Fishing, Bruma, Wyrmstooth, USSEP, etc.
+- **Gourmet Patch Page - Remiel** `1.0.0.0` modid=97050
+  - Library of patches for Gourmet; includes patches for Beyond Skyrim, AI Overhaul, Rare Curios, and many other mods; soft requirements.
+- **Gourmet Patch Page - Wyrmstooth** `1.0.0.0` modid=97050
+  - Library of patches for Gourmet; includes patches for Beyond Skyrim, AI Overhaul, Rare Curios, and many other mods; soft requirements.
+- **Gourmet Patch Page - Vigilant** `1.0.0.0` modid=97050
+  - Library of patches for Gourmet; includes patches for Beyond Skyrim, AI Overhaul, Rare Curios, and many other mods; soft requirements.
+- **Gourmet - A Cooking Overhaul - USSEP Patch** `1.1.12.0` modid=96876
+  - Complete cooking system overhaul; adds food distribution, new recipes, cookbooks, and buffs for health, stamina, magicka; integrates with Survival Mode; adds chef NPCs, new drinks, drugs, and modifies vendor inventories.
+- **Gourmet - A Cooking Overhaul - Survival Patch** `1.1.12.0` modid=96876
+  - Complete cooking system overhaul; adds food distribution, new recipes, cookbooks, and buffs for health, stamina, magicka; integrates with Survival Mode; adds chef NPCs, new drinks, drugs, and modifies vendor inventories.
+- **Gourmet - A Cooking Overhaul - Fishing Patch** `1.1.12.0` modid=96876
+  - Complete cooking system overhaul; adds food distribution, new recipes, cookbooks, and buffs for health, stamina, magicka; integrates with Survival Mode; adds chef NPCs, new drinks, drugs, and modifies vendor inventories.
+- **Gourmet - A Cooking Overhaul - Extended Cut Saints and Seducers Patch** `1.1.12.0` modid=96876
+  - Complete cooking system overhaul; adds food distribution, new recipes, cookbooks, and buffs for health, stamina, magicka; integrates with Survival Mode; adds chef NPCs, new drinks, drugs, and modifies vendor inventories.
+- **Gourmet - A Cooking Overhaul** `1.1.12.0` modid=96876
+  - Complete cooking system overhaul; adds food distribution, new recipes, cookbooks, and buffs for health, stamina, magicka; integrates with Survival Mode; adds chef NPCs, new drinks, drugs, and modifies vendor inventories.
+- **Alchemy Requires Bottles - Empty Potions at the Alchemy Lab - Show Empty Bottes in the Menu** `1.1.0.0` modid=137443
+  - Discard potions/poisons at Alchemy Lab to receive empty bottles
+  - ESL flagged
+- **Patch for Project AHO and Apothecary - An Alchemy Overhaul** `1.2.0.0` modid=52357
+  - Adjusts Project AHO potions to match Apothecary's effects and magnitudes, ensuring consistency with the alchemy overhaul.
+- **Addons for 'Alchemy Requires Bottles Redux' - Venom Requires Empty Bottles** `1.0.0.0` modid=45336
+  - Adds empty bottle model, optional integration for crafting, no permissions required, ESL‑flagged
+- **Addons for 'Alchemy Requires Bottles Redux' - Empty Bottle Patch** `1.0.0.0` modid=45336
+  - Adds empty bottle model, optional integration for crafting, no permissions required, ESL‑flagged
+- **Apothecary - An Alchemy Overhaul - CC Saints and Seducers Patch** `1.3.9.0` modid=52130
+  - Rebalances potions and poisons, standardizing magnitudes and adding new effects such as Fortify Health Regeneration; removes useless effects; adds utility potions (Invisibility, Waterwalking); requires Scrambled Bugs for poison resistance; compatible with Mysticism; adjusts durations and resistances.
+- **Apothecary - An Alchemy Overhaul - CC Rare Curios Patch** `1.3.9.0` modid=52130
+  - Rebalances potions and poisons, standardizing magnitudes and adding new effects such as Fortify Health Regeneration; removes useless effects; adds utility potions (Invisibility, Waterwalking); requires Scrambled Bugs for poison resistance; compatible with Mysticism; adjusts durations and resistances.
+- **Apothecary - An Alchemy Overhaul - CC Fishing Patch** `1.3.9.0` modid=52130
+  - Rebalances potions and poisons, standardizing magnitudes and adding new effects such as Fortify Health Regeneration; removes useless effects; adds utility potions (Invisibility, Waterwalking); requires Scrambled Bugs for poison resistance; compatible with Mysticism; adjusts durations and resistances.
+- **Apothecary - An Alchemy Overhaul - Bruma Patch** `1.3.9.0` modid=52130
+  - Rebalances potions and poisons, standardizing magnitudes and adding new effects such as Fortify Health Regeneration; removes useless effects; adds utility potions (Invisibility, Waterwalking); requires Scrambled Bugs for poison resistance; compatible with Mysticism; adjusts durations and resistances.
+- **Apothecary - An Alchemy Overhaul - Wyrmstooth Patch** `1.3.9.0` modid=52130
+  - Rebalances potions and poisons, standardizing magnitudes and adding new effects such as Fortify Health Regeneration; removes useless effects; adds utility potions (Invisibility, Waterwalking); requires Scrambled Bugs for poison resistance; compatible with Mysticism; adjusts durations and resistances.
+- **Alchemy recipe view mode - Show in UI** `1.0.2.0` modid=141094
+  - Overhauls Ancient Nord armors into gender-neutral heavy/light variants
+  - Adds Nord Hero sets, Stalhrim, Ebony, Hero counterparts
+  - Integrates with Skyforge, optional modules for Stalhrim/Ebony
+  - ESL flagged
+- **Alchemy recipe view mode SE** `1.0.1.0` modid=135485
+  - Special Edition port of recipe view mode
+  - Allows viewing effects of ingredients not carried
+  - Press backslash to toggle
+  - ESL flagged
+- **Alchemy Requires Bottles - Empty Potions at the Alchemy Lab** `1.1.0.0` modid=137443
+  - Discard potions/poisons at Alchemy Lab to receive empty bottles
+  - ESL flagged
+- **Seasonal Alchemy** `1.0.0.0` modid=63969
+  - Alchemy plants have seasonal cycles, dying in winter and reappearing in spring, summer, autumn
+- **Crafting Recipe Distributor** `4.1.0.0` modid=52276
+  - Auto‑generates smelting and tempering recipes for weapons, armor, and clutter via SKSE, requiring no manual patches.
+- **Alchemical Appraisal Services** `1.7.1.0` modid=107344
+  - Lets alchemists identify ingredient effects for gold, pricing per effect, requires SKSE, ESL‑flagged, works with new ingredients
+- **Recipe Auto-Learn** `1.1.1.0` modid=84909
+  - SKSE plugin that auto‑learns ingredient effects from recipes, corrects misspellings, works with all recipes, no lasting save changes.
+- **Alchemy Requires Bottles Redux** `1.0.1.0` modid=44053
+  - Require empty bottle to craft potions/poisons
+  - Purchase empty bottles from apothecaries, retrieve after use
+  - Supports Mortar and Pestle, ESL flagged
+- **Apothecary - An Alchemy Overhaul** `1.3.9.0` modid=52130
+  - Rebalances potions and poisons, standardizing magnitudes and adding new effects such as Fortify Health Regeneration; removes useless effects; adds utility potions (Invisibility, Waterwalking); requires Scrambled Bugs for poison resistance; compatible with Mysticism; adjusts durations and resistances.
+- **Alchemy Plus** `1.1.0.0` modid=80882
+  - Improves alchemy with dynamic models and better names
+  - Impurities subtract from cost, rounded effects to nearest 5
+  - UI hints hide combos when known
+  - ESL flagged
+- **Honed Thaumaturgy (FLM)** `1.1.0.0` modid=104295
+  - Patch enabling Honed Metal to use Thaumaturgy enchantments via FormList Manipulator; requires Honed Metal and Thaumaturgy; optional plugin for non‑FLM usage
+- **Mystical Materials** `1.1.0.0` modid=81808
+  - Adds mystical material properties that boost matching enchantments, with material categories and bonuses
+- **Enchantments Price Formula Fix - Fixed Formula** `1.0.2.0` modid=62144
+  - Fixes enchanting cost formula to be independent of skill level, offers fixed and reversed variants, improves price stability, compatible with enchantment mods.
+- **Thaumaturgy - Weapon Enchantment XP Tweak** `1.4.5.0` modid=57138
+  - Overhauls enchanting with new weapon effects (Fire Damage 30, Frost Damage 30, Shock Damage 30, Chaos Damage 50% chance, Magicka Damage 10/sec, Stamina Damage 10/sec, Absorb Health 30, etc.) and armor effects (Fortify Alteration Cost, Fortify Destruction Power, etc.), removes useless enchantments, balances power creep.
+- **Thaumaturgy - An Enchanting Overhaul** `1.4.5.0` modid=57138
+  - Overhauls enchanting with new weapon effects (Fire Damage 30, Frost Damage 30, Shock Damage 30, Chaos Damage 50% chance, Magicka Damage 10/sec, Stamina Damage 10/sec, Absorb Health 30, etc.) and armor effects (Fortify Alteration Cost, Fortify Destruction Power, etc.), removes useless enchantments, balances power creep.
+- **Rune Perk Fix - Adamant** `1.1.1.0` modid=83381
+  - Fixes rune placement perk bug by scripting iMaxPlayerRunes, works with Adamant/Ordinal, requires SKSE.
+- **Adamant - Bard Perks Addon - Pilgrim Integration** `5.9.2.0` modid=30191
+  - Overhauls all perk trees, balances skills, adds powerful new perks
+  - Requires Mysticism for magic perks
+  - Optional Hand to Hand addon adds Security and Hand to Hand tree
+  - Adds new perks across Alchemy, Alteration, Conjuration, etc.
+  - Integrates with Adamant's systems
+  - ESL flagged
+- **Adamant - Bard Perks Addon** `5.9.2.0` modid=30191
+  - Overhauls all perk trees, balances skills, adds powerful new perks
+  - Requires Mysticism for magic perks
+  - Optional Hand to Hand addon adds Security and Hand to Hand tree
+  - Adds new perks across Alchemy, Alteration, Conjuration, etc.
+  - Integrates with Adamant's systems
+  - ESL flagged
+- **Fearsome Fists - Hand to Hand Patch** `1.0.0.0` modid=62710
+  - Patch giving Brawler gloves base unarmed damage that scales with perk tree, enabling non‑beast races to match Khajit/Argonians in unarmed combat.
+- **Hand to Hand - An Adamant Addon - Trainers and Skill Books Addon** `1.5.8.0` modid=59790
+  - Addon for Adamant that merges Lockpicking & Pickpocketing into a Hand‑to‑Hand skill, adds a new perk tree, adjusts Light & Heavy Armor trees, adds Hand‑to‑Hand perks (Pugilist, Light Feet, Bracer, etc.), changes Alteration, Block, Heavy Armor, Light Armor mechanics, requires Address Library for SKSE, SPID, KID, Scrambled Bugs, and Hand‑to‑Hand Weapon Speed Scaling
+- **Hand to Hand - An Adamant Addon** `1.5.8.0` modid=59790
+  - Addon for Adamant that merges Lockpicking & Pickpocketing into a Hand‑to‑Hand skill, adds a new perk tree, adjusts Light & Heavy Armor trees, adds Hand‑to‑Hand perks (Pugilist, Light Feet, Bracer, etc.), changes Alteration, Block, Heavy Armor, Light Armor mechanics, requires Address Library for SKSE, SPID, KID, Scrambled Bugs, and Hand‑to‑Hand Weapon Speed Scaling
+- **Adamant - A Perk Overhaul - Simonrim Attack Speed Fix** `5.9.2.0` modid=30191
+  - Overhauls all perk trees, balances skills, adds powerful new perks
+  - Requires Mysticism for magic perks
+  - Optional Hand to Hand addon adds Security and Hand to Hand tree
+  - Adds new perks across Alchemy, Alteration, Conjuration, etc.
+  - Integrates with Adamant's systems
+  - ESL flagged
+- **Adamant - A Perk Overhaul** `5.9.2.0` modid=30191
+  - Overhauls all perk trees, balances skills, adds powerful new perks
+  - Requires Mysticism for magic perks
+  - Optional Hand to Hand addon adds Security and Hand to Hand tree
+  - Adds new perks across Alchemy, Alteration, Conjuration, etc.
+  - Integrates with Adamant's systems
+  - ESL flagged
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - Meditation Stone - Stormcrown Overhaul** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Stormcrown - Capstone Perk Consistency** `1.0.0.0` modid=148487
+  - Swaps capstone perk positions in Stormcrown for consistency with branch perks
+- **Stormcrown - Wyrmstooth - Original Phantom Form** `1.0.0.0` modid=104701
+  - Patches Dragon Aspect Overhaul with Wyrmstooth's Phantom Form, adds fall‑damage negation via meditation; base effects take priority, Black Book Epistolary Acumen benefits stack, fixes oddities
+- **Stormcrown - Dragon Aspect Overhaul** `1.0.0.0` modid=104701
+  - Patches Dragon Aspect Overhaul with Wyrmstooth's Phantom Form, adds fall‑damage negation via meditation; base effects take priority, Black Book Epistolary Acumen benefits stack, fixes oddities
+- **Call of Valor - Tweaks - Stormcrown Patch** `1.1.6.0` modid=113754
+  - Call of Valor summons all 3 heroes; duration 120 s; buffed stats/outfits; optional Dragonsoul cost to unlock words; patches for USSEP and Stormcrown
+- **Stormcrown - A Shout Overhaul** `1.1.17.0` modid=90659
+  - Adds new Shouts Lightning Breath and Poison Breath, expands Dragonborn perk tree with Meditate, Dragon of the North, Sky Above, Voice Within, Deep Breath, etc., adds perks like Dragonborn (2/2), Dragon Aspect, etc.; requires Address Library and Custom Skills Framework; must start before Paarthurnax meditation
+- **Call of Valor - Tweaks - USSEP Patch** `1.1.6.0` modid=113754
+  - Call of Valor summons all 3 heroes; duration 120 s; buffed stats/outfits; optional Dragonsoul cost to unlock words; patches for USSEP and Stormcrown
+- **Call of Valor - Tweaks - Alduin's Bane Fix Patch** `1.1.6.0` modid=113754
+  - Call of Valor summons all 3 heroes; duration 120 s; buffed stats/outfits; optional Dragonsoul cost to unlock words; patches for USSEP and Stormcrown
+- **Call of Valor Tweaks** `1.1.6.0` modid=113754
+  - Call of Valor summons all 3 heroes; duration 120 s; buffed stats/outfits; optional Dragonsoul cost to unlock words; patches for USSEP and Stormcrown
+- **Dragon Aspect Overhaul** `2.0.0.0` modid=29941
+  - Features
+  - - Removed the sound that plays when Dragon Aspect is active
+  - - Removed the chance to summon an Ancient Dragonborn
+  - - A tail grows on your character when the 3rd word is used
+  - - Overall buff to the shout
+  - - If SPID installed, Miraak benefits from all changes
+  - - Vanilla: cooldown 5 5 5s, once/day, duration 10m
+  - - Shout: cooldown 60 120 360s, unlimited uses, duration 5m
+  - - Dragon Aspect: 300-600s, Power attacks 25-50-75% stronger, physical attacks 20-35-50% more damage, Alteration/Conjuration/Illusion spells 20-35-50% longer, Destruction spells 20-35-50% more damage, Restoration cost 20-35-50% less, Health/Magicka/Stamina regen 25-50-100%, incoming physical damage -25-50%, Magic Resistance +20-35%, Shout cooldown -25%
+- **Custom Shout Cooldown Notifications** `0.9.0.0` modid=50870
+  - Adds customizable visual, audio, or haptic notifications for shout cooldowns via MCM.
+- **Male Argonian Shouts - Revoiced** `2.0.0.0` modid=44124
+  - Revoices male Argonian shouts to sound gruffer and more authentic to Argonians
+- **YASTM - Yet Another Soul Trap Manager** `3.0.0.0` modid=56144
+  - Advanced SKSE‑based soul trap manager offering displacement, relocation, shrinking, splitting, redirection, leveling, and configurable behavior for soul gems.
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - Teleport Only In Tamriel - Mysticism and Sorcerer** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Subtler Illusions for Mysticism** `1.0.0.0a` modid=127152
+  - Makes selected illusion spells hitscan, removes collision physics and glow; affects Calm, Command, Fear, Frenzy, Paralyze, Silence; compatible with Mysticism; requires SkyUI
+- **Immersive Spell Learning - DESTified** `1.4.5.0` modid=45514
+  - Study spell tomes via selectable time prompt, retain progress across copies, only one spell at a time, affected by spell level, skill, mental aptitude, location bonuses; induces fatigue with Survival Mode or SunHelm, MCM supported.
+- **Elemental Weathers LITE** `1.1.0.0` modid=76435
+  - Simplified weather effects that modify magic resistances during rain or snow, script‑free, ESL‑flagged, no world edits.
+- **Simonrim I4 Addons - Mysticism** `1.0.0.0` modid=87608
+  - Adds I4 support for various Simonrim mods
+- **Mysticism - A Magic Overhaul - Survival Spells Add-on** `2.4.2.0` modid=27839
+  - Overhauls magic system, adds new spells across schools, fixes bugs, expands spell list
+- **Mysticism - A Magic Overhaul** `2.4.2.0` modid=27839
+  - Overhauls magic system, adds new spells across schools, fixes bugs, expands spell list
+- **Immersive Rejections** `1.13.0.0` modid=67930
+  - Fully voiced rejection dialogues for marriage proposals (~100 lines, 50 voice types) triggered for NPCs wearing an Amulet of Mara and who have spoken to Maramal; does not alter vanilla marriage or gameplay.
+- **Trade and Barter - Patches** `1.1.0.0` modid=23220
+  - Provides compatibility patches for Trade and Barter with mods such as Beyond Skyrim, YASH, and Keld‑Nar.
+- **Trade and Barter** `2.1.0.0` modid=23081
+  - Adds extensive customization to merchant pricing, gold, inventory respawn, and relationship‑based discounts via an MCM menu.
+- **Elven Supremacy - Currency Swapper for Thalmor** `1.0.3.0` modid=129717
+  - Introduces Thalmor currency sancar, replaces septims in Thalmor areas, integrates with C.O.I.N. exchange, fully functional.
+- **Morrowind Mint - Currency Swapper for Solstheim** `1.0.10.0` modid=129387
+  - Adds dram currency system, exchange with NPC, adjusts prices for realism
+- **C.O.I.N. - Treasury Exchange** `1.0.2.0` modid=131682
+  - Introduces a voiced NPC in Markarth’s Treasury to trade ancient coins for gold
+- **C.O.I.N. - Coins of Interesting Natures** `3.2.1.0` modid=51439
+  - Adds distinct ancient coins with varied values and lower worth, reshaping Skyrim’s economy to be more challenging
+- **Garbage Loot - Barrels and Sacks - CC Survival Patch** `4.0.0.0` modid=18047
+  - Updated version with FOMOD options and patches; conflicts as intended; includes patches for various mods; updated notes.
+- **Garbage Loot - Barrels and Sacks** `4.0.0.0` modid=18047
+  - Updated version with FOMOD options and patches; conflicts as intended; includes patches for various mods; updated notes.
+- **Open World Loot - Encounter Zone and Loot Overhaul - Reforging - For the Masses Patch** `1.3.5.0` modid=49681
+  - Overhauls loot and encounter zones for progression‑based loot; balanced tiered weapons/armor; no world deleveling; easy integration for modded gear.
+- **Open World Loot - Encounter Zone and Loot Overhaul - Faction Crossbows Patch** `1.3.5.0` modid=49681
+  - Overhauls loot and encounter zones for progression‑based loot; balanced tiered weapons/armor; no world deleveling; easy integration for modded gear.
+- **Open World Loot - Encounter Zone and Loot Overhaul - Common Clothes and Armors** `1.3.5.0` modid=49681
+  - Overhauls loot and encounter zones for progression‑based loot; balanced tiered weapons/armor; no world deleveling; easy integration for modded gear.
+- **Open World Loot - Encounter Zone and Loot Overhaul - Armor Variants Expansion Patch** `1.3.5.0` modid=49681
+  - Overhauls loot and encounter zones for progression‑based loot; balanced tiered weapons/armor; no world deleveling; easy integration for modded gear.
+- **Open World Loot patches for various small armor mods - Nordic Leather Armor** `1.0.0.0` modid=81050
+  - Integrates various armor mods (Mercenary Light Armor, Black Bear Ancient Nord Armor, Nord Vagabond Armor, Nord Raven Battle Armor, Nord Tribal Armor, Nordic Carved Light Armor, Nordic Leather Armor, Dwarven Lite Armor, Eastern Dwemer Armor, Dwemer Armor SE) into Open World Loot's leveled list, appearing in hide, nordic, leather, scaled, and Dwarven categories; requires leveled‑list patch.
+- **Open World Loot patches for various small armor mods - Nord Vagabond Armor** `1.0.0.0` modid=81050
+  - Integrates various armor mods (Mercenary Light Armor, Black Bear Ancient Nord Armor, Nord Vagabond Armor, Nord Raven Battle Armor, Nord Tribal Armor, Nordic Carved Light Armor, Nordic Leather Armor, Dwarven Lite Armor, Eastern Dwemer Armor, Dwemer Armor SE) into Open World Loot's leveled list, appearing in hide, nordic, leather, scaled, and Dwarven categories; requires leveled‑list patch.
+- **Open World Loot patches for various small armor mods - Nord Raven Battlemage Armor** `1.0.0.0` modid=81050
+  - Integrates various armor mods (Mercenary Light Armor, Black Bear Ancient Nord Armor, Nord Vagabond Armor, Nord Raven Battle Armor, Nord Tribal Armor, Nordic Carved Light Armor, Nordic Leather Armor, Dwarven Lite Armor, Eastern Dwemer Armor, Dwemer Armor SE) into Open World Loot's leveled list, appearing in hide, nordic, leather, scaled, and Dwarven categories; requires leveled‑list patch.
+- **Open World Loot patches for various small armor mods - Eastern Dwemer Armor** `1.0.0.0` modid=81050
+  - Integrates various armor mods (Mercenary Light Armor, Black Bear Ancient Nord Armor, Nord Vagabond Armor, Nord Raven Battle Armor, Nord Tribal Armor, Nordic Carved Light Armor, Nordic Leather Armor, Dwarven Lite Armor, Eastern Dwemer Armor, Dwemer Armor SE) into Open World Loot's leveled list, appearing in hide, nordic, leather, scaled, and Dwarven categories; requires leveled‑list patch.
+- **Open World Loot patches for various small armor mods - Dwemer Armor SE** `1.0.0.0` modid=81050
+  - Integrates various armor mods (Mercenary Light Armor, Black Bear Ancient Nord Armor, Nord Vagabond Armor, Nord Raven Battle Armor, Nord Tribal Armor, Nordic Carved Light Armor, Nordic Leather Armor, Dwarven Lite Armor, Eastern Dwemer Armor, Dwemer Armor SE) into Open World Loot's leveled list, appearing in hide, nordic, leather, scaled, and Dwarven categories; requires leveled‑list patch.
+- **Open World Loot - Encounter Zone and Loot Overhaul - Randomized Special Loot** `1.3.5.0` modid=49681
+  - Overhauls loot and encounter zones for progression‑based loot; balanced tiered weapons/armor; no world deleveling; easy integration for modded gear.
+- **Open World Loot - Various Patches - NordwarUA Variants** `1.2.0.0` modid=50057
+  - Patches various mods to align with Open World Loot logic; compiled by JaySerpa.
+- **Open World Loot - Encounter Zone and Loot Overhaul** `1.3.5.0` modid=49681
+  - Overhauls loot and encounter zones for progression‑based loot; balanced tiered weapons/armor; no world deleveling; easy integration for modded gear.
+- **Encounter Zones Unlocked SE** `1.5.4.0` modid=19608
+  - Prevents Skyrim from freezing encounter zone levels upon first visit.
+- **Locational Encounter Zones** `1.0.2.0` modid=85212
+  - SKSE plugin that makes exterior enemies scale to interior level by assigning encounter zones; patches actor references
+- **Immersive World Encounters SE** `3.6.1.0` modid=18330
+  - Adds ~100 random wilderness and settlement encounters with new voiced NPCs and quests, diversifies exploration, modifies vanilla events, includes faction‑specific encounters and new follower.
+- **GATE TO SOVNGARDE (GTS) - Small Mods and Resources - Sleeping Heals Diseases** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Next-Gen Decapitations** `1.4.3.0` modid=135254
+  - Fixes decapitation crashes, adds helmet ejection, spin effects, configurable via .ini; fully configurable, works with SE/AE/VR; requires SKSE, Address Library; fully compatible.
+- **Dismembering Framework - Official Humanoid Asset Pack** `1.0.1.0` modid=126327
+  - Allows dismemberment of all humanoid races; covers many armors; install to Data folder, activate .esp.
+- **Dismembering Framework - Official Creature Asset Pack** `1.0.2.0` modid=126328
+  - Enables creature dismemberment for Draugr, Falmer, Troll, Wolf; extends to all creatures; install to Data folder, activate .esp.
+- **Dismembering Framework** `1.2.2.0` modid=126203
+  - Real-time dismemberment system with adaptive blood and sound based on armor/weapon, engine-level integration, extensive MCM customization.
+- **Non-Exploitable Crossbow Reloading SE** `1.3.0.0.SE` modid=29869
+  - Adds manual crossbow reloading without SKSE; optional stamina drain based on weight and skill; compatible with Requiem; prevents auto‑reload exploits.
+- **Sanguine Symphony** `1.2.1.0` modid=148388
+  - Overhauls combat with visceral visual effects, adaptive blood splatters, decals, HD wound textures, custom sounds, slow-motion kills, hit impulses, physics tweaks, body mass adjustments, configurable via MCM
+- **Shield debuff Half effect** `2.0.0.0` modid=47285
+  - Sets a weak point on shields to increase effectiveness of one‑handed weapons without a shield
+- **Parrying RPG** `2.0.1.0` modid=81356
+  - Reimplementation of Parrying -- Weapons Bounce on Impact with RPG mechanics that let stronger characters or power attacks break parries; configurable via .ini; compatible with Precision.
+- **Precision - Attack Collision Fixes** `1.13.0.0` modid=177313
+  - Fixes dual‑wield and unarmed combo hit count and unarmed attack timing issues in Precision.
+- **Precision Creatures** `2.4.0.0` modid=74887
+  - Extends Precision hitboxes and pitch adjustments to werewolves, vampires, and draugr for better combat responsiveness.
+- **Precision** `2.0.4.0` modid=72347
+  - Adds physically accurate melee collision detection, trails, hitstop, and configurable combat mechanics.
+- **Blade and Blunt - A Combat Overhaul** `3.8.3.0` modid=34549
+  - Overhauls combat difficulty with active resource management
+  - - Base regen: Health 1%, Magicka 3%, Stamina 5%
+  - - Combat regen: Health 0.5%, Magicka 1.5%, Stamina 2.5%
+  - - No stamina regen while attacking/blocking/casting; bow aims drain stamina, crossbow halts regen
+  - - Power‑attack stamina costs: Hand 40, Dagger 40, One‑hand 50, Two‑hand 75, Dual‑wield 125 (25% off‑hand reduction)
+  - - Ranged stamina: Bow 5 stamina/s, Crossbow 15 stamina
+  - - Bash costs: Bash 40, Power Bash 60
+  - - Exhausted stamina: 25% slower attack/block, 25% less damage, 50% larger stagger, no regen for 3 s
+  - - Movement stamina: Sprint +1 stamina per light armor piece (max 12) and +2 per heavy (max 16) in combat, Jump +1/2 per armor, Swim +0.5/1 per armor, Sneak +0.5/1 per armor plus 50% less effective sneaking & sneak dmg when exhausted
+  - - Attacks of opportunity: +50% dmg & stagger on enemies power‑attacking/drawing bow/casting, ignore stagger cooldown, ward spells protect
+  - - Stagger: +50% dmg to staggered, +50% dmg taken when staggered
+  - - Compatibility via Address Library, Spell Perk Item Distributor, Scrambled Bugs, Dual Casting Fix
+  - Boats - Operational Animated Travel: Adds animated boats that move on water routes with ferry support
+  - - Covers major docks and ferry routes: Solitude Docks, Icewater Jetty ↔ Volkihar, Septimus Signus Outpost → Winterhold, Guardian Stones → Lady Stone, Dawnguard ferries
+  - - Compatibility patches for Great City of Solitude SSE, Winterhold, Redbag's Solitude, Great City of Winterhold, COTN Morthal, COTN Dawnstar, etc.
+  - - Uses vanilla meshes (x Vanilla) and optional misc patches
+  - - Requires Address Library for SKSE; compatible with many city overhaul mods
+  - Boethiah's Calling - Alternate Questline: Fully voiced alternate questline (70+ lines) to obtain Ebony Mail
+  - - Starts with Dark Elf Rudin Filaro at Braidwood Inn in Kynesgrove, masquerading as Mara priest, leads to sacrifice ritual
+  - - Player survives, tracks clues, deals with traps, hunts deceiver, obtains revenge
+  - - Version 2.0 adds voiced encounter where Mia hunts player if Ebony Mail detected and murder count <5
+  - - Consequence based on murder count; compatible with Requiem and Great Village of Kynesgrove patch; no quest‑spoiler content; patch disables “Start quest at any level” option
+  - Book Covers Skyrim SE - Desaturated: Retextures all readable books, journals, and notes with unique covers
+  - - Offers Original or Desaturated textures; optional language packs: English, French, German, Italian, Polish, Russian, Spanish
+  - - Installed via BAIN/FOMOD, Wrye Bash, NMM, or manual copy to Skyrim/Data; LOOT‑registered for correct load order
+  - - Known issues: Weightless Books compatibility; source files released for non‑English texture creation with credit required
+  - Bound Daedric Armor: Adds Bound Armor and Bound Armor – Other spells to summon Daedric armor (60 s) and armor for allies; unique transparent blue‑flame visual
+  - - Crafted via Atronach Forge using Human Flesh and Filled Black Soul Gem; 5% chance NPCs use spell
+  - - Lightweight scripts, no vanilla modifications, maximum compatibility; can be crafted at College of Winterhold; Xbox version includes tutorial video; fully compatible with most mods
+- **True Directional Movement - Modernized Third Person Gameplay** `2.2.6.0` modid=51614
+  - Move and attack in any direction while in third-person perspective
+  - Vanilla-style movement mode also available
+  - Target lock tailored for directional movement with multiple target points
+  - MCM configurable features including rotation multipliers, camera speed, aim support for projectiles/spells, mount support and directional camera adjustments
+- **MFA Vampire Lord Update SE** `1.0.0.0` modid=68245
+  - Updates Vampire Lord headparts using Monster Facial Animation improvements
+- **Monster Facial Animation (MFA) - Monster Lipsync Vanilla** `2.8.0.0b` modid=22878
+  - Adds facial animation and lip sync to werewolves, werebears, vampire lords
+- **Draugr Spear Animation (AMR)** `1.3.0.0` modid=72794
+  - Adds spear combat animations for Draugr with keyword support for Heavy Armory and similar mods; requires Animation Motion Revolution, etc.
+- **Draugr One-handed Attack Animation** `1.3.0.0` modid=74685
+  - Provides new attack animations, Precision Creatures and Vanilla versions; includes YouTube previews.
+- **Draugr Greatsword Animation** `1.1.0.0` modid=114721
+  - Adds 7 attack animation; compatible with Precision Creatures; includes video previews.
+- **Comprehensive First Person Animation Overhaul - CFPAO** `1.0.4.0` modid=87169
+  - Adds thousands of first‑person weapon‑specific animations replacing vanilla, requires DAR or OAR, install via FOMOD or manual mesh copy, no Nemesis/FNIS needed.
+- **First Person Interactions** `1.7.6.0` modid=123129
+  - Adds context‑aware first‑person animations for greetings, pickpocketing, lockpicking, harvesting, looting, etc.; requires OAR and animation replacer; configurable via MCM; includes many actions
+- **BadAss Get-Up Animation - Combat Only Version** `1.0.0.0` modid=54368
+  - Replaces vanilla get‑up animations with faster, combat‑oriented variants that include a hitframe, providing a more immediate and interactive recovery in combat
+- **Feral - Go for the Throat SSE v2.0** `2.0.0.0` modid=34552
+  - Overview:
+  - - Restores unarmed attack animations for beast races, vampires, werewolves using Open Animation Replacer
+  - - Includes optional cosmetic claws that can be crafted, tempered, enchanted, no skill advancement
+  - - Affected: beast races, vampires, werewolves, claw weapon users
+  - - No conflicts, distributed via SPID/KID
+- **Artifact Animation Replacer - Wabbajack** `0.9.0.0` modid=34197
+  - Adds custom idle and casting animations to Wabbajack via Dynamic Animation Replacer; requires YY animation replacer for movement; compatible with Mystic Knight.
+- **Goetia Animations - Magic Spell Casting** `1.4.0.0` modid=70204
+  - Overhauls 3rd‑person spell casting with 110 hand‑crafted animations; works for all spell categories and spellblade/hybrid builds; requires DAR.
+- **Conditional Expressions - Subtle Face Animations** `1.29.0.0` modid=45148
+  - Adds subtle condition‑based face animations (idle, eating, sneaking, swimming, hurt, combat, drunk, high, embarrassed, cold) configurable via MCM; requires SKSE, MFG Fix, Address Library; lightweight and compatible with animation mods
+- **Simple Diving System (SDS) - Dive Into Water Animations and Modder Resource** `1.0.3.0-NoAnims` modid=154534
+  - Adds diving state detection and animations for player, includes modder resource for animation replacers
+- **Goetia Animations - Conditional Shouts** `1.2.0.0` modid=76388
+  - Adds conditional shout animations that vary by shout effect; works with vanilla and mod shouts (Thunderchild, Keysmash2c); requires Dynamic Animation Replacer (DAR) version matching SE/AE; includes separate packs for PC and NPC, optional momentum Whirlwind Sprint for PC only; provides female/male animation packs.
+- **EVG Conditional Idles** `1.42.0.0` modid=34006
+  - Adds idle animations for player/NPCs under conditions (cold, shield cover, modesty, etc.), zero gameplay changes, uses SKSE and OAR, toggle via MCM.
+- **EVG CLAMBER - Slope Animations** `1.0.0.0` modid=114753
+  - Adds slope traversal animations (run, walk, duck, etc.) with configurable MCM options, angle detection via OAR, supports extreme accuracy mode, works with navmesh.
+- **Assorted Animation Fixes** `f1.02` modid=93271
+  - Fixes minor vanilla animation issues like jarring loops and compression artifacts; optional OAR/DAR support; compatible with other replacers.
+- **Eating Animations - Fishing Patch** `1.1.0.0` modid=63309
+  - Patch adding eating animations and sound effects for all fish items from Creation Club Fishing mod, includes various food animations, compatible with Survival Mode.
+- **Eating Animations - Patch Collection** `2.10.0.0` modid=63741
+  - Collection of compatibility patches for Eating Animations with many food‑adding mods, requires AnimObjectSwapper, provides food‑specific animations for numerous items.
+- **Eating Animations and Sounds SE** `1.9.4.0` modid=42602
+  - Adds exclusive eating animations and sound effects for all vanilla SE foods, 98+25 animations, supports seated/moving/combat, integrates with KID and AnimObjectSwapper.
+- **Skill Based Dynamic Animations** `1.12.0.0` modid=99842
+  - Adds skill‑based animations for player and NPCs in magic, archery, and sneaking, with race‑specific variations and dynamic stamina integration.
+- **EVG Conditional Idles - Wade in Water Animations (beta)** `1.42.0.0` modid=34006
+  - Adds idle animations for player/NPCs under conditions (cold, shield cover, modesty, etc.), zero gameplay changes, uses SKSE and OAR, toggle via MCM.
+- **Dynamic Crafting Animations** `1.2.2.0` modid=116422
+  - Adds new crafting animations for grindstones, workbenches, and enchanters using SkyUI, Open Animation Replacer, and Immersive Equipment Displays.
+- **Animation Motion Revolution** `1.5.3.0` modid=50258
+  - Removes mismatch between displacement and custom animations; enables true unique movements per weapon, enemy, or creature; uses animation annotations (e.g., [time] animmotion [x] [y] [z]) to inject displacement; supports rotation annotations; works with behaviors having bAllowRotation or bAnimationDriven; requires Moder Combat Overhaul for full potential; annotation format similar to Bethesda's animationdatasinglefile.txt; see example with numOriginalFrames, duration, etc.
+- **Open Animation Replacer** `3.0.0.0` modid=92109
+  - SKSE framework to replace animations based on configurable conditions; backward compatible, extensible, supports SE/AE/VR, in‑game editor.
+- **Ingredients Restore Hunger** `1.0.2.0` modid=146361
+  - Eating ingredients restores hunger—high (40), medium (20), low (10); vanilla‑compatible; works with Survival Mode Improved and includes CACO ingredients.
+- **Waterskin - Stay Hydrated In Tamriel - Gourmet Compatibility** `1.0.0.0` modid=110895
+  - Adds craftable waterskins that can be filled in water, restore a small hunger amount, grant a 12‑minute Hydrated buff that boosts food effects by 20 %, with optional integrations.
+- **Waterskin - Stay Hydrated In Tamriel** `1.0.0.0` modid=110895
+  - Adds craftable waterskins that can be filled in water, restore a small hunger amount, grant a 12‑minute Hydrated buff that boosts food effects by 20 %, with optional integrations.
+- **Survival Mode Improved - SKSE** `1.6.0.0` modid=78244
+  - Provides C++ implementation of Survival Mode Improved with faster needs updates, configurable via ini (e.g., bAutoEnableSMOnNewGame), compatible with patches like Campfire, Campsite, Wyrmstooth, etc., requires Address Library, SKSE64, and CC Survival Mode
+- **Poisonous Bear Traps** `1.0.0.0` modid=120964
+  - Allows applying potions or poisons to bear traps (max 10), compatible with trap‑related mods.
+- **Simple Hunting Overhaul - Bruma Patch** `1.16.0.0` modid=95943
+  - What it is:
+  - - Inspired by RDR2, focuses on immersion and lightweight hunting
+  - - Lets you loot carcasses with Shift+E and sell them to shops
+  - - NPCs react with voiced greetings and may question poaching
+  - - Configurable time‑pass and fade effects via console commands
+- **Immersive Hunting Animations** `2.3.1.0` modid=96961
+  - Adds skinning, harvest, butcher, retrieve arrow, pick‑up animations for animal looting, requires Open Animation Replacer and SkyUI, optional IED and Papyrus Extender, works with carcass types and conditional triggers
+- **Simple Hunting Overhaul** `1.16.0.0` modid=95943
+  - What it is:
+  - - Inspired by RDR2, focuses on immersion and lightweight hunting
+  - - Lets you loot carcasses with Shift+E and sell them to shops
+  - - NPCs react with voiced greetings and may question poaching
+  - - Configurable time‑pass and fade effects via console commands
+- **Useful Dogs** `1.0.0.0` modid=1666
+  - Allows giving commands to dogs, wolves, and similar companions to fetch items, food, etc.
+- **Dynamic Mercenary Fees** `2.0.0.0` modid=45677
+  - Adjusts mercenary prices based on speechcraft, reputation, race, etc.; starts at 2000 gold with up to 50 % discount; formula provided.
+- **GATE TO SOVNGARDE (GTS) - Small Mods and Resources - Administer Potions to NPCs - Follower Dialogue** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Administer Potions and Poisons to Friendly NPCs** `3.4.0.0` modid=24127
+  - Adds power to give potions/poisons to NPCs for buffing or poisoning, requires Papyrus Extender, works mid‑game, console tweaks available
+- **Show Follower Carry Weight** `0.1.0.0` modid=99878
+  - Displays follower's current carry weight in the trading menu
+- **Follower Stats - in a nutshell** `f5.01` modid=66826
+  - Provides a messagebox showing follower stats via additional dialogue.
+- **Follower Death Injury - Skyrim Bandages Patch** `3.51.0.0` modid=38043
+  - Allows followers to die or incur injuries with low probabilities; mini, serious, fatal outcomes; uses SPID for compatibility; can resurrect via MCM
+- **Follower Death and Injury Chance - Followers Can Die - SPID** `3.51.0.0` modid=38043
+  - Allows followers to die or incur injuries with low probabilities; mini, serious, fatal outcomes; uses SPID for compatibility; can resurrect via MCM
+- **Simple Follower Sandbox** `1.1.0.0` modid=48636
+  - Adds a simple follower system to vanilla, letting followers perform sandbox activities similar to Serana.
+- **Aetherius - A Race Overhaul** `2.14.1.0` modid=26686
+  - Balances racial passives, adds powerful new race abilities
+  - Each race has unique major/minor skills and bonuses
+  - Adds NPC spell absorption for Bretons, racial spells for five races
+  - Lowers starting skill levels, optional NPC spell absorption addon
+  - Requires Mysticism for spells
+  - ESL flagged
+- **Why I Came to Skyrim** `f2.02` modid=167166
+  - Provides 40 radiantly‑generated origin quests giving motivation and purpose at game start, compatible with Alternate Start mods.
+- **Adventurer's Start - Serious Civil War Fort Personnel Patch** `1.0.1.0` modid=145599
+  - Adds numerous alternate beginnings for Alternate Perspective; includes Roadside Ambush
+  - - ambush by 3 level 1 bandits at locations such as Bruma, Eastmarch, etc.
+  - Fell in a Spike Pit
+  - - starts in spike pit at half health in Halted Stream Camp
+  - Bounty Hunter
+  - - starts at bandit camp with bounty quest and potions
+  - Bandit Prisoner
+  - - starts in cell in bandit fort, can escape with lockpicks
+  - Orc Stronghold
+  - - starts at Orc stronghold as Blood‑Kin
+  - Saved by Vigilants
+  - - starts in cell to be sacrificed, saved by vigilantes
+  - Out in the Wilderness
+  - - starts in wild, optional removal of items via global variable; compatible with many add‑ons.
+- **Bruma Adventurer's Start Addon** `1.0.1.0` modid=145599
+  - Adds numerous alternate beginnings for Alternate Perspective; includes Roadside Ambush
+  - - ambush by 3 level 1 bandits at locations such as Bruma, Eastmarch, etc.
+  - Fell in a Spike Pit
+  - - starts in spike pit at half health in Halted Stream Camp
+  - Bounty Hunter
+  - - starts at bandit camp with bounty quest and potions
+  - Bandit Prisoner
+  - - starts in cell in bandit fort, can escape with lockpicks
+  - Orc Stronghold
+  - - starts at Orc stronghold as Blood‑Kin
+  - Saved by Vigilants
+  - - starts in cell to be sacrificed, saved by vigilantes
+  - Out in the Wilderness
+  - - starts in wild, optional removal of items via global variable; compatible with many add‑ons.
+- **Alternate Perspective - Project AHO Start** `1.2.0.0` modid=165341
+  - Enables starting the Project AHO questline via an alternate perspective where the player begins as a captured slave
+- **Adventurer's Start - An Alternate Perspective Addon** `1.0.1.0` modid=145599
+  - Adds numerous alternate beginnings for Alternate Perspective; includes Roadside Ambush
+  - - ambush by 3 level 1 bandits at locations such as Bruma, Eastmarch, etc.
+  - Fell in a Spike Pit
+  - - starts in spike pit at half health in Halted Stream Camp
+  - Bounty Hunter
+  - - starts at bandit camp with bounty quest and potions
+  - Bandit Prisoner
+  - - starts in cell in bandit fort, can escape with lockpicks
+  - Orc Stronghold
+  - - starts at Orc stronghold as Blood‑Kin
+  - Saved by Vigilants
+  - - starts in cell to be sacrificed, saved by vigilantes
+  - Out in the Wilderness
+  - - starts in wild, optional removal of items via global variable; compatible with many add‑ons.
+- **Start in Bruma (an addon for Alternate Perspective)** `1.2.0.0` modid=100522
+  - Provides three Bruma start locations—edge of map, cathedral, hidden Talos shrine—requiring the Bruma mod.
+- **Alternate Perspective - Alternate Start Version 3.1.1** `3.1.1.0` modid=50307
+  - New Alternate Start experience
+  - Spawns in Helgen inn, choose from various scenarios (roadside ambush, bounty hunter, etc.)
+  - Preserves Helgen as functional town until main quest
+  - Safe mid-game, expands gameplay options
+  - ESL flagged
+- **Tavern Games - Mini Games in Skyrim** `1.2.1.0` modid=1668
+  - Adds tavern mini‑games (lotteries, card/dice games) requiring gold, works in any tavern, ESL flagged.
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - GTS Dwemer Override Hacking Minigame Addon** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Animunculi Override - Custom Skills Framework** `1.0.2.0` modid=114546
+  - Adds hacking minigame to disable Dwemer automatons by tracing a path within 8 seconds; requires Surge Module; optional perks via Custom Skills Framework; compatible patches for Ordinator/Vokrii; ESP-FE, no vanilla edits.
+- **Animunculi Override - Dwemer Automaton Hacking Minigame** `1.0.2.0` modid=114546
+  - Adds hacking minigame to disable Dwemer automatons by tracing a path within 8 seconds; requires Surge Module; optional perks via Custom Skills Framework; compatible patches for Ordinator/Vokrii; ESP-FE, no vanilla edits.
+- **Stay In Shape - A Pumping Iron Addon - Patch for Immersive Interactions (Boxing)** `f2.01` modid=50371
+  - Adds weight loss and push‑up ability to Pumping Iron, with strength‑based animations (Weak/Average/Strong); compatible with DAR and Immersive Interactions; requires Pumping Iron; adds muscle gain/loss mechanics
+- **Stay In Shape - A Pumping Iron Addon** `f2.01` modid=50371
+  - Adds weight loss and push‑up ability to Pumping Iron, with strength‑based animations (Weak/Average/Strong); compatible with DAR and Immersive Interactions; requires Pumping Iron; adds muscle gain/loss mechanics
+- **GATE TO SOVNGARDE (GTS) - Small Mods and Resources - Pumping Iron and Hand to Hand (Adamant) Patch** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Stress and Fear - A Dynamic Sanity System** `f2.07` modid=116522
+  - Adds dynamic stress that reduces stamina/magicka when hurt, reducible via alcohol, food, sleep, etc., and fears/phobias (wolves, dragons, etc.) that can be overcome for damage buffs; configurable via MCM, keywords Stress_Reduce10/25/50 etc
+- **Dirt and Blood - Dynamic Visual Effects** `2.38.0.0` modid=38886
+  - Adds visual dirt and blood accumulation on player and NPCs, cleanable via swimming, rain, or washing, with configurable stages.
+- **Biggie Traits** `1.0.19.0` modid=136384
+  - Adds a collection of new character traits with diverse mechanical effects, reminiscent of Fallout New Vegas, influencing stats and abilities
+- **Wounds - Eternal Cuts Bug Fix** `1.0.0.0` modid=162436
+  - Bug‑fix for Wounds that resolves cuts that otherwise never disappear, using per‑limb and spell detection.
+- **Common Injuries of the Everyday Adventurer - A Simple Wounds Addon** `1.4.0.0` modid=140466
+  - Delays the Treat Wounds power until a found book is obtained, adding immersive wound mechanics, ESL flagged with CID/Bruma compatibility.
+- **Wounds Injury Animations - Leg animations IDLE WALKING AND RUN port from UNDERDOG** `1.0.0.0` modid=85230
+  - Provides dynamic injury animations via DAR, playing unique animations for each injury state including combos.
+- **Wounds injury animations DAR add-on** `1.1.1.0` modid=54870
+  - Adds over 5000 DAR animations covering all Wounds injury states and movements for visual feedback.
+- **GATE TO SOVNGARDE (GTS) - Small Mods and Resources - Wounds Misc Objects (I4) Icons** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - Wounds Addon Patch** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Equipment Durability System NG** `2.2.0.0` modid=109899
+  - Durability system using CommonLib‑NG that degrades weapons and armor on use, configurable rates, includes widgets, works with SKSE and SkyUI.
+- **SkyParkour v2 - Procedural Parkour Framework (SPPF)** `3.4.0.0` modid=132292
+  - Provides a procedural parkour framework with vaulting, sliding, stamina system, dynamic ledge detection, and first/third‑person support.
+- **EVGAT Content Package - Flat-Footed** `2.1.0.0` modid=63232
+  - Framework adding new player movement animations (climbing, squeezing, ledge interactions), used by other mods, requires SKSE, Open Animation Replacer, Animation Motion Revolution, compatible with SE/AE.
+- **EVG Animated Traversal** `2.1.0.0` modid=63232
+  - Framework adding new player movement animations (climbing, squeezing, ledge interactions), used by other mods, requires SKSE, Open Animation Replacer, Animation Motion Revolution, compatible with SE/AE.
+- **Skyrim's Got Talent - Adamant Bard Perks Synergy** `1.0.1.0` modid=101206
+  - Integrates Adamant Bard Perks with Skyrim's Got Talent, adjusting perk requirements and buff mechanics.
+- **Skyrim's Got Talent - Improve As a Bard - Bruma Mini Patch** `1.76.0.0` modid=50357
+  - Adds bard progression with ~100 songs, NPC reactions, buff/debuff tiers, and skill rank advancement based on expertise.
+- **Skyrim's Got Talent - Improve As a Bard - Free Movement** `1.76.0.0` modid=50357
+  - Adds bard progression with ~100 songs, NPC reactions, buff/debuff tiers, and skill rank advancement based on expertise.
+- **Skyrim's Got Talent - Improve As a Bard - Auri reacts to your Music** `1.76.0.0` modid=50357
+  - Adds bard progression with ~100 songs, NPC reactions, buff/debuff tiers, and skill rank advancement based on expertise.
+- **Skyrim's Got Talent - Improve As a Bard - Inigo reacts to your Music** `1.76.0.0` modid=50357
+  - Adds bard progression with ~100 songs, NPC reactions, buff/debuff tiers, and skill rank advancement based on expertise.
+- **Skyrim's Got Talent - Improve As a Bard - Xelzaz reacts to your Music** `1.76.0.0` modid=50357
+  - Adds bard progression with ~100 songs, NPC reactions, buff/debuff tiers, and skill rank advancement based on expertise.
+- **Skyrim's Got Talent - Improve As a Bard** `1.76.0.0` modid=50357
+  - Adds bard progression with ~100 songs, NPC reactions, buff/debuff tiers, and skill rank advancement based on expertise.
+- **lawbringer - guardsman - Ryn's Karthspire version** `1.0.37.0V3` modid=67003
+  - Extends Lawbringer to let player claim 44 locations for chosen faction; lists many specific sites
+- **Lawbringer - Guardsman** `1.0.37.0V3` modid=67003
+  - Extends Lawbringer to let player claim 44 locations for chosen faction; lists many specific sites
+- **Lawbringer** `1.3.0.2` modid=29882
+  - Enables claiming bandit strongholds for chosen factions (Imperial, Stormcloak, etc.) using banner system; configurable patches and integrates with other mods
+- **SRC - Exclude from Radiant System** `1.1.0.0` modid=41881
+  - Provides multiple versions of the Exclude from Radiant System ESP for Skyrim Realistic Conquering series, offering compatibility options with various mods
+- **Skyrim Realistic Conquering - All In One** `0.76.0.0` modid=26396
+  - Adds dynamic world changes where cleared locations are repopulated and transformed, reflecting player actions and consequences.
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - Undeath - Phylactery Limits** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Undeath - Classical Lichdom - The Cause Ayleid Lich Model Patch** `3.60.0.0` modid=40802
+  - Adds lich transformation with spells such as Necrotic Rejuvenation, Bane of Life, Enslave Mind, Enslave Undead, Mass Reanimate, Summon Diilonthur, Devour Soul, and grants fire weakness, no health regen, resistances, and perks like Transcendence (20% faster XP) and Lich Barrier (armor and spell absorption).
+- **Prelude to Purgatory - A Lich Custom Skill Tree** `3.0.0.0b.-6` modid=53143
+  - Adds a 12‑perk skill tree for lich abilities (e.g., scaling Bound Weapons, Mirror Weave, Reconstruct Form) via Custom Skills Framework.
+- **Undeath - Classical Lichdom - Hardcore Mode** `3.60.0.0` modid=40802
+  - Adds lich transformation with spells such as Necrotic Rejuvenation, Bane of Life, Enslave Mind, Enslave Undead, Mass Reanimate, Summon Diilonthur, Devour Soul, and grants fire weakness, no health regen, resistances, and perks like Transcendence (20% faster XP) and Lich Barrier (armor and spell absorption).
+- **Undeath Remastered** `1.7.0.0` modid=6180
+  - Expands lich gameplay with new spells (Ice Coffin, Necrotic Rejuvenation), abilities (fire weakness, resistances), phylactery progression, and extensive bug fixes, adding deep lich mechanics and questline.
+- **Undeath - Classical Lichdom** `3.60.0.0` modid=40802
+  - Adds lich transformation with spells such as Necrotic Rejuvenation, Bane of Life, Enslave Mind, Enslave Undead, Mass Reanimate, Summon Diilonthur, Devour Soul, and grants fire weakness, no health regen, resistances, and perks like Transcendence (20% faster XP) and Lich Barrier (armor and spell absorption).
+- **Skills of the Wild - Reskin Skill Tree** `1.0.0.0` modid=160166
+  - Reskins the skill trees from Skills of the Wild with a Dovahkiin‑themed visual style resembling sketches.
+- **Skills of the Wild - New Campfire Survival Skill Trees - RE-enable Map GPS (Visible Map Cursor)** `2.17.0.0` modid=37693
+  - Adds four campfire survival skill trees — Art of the Hunt, Knower of the Land, Beast Handler, Culinary Arts — with tiered perks and mechanics integrated with the Campfire mod.
+- **Get Lost - A Player Map Marker Hider** `1.0.0.0` modid=119736
+  - Hides player map markers completely (no transparency, no centering), compatible with UI replacers; introduces alternative marker exploration where markers appear only in cities/towns/home, when far away, or with active magic effect RevealsKnownMapMarkers; configurable via SKSE plugin; compatible with many UI and worldspace mods; includes papyrus function PutMapMarkersOnMap to reveal markers.
+- **Skills of the Wild - New Campfire Survival Skill Trees - Menagerie Patch** `2.17.0.0` modid=37693
+  - Adds four campfire survival skill trees — Art of the Hunt, Knower of the Land, Beast Handler, Culinary Arts — with tiered perks and mechanics integrated with the Campfire mod.
+- **Skills of the Wild - New Campfire Survival Skill Trees - Inventory Injector Patch** `2.17.0.0` modid=37693
+  - Adds four campfire survival skill trees — Art of the Hunt, Knower of the Land, Beast Handler, Culinary Arts — with tiered perks and mechanics integrated with the Campfire mod.
+- **Skills of the Wild - New Campfire Survival Skill Trees - Toggle Compass Hotkey Patch** `2.17.0.0` modid=37693
+  - Adds four campfire survival skill trees — Art of the Hunt, Knower of the Land, Beast Handler, Culinary Arts — with tiered perks and mechanics integrated with the Campfire mod.
+- **Skills of the Wild - New Campfire Survival Skill Trees** `2.17.0.0` modid=37693
+  - Adds four campfire survival skill trees — Art of the Hunt, Knower of the Land, Beast Handler, Culinary Arts — with tiered perks and mechanics integrated with the Campfire mod.
+- **AJO - Andrealphus' Jobs Overhaul** `1.6.0.0` modid=109363
+  - Employed in many jobs (Acolyte, Alchemist, Blacksmith, etc.)
+  - Earn gold and rewards based on skill, reputation, job difficulty
+  - Requires tools, may have reputation penalties
+  - Payment varies by performance
+  - ESL flagged
+- **Soldier of Stendarr** `1.0.3.0` modid=97984
+  - Allows turning in vampire dust (5=200g), werewolf pelts (2=300g), daedra hearts (1=500g) to Vigilants for gold when wearing Stendarr amulet; repeatable with no quest tracker; dialogue only with Vigilant faction; ESL‑flagged; generally compatible
+- **Missives - Voice and Quest Expansion** `1.6.2.0` modid=166094
+  - Adds 20 new quest types and expanded voiced responses for immersion
+- **Missives - Worldspace Additions - Bruma** `2.11.1.0` modid=26788
+  - Adds Missives board to Solstheim and other regions, new location‑based quests
+- **Missives - Worldspace Additions - Wyrmstooth** `2.11.1.0` modid=26788
+  - Adds Missives board to Solstheim and other regions, new location‑based quests
+- **Missives - Worldspace Additions - Solstheim** `2.11.1.0` modid=26788
+  - Adds Missives board to Solstheim and other regions, new location‑based quests
+- **Missives** `f2.03` modid=17576
+  - Adds 264 radiant quests at missive boards, localized, with quest variety and quit option
+- **Ghosts of the Tribunal - Project Aho Integration** `1.0.0.0` modid=79163
+  - Adds clothing sets from Ghost of the Tribunal to NPCs in Sadrith Kegran.
+- **Unofficial Project AHO Patch** `1.3.0.0` modid=36915
+  - Patch fixes crashes in Project AHO after the "No Corpse, No Case" quest.
+- **Project AHO - Spell Crafting for Mysticism** `1.0.1.0.` modid=65891
+  - Adds Mysticism spell tomes to the Project AHO crafting station for consistent spell acquisition.
+- **Project AHO - Start when You want - ESL** `f2.00` modid=21386
+  - Provides an optional start quest triggered by a note at Braidwood Inn after reaching level 15.
+- **Project AHO - Start when You want** `f2.00` modid=21386
+  - Provides an optional start quest triggered by a note at Braidwood Inn after reaching level 15.
+- **Unofficial Project AHO - Bugfix and Improvement Patch - Table Mesh Fix** `1.7.1.0` modid=41751
+  - Fixes bugs and improves textures and meshes in Project AHO.
+- **Unofficial Project AHO - Bugfix and Improvement Patch** `1.7.1.0` modid=41751
+  - Fixes bugs and improves textures and meshes in Project AHO.
+- **GATE TO SOVNGARDE (GTS) - Small Mods and Resources - Project AHO - Less Jarring Structures** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Project AHO - Saving The Oryses Tweaks** `1.0.1.0` modid=77967
+  - Re‑enables escaped NPCs in Windhelm and adds idle markers after Escape choice.
+- **Project AHO ESM Flag Edition** `2.0.0.0` modid=15996
+  - Adds extensive quest content exploring Great House Telvanni in Sadrith Kegran, with dozens of quests and locations.
+- **Project AHO** `2.0.0.0` modid=15996
+  - Adds extensive quest content exploring Great House Telvanni in Sadrith Kegran, with dozens of quests and locations.
+- **DAc0da - Delayed Start** `1.1.0.0` modid=136031
+  - Delays the DAc0da questline until specified level or quest conditions; offers level triggers (Level 25, 30, 40) and multiple quest chains (Jurgen Windcaller, Eye of Magnus, Arniel's Endeavour, Yngol's Barrow, Discerning the Transmundane, Mind of Madness, Legends Lost) with escalating requirements, ESL‑flagged plugins, and configurable start level via Global variable zDcdGStartLevel.
+- **Dac0da** `1.0.5.0` modid=134405
+  - Logs Numidium appearance in Skyrim.
+- **VIGILANT - Nerfed Jewelry Magic Effects** `1.0.0.0` modid=102544
+  - Provides tweaks for VIGILANT such as smaller shields, no early Daedric weapons, nerfed jewelry effects, etc.
+- **Vigilant - Delayed Start** `2.3.0.0` modid=57961
+  - Delays the Vigilant questline until player reaches a set level or completes prerequisite quests.
+- **VIGILANT SE - Adjustments and Addons - No Boss Summons** `1.1.0.0` modid=69400
+  - Rebalances VIGILANT rewards by reducing overpowered enchantments and adjusting progression.
+- **VIGILANT SE - Adjustments and Addons - Nerfed Rewards** `1.1.0.0` modid=69400
+  - Rebalances VIGILANT rewards by reducing overpowered enchantments and adjusting progression.
+- **VIGILANT - Tweaks - Smaller Dragon Knight Tower Shield** `1.0.0.0` modid=102544
+  - Provides tweaks for VIGILANT such as smaller shields, no early Daedric weapons, nerfed jewelry effects, etc.
+- **VIGILANT SEAE** `1.8.0.0` modid=11849
+  - Adds unique armor, weapons, jewelry, and creatures for the Vigilant of Stendarr quest.
+- **Scriptures x Armory of the Dragon Cult** `f1.00` modid=173764
+  - Quest to aid Farengar and Viarmo, bringing the Dragon Cult to life in story and song
+- **Scriptures x The Great Village of Kynesgrove** `f1.00` modid=173764
+  - Quest to aid Farengar and Viarmo, bringing the Dragon Cult to life in story and song
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - Teleport Only In Tamriel - The Frozen Heart** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Fists of Fury - Redguard Elite Armaments Tweak** `1.3.0.0` modid=73835
+  - Brawling tournament quest in Windhelm, Riften, Morthal; defeat champions; optional Hand‑to‑Hand integration and AE support; includes arena and post‑quest packages
+- **Fists of Fury - AE Integration** `1.3.0.0` modid=73835
+  - Brawling tournament quest in Windhelm, Riften, Morthal; defeat champions; optional Hand‑to‑Hand integration and AE support; includes arena and post‑quest packages
+- **RS Children Patch Compendium - The Forgotten City** `1.0.0.0` modid=13409
+  - Collection of RS Children patches for many mods requiring RS Children Overhaul, may conflict as intended (ESLified Patch).
+- **The Forgotten City - Decree of the Arbiter spell music Fix** `1.0.0.0` modid=64730
+  - Fixes music for Decree of the Arbiter spell, stops lingering after effect.
+- **Dwemer Armor SE - My patches and fixes by Xtudo - The Forgotten City Replacer** `3.1.0.0` modid=81046
+  - Provides patches with proper weight sliders, full beast races support, ESL flag, crafting recipes, bug fixes, optional textures, and optional light‑armor version.
+- **The Forgotten City - Good Ending Tweaks** `1.1.0.0` modid=77965
+  - After good ending, relocates NPCs (Safira, Marius, etc.), adds moss/vegetation, fixes water leak, changes bed ownership.
+- **Carved Brink ESM Flag Edition** `1.1.0.0` modid=24351
+  - Large quest adding Peryite’s daedric plan, faceted stones, goblin cities; vertical gameplay; new quests, music, 40+ locations; requires DLCs; minimal engine impact
+- **Ascend - Hidden Peaks of Skyrim - Add-on for Shrine to Kyne** `f1.01` modid=120802
+  - Adds 10 hidden peaks to climb; meditation grants resistances and passive bonuses; no landscape edits; compatible with most mods; includes wind guidance.
+- **Ascend - Hidden Peaks of Wyrmstooth** `1.0.2.2` modid=124169
+  - Adds support for climbing Wyrmstooth mountains; includes specific peaks and challenges; part of Gate To Sovngarde; compatible with related mods.
+- **Scriptures of the Dragon Cult** `f1.00` modid=173764
+  - Quest to aid Farengar and Viarmo, bringing the Dragon Cult to life in story and song
+- **The Frozen Heart** `0.9.1.0` modid=159911
+  - Enter cursed frozen realm via magical mirror, solve puzzles, complete 4 quests (require Slow Time & Fire Breath), new worldspace, weapons, armor, follower, 3‑4 h gameplay.
+- **Once We Were Here - Quest Mod** `1.0.2.0` modid=149820
+  - Quest mod following Bosmer scholar Sillas exploring Falmer history and Snow Elf lore across various sites.
+- **Sleepwalking Into A Nightmare - New Daedric Prince Quest** `1.0.9.0` modid=141047
+  - Introduces a new Daedric prince quest to rescue a missing woman, featuring nightmarish sequences, new weapons, spells, and multiple endings.
+- **The Tale of Tsatampra Xiros** `f1.04` modid=36707
+  - Explore a page‑bound world, earn Hermaeus Mora’s favor; new spell lets Antiquarian leave Annals and fight alongside Custodian; new dialogue with both; custodian gains boundless knowledge bonuses
+  - The Taste of Death - Quest Addon: Extends vanilla quest with 50+ voiced lines, new dialogue, enemies; adds quest “A Bitter Aftertaste”, optional Ring of Namira, new boss “Champion of Namira” with Daedric Parasite, curse of ring forces cannibalism for hunger, modular FOMOD install
+  - The Whispering Door - Quest Expansion: Extends Mephala’s Daedric quest with longer dialogue and darker tone; adds Jarl Balgruuf and son Nelkir, new “good guy” ending route, options to side with Jarl or betray, NPC reactions change, fully voiced with spliced lines
+  - Thieves Guild Alternative Endings: Adds 4 new voice‑acted endings – Defy Nocturnal, Betray Nocturnal, Exorcise the Key, Refuse to be Nightingale; new rewards, NPC recognition with Karliah/Brynolf, ESL‑compatible, install before Karliah’s request
+  - Thieves' Night On the Town: Overhauls Thieves Guild radiant jobs with hold selection, concurrent quests, targets in all holds; adds independent crime tracking, job‑specific failure conditions (Burglary, Shill, Numbers, Fishing, Sweep, Bedlam, Heist), fixes vanilla locations
+- **Before the End - Quest Mod** `1.0.2.0` modid=142238
+  - Lets the player converse with a death‑row prisoner to learn about his regrets and story.
+- **Bark and Bite - Witcher Inspired Quest** `1.0.4.0` modid=135087
+  - Adds a short Witcher‑style quest centered on a mysterious tree with two morally ambiguous endings.
+- **Fists of Fury** `1.3.0.0` modid=73835
+  - Brawling tournament quest in Windhelm, Riften, Morthal; defeat champions; optional Hand‑to‑Hand integration and AE support; includes arena and post‑quest packages
+- **The Breathing Abyss - Lovecraft Inspired Mod** `1.0.8.0` modid=141216
+  - Quest about mysterious underwater entity with high‑quality voice acting, unique story, new cavern, voiced by D.D. Rumin.
+- **Heart of the Reach - High Resolution Textures** `1.0.6.0` modid=76494
+  - Quest to heal the Heart of the Reach in an underground swamp; adds new weapons, ring, and spell.
+- **Stendarr Rising - The Hall of the Vigilant Rebuild** `1.6.0.0` modid=49346
+  - Rebuilds Hall of the Vigilant after vampire attack; adds recruits, crafting, defenses, MCM customization; compatible with patches like Better Dynamic Snow 2, CACO, Cutting Room Floor, etc.; ESL‑flagged
+- **SIRENROOT - Deluge of Deceit** `1.21.0.0` modid=70917
+  - Dialogue‑heavy dungeon quest with water puzzles, platforming, multiple endings, voiced dialogue (~1000 lines).
+- **The Gift Of Saturalia** `f1.04` modid=105697
+  - Holiday quest to spread Saturalia spirit, help NPCs, ~500 voiced dialogue lines, optional patches.
+- **Carved Brink** `1.1.0.0` modid=24351
+  - Large quest adding Peryite’s daedric plan, faceted stones, goblin cities; vertical gameplay; new quests, music, 40+ locations; requires DLCs; minimal engine impact
+- **The DoubtSuspended Quest Pack - Merged** `1.4.0.0` modid=4929
+  - Adds three fully voiced, lore-friendly short quests involving assassination, missing fur trader, and smuggler crew vengeance.
+- **Morthal Barrow** `1.4.0.0` modid=90737
+  - Adds Nordic dungeon with voiced quest, new enemies, spells, artifacts, and dynamic changes
+- **The Forgotten City** `1.8.0.0` modid=1179
+  - Critics‑award winning murder mystery in ancient underground city, 6‑8 h, time‑loop mechanics, multiple endings, professional voice acting.
+- **Whispers of the Depths - Quest Mod** `1.0.4.0` modid=127087
+  - Quest centered on Argonian fisherman Slays‑Many‑Beasts with four unique encounters, fully voiced, teaching lore about sea monsters.
+- **More to do in the Soul Cairn - ESPFE Version** `1.1.0.0` modid=115962
+  - Adds a quest in the Soul Cairn to help three inhabitants through five stages of grief and retrieve memories.
+- **Mysteries of the Dwemer - Quest Mod** `1.0.3.0` modid=114863
+  - Adds a quest centered on Maro, a Dwemer researcher who explains aspects of Dwemer lore to the player.
+- **Gravewind** `1.2.0.0` modid=129582
+  - A quest about a realm lost to myth, an ancient city of ghosts, and a small house in the woods, featuring three new magic groups, unique boss fights, custom enemies, two endings, and more.
+- **Ascend - Hidden Peaks of Skyrim** `f1.01` modid=120802
+  - Adds 10 hidden peaks to climb; meditation grants resistances and passive bonuses; no landscape edits; compatible with most mods; includes wind guidance.
+- **OMEAR Addition - Val Serano 2** `1.8.2.0` modid=67968
+  - Replaces frequent OnMagicEffectApply calls to reduce VM overstress; supports many scripts and optional fixes for popular mods.
+- **Val Serano - Velehk Sain Patch** `2.3.0.0` modid=103669
+  - Adds a voiced pirate/thief character named Val Serano.
+- **Val Serano - Minimalist Creation Club Addon** `2.3.0.0` modid=103669
+  - Adds a voiced pirate/thief character named Val Serano.
+- **Val Serano - Minimalist USSEP Patch** `2.3.0.0` modid=103669
+  - Adds a voiced pirate/thief character named Val Serano.
+- **Val Serano - Minimalist** `2.3.0.0` modid=103669
+  - Adds a voiced pirate/thief character named Val Serano.
+- **Auri VIGILANT commentary patch tweaks** `1.0.0.0` modid=148207
+  - Fixes quest conditions, enables Auri to follow in inaccessible locations, updates dialogue; requires ESPFE.
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - Auri Optional Replacer** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Refined Auri SSE - Pointy Teeth Update** `1.1.0.0` modid=36444
+  - Overhauls Auri with a bosmeri style featuring pointy teeth and refined assets.
+- **Song of the Green (Auri Follower) - 3DNPC Banter Patch** `2.2.0.0` modid=11278
+  - Custom‑voiced Bosmer follower Auri with 1k+ dialogue lines, approval system, mini‑quest, romance independent of vanilla marriage, mount option; ESL‑flagged; conflicts with patches; install via MCM
+- **Song of the Green (Auri Follower) - Vigilant Commentary Patch** `2.2.0.0` modid=11278
+  - Custom‑voiced Bosmer follower Auri with 1k+ dialogue lines, approval system, mini‑quest, romance independent of vanilla marriage, mount option; ESL‑flagged; conflicts with patches; install via MCM
+- **Song of the Green (Auri Follower) - Inigo Banter Patch - sfts and Talwin fix** `2.2.0.0` modid=11278
+  - Custom‑voiced Bosmer follower Auri with 1k+ dialogue lines, approval system, mini‑quest, romance independent of vanilla marriage, mount option; ESL‑flagged; conflicts with patches; install via MCM
+- **Gourmet Patch Page - Auri** `1.0.0.0` modid=97050
+  - Library of patches for Gourmet; includes patches for Beyond Skyrim, AI Overhaul, Rare Curios, and many other mods; soft requirements.
+- **Song of the Green (Auri Follower)** `2.2.0.0` modid=11278
+  - Custom‑voiced Bosmer follower Auri with 1k+ dialogue lines, approval system, mini‑quest, romance independent of vanilla marriage, mount option; ESL‑flagged; conflicts with patches; install via MCM
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - Kaidan Revoiced Optional Replacer** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Kaidan Revoiced - Community Expansion (KRCE)** `1.2.0.0` modid=135345
+  - Fully voiced follower Kaidan with extensive lore‑rich quests, romance paths, custom armor, requires new save, incompatible with other follower managers
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - GTS - Gore Replacer Patch** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - Gore Replacer and HDT-SMP Vanilla Armors patch** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - Alchemy Requires Bottles and Gore Patch** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Gore - A Companion Mod** `1.8.11.0` modid=85298
+  - Lore‑friendly voiced follower with custom quest, optional survival‑lite camp system, death‑rescue mechanic, equips weapons/armor, and supports non‑binary dialogue.
+- **GATE TO SOVNGARDE (GTS) - Small Mods and Resources - Lucien Dwemer Ruin Redux** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Lucien - Immersive Fully Voiced Male Follower - Bruma Patch** `1.6.3.0` modid=20035
+  - Fully voiced follower with 5,000+ lines, dynamic personality, training system, personal quests, and interactions with many mods
+- **Lucien - Immersive Fully Voiced Male Follower - Umbra Patch** `1.6.3.0` modid=20035
+  - Fully voiced follower with 5,000+ lines, dynamic personality, training system, personal quests, and interactions with many mods
+- **Lucien - Immersive Fully Voiced Male Follower - Staff of Sheogorath Patch** `1.6.3.0` modid=20035
+  - Fully voiced follower with 5,000+ lines, dynamic personality, training system, personal quests, and interactions with many mods
+- **Lucien - Immersive Fully Voiced Male Follower - Saturalia Patch** `1.6.3.0` modid=20035
+  - Fully voiced follower with 5,000+ lines, dynamic personality, training system, personal quests, and interactions with many mods
+- **Lucien - Immersive Fully Voiced Male Follower - Tundra Homestead Patch** `1.6.3.0` modid=20035
+  - Fully voiced follower with 5,000+ lines, dynamic personality, training system, personal quests, and interactions with many mods
+- **Lucien - Immersive Fully Voiced Male Follower - Stendarr's Hammer Patch** `1.6.3.0` modid=20035
+  - Fully voiced follower with 5,000+ lines, dynamic personality, training system, personal quests, and interactions with many mods
+- **Lucien - Immersive Fully Voiced Male Follower - Forgotten Seasons Patch** `1.6.3.0` modid=20035
+  - Fully voiced follower with 5,000+ lines, dynamic personality, training system, personal quests, and interactions with many mods
+- **Lucien - Immersive Fully Voiced Male Follower - Arcane Archer Patch** `1.6.3.0` modid=20035
+  - Fully voiced follower with 5,000+ lines, dynamic personality, training system, personal quests, and interactions with many mods
+- **Lucien - Immersive Fully Voiced Male Follower - Adventurer's Backpack Patch** `1.6.3.0` modid=20035
+  - Fully voiced follower with 5,000+ lines, dynamic personality, training system, personal quests, and interactions with many mods
+- **Lucien - Immersive Fully Voiced Male Follower - Alternative Armors - Elven Hunter Patch** `1.6.3.0` modid=20035
+  - Fully voiced follower with 5,000+ lines, dynamic personality, training system, personal quests, and interactions with many mods
+- **Lucien - Immersive Fully Voiced Male Follower - Alternative Armors - Silver Patch** `1.6.3.0` modid=20035
+  - Fully voiced follower with 5,000+ lines, dynamic personality, training system, personal quests, and interactions with many mods
+- **Lucien - Immersive Fully Voiced Male Follower - Bone Wolf Patch** `1.6.3.0` modid=20035
+  - Fully voiced follower with 5,000+ lines, dynamic personality, training system, personal quests, and interactions with many mods
+- **Lucien - Immersive Fully Voiced Male Follower - Camping Patch** `1.6.3.0` modid=20035
+  - Fully voiced follower with 5,000+ lines, dynamic personality, training system, personal quests, and interactions with many mods
+- **Lucien - Immersive Fully Voiced Male Follower - Goblins Patch** `1.6.3.0` modid=20035
+  - Fully voiced follower with 5,000+ lines, dynamic personality, training system, personal quests, and interactions with many mods
+- **Lucien - Immersive Fully Voiced Male Follower - Rare Curios Patch** `1.6.3.0` modid=20035
+  - Fully voiced follower with 5,000+ lines, dynamic personality, training system, personal quests, and interactions with many mods
+- **Lucien - Immersive Fully Voiced Male Follower - Myrwatch Patch** `1.6.3.0` modid=20035
+  - Fully voiced follower with 5,000+ lines, dynamic personality, training system, personal quests, and interactions with many mods
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - Lucien Optional Replacer** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Cosmos Lucien Replacer** `1.5.0.0` modid=71960
+  - Replaces Lucien's face with a rounder, fairer‑skinned version while preserving original features.
+- **Lucien - Immersive Fully Voiced Male Follower** `1.6.3.0` modid=20035
+  - Fully voiced follower with 5,000+ lines, dynamic personality, training system, personal quests, and interactions with many mods
+- **Snazzy Items for Inigo** `1.0.0.0` modid=57194
+  - Model and texture replacer for Inigo's unique items, providing custom meshes/textures for items such as the Muffle Tongue Necklace, Inigo's Ebony Bow, etc.
+- **High-Poly Inigo Replacer** `3.0.0.0` modid=38860
+  - Rebrands follower Inigo with higher‑poly head and recolored hair.
+- **INIGO** `2.4.0.0C` modid=1461
+  - Fully voiced Khajiit companion with 7,000+ unique dialogue lines who levels with the player, avoids traps, whispers when sneaking, can run out of arrows, skilled in archery/one‑handed, uses whistle key (SKSE64) to call; official patch fixes conflicts and enables placing Mr D on belt via console command
+- **Xelzaz - Custom Fully Voiced Argonian Telvanni Follower - Sirenroot Patch** `1.13.2.0` modid=62893
+  - Fully voiced Argonian lawman Xelzaz offers quests, cooking, potions, lore commentary, and unique interactions, with ~8500 voiced lines.
+- **Xelzaz - Custom Fully Voiced Argonian Telvanni Follower - Wyrmstooth Patch** `1.13.2.0` modid=62893
+  - Fully voiced Argonian lawman Xelzaz offers quests, cooking, potions, lore commentary, and unique interactions, with ~8500 voiced lines.
+- **Xelzaz - Custom Fully Voiced Argonian Telvanni Follower - AE CC Patch** `1.13.2.0` modid=62893
+  - Fully voiced Argonian lawman Xelzaz offers quests, cooking, potions, lore commentary, and unique interactions, with ~8500 voiced lines.
+- **Xelzaz - Custom Fully Voiced Argonian Telvanni Follower** `1.13.2.0` modid=62893
+  - Fully voiced Argonian lawman Xelzaz offers quests, cooking, potions, lore commentary, and unique interactions, with ~8500 voiced lines.
+- **The Practical Dwemechanic - A Remiel Replacer** `1.2.4.0` modid=63619
+  - Replacer for Remiel's appearance adding scarred face and Dwemer necklace, compatible with body textures, requires HLIORemi.esp, works with most follower overhauls
+- **Remiel-Custom Voiced Follower** `1.7.5.0` modid=51874
+  - Adds Breton engineer follower Remiel (~5k dialogue lines) with custom quest, spider companion, and upgrade system.
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - Orpheus Optional Replacer** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **eeekie's Orpheus - visual overhaul** `1.3.0.0` modid=130328
+  - Replaces appearance of a custom ANCIENT SNOW ELF vampire follower using BnP base, requires compatible skin, weight adjustable via console, ESL flagged, compatible only with base BnP skins
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - Orpheus Start Delay** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - Taliesin Optional Replacer** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **A Makeover for Taliesin - Yellow Sclera** `1.2.0.0` modid=94293
+  - Replaces textures for the follower Taliesen.
+- **A Makeover for Taliesin** `1.2.0.0` modid=94293
+  - Replaces textures for the follower Taliesen.
+- **GATE TO SOVNGARDE (GTS) - Small Mods and Resources - Mythos GtS Patch** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Pandorable's Mythos Replacer** `1.0.0.0` modid=56605
+  - Visual replacer for Mythos followers Karna and Bacchus, requiring Mythos and compatible with various texture packs.
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - Nessa Optional Replacer** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Simple Winterhold Housecarl** `1.2.0.0` modid=127474
+  - Adds a housecarl NPC to Winterhold, edits Jarl dialogue using Argis voice, includes dismissal line, and is compatible with most mods.
+- **Orpheus** `1.8.0.0` modid=128519
+  - Ancient Snow Elf vampire follower with custom combat system based on scaling Bound Weapons, full Vampire Lord form support, modular features; found near Haemar's Shame.
+- **The Thalmor's Shadow - Taliesin (Custom Voiced Follower)** `f1.03` modid=93413
+  - Adds a custom voiced Thalmor follower with unique dialogue and purpose.
+- **Mythos SE** `Redux` modid=51576
+  - Adds two fully voiced companions with unique quests, dialogue, and reactivity
+- **Nessa SE** `2.0.0.0` modid=77337
+  - Adds a quest‑full NPC named Nessa, a thief with 800+ dialogue lines, unique outfit, and sandbox toggles.
+- **Khash The Argonian (A Fully Custom Voiced Follower) (SOT - Sidekicks of Tamriel)** `1.9.3.7` modid=40122
+  - Adds a fully voiced Argonian follower named Khash with over 1600 lines of custom dialogue.
+- **Melana the War Maiden - An Evolving Custom Voiced Follower** `1.1.1.0` modid=129215
+  - Adds dynamic follower Melana with three evolution phases, voice changes, attribute upgrades, sparring system
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - 3DNPC - Text Fixes** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Proper journal entries for 3dnpcs** `1.0.0.0` modid=157902
+  - Adds journal entries to 39 3DNPC quests, providing quest summaries from the player's perspective.
+- **Interesting NPCs (3DNPC) - Patches** `1.8.1.0` modid=89307
+  - Provides assorted patches for 3DNPC including AI Overhaul integration, navmesh fixes, marker relocations, and conflict resolutions; installable via mod manager; covers multiple compatibility updates.
+- **3dnpcs Fixes and Tweaks - Ashwood Wont be enabled until Dragon Rising** `6.2.0.0` modid=131274
+  - Adds Mojin merchant inventory
+  - Fixes Alassea werewolf dialogue
+  - Adds 3 new conjuration spells
+  - Adds alternate ending to \"That was always there\"
+  - Fixes Mannequin dialogue loop
+  - Removes ownership from Ariele basement items
+  - Adds alternate ending to \"To Bite the Hand that feeds you\"
+  - Fixes Axe of Forgotten Kings respawn
+  - Improves Deneris AI
+  - Expands dialogue recognition for fine clothes
+  - Adds Iron dagger to Kianna
+- **3dnpcs Fixes and Tweaks** `6.2.0.0` modid=131274
+  - Adds Mojin merchant inventory
+  - Fixes Alassea werewolf dialogue
+  - Adds 3 new conjuration spells
+  - Adds alternate ending to \"That was always there\"
+  - Fixes Mannequin dialogue loop
+  - Removes ownership from Ariele basement items
+  - Adds alternate ending to \"To Bite the Hand that feeds you\"
+  - Fixes Axe of Forgotten Kings respawn
+  - Improves Deneris AI
+  - Expands dialogue recognition for fine clothes
+  - Adds Iron dagger to Kianna
+- **GATE TO SOVNGARDE (GTS) - Small Mods and Resources - 3DNPC Zora Children Fair Unstuck Scene Fix** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Tragedian's Interesting NPCs - 3DNPC Followers Reimagined** `1.4.0.0` modid=61669
+  - makeover mod for Interesting NPCs featuring unique, lore-friendly looks & improved combat skills
+- **Interesting NPCs SE (3DNPC) - Alternative Locations** `4.5.0.0` modid=29194
+  - Adds 250+ voiced NPCs, 50+ quests, 25+ followers with location‑based commentary, and 15+ marriage NPCs, with extensive dialogue trees and role‑play choices; can disable base dialogue via console and enable unvoiced dialogue via console.
+- **Interesting Follower Requirements for Interesting NPCs** `f2.03` modid=45646
+  - Adds recruitable‑follower requirements based on criteria such as speechcraft; version 2.0 uses column A/B/C logic; compatible with older version 1.0; avoids recruiting low‑level followers.
+- **Interesting NPCs SE (3DNPC) - 4.54 Update** `4.5.0.0` modid=29194
+  - Adds 250+ voiced NPCs, 50+ quests, 25+ followers with location‑based commentary, and 15+ marriage NPCs, with extensive dialogue trees and role‑play choices; can disable base dialogue via console and enable unvoiced dialogue via console.
+- **Interesting NPCs SE (3DNPC)** `4.5.0.0` modid=29194
+  - Adds 250+ voiced NPCs, 50+ quests, 25+ followers with location‑based commentary, and 15+ marriage NPCs, with extensive dialogue trees and role‑play choices; can disable base dialogue via console and enable unvoiced dialogue via console.
+- **Lost Grimoire SSE - Adamant Patch** `1.4.0.0` modid=4455
+  - Adds 115+ balanced spells across all schools, with scrolls and staves; auto‑distributed, high‑quality VFX/SFX, no background scripts
+- **Bound Daedric Armor Sidegraded** `1.1.0.0` modid=119779
+  - Replacer that offers a more vanilla‑style bound armor spell set with modular spells and reduced armor overlap when wearing other gear
+- **Bound Daedric Armor - Beast Race Helmets** `1.2.0.0` modid=152148
+  - Remodels the helmets of Bound Daedric Armor to fit neglected races using Improved Close‑Faced Helmets meshes.
+- **Bound Daedric Armor** `2.2.0.0` modid=11268
+  - Adds spells to summon a temporary Daedric Armor set for the player and optionally allies, featuring unique visual effects
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - Teleport Only In Tamriel - Lost Grimoire** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Lost Grimoire SSE** `1.4.0.0` modid=4455
+  - Adds 115+ balanced spells across all schools, with scrolls and staves; auto‑distributed, high‑quality VFX/SFX, no background scripts
+- **Inconsequential Incantations - Mysticism Patch** `1.1.0.0` modid=145512
+  - Adds 26 new immersive spells across all five magic schools for use with Mysticism overhaul; distributed via SkyPatcher; V83: NEW; conflicts as intended (GtS-specific Patches).
+- **Inconsequential Incantations - Minor Immersive Spells** `1.1.0.0` modid=145512
+  - Adds 26 new immersive spells across all five magic schools for use with Mysticism overhaul; distributed via SkyPatcher; V83: NEW; conflicts as intended (GtS-specific Patches).
+- **Immersive Illusion Spells** `1.3.0.0` modid=142357
+  - Adds 16 new instant‑cast illusion spells across novice–master tiers (Distraction, Mind Trick, Mirror, Brain Fog, Tremor, etc), no projectiles, optional Blink/Cure Poison/Throw Voice, enabled via globals
+- **Elemental Mastery Magic** `1.35.0.0` modid=139953
+  - Adds new destruction spells for player and NPCs.
+- **Little Library - New Books in Skyrim - No LLOS Patch** `1.8.0.0` modid=135278
+  - Adds 50 lore‑friendly books with diverse genres; integrates via Leveled List Object Swapper and other frameworks for distribution
+- **Little Library - New Books in Skyrim** `1.8.0.0` modid=135278
+  - Adds 50 lore‑friendly books with diverse genres; integrates via Leveled List Object Swapper and other frameworks for distribution
+- **Armors of the Velothi Pt. II - My patches SE by Xtudo - Indoril Bonesaint** `1.6.0.0` modid=130296
+  - Provides fixes and optimizations, optional non‑HDT version, text fixes, keyword additions, resolves clipping and texture issues.
+- **Dwemer Armor SE - My patches and fixes by Xtudo - Fixes ESL** `3.1.0.0` modid=81046
+  - Provides patches with proper weight sliders, full beast races support, ESL flag, crafting recipes, bug fixes, optional textures, and optional light‑armor version.
+- **Imperial Tribune Armor - SMP Physics for the cape** `1.26.0.0` modid=54294
+  - Adds Imperial armor set craftable with Steel smithing; heavy variant provides Dwarven‑level protection, light variant matches Glass, cape and ceremonial sword are clothing with no protection.
+- **Imperial Tribune Armor - General Tullius' outfit replacer** `1.26.0.0` modid=54294
+  - Adds Imperial armor set craftable with Steel smithing; heavy variant provides Dwarven‑level protection, light variant matches Glass, cape and ceremonial sword are clothing with no protection.
+- **Imperial Tribune Armor - Feet Fix** `1.26.0.0` modid=54294
+  - Adds Imperial armor set craftable with Steel smithing; heavy variant provides Dwarven‑level protection, light variant matches Glass, cape and ceremonial sword are clothing with no protection.
+- **Imperial Tribune Armor - ESL Plug-in** `1.26.0.0` modid=54294
+  - Adds Imperial armor set craftable with Steel smithing; heavy variant provides Dwarven‑level protection, light variant matches Glass, cape and ceremonial sword are clothing with no protection.
+- **Colovian Prince Set - My patches and tweaks SE by Xtudo - See Through Eyes Patch** `1.0.0.0` modid=110812
+  - Provides patches adding beast races support, female helmet, texture options, and various fixes to the Colovian Prince Set.
+- **Colovian Prince Set - My patches and tweaks SE by Xtudo - Fixes** `1.0.0.0` modid=110812
+  - Provides patches adding beast races support, female helmet, texture options, and various fixes to the Colovian Prince Set.
+- **Ysmir Armor - SE by Xtudo - Fixes ESL** `2.0.0.0` modid=112480
+  - Provides patches and fixes for Ysmir Armor, including beast race support, optional vanilla iron armor replacer, and various compatibility tweaks.
+- **Ysmir Armor - My patches SE by Xtudo** `2.0.0.0` modid=112480
+  - Provides patches and fixes for Ysmir Armor, including beast race support, optional vanilla iron armor replacer, and various compatibility tweaks.
+- **GATE TO SOVNGARDE (GTS) - Small Mods and Resources - Wizard Hats Lite Integration** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Lunar Guard Armor Rebalance** `1.0.0.0` modid=84100
+  - Rebalances armor stats for vanilla content, stabilizes strong armor stats
+- **Moon Monk's Robes Rebalanced** `1.0.0.0` modid=84100
+  - Rebalances armor stats for vanilla content, stabilizes strong armor stats
+- **sforzinda's Variations intergrated (AKA Standalone Sleeves of Skyrim) - Standalone Sleeved Imperials** `1.1.0.0` modid=42865
+  - Adds sleeved variants of many vanilla armors, integrated into leveled lists and craftable, includes Imperial armors and recommended patches for guards and cloaks
+- **sforzinda's Variations intergrated (AKA Standalone Sleeves of Skyrim)** `1.1.0.0` modid=42865
+  - Adds sleeved variants of many vanilla armors, integrated into leveled lists and craftable, includes Imperial armors and recommended patches for guards and cloaks
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - Aetherium Minimalistic Addon** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Ancient Nord Armo(u)ry EXTREME AE** `2.0.0.0` modid=41265
+  - Overhauls Ancient Nord armors into unisex heavy/light variants with hero tiers, adds Skaalic, Ebony, Stalhrim sets, optional modules, keyword injections, crafting at Skyforge or Skaal forge, stat adjustments, and FOMOD options.
+- **Skyrim Spear Mechanic SE** `3.0.0.0` modid=25146
+  - Adds spear/javelin weapons with crafting, animations via DAR, custom skeleton, and usage by player and NPCs.
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - NordWarUA Armor Variants (Fixed)** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Armors of the Velothi Pt. II** `1.0.0.0` modid=69996
+  - Adds 9 Dunmer‑themed armor sets and 7 weapons; requires SKSE/FSMP; includes optional world integration and crafting via specific smithing; adds boss encounters; optional patches.
+- **Real Silver Arrows** `1.0.0.0` modid=56874
+  - Adds craftable silver arrows that function like silver weapons, extra vs undead, cheaper than daedric, require steel smithing perk.
+- **Silver Bow** `1.2.0.0` modid=79302
+  - Adds craft-only version of InsanitySorrow's Silver Bow, now includes a leveled list addon
+- **Forsworn_Headdress_Variants** `armor-1.1` modid=136342
+  - Adds 12 headdress/helmet and 6 armor variants for all races; edits leveled lists (LItemForswornHelmet50, SkinBriarHeart); rare versions lootable, can be tempered; no crafting; optional files planned.
+- **Forsworn Headdress And Armor Variants** `armor-1.1` modid=136342
+  - Adds 12 headdress/helmet and 6 armor variants for all races; edits leveled lists (LItemForswornHelmet50, SkinBriarHeart); rare versions lootable, can be tempered; no crafting; optional files planned.
+- **Eyepatch Pt1** `1.0.0.0` modid=137892
+  - Adds three craftable eyepatches (Labourer’s, Sin’Dorei, Havi’s) for all races and genders, usable in face slot 55, ESL flagged, contains no armor
+- **New Elven Helmets** `1.2.0.0` modid=137216
+  - Adds craftable elven helmets (Decorated, Simple, Visor) balanced with vanilla, requires Advanced Armors perk, uses vanilla textures.
+- **Dawnstar Thane Armour** `4.0.0.0` modid=127570
+  - adds a heavy unisex armor set blending NordwarUA aesthetic with Witcher 3 meshes, mid‑tier rating, sash slot 46, helmet customizable at forges, optional HIMBO refit, credit list of mesh contributors.
+- **Warmonger Armory - Unofficial Fixed SSE Port** `1.1.0.0` modid=17809
+  - Port of Warmonger Armory to SSE with merged ESPs, fixed grammar, scaled enchantments, USSEP compatibility, and various bug fixes.
+- **Nirn Necessities - SMP Accessories** `f1.03` modid=112481
+  - Adds physics-enabled satchels, backpacks, cloaks with low‑fantasy designs; many color options, SMP physics; requires Faster HDT‑SMP, optional SPID/Bodyslide; compatible.
+- **Wrought Iron Weaponry - Leveled list integration** `1.2.0.0` modid=52878
+  - Adds standalone Wrought Iron weapons that are craftable and integrated into leveled lists.
+- **Volkihar Knight - Vampire Armor** `1.0.0.0` modid=4806
+  - Three standard variations (heavy ~ebony, light ~glass) can be crafted; legendary sets (cuirass, boots, gauntlets, hood) found after confronting Harkon grant bonuses: 10% chance to launch melee attackers (20 HP drain 4 s), muffled footsteps draining stamina/magicka/health in sunlight, and smoke‑form invisibility when sneaking.
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - Animated Armoury for GTS** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Reforging - To the Masses (Weapons Expansion) - Animated Armoury Patch** `2.1.0.0` modid=49030
+  - Adds ~300 vanilla‑friendly weapons with crafting conditions, historical names, and varied acquisition methods.
+- **Reforging - To the Masses (Weapons Expansion)** `2.1.0.0` modid=49030
+  - Adds ~300 vanilla‑friendly weapons with crafting conditions, historical names, and varied acquisition methods.
+- **DX Faction Crossbows SE** `1.1.0.0` modid=4047
+  - Adds craftable faction‑specific crossbows, quivers, and bolts for Companions, Dawnguard, Dark Brotherhood, Thieves Guild, Imperial Legion, and Stormcloaks.
+- **Artifact of Might** `1.0.3.0` modid=104381
+  - Adds 8 new lore‑friendly weapons with unique locations, stats, and tempering requirements; hand‑placed; requires appropriate smithing; conflicts with location‑editing mods.
+- **East Empire Company Armor** `3.0.0.0` modid=54990
+  - Adds unique East Empire Company armor set for NPCs such as mercenaries and wardens, craftable after Rise in the East, light armor governed by Steel Smiting perk.
+- **Common Clothes and Armors** `2.0.0.0` modid=21305
+  - Adds over 130 new clothes and armors for Skyrim’s common NPCs, with balanced stats and keywords.
+- **Armory of the Dragon Cult - Dragon Priest Armor - Half Res** `1.1.0.0` modid=94244
+  - Expands Dragon Priest armor with additional sets such as King‑Priest and Morokei; offers FOMOD variants.
+- **New Armory Series - Ash Spawn Weapons** `1.32.0.0` modid=72728
+  - Adds new Ashen weapons for Ash Spawn, chance to drop smothered or ignited weapons; 6 new weapons, shield, addons with Heavy Armory/Animated Armory; requires Glass/Arcane perks; compatible with audio patches and WACCF.
+- **Stormcloak Warrior Armor (Performance)** `1.1.0.0` modid=71276
+  - Adds craftable Stormcloak Warrior heavy armor set; no perks required, upgrades via Advanced Armors; compatible with Survival Mode; tested on fresh install
+- **Imperial Tribune Armor** `1.26.0.0` modid=54294
+  - Adds Imperial armor set craftable with Steel smithing; heavy variant provides Dwarven‑level protection, light variant matches Glass, cape and ceremonial sword are clothing with no protection.
+- **Chevalier's Armor Set HDT-SMP** `1.1.0.0` modid=132629
+  - Adds 12‑piece heavy armor set with HDT‑physics, crests, craftable from level 18, found in chests/blacksmiths; supports CBBE/3BA/HIMBO bodies; optional no‑physics version
+- **Colovian Prince Set** `1.1.0.0` modid=79894
+  - Adds an imperial‑themed light armor set and a weapon, crafted via Advanced Armors smithing perk with loading screen in Falkreath Hold.
+- **Ysmir Armor SE** `1.0.0.0` modid=112454
+  - Adds unique heavy Ancient Nord armor from mythic era, lore about deeds buried under snow and serving the dragonborn, not supported for beast races, includes donation incentive
+- **Hammet Dungeon Pack 2 SE** `2.0.0.0` modid=95339
+  - Adds 16 vanilla‑asset dungeons (Aldnzark Vault, Anchazgar, Blood Iron Veil, Brimspire, Btharkel, Darkfrost End, Darkleaf Grotto, Frey’s Dagger Mine, Hilleye Cabin, Narzak’s Vault, Nirnmire Grotto, Silent Vale, Silver Yol, Skullgrim Crypt, Twin Sonaak, Volengrim) with radiant‑quest support, difficulty normal‑hard, unique weapons & enchantments, requires AE v1.6.353+, not compatible with the nine standalone dungeons
+- **Hammet's Dungeon Pack 1 SE** `f3.01` modid=12186
+  - Compiles 30 vanilla‑asset dungeons across Skyrim and Solstheim plus Desolate Veil world space, radiant‑quest enabled, difficulty normal‑hard, unique enchantments & new spells, includes five followers (Ginvur Nedalin, Arani Valestorm, Sirkvur Stonearm, Remzir, Tarven), Nexus‑exclusive, v3.0 adds Temple of Ankarith, fixes bugs, removes Desolate Veil
+- **Taarengrav Barrow** `1.3.0.0` modid=84371
+  - Lore
+  -
+  - Ancient Nordic ruin in Western Rift tied to Dragon Cult; Valdur entombed, spirit bound; Radiant Quest, Min Level 6; Lighting Options: Darker Version (Ambiance), Brighter Version (Vanilla‑like), Vanilla Version (Bleak Falls style); Compatibility: minor worldspace edits, optional patch for DeltaRider's Draugr Overhaul, Lux patch; Followers can follow throughout
+- **Unmarked Locations Pack - Soul Cairn - Custom Ruins Patch** `1.2.0.0` modid=103028
+  - Adds new unmarked locations in Soul Cairn with unique interactions and encounters.
+- **Hidden Hideouts of Skyrim - Merged** `1.0.0.0` modid=2625
+  - 21 small hideouts across Skyrim, available as merged or individual plugins; Standard/No Map Marker/Deep Immersion versions with varying amenities and map markers.
+- **Unmarked Locations Pack - Soul Cairn** `1.2.0.0` modid=103028
+  - Adds new unmarked locations in Soul Cairn with unique interactions and encounters.
+- **Unmarked Locations Pack - Solstheim** `1.0.0.0DESC` modid=108527
+  - Adds new unmarked locations in Solstheim with unique loot and encounters.
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - Container Exclusion for Caranthir Tower** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - Teleport Only In Tamriel - Caranthir Tower** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Caranthir Tower Reborn in Wyrmstooth** `1.2.0.0` modid=70311
+  - Moves tower to Wyrmstooth; requires main quest completion; replacer ESP; known dragon guardian issue; optional patches available
+- **Riverside Shack** `4.0.0.0` modid=20982
+  - Player home built from abandoned shack near Windhelm, with quest to rebuild and customize, includes mod patches.
+- **Harborside - Solitude Bridge Home** `1.1.0.0` modid=17959
+  - Adds a unique home overlooking Solitude harbor with no load doors
+- **Caranthir Tower Reborn SE** `3.2.0.0` modid=4269
+  - Large wizard tower quest; restore via Hearthfire‑style crafting; level 20 required; features spell creation, auto‑sort, portals; requires DLCs; optional patches
+- **Stonehollow Overhaul for Wyrmstooth** `1.0.2.0` modid=131619
+  - Reworks Wyrmstooth's Stonehollow settlement for aesthetic unity, replacing farmhouses and hall with Nordic-Imperial style.
+- **King-Priest - Wyrmstooth Patch** `4.0.1.0` modid=59652
+  - Increases difficulty of Dragon Priest encounters, balancing them for high‑level play
+- **RS Children Patch Compendium - Wyrmstooth** `1.0.0.0` modid=13409
+  - Collection of RS Children patches for many mods requiring RS Children Overhaul, may conflict as intended (ESLified Patch).
+- **Mihail's Ice Titans in Wyrmstooth** `1.0.0.0` modid=110136
+  - Adds Ice Titans to Wyrmstooth coast, wearing shipwreck armor, anchor weapons, increasing creature variety
+- **Daedric Shrines - All in One - My Patches by Xtudo - Wyrmstooth** `4.3.0.0` modid=78809
+  - Provides comprehensive ESL patches and fixes for Daedric Shrines, including HD textures, map‑marker options, and compatibility patches with many other mods.
+- **Wyrmstooth - Brimstone and Wyrmstone Armory** `1.5.0.0` modid=74671
+  - Adds craftable Brimstone and Wyrmstone armor and weapons, plus an optional Legacy of the Dragonborn display patch.
+- **Wyrmstooth** `1.20.3.0` modid=45565
+  - Adds a large DLC‑size quest expansion with a new island, voiced NPCs, dungeons, music, and a player home.
+- **Beyond Skyrim - Bruma - Animated Doors Patch** `1.7.3.0` modid=103156
+  - Comprehensive bug‑fix patch for Bruma addressing meshes, navmeshes, quest issues, voice problems, and other compatibility fixes
+- **Beyond Skyrim - Bruma - CC The Contest Spider Patch** `1.7.3.0` modid=103156
+  - Comprehensive bug‑fix patch for Bruma addressing meshes, navmeshes, quest issues, voice problems, and other compatibility fixes
+- **BSHeartland - Ayleid Loot** `1.7.3.0` modid=103156
+  - Comprehensive bug‑fix patch for Bruma addressing meshes, navmeshes, quest issues, voice problems, and other compatibility fixes
+- **BSHeartland - Unofficial Subjective Tweaks** `1.7.3.0` modid=103156
+  - Comprehensive bug‑fix patch for Bruma addressing meshes, navmeshes, quest issues, voice problems, and other compatibility fixes
+- **Beyond Skyrim - Bruma - Unofficial Patch** `1.7.3.0` modid=103156
+  - Comprehensive bug‑fix patch for Bruma addressing meshes, navmeshes, quest issues, voice problems, and other compatibility fixes
+- **Morihaus' Refuge - Lord's Mail Reintegration - Bruma Ogrehaul** `1.0.0.0` modid=68558
+  - Replaces Lord's Mail quest with new dungeon, boss fight to obtain the mail
+- **Plague of the Dead - BS Bruma Synergy Patch** `2.0.0.0` modid=28630
+  - Swaps Bruma zombies with Plague of the Dead variants and updates related spell tomes in leveled lists.
+- **The Halls of Rielle - Beyond Skyrim Bruma and The Cause Combined - Ayleid Consistency Suite - Equip - Wearable Armor** `1.3.3.0` modid=58213
+  - Adds a new cave connecting Rielle from Bruma and The Cause, creating a central concourse with doors to each ruin behind completed dungeons; seismic activity uncovers hidden chambers; includes Rielle's Temple of Merid‑Nunda, Great Vaults, and Whitestone Cave with views; integrates Ayleid city architecture and lavish vaults; offers optional exploration after completing individual dungeons.
+- **The Halls of Rielle - Beyond Skyrim Bruma and The Cause Combined - Ayleid Consistency Suite - Ayleid Equipment** `1.3.3.0` modid=58213
+  - Adds a new cave connecting Rielle from Bruma and The Cause, creating a central concourse with doors to each ruin behind completed dungeons; seismic activity uncovers hidden chambers; includes Rielle's Temple of Merid‑Nunda, Great Vaults, and Whitestone Cave with views; integrates Ayleid city architecture and lavish vaults; offers optional exploration after completing individual dungeons.
+- **The Halls of Rielle - Beyond Skyrim Bruma and The Cause Combined** `1.3.3.0` modid=58213
+  - Adds a new cave connecting Rielle from Bruma and The Cause, creating a central concourse with doors to each ruin behind completed dungeons; seismic activity uncovers hidden chambers; includes Rielle's Temple of Merid‑Nunda, Great Vaults, and Whitestone Cave with views; integrates Ayleid city architecture and lavish vaults; offers optional exploration after completing individual dungeons.
+- **Lawless Bruma - A Bandit Overhaul for Beyond Skyrim Bruma** `1.0.0.0` modid=91305
+  - Implements Lawless bandit overhaul in Bruma using Bruma‑specific assets and bug fixes
+- **Beyond Skyrim - Wares of Tamriel SE** `1.5.3.0` modid=31519
+  - Introduces a voiced merchant in Dawnstar offering unique items drawn from across Tamriel
+- **Beyond Skyrim - Bruma - DLC Integration Patch** `1.6.2.0` modid=10917
+  - Adds the Bruma region beyond Skyrim, featuring new quests, weapons, voiceover, music, and high‑resolution textures
+- **Beyond Skyrim - Bruma** `1.6.2.0` modid=10917
+  - Adds the Bruma region beyond Skyrim, featuring new quests, weapons, voiceover, music, and high‑resolution textures
+- **Beyond Skyrim - Assets** `1.6.2.0` modid=10917
+  - Adds the Bruma region beyond Skyrim, featuring new quests, weapons, voiceover, music, and high‑resolution textures
+- **Siege at Icemoth - Fishing and Survival Patch ESL** `1.4.5.0` modid=109541
+  - Adds small-scale new lands with islands, locations, dungeons, unique items, and voiced guard dialogue in the Sea of Ghosts
+- **Siege at Icemoth - ESM** `1.4.5.0` modid=109541
+  - Adds small-scale new lands with islands, locations, dungeons, unique items, and voiced guard dialogue in the Sea of Ghosts
+- **Damaged Skeletons - Compatibility version** `1.0.0.0` modid=92930
+  - Adds compatibility patches for Mihail's damaged skeletons to leveled lists, ensuring proper weapon placement and addressing conflicts.
+- **Farm Geese- Mihail Monsters and Animals (SE-AE)** `1.0.0.0` modid=156242
+  - Adds Farm Goose (white/grey), new foods Goose Breast and Goose Roast, geese wander villages honking judgmentally, no known incompatibilities.
+- **Chub Loons- Mihail Monsters and Animals (SE-AE)** `1.0.0.0` modid=145507
+  - Chub Loons are plump, flightless, auk‑like birds of icy coasts in High Rock and Skyrim, passive, flee when approached, historically hunted by Nords, only a few flocks remain on Winterhold shores.
+- **The Blood Horker (Bloodmoon Creature Restoration Project) SE** `1.1.0.0` modid=13938
+  - Adds Blood Horker predatory creature on Solstheim, replaces all vanilla horkers, improves lore consistency.
+- **Fiendroth Beetles- Mihail Monsters and Animals (SE-AE version) (''eso daedra'')** `1.0.0.0` modid=70076
+  - Adds Fiendroth beetles—small harmless daedric insects that spawn via residual summoning energy, can accumulate, found in Necromancer/vampire areas and Soul Cairn; provides beetle and Torax ingredient; no known incompatibilities; part of Mihail’s lore‑rich creature series
+- **Storm Golem- Mihail Monsters and Animals (SE-AE version) (''atronach'')** `2.1.0.0` modid=24794
+  - Adds Storm Golem creature and Conjure Storm Golem spell; elite electricity‑based atronach with humanoid form, bracelets, core power, immune to electricity, found in Soul Cairn; created by Mihail
+- **Goliath Groupers - (Animal Series Pt.8) SE** `1.0.0.0` modid=49523
+  - Adds large predatory fish up to 800 lb found in Skyrim seas, with 5 variants dropping distinct alchemical scales.
+- **Ice Titans- Mihail Monsters and Animals** `2.0.0.0` modid=47181
+  - Adds Ice Titan creature (two variants) with blue‑skinned, warty appearance, Rusted Iron Anchor weapon and Titan Tripe ingredient; part of High Fantasy Pack, requires removing standalone ESP if using pack, no known incompatibilities, lore‑rich implementation by Mihail
+- **Veiltail Lobsterfish and Emean Triclops- Mihail Monsters and Animals (SE-AE version)** `1.0.0.0` modid=104365
+  - Adds Veiltail Lobsterfish and Emean Triclops creatures from the Shivering Isles with lore variants.
+- **Damaged Skeletons- Mihail Monsters and Animals** `1.0.0.0` modid=89623
+  - Adds 16 new damaged skeleton variants with unique appearances such as decapitated or limbless skeletons.
+- **Coelacanth (Prehistoric Content Series Pt.14) SE** `1.0.0.0` modid=59493
+  - Adds two Coelacanth species (small and large) with aquatic AI and new cookable loot found in Reikling villages
+- **Mating Crabs- Mihail Monsters and Animals** `1.1.0.0` modid=51536
+  - Adds crab mating behavior on Skyrim coast, spawns as predator‑prey, tireless reproduction
+- **Ring-necked Pheasants - Mihail Monsters and Animals** `1.0.0.0` modid=95121
+  - Adds live male ring‑necked pheasants to forests and fields.
+- **Bantam Guars- Mihail Monsters and Animals** `3.0.0.0` modid=27363
+  - Introduces the Bantam Guar, a small, docile reptilian creature from Morrowind, adds related foods and lore‑friendly integration
+- **Baby Mammoths - Mihail Monsters and Animals** `1.0.0.0` modid=100006
+  - Adds baby mammoths that graze near giant camps; standalone version; no known incompatibilities.
+- **House Cats- Mihail Monsters and Animals** `1.1.0.0` modid=30496
+  - Adds a house cat creature (common and named Puss in Boots) with 4K textures, animations, and lore‑rich description authored by Mihail, part of his creature series
+- **Ancient Skeletons- Mihail Monsters and Animals** `3.0.0.0` modid=34368
+  - Adds ancient skeleton creatures from Merethic Era
+  - Purpose-driven, fast, intelligent, target Dragonkin
+  - Includes various skeleton types, no scripts, ESL flagged
+- **Scarecrows of Skyrim - Elianora Version** `1.5.0.0` modid=39575
+  - Places scarecrows at crop locations across Skyrim
+- **Official Unique Flowers and Plants SSE - No Landscape Edits** `1.0.0.0` modid=83623
+  - Provides an ESL esp replacer for Unique Flowers and Plants that removes landscape edits for greater compatibility.
+- **Quiet Muffle Footsteps For Player - Audio Overhaul Patch** `1.1.0.0` modid=41136
+  - Silences player footsteps when muffle effect is active, works on all surfaces except jumping into water, requires loading after AoS and ISC plugins, adds patches for those mods.
+- **Quiet Muffle Footsteps For Player** `1.1.0.0` modid=41136
+  - Silences player footsteps when muffle effect is active, works on all surfaces except jumping into water, requires loading after AoS and ISC plugins, adds patches for those mods.
+- **Audio Overhaul for Skyrim (4.1.2)** `4.1.3.0` modid=12466
+  - Comprehensive sound overhaul enhancing distance propagation, reverb, weapons, magic, and creatures; requires Sound Record Distributor and Engine Fixes; improves immersion and performance.
+- **Arachnid -Spiders Sounds Rework SFX-** `2.0.0.0` modid=50706
+  - Provides reworked spider sound effects with unique attack, death, injury, and footstep sounds, replacing vanilla audio for immersive gameplay.
+- **Undead FX - SPID Patch** `2.2.0.0` modid=71584
+  - Provides an SPID patch for Undead FX.
+- **Undead FX** `4.2.0.0` modid=5197
+  - Adds decayed zombie visuals, restoring undead appearances from earlier Elder Scrolls games.
+- **Book Covers Skyrim SE - Desaturated** `4.2.0.0` modid=901
+  - Retextures all books, journals, and notes with unique covers and optional desaturated variants, supporting multiple languages
+- **Fixed Lighting for Deathbell and Dragons Tongue for Maris Flora** `1.0.0.0` modid=99555
+  - Corrects improper glowing on deathbells and dragon tongues when using Mari's Flora by adjusting mesh lighting.
+- **Thicket and Dead Shrub Swapper** `f2.01` modid=86414
+  - Combines various dead shrub and thicket replacements, requiring Base Object Swapper
+- **Civil War Champions - Proper Male Weighting** `1.0.0.0` modid=159016
+  - Fixes weight painting on male Imperial Dragon and Stormbear armors for realistic movement, providing a complete polished solution for both sets (V95 NEW ANNIVERSARY EDITION UPGRADE).
+- **Chrysamere by lautasantenni for SSE** `1.1.0.0` modid=82969
+  - Adds a broken legendary sword with forging recipes and elemental damage, spread across world locations.
+- **aMidianBorn Book of Silence SE** `1.9.1.0` modid=35382
+  - Provides high‑resolution texture replacements for many armors, weapons, creatures and unique items, includes complete BSA with optional plugins for variants such as glass, ebony, unique items, and requires separate plugins for customization
+- **Paragon of Mannimarco - Replacer for the Necromancer's Amulet - No Eyes Version** `1.0.0.0` modid=38084
+  - Replacer that changes the Necromancer's Amulet into an octagonal jade skull pendant with optional glowing eyes, daedric runes and bone‑shaped chain, provides a standalone Talisman of the Black Worm (ID FE000800), can be installed after conflicting mods, and offers both eye‑enabled and eye‑less versions using shared textures.
+- **Praedy's Staves AIO - Unenchanted Staves Alternative** `1.3.0.0` modid=65481
+  - Overhauls staves with unique models, particles, and collisions, offering ~45 variants and support for popular magic mods.
+- **Praedy's Staves AIO - Patch Hub** `1.21.0.0` modid=65660
+  - Provides compatibility patches for Praedy's Staves AIO with numerous magic and visual mods.
+- **Praedy's Staves AIO - 1k** `1.3.0.0` modid=65481
+  - Overhauls staves with unique models, particles, and collisions, offering ~45 variants and support for popular magic mods.
+- **Wormpie's Hagravens (SE)** `f1.05` modid=91607
+  - Overhauls hagraven appearance with 80+ variations, unique models and textures, includes unique named hagravens and scaled challenges up to level 50.
+- **Hawk Replacer and Eagles- Mihail Monsters and Animals** `1.0.0.0` modid=55461
+  - Replaces vanilla low‑poly Hawks with high‑quality 2k models, detailed textures, custom nests, and new sounds; adds three eagle types (Golden, Black, Bald) with superior loot; fixes interactable Hawk activators, enables looting, adds destruction data, preserves nest quality, uses new models faithful to species
+- **Dunmeri Furniture in Gray Quarter** `2.2.0.0` modid=60077
+  - Adds dark‑elf style furniture to Windhelm’s Gray Quarter interiors via Base Object Swapper, compatible with several interior mods.
+- **Project Porthole - Unique Doors For Unique Cities** `4.0.0.0` modid=149931
+  - Adds custom door assets to modded cities for architectural consistency.
+- **Daedric Shrines - All in One - My Patches by Xtudo - BS Bruma - Namira** `4.3.0.0` modid=78809
+  - Provides comprehensive ESL patches and fixes for Daedric Shrines, including HD textures, map‑marker options, and compatibility patches with many other mods.
+- **Daedric Shrines - All in One - My Patches by Xtudo - VIGILANT patch** `4.3.0.0` modid=78809
+  - Provides comprehensive ESL patches and fixes for Daedric Shrines, including HD textures, map‑marker options, and compatibility patches with many other mods.
+- **Daedric Shrines - All in One - My Patches by Xtudo - The Only Cure patch** `4.3.0.0` modid=78809
+  - Provides comprehensive ESL patches and fixes for Daedric Shrines, including HD textures, map‑marker options, and compatibility patches with many other mods.
+- **Daedric Shrines - All in One - My Patches by Xtudo - Fists of Fury - Skyrim patch** `4.3.0.0` modid=78809
+  - Provides comprehensive ESL patches and fixes for Daedric Shrines, including HD textures, map‑marker options, and compatibility patches with many other mods.
+- **Daedric Shrines AIO by Xtudo - FIXES** `4.3.0.0` modid=78809
+  - Provides comprehensive ESL patches and fixes for Daedric Shrines, including HD textures, map‑marker options, and compatibility patches with many other mods.
+- **Dwemer Pipework Reworked - Performance friendly textures** `5.0.0.0` modid=46507
+  - Reworks Dwemer pipes and boilers to be functional, transparent, animated fans, glowing; compatible with texture mods; version 5 available.
+- **Dwemer Pipework Reworked - Hotfix 3** `5.0.0.0` modid=46507
+  - Reworks Dwemer pipes and boilers to be functional, transparent, animated fans, glowing; compatible with texture mods; version 5 available.
+- **Dwemer Pipework Reworked - Hotfix 2** `5.0.0.0` modid=46507
+  - Reworks Dwemer pipes and boilers to be functional, transparent, animated fans, glowing; compatible with texture mods; version 5 available.
+- **Dwemer Pipework Reworked - Hotfix** `5.0.0.0` modid=46507
+  - Reworks Dwemer pipes and boilers to be functional, transparent, animated fans, glowing; compatible with texture mods; version 5 available.
+- **Dwemer Pipework Reworked** `5.0.0.0` modid=46507
+  - Reworks Dwemer pipes and boilers to be functional, transparent, animated fans, glowing; compatible with texture mods; version 5 available.
+- **Proper Windmills of Skyrim** `1.1.0.0` modid=47374
+  - Scales and repositions windmill sails to proper size and placement using SMIM meshes for better visual fidelity.
+- **Fabled Forests** `2.1.0.0A` modid=94462
+  - Adds 45,000 tree alterations with lush, dense forests, performance variants (2K/1K), compatibility selector, optional snow pine textures, LOD generation, and extensive compatibility patches
+- **Northern Roads Patch Collection** `1.19.0.0` modid=77386
+  - Collection of compatibility patches for Northern Roads with various mods; includes load order advice and credits.
+- **Northern Roads - Patches Compendium** `7.3.0.0` modid=77893
+  - Provides patches for Northern Roads compatibility with popular mods; includes load order and engine fix guidance.
+- **ElSopa - Northern Roads Resculpted 2k** `1.1.0.0` modid=83792
+  - Resculpts Northern Roads meshes and textures with reduced triangle counts, offers 4k/2k texture options, improves performance, includes custom LODs.
+- **ELFX Shadows** `1.5.2.0` modid=63790
+  - Enhanced lighting addon that adds realistic window shadows, exceeds engine light limits, ESL‑flagged, includes fixes for ELFX, works with ENB, requires ELFX Enhancer, improves lighting without flicker.
+- **Skyland Bits and Bobs - A Clutter Overhaul - Performance Version** `1.91.0.0` modid=95032
+  - Adds hundreds of performance‑focused textures for clutter items like crates, barrels, furniture, and integrates with SMIM meshes.
+- **Majestic Mountains Main** `f4.02` modid=11052
+  - Redesigns mountain textures with single 8k map, improved LOD, snow shader, optional packs; requires DynDoLOD for proper LOD generation
+- **LeanWolf's Better-Shaped Weapons - All in One Installer** `2.1.3.0` modid=2017
+  - Reshapes weapon meshes for realistic proportions; optional texture patches; safe to install/uninstall
+- **Elegant Candlelight** `1.3.0.0` modid=64435
+  - Offers multiple candlelight radius options with optional ENB support for enhanced lighting.
+- **Seasons of Skyrim Support - Thicket and Dead Shrub Swapper** `f2.01` modid=86414
+  - Combines various dead shrub and thicket replacements, requiring Base Object Swapper
+- **Depths of Skyrim - An Underwater Overhaul SSE** `1.1.7.0` modid=26913
+  - overhauls underwater environments and adds new content to the Sea of Ghosts.
+- **GKB Waves** `1.0.0.0` modid=19077
+  - Adds new wave models and textures to Skyrim's coast up to Solitude; animated textures; minimal performance impact; designed for compatibility.
+- **Volumetric Mists** `1.4.2.0` modid=29273
+  - Adds large‑scale, hand‑placed volumetric mist/fog to SSE that is not weather‑controlled; offers dense and performance‑optimized versions, works alongside other fog mods, and can resolve grid patterns by setting bUse64bitsHDRRenderTarget=1 in SkyrimPrefs.ini.
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - GTS Azurite - No Config Spell** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Dynamic Interior Ambient Lighting (DIAL)** `3.9.0.0` modid=149920
+  - Dynamically adjusts interior lighting by time of day using optional weather patches and SKSE/SkyPatcher, compatible with many lighting mods.
+- **HammerHair V1.6.1** `1.15.0.0` modid=156562
+  - Adds 77 male and 77 female Redguard hairstyles (wigs included) for humanoid races, requiring texture mods for quality; includes extensive hair list and recommended texture mods.
+- **Vanilla hair remake SMP - Wigs** `1.0.3.0` modid=63979
+  - Replaces 146 vanilla hairstyles with detailed models
+  - Optional SMP physics via FSMP
+  - Lower performance cost; safe to install/uninstall; no ESP; optional NPC files
+  - Uses vanilla textures; hats may clip without FSMP option disableSMPHairWhenWigEquipped
+  - Compatible with High Poly Vanilla Hair and related patches
+  - Not compatible with Vanilla Hair Replacer
+- **Vanilla hair remake SMP** `1.0.3.0` modid=63979
+  - Replaces 146 vanilla hairstyles with detailed models
+  - Optional SMP physics via FSMP
+  - Lower performance cost; safe to install/uninstall; no ESP; optional NPC files
+  - Uses vanilla textures; hats may clip without FSMP option disableSMPHairWhenWigEquipped
+  - Compatible with High Poly Vanilla Hair and related patches
+  - Not compatible with Vanilla Hair Replacer
+- **Lion's Mane SMP** `1.0.0.0` modid=72166
+  - Adds lion‑like hairstyle and beard for male Khajiit; optional HDT‑SMP physics for gentle rustling
+- **Authentic Eyes** `1.1.0.0` modid=36063
+  - Overhauls eye textures for subtlety and realism; replaces all eye textures with higher‑resolution normal, glow, and reflection maps; reduces glow for men/mer; compatible with other eye mods.
+- **Additional Dremora Faces - Mysticism Patch** `1.3.12.0` modid=97946
+  - Adds female Dremora, unique faces up to 216, human brows, beards, vampire eyes, voice adjustments, unique key appearances, many compatibility patches
+- **Additional Dremora Faces** `1.3.12.0` modid=97946
+  - Adds female Dremora, unique faces up to 216, human brows, beards, vampire eyes, voice adjustments, unique key appearances, many compatibility patches
+- **CoverKhajiits - Face Textures 2k** `1.3.0.0` modid=71067
+  - High‑quality cleaned and upscaled Khajiit face textures optimized for SE.
+- **Better Claws and Gauntlets for Anniversary Edition** `0.1.0.0` modid=160444
+  - Extends the Better Claws and Gauntlets port to include AE‑specific gauntlet meshes and updates
+- **Better Claws and Gauntlets SSE** `1.2.3.0` modid=12595
+  - Fixes beast‑race claw appearance by porting the original mod to Skyrim Special Edition, ensuring proper claws regardless of equipped gloves and compatible with Immersive Armors
+- **Wounds Overlays Applied** `1.2.0.0` modid=107246
+  - Applies overlay textures to Wounds injuries for visual effect.
+- **Dragonborn's Bestiary - DAC0DA** `1.0.0.0` modid=136795
+  - Provides a bestiary patch for the DAc0da mod, integrating its creature data.
+- **The Dragonborn's Bestiary - Show In UI** `1.0.1.0` modid=161050
+  - Adds Bestiary entry to main menu.
+- **The Dragonborn's Fishiary - Bestiary Addon** `1.0.1.0` modid=134739
+  - Unlock Bestiary entries by fishing new fish, 30 entries, ESL flagged.
+- **The Dragonborn's Bestiary - Sun Spells Addon** `1.0.0.0` modid=123871
+  - Adds sun icon to undead creature weaknesses in Bestiary.
+- **The Dragonborn's Bestiary - Addons - CC Pets** `1.2.0.0` modid=123389
+  - Replaces Bestiary images with modded versions and adds new creature entries.
+- **The Dragonborn's Bestiary - Dragon Priests** `0.3.0.0` modid=125166
+  - Adds support for named Dragon Priests and Dragon Priest mods in Bestiary.
+- **The Dragonborn's Bestiary - Falmer Overhaul Add-on** `1.5.2.0` modid=123521
+  - Adds custom menu to collect creature info, unlock entries via kills/summons/transformations, includes counters, widescreen & gamepad support, SKSE plugin.
+- **The Dragonborn's Bestiary - Bruma Add-on** `1.5.2.0` modid=123521
+  - Adds custom menu to collect creature info, unlock entries via kills/summons/transformations, includes counters, widescreen & gamepad support, SKSE plugin.
+- **The Dragonborn's Bestiary - Addons - Mihail** `1.2.0.0` modid=123389
+  - Replaces Bestiary images with modded versions and adds new creature entries.
+- **Character Menu SE** `1.2.1.0` modid=173074
+  - Adds full character menu (press N); 4 tabs (Character, Skills, Factions, Stats); class system based on skill distribution; works with Constellations, Firmament; compatible with SkyUI, etc
+- **Rename Potions SKSE** `1.0.0.0` modid=152087
+  - SKSE plugin enabling renaming of crafted potions in alchemy menu, supports AE/SE, requires Address Library.
+- **Werewolf Transformation Timer - SkyUI Addon** `1.0.3.0` modid=45326
+  - Adds a SkyUI widget showing remaining werewolf transformation time, fully customizable via MCM.
+- **Patreons Menu** `1.0.3.0` modid=120505
+  - Adds a menu item to list Patreon supporters, with configurable label and texture.
+- **Player Name Randomizer** `1.1.1.0` modid=92438
+  - Randomly generates player names based on race and gender using Tamrielic Names definitions.
+- **PhotoMode** `2.0.3.0` modid=91701
+  - Adds Photo Mode for taking screenshots, with camera controls, filters, overlays, and configurable settings.
+- **The Dragonborn's Bestiary** `1.5.2.0` modid=123521
+  - Adds custom menu to collect creature info, unlock entries via kills/summons/transformations, includes counters, widescreen & gamepad support, SKSE plugin.
+- **More Informative Console** `1.2.2.0` modid=19250
+  - Enhances console UI with detailed object info, mod source, and form data
+- **GATE TO SOVNGARDE (GTS) - Small Mods and Resources - Description Framework for Holidays** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Descriptions for Various Mods - Only Usable Items** `2.6.0.0` modid=106229
+  - Provides descriptions for misc items across 200+ mods via Description Framework.
+- **Unmarked Locations Pack - Solstheim - Descriptions Add-on** `1.0.0.0DESC` modid=108527
+  - Adds new unmarked locations in Solstheim with unique loot and encounters.
+- **Creation Club Item Descriptions** `1.6.0.0` modid=106048
+  - Adds immersive flavor‑text descriptions to most Creation Club miscellaneous items.
+- **GATE TO SOVNGARDE (GTS) - Small Mods and Resources - Undeath Misc Descriptions** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **GATE TO SOVNGARDE (GTS) - Small Mods and Resources - Description Framework for Alchemy Requires Bottles** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **GATE TO SOVNGARDE (GTS) - Small Mods and Resources - Description Framework for Campfire** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **GATE TO SOVNGARDE (GTS) - Small Mods and Resources - Description Framework for Headhunter** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Description Framework** `2.1.1.0` modid=105799
+  - Allows mods to attach in‑game descriptions to items, supporting many types and customizable formatting.
+- **Constructible Object Custom Keyword System** `1.1.1.0` modid=81409
+  - Adds a keyword‑based category system to the Constructible Object menu in SkyUI for better organization.
+- **Knotwork** `2.0.1.0` modid=128235
+  - Adds custom journal knotwork for quests via INI mappings; compatible with SkyUI and Skyrim UI mods
+- **Simple Interface Tweaks** `1.1.0.0a` modid=82215
+  - Compiles interface addons for SkyUI, adding wider MCM menus, better sleep wait menu, remove quicksave button, improve dialogue controls, extended favorites, optional Nordic font, while preserving vanilla feel.
+- **Informed Mail Delivery** `2.0.0.0` modid=66339
+  - Shows names of delivered items; works in 1st/3rd person; SKSE required; compatible with vanilla, Provincial Courier Service, Better Courier (patch for Loot & Degradation); optional ESL; configurable text color (green/red/white).
+- **Switch Camera During Dialogue** `1.1.0.0` modid=95269
+  - Allows switching camera perspective (1st/3rd) during dialogue via F or controller; requires SKSE; compatible with Improved Camera and similar mods; ESL‑flagged; safe to install mid‑game
+- **Toggle Compass Hotkey** `1.4.0.0` modid=63247
+  - Allows toggling the compass/floating markers via a hotkey (default X) and also hides related HUD elements such as shouts and temperature indicators.
+- **Smart Optimal Salves - Optimal Potion Hotkey MCM** `0.3.0.0` modid=42402
+  - Use MCM to assign hotkeys to drink health/stamina/magicka potions; will use optimal potion to avoid over‑heal; requires SkyUI and SKSE64; ESL‑flagged; compatible only if potion keywords unchanged
+- **Hotkey Reminder** `1.0.5.0` modid=115853
+  - A UI menu (default F11, configurable) that displays all keybinds, lets you label keys, saves to interface/hotkeysreminder_data.json, can lock editing via MCM, is an ESP-FE plugin with no load‑order conflicts
+- **B612 - my little asteroid of useful UI components** `1.0.19.0` modid=127701
+  - Provides UI components like QuantitySlider, List, ItemSelect, SpellSelect for modders; repurposed from vanilla UI; compatible with most mods.
+- **Stay At The System Page NG** `1.6.0.0` modid=76927
+  - Converts Stay At The System Page to CLib-NG DLL for SE/AE, ensuring journal opens at system page tab
+- **Persistent Favorites** `1.0.4.0` modid=118174
+  - Automatically re‑favorites or hotkeys any item or spell added to inventory, with optional tracking/untracking.
+- **Better Grabbing** `1.17.0.0` modid=134769
+  - Replaces the vanilla grab with a more flexible system allowing rotation, translation, and gamepad control, configurable via an INI file
+- **Contextual Crosshair** `1.3.2.0` modid=63980
+  - Provides a contextual crosshair that appears only when targeting, aiming, or using spells, with smooth fading transitions.
+- **Better Third Person Selection - BTPS** `0.8.9.0` modid=64339
+  - SKSE DLL that overhauls 3rd‑person object selection with a 3D widget, filter presets, and horseback support for precise targeting
+- **Aura's Scrumptious Supplement (A.S.S. for B.O.O.B.I.E.S.)** `1.3.0.0` modid=89823
+  - Adds item types, colors, and icons for food and ingestibles; requires O.C.F., B.O.O.B.I.E.S., and SKSE; supports many mods; optional P.E.N.I.S. for ingredient icons.
+- **Simonrim I4 Addons - Artificer** `1.0.0.0` modid=87608
+  - Adds I4 support for various Simonrim mods
+- **Wounds - I4 and Wheeler patch** `1.2.0.0` modid=92614
+  - Provides icons for Wounds injuries and patches for add‑ons, with no ESP required.
+- **Racial Abilities - I4 icons** `1.4.2.0` modid=93219
+  - Assigns icons to racial abilities and powers, compatible with overhauls such as Aetherius, Imperious, Survival Mode, and others.
+- **Standing Stones - I4 icon** `1.0.0.0` modid=92780
+  - Assigns icons to Standing Stone abilities; compatible with Mundus, Andromeda, Evenstar, Mundustar, Freyr; ESP-FE
+- **The Handy Icon Collection Collective** `1.7.0.0` modid=90508
+  - Provides SWF icon assets for UI mods using I4 or COCKS, requires I4 for item/spell icons or COCKS for crafting category icons, lists compatible and incompatible mods, no plugins, load after conflicting mods, optional requirements include I4 or COCKS NG for specific Skyrim SE versions.
+- **Inventory Interface Information Injector - Alchemy Fix** `1.1.0.0-AF` modid=141883
+  - Enables keyword matching in alchemy menu, fixing missing icons for alchemy mods such as AIT and KIT.
+- **UIExtensions** `1.2.0.0` modid=17561
+  - Adds custom menus: Cosmetic Menu (RaceMenu overlay) for NPC overlays, Dye Menu for dyeing armor, List Menu for variable info lists, Magic Menu to display/trade spells, Selection Menu for favorites, Stats Menu for actor stats, Text Entry Menu for script input, Wheel Menu for 8‑option radial menu with optional actor stats.
+- **TrueHUD - HUD Additions** `1.1.9.0` modid=62775
+  - floating info bars for any amount of actors, boss health bars, moveable/scalable player health/magicka/stamina bars with shout cooldown and enchantment meter, recent loot log, API for other plugins, all modular and configurable via MCM
+- **Fully Harvest Hanging Carcasses and Coin Purses** `1.13.0.0` modid=86751
+  - Fixes harvesting of dead animal carcasses; makes them disappear; fixes collision for hanging salmons and coin purses; improves interaction; requires Papyrus Extender; conflicts with certain flora fixes.
+- **More Craftable Equipment** `1.4.0.0` modid=44666
+  - Adds Weaving Loom crafting station and new craftable clothing/gear via quests
+- **Terrain Variation** `1.0.1.0` modid=148123
+  - Fixes terrain tiling with stochastic sampling, works with all texture types, LOD support, runtime toggle, ~3‑5% performance impact.
+- **CS Light** `1.9.4.0` modid=138443
+  - Config hub for Light Placer with pre‑configured JSON for candles, lanterns, fires, etc.; works with Community Shaders; customizable fade/radius; supports ISL and True Light
+- **Wetness Effects** `3.0.0.0` modid=112739
+  - Adds realistic wetness and weather effects such as rain‑wetness, puddles, raindrop impacts, and shore wetness, supporting SE, AE, and VR.
+- **Community Shaders** `1.4.11.0` modid=86492
+  - Open‑source SKSE plugin enabling advanced graphics modifications for Skyrim AE, SE, and VR.
+- **Target Focus** `1.2.1.0` modid=67996
+  - SKSE plugin adds targeting depth‑of‑field effect in combat and dialogue, supports vanilla and ENB, configurable sliders, patchable via Web Patcher.
+- **Fishing Extension Framework** `1.0.0.0` modid=139626
+  - Framework that modifies fishing system to allow new rods, biomes, keyword weather options; .ESL flagged
+- **Injected Animated Armoury** `1.1.5.0` modid=74737
+  - Adds OAR‑compatible injected keywords for Animated Armoury via Update.esm master; lists keywords (e.g., OCF_WeapTypePole1H_Thrust) and condition files; requires OAR files; enables AA animations without full AA master; compatible with other mods using those keywords.
+- **SkyPatcher** `6.2.2.0` modid=106659
+  - Offers a data‑patch system based on SKSE and CommonLibSSE that lets mod authors modify records such as leveled lists, formlists, and containers via simple config files.
+- **Save & Load Accelerator for SKSE Cosaves (S.L.A.C.K.)** `1.3.2.0` modid=163969
+  - Accelerates SKSE cosave saving up to 150x and loading up to 15x faster
+- **Core Impact Framework (CIF)** `1.2.8.0` modid=146873
+  - Script‑free modular impact system managing effects like blood, sound, and visuals, fully customizable via JSON filters.
+- **Light Placer** `4.2.0.0` modid=127557
+  - Framework to attach real lights to objects and actors via JSON configs; supports static, dynamic, worn, and FX lights; requires Address Library
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - Faster HDT - Preconfigured Settings** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **FPS Boost for Quest Mods** `1.1.0.0` modid=122050
+  - Provides occlusion plane patches for quest mods to improve FPS on low‑end systems; .ESL flagged; compatible with many mods; optional VR settings; safe to install mid‑game
+- **Nemesis Creature Behaivour - WereWolf Addon** `1.3.0.0` modid=45966
+  - Provides compatibility resource for Nemesis to edit creature behaviour; does not enable creature sex/FNIS animations; includes optional patches for Ultimate Combat and Ultimate Dragons; excludes horses; lists base game creature behaviours.
+- **Nemesis Creatures BEHAVIOUR compatibility** `1.3.0.0` modid=45966
+  - Provides compatibility resource for Nemesis to edit creature behaviour; does not enable creature sex/FNIS animations; includes optional patches for Ultimate Combat and Ultimate Dragons; excludes horses; lists base game creature behaviours.
+- **Fort Takeovers Framework - Core** `3.1.0.0` modid=25143
+  - Framework to clear dungeons and let factions take control; supports up to 5 factions; scripts/quests/keywords/location ref types; compatible with vanilla; conflicts only if two mods edit same location; documentation available.
+- **Survival Control Panel** `1.1.2.0` modid=41891
+  - Framework to customize Survival Mode features like sleep leveling up and cloak support; does not require Survival Mode installed
+- **Currency Swapper** `2.0.0.0` modid=127686
+  - SKSE framework enabling dynamic currency changes, with functions like SetCurrency and training overrides.
+- **Dynamic Armor Variants** `1.0.5.0` modid=65963
+  - Framework allowing dynamic armor variants by swapping addons at runtime; uses JSON configs; supports UIExtensions and hidden equipment add‑ons.
+- **Object Categorization Framework** `6.1.0.0` modid=81469
+  - Framework that assigns keywords and FormLists to items for other mods to use; requires KID, FLM, SPID; optional patches available; widely used.
+- **NPCs Names Distributor - Patches for Various Mods** `1.6.0.0` modid=119090
+  - Patches popular mods so NPCs get proper name distribution via SPID
+- **NPCs Names Distributor** `2.6.2.0` modid=73081
+  - Framework to generate and distribute custom names to NPCs via SPID, with titles and obscurity
+- **Keyword Item Distributor** `3.3.0.0` modid=55728
+  - SKSE plugin that assigns keywords to weapons, armor, magic effects, ingestibles and other items via configuration files
+- **Custom Skills Framework** `3.1.0.0` modid=41780
+  - Enables unlimited custom skills and their perk trees for mods.
+- **Container Distribution Framework** `3.0.2.0` modid=120152
+  - SKSE framework that dynamically distributes items to containers based on location, type, or keyword rules.
+- **Spell Perk Item Distributor (SPID)** `7.2.1.0` modid=36869
+  - SKSE plugin that adds spells, perks, items, shouts, and keywords to NPCs via config; examples include granting 3000 gold to NPCs, adding perks from test.esp, applying Flames spell to NPCs, etc.; requires SKSE64 and Address Library; logs details in My Games/Skyrim Special Edition/SKSE/po3_SpellPerkItemDistributor.log
+- **Base Object Swapper** `3.4.1.0` modid=60805
+  - SKSE framework that lets modders swap objects via config files, supporting property overrides, location‑based swaps, and conditional chances
+- **AnimObject Swapper** `1.1.0.0` modid=75167
+  - SKSE plugin and framework for swapping AnimObjects via config files
+  - Allows random variations, conditional swaps, keyword filters
+  - ESL flagged
+- **JContainers SE** `4.2.9.0` modid=16495
+  - Provides JSON‑based serializable data structures (arrays, maps, nested containers) and embedded Lua for Papyrus scripts, allowing complex data storage and loading.
+- **Stuck Underwater Visuals and Sounds Fix SKSE** `0.1.2.0` modid=173716
+  - Prevents underwater visuals and sounds from sticking after camera exit; fixes Dragonsreach pool bug; SKSE64 plugin requiring SKSE64, Address Library, VC++ Redistributable
+- **CritterSpawn - Script Call Reduction** `6.0.0.0` modid=141745
+  - Refactors critter scripts into a centralized master, cutting script load by ~83.7% and improving performance.
+- **Stormcloaks Fight With Thalmor** `4.0.0.0` modid=159287
+  - Makes Stormcloak NPCs fight Thalmor and Penitus Oculatus on sight; adds random encounter WE33; requires SPID; compatible with USSEP; affects both vanilla and mod‑added NPCs using those factions
+- **Skyrim Cell load Freeze fix NG** `0.0.4.0` modid=160704
+  - Prevents deadlock freezes by reordering lock acquisition in cell loading code, reordering Thread1 to acquire lock2 before lock1.
+- **Death Drop Overhaul** `1.2.4.0` modid=151590
+  - Makes weapons and shields drop as physical objects with momentum upon death, stay sheathed logically, and be interactable, with configurable cleanup via INI.
+- **Inertia (Floating Gear Fix)** `1.1.0.0` modid=148746
+  - Fixes NPC equipment freezing on death by temporarily disabling collision capsule calculation; enables realistic item falls; works for all NPCs/creatures; requires SKSE64 and Address Library; no noticeable performance impact; compatible with all mods.
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - T-Pose Animal Fix by SpinPigeon** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Death Idle Fix** `1.0.1.0` modid=152344
+  - Restores proper ragdoll physics to dead NPCs after loads, preventing unnatural standing poses.
+- **You Can Sleep SKSE Remake** `1.0.2.0.ng` modid=36057
+  - Remake of SKSE plugin enabling sleeping and waiting anywhere regardless of restrictions.
+- **Dragonactorscript infinite loop fix** `1.4.2.0` modid=87940
+  - Fixes stuck dragon soul scripts by either silently ending loops or auto‑absorbing souls after death, ensuring all dragons yield souls.
+- **Script Effect Archetype Crash Fix** `21.0.0.0` modid=43532
+  - Collection of engine bug fixes and patches
+- **FUS RO DON'T - PushActorAway Crash Prevention Script Tweak** `1.0.0.0` modid=57816
+  - Prevents crashes from PushActorAway by adding checks that both caster and target are fully loaded before execution; affects vanilla scripts voicepusheffectscript and mq101voicepusheffectscript.
+- **Horns Are Forever (Persistent Argonian Horns)** `1.1.0.0` modid=1139
+  - Ensures Argonian horns stay visible except when wearing full‑head gear; implemented via skin partitions on hair/NRs, compatible with most custom Argonians; maintains horns when helmets are equipped
+- **Enchantments and Potions Work for NPCs - EPW4NPCs (SKSE64) (SPID Plugin ini)** `1.0.2.0` modid=37607
+  - SPID INI distributes PerkSkillBoosts and AlchemySkillBoosts to all NPCs so potions and enchantments affect them, requires Spell Perk Item Distributor, highly compatible.
+- **ENB Light Inventory Fix (ELIF)** `1.2.0.0` modid=66411
+  - SKSE plugin that fixes inventory 3D item view zoom and rotation broken by NiBillboardNodes used for ENB particle lights, recomputes bounding spheres, requires SKSE and Address Library.
+- **Unofficial Skyrim Creation Club Content Patches** `8.2.0.0` modid=18975
+  - Applies USSEP fixes to Creation Club content, resolving bugs and conflicts.
+- **Loading Screen Truce AE** `f0.01-AE1.2` modid=104522
+  - AE and VR support for loading screen truce; SKSE plugin disables NPC combat during loading screens
+- **No More Swimming In Air - Fixed Floating SwimIdle** `1.0.0.0` modid=73421
+  - Fixes swim idle animation to play below water; adjusts bone angles and Z‑axis; only conflicts with other SwimIdle replacements.
+- **Scripts Carefully Reworked Optimized and Tactfully Enhanced (SCROTE) - Simply Optimized Scripts AIO - BSA** `1.0.2.0` modid=97155
+  - dunFolgunthurBossBattle Script Fix prevents infinite loop in Folgunthur boss battle
+  - Shroud Hearth Barrow Script Fix prevents door loop in Shroud Hearth Barrow
+  - Soul Cairn Script Tweaks reduce FPS drop via periodic updates
+  - The Taste of Death Improved Shutdown optimizes post‑quest shutdown
+  - DLC2TribalWerebearScript Fix stops unnecessary updates and cleans stuck scripts
+  - DLC2dunNchardakDoorSeal Script Infinite Loop Fix stops updates when seal disabled
+- **FYX - Nordic Doors and Traps Collisions** `1.0.0.0` modid=100295
+  - Fixes collision issues with Nordic doors and traps, allowing ranged attacks through bars; no ESP required
+- **Whirlwind Sprint Delayed Voice Fix - SSE** `1.0.0.0` modid=92799
+  - Fixes delayed voice for the second and third words of the Whirlwind Sprint shout, ensuring they play without lag.
+- **OMEAR Addition - Skyrim Extended Cut S-and-S** `1.8.2.0` modid=67968
+  - Replaces frequent OnMagicEffectApply calls to reduce VM overstress; supports many scripts and optional fixes for popular mods.
+- **OnMagicEffectApply Replacer** `1.8.2.0` modid=67968
+  - Replaces frequent OnMagicEffectApply calls to reduce VM overstress; supports many scripts and optional fixes for popular mods.
+- **NARC Remade - No Animals Report Crimes** `1.1.0.0` modid=17946
+  - Prevents animals from reporting crimes, removes animal bounty reporting
+- **Horsemen Torch Wield Fix and Mount Tweaks SE** `1.3.0.0` modid=77303
+  - Adds proper torch wielding for riders and extra mount benefits; requires Nemesis or Pandora behavior engine; safe install/remove; may conflict with mods editing HorseBehavior hkx; generally compatible otherwise
+- **Enhanced Reanimation** `1.5.1.0` modid=43500
+  - SKSE plugin that fixes and enhances reanimation effects—dead thralls persist, decapitated corpses can be reanimated, rideable mounts, configurable via INI.
+- **powerofthree's Tweaks** `1.15.1.0` modid=51073
+  - SKSE plugin providing numerous engine bug fixes and optional tweaks, configurable via po3_Tweaks.ini, covering distant reference loading, projectile range, combat dialogue fixes, and other gameplay enhancements
+- **Dragon Priest Fix - Behaviour Overhaul** `1.6.1.0` modid=51608
+  - Overhauls dragon priest behaviour, fixes bugs, enables casting in one hand while using another spell, adds rudimentary sprinting, requires Nemesis and compatibility mods, installed via Nemesis engine
+- **Dual Casting Fix** `1.0.0.0` modid=92454
+  - SKSE plugin fixes vanilla bug treating dual‑cast spells as single casts.
+- **Sprint Sneak Movement Speed Fix** `1.1.2.0` modid=86631
+  - Fixes movement speed glitches when drawing, sheathing, or shouting while sprinting or sneaking; SKSE64 plugin
+- **Equip Enchantment Fix** `1.3.6.0` modid=42839
+  - SKSE plugin that ensures enchantments are correctly applied when items are equipped or equipped from inventory/followers, preventing common engine bugs.
+- **LOD Unloading Bug Fix** `0.2.0.0` modid=61251
+  - Fixes LOD unloading bug by forcing worldspace reload via ConsoleUtil; offers unaggressive, somewhat aggressive, and aggressive options.
+- **Unaggressive Dragon Priests Fix** `1.3.1.0` modid=69026
+  - Fixes unaggressive dragon priests by forcing them to draw spells when they enter combat, preventing them from getting stuck in a non‑combat state.
+- **Alduin Bane Fix** `1.3.0.0` modid=80927
+  - Fixes Alduin landing on wall, Hakon weapon draw, Felldir stuck in body
+  - Ensures proper dialogue and scroll reading
+  - ESL flagged
+- **Adoption Spouse and Moving Fixes** `1.2.0.0` modid=92845
+  - Adds empty bottle model, retrieval after use
+  - Supports harvesting spider venom with bottle
+  - Description Framework support
+  - ESL flagged
+- **Zero Bounty Hostility Fix** `0.5.0.0` modid=95989
+  - Clears player hostility when bounty is zero on vanilla holds, applied on location change, does not affect bounty‑less factions, allows jail access, can be extended to custom crime factions via ESP form list
+- **Stagger Effect Fix** `1.0.3.0` modid=110508
+  - Fixes magic effect stagger direction bug affecting SE, AE, and VR
+- **GATE TO SOVNGARDE (GTS) - Small Mods and Resources - Orc Stalkers Fix** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **GATE TO SOVNGARDE (GTS) - Small Mods and Resources - Delphine Attic Room Stuck Fix** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Flute Animation Fix** `1.3.0.0` modid=69609
+  - Fixes flute animation alignment for players and NPCs across various skeletons (XP32, diverse racial skeletons); uses animation replacers; .ESL flagged; improves upon telepathic or nose‑playing issues
+- **Hunters Not Bandits** `4.2.0.0` modid=1547
+  - Adjusts NPC dialogue to behave realistically when hunting animals, removes out‑of‑context taunts, improves immersion, and is ESL‑compatible, requiring placement after dialogue‑changing mods
+- **Scrambled Bugs** `21.0.0.0` modid=43532
+  - Collection of engine bug fixes and patches
+- **Bug Fixes SSE** `10.0.0.0` modid=33261
+  - Implements engine‑level bug fixes for magic effect condition updates, movement speed handling, and speech experience calculation
+- **Unofficial Skyrim Special Edition Patch - USSEP** `4.3.8.0a` modid=266
+  - Comprehensive bug‑fix for Skyrim SE addressing hundreds of bugs.
+- **SSE Engine Fixes (skse64 plugin) Part 2** `7.0.19.0` modid=17230
+  - skse64 plugin that fixes various Skyrim Special Edition engine issues, including patches for performance, crashes, and memory management, with configurable INI settings for various fixes
+- **SSE Engine Fixes (skse64 plugin) Part 1** `7.0.19.0` modid=17230
+  - skse64 plugin that fixes various Skyrim Special Edition engine issues, including patches for performance, crashes, and memory management, with configurable INI settings for various fixes
+
+### Quests, New Lands, Dungeons
+
+- **Time Flies SE** `8.2.2.0` modid=39426
+  - Makes game time advance during crafting, reading, eating, fishing, building, etc., highly configurable, adds mod support and notifications, version 8 adds Wounds, Shovels, Pilgrim, Wintersun compatibility.
+- **Fortified Imperial Fort Battlements (ESL) - LOD Files Addon** `1.2.0.0` modid=66831
+  - Enhances the fortified appearance of Imperial forts for greater immersion.
+- **Grab and Eat - Eat directly from harvestable flora** `1.1.0.0` modid=118899
+  - INTRODUCTION
+  -
+  - Press Shift+E to eat food or ingredients directly from harvestable flora
+  -
+  - REQUIREMENTS
+  - -Dynamic Activation Key
+  - -PowerOfThree's Papyrus Extender
+  -
+  - MOD PREVIEW
+  -
+  - RECOMMENDED MODS
+  - -Dynamic Looting and Harvesting Animations: for picking up ingredient/food animations
+  - -Immersive Interactions - Eating ingredients and apply poison animations
+  - -Eating Animations and Sounds SE
+  -
+  - Q&A
+  - -Q: ESL flagged? A: Yes
+  - -Q: Animations? A: No animations or displays for this mod :O, you'll need another mod
+  - -Q: Limitations? Only food/ingredients consumed via Dynamic Activation Key; some flora via scripts not consumed
+  - -Q: This xxx flora shouldn't be consumed! Add to EFlora_IgnoreList via FormList Manipulator
+  -
+  - Comments: V102: UPDATED. Files conflict as intended (GtS-specific Patches).
+  - Gravewind: Quest about a realm lost to myth, an ancient city of ghosts, and a small house in the woods; includes three new magic groups, unique boss fights, custom enemies, two endings, and more.
+  - Guard Dialogue Overhaul SE: Alters guard dialogue to increase immersion; fixes bugs, expands dialogue variety, integrates SPIKE compatibility, adds console commands to adjust skill thresholds, global values, and optional MCM settings; requires DAV, FLM, KID, SPID; compatible with many armor and perk mods.
+  - GuardsTalk: Adds keywords for Guard Dialogue Overhaul to many items via Keyword Item Distributor.
+  - HammerHair V1.6.1: Adds 77 male and 77 female Redguard hairstyles (wigs included); recommends texture packs SC - Vanilla Hair Retex and BnP - Female Skin, BnP - Male Skin.
+  - Hammet Dungeon Pack 2 SE: Compilation of 16 dungeons across Skyrim and Solstheim; features vanilla assets, radiant quests, unique weapons and armor enchantments, compatibility notes, requires Skyrim SE v1.5.97.0.8 or later, works with AE versions.
+  - Hammet's Dungeon Pack 1 SE: Adds 30 dungeons to Skyrim and Solstheim for exploration; includes unique rooms, difficulty scaling, radiant quests, and is Nexus‑only.
+  - Hand to Hand - An Adamant Addon: Merges lockpicking and pickpocketing into Security skill, adds new Hand to Hand perk tree, adjusts Light and Heavy Armor trees for unarmed combat, adds perks like Bracer’s Stance, Overwhelm, Finisher, and integrates with Adamant’s perk system; requires Address Library, SPID, KID, Scrambled Bugs.
+  - Hawk Replacer and Eagles- Mihail Monsters and Animals: Replaces vanilla hawk with high‑quality model and textures, adds three eagle types, improves sounds and nests, enables interaction such as destruction and looting, includes detailed installation notes and compatibility warnings.
+  - Headhunter - Bounties Redone: Expands bounty system with proof requirement, captures prisoners, options to spare giants, integrates with Missives, AllGUD, SRC; adds head loss visual, follower reward, configurable via MCM; requires main file and optional patches.
+  - Heart of the Reach - High Resolution Textures: Quest to heal the Heart of the Reach in an underground swamp; includes new quest, weapons, ring, and spell.
+  - Hearth Craft: Adds craftable, placeable furniture, clutter, and structures using Campfire framework; designed for survival play, integrates with Complete Crafting Overhaul, Requires Campfire.
+  - Helmet Toggle 2: Hides or shows helmets/hoods via Dynamic Armor Variants with animations; requires Open Animation Replacer, Papyrus Extender, DAV, optional Immersive Equipment Displays; includes MCM options, spells, keywords, and config files for managing headgear behavior.
+  - Hidden Hideouts of Skyrim - Merged: Provides 21 small wilderness hideouts with Standard, No Map Marker, and Deep Immersion versions; includes rare book guide, optional follower‑friendly NavMeshed file, recommended survival mods, installation and uninstallation instructions.
+  - Hold on a sec - Pause Dialogue Menus: Lightweight SKSE plugin that lets you press the system menu button during conversations to pause dialogue; dialogue resumes after closing the menu.
+  - Honed Metal -NPC Crafting and Enchanting Services-: Adds NPC blacksmiths and mages to craft, temper, and enchant player equipment; cost and quality depend on NPC skill and barter; configurable via MCM; compatible with most mods, requires SKSE and SkyUI.
+  - Honed Thaumaturgy (FLM): Patch enabling Honed Metal to access enchantments added by Thaumaturgy via FormList Manipulator; optional plugin for non‑FLM users.
+  - Horns Are Forever (Persistent Argonian Horns): Ensures Argonian horns remain visible except when wearing full‑head headgear; works with vanilla NPCs and custom subraces; simple drop‑in ESP/BSA.
+  - HorsePower - Modernized Horse Riding (Total Riding Overhaul): Overhauls horse riding with directional animations, improved speed/turning, follow‑up attacks, ragdoll physics, sprint swimming, in‑place turns, jump height increases, and related fixes; requires SKSE, Address Library, Nemesis/Pandora behavior engine.
+  - Horsemen Torch Wield Fix and Mount Tweaks SE: Customizes horse behavior for proper torch wielding and extra mount benefits for player and NPCs; behavioral customization for rider actions.
+  - Hotkey Reminder: Custom menu to view and edit all hotkeys; saves data to interface/hotkeysreminder_data.json; can lock editing via MCM; lightweight ESP‑FE, no load‑order impact.
+  - House Cats- Mihail Monsters and Animals: Adds house cats as docile creatures in towns and farms, including a unique named cat Puss in Boots; part of Mihail’s creature series with high‑quality models and textures.
+  - House of Horrors - Quest Expansion: Expands Molag Bal’s daedric quest with alternative good‑guy path, new scenes, fully voiced, optional follower reward; integrates with Missives and other patches; requires main file and patches.
+  - Housecarl Companions Refine Add-on: Provides unique, balanced buffs for housecarl followers; standalone low‑fantasy appearance package; includes perks like Sworn To Carry Burdens, Region Familiarity, etc.; requires expressive facegen and skin mods.
+  - Hunters Not Bandits: Prevents NPCs from using taunts or insults when fighting animals; fixes unrealistic dialogues like ‘Can I help you?’ after killing player; improves realism of animal interactions.
+  - INIGO: Fully voiced Khajiit companion with 7000+ lines, levels with player, avoids traps, whispers when sneaking, can run out of arrows; includes whistle key, quest progression, and optional patches.
+  - Ice Titans- Mihail Monsters and Animals: Adds Ice Titan creature with blue skin, warts, snow‑covered hair, powerful hands and feet; lore about Titans, elemental magic, compatibility notes; part of Mihail’s monster pack.
+  - Igniting Animation for Campfire: Adds animated campfire ignition; flagged as ESL; lightweight.
+  - Immersive Aggressive Opponents - Armor-Based Opposite Faction Aggression: Makes Imperial, Thalmor, Stormcloak, Penitus Oculatus, and Reach guards attack player when wearing opposite faction armor; configurable via slots; optional Forsworn Armor module; no direct conflicts.
+  - Immersive Death Cycle: Animals decay over time: half‑eaten model after 4h, bones after 12h; supports necromancy, no vanilla edits; configurable via console commands; optional Undead FX addon.
+- **Torch Bash Ignites Traps** `1.0.1.0` modid=80807
+  - Enables torch attacks to ignite or trigger environmental traps and interact with ignitable objects and NPCs.
+- **Immersive Death Cycle - Optional Undead FX Addon** `f1.04` modid=97048
+  - Causes animal corpses to decay through half‑eaten to bone models over 4‑12 hours, supports necromancy, bone removal, optional undead FX addon, no vanilla edits, compatible with Simple Hunting Overhaul
+- **Immersive Death Cycle** `f1.04` modid=97048
+  - Causes animal corpses to decay through half‑eaten to bone models over 4‑12 hours, supports necromancy, bone removal, optional undead FX addon, no vanilla edits, compatible with Simple Hunting Overhaul
+- **Windhelm Segregation - Stay at New Gnisis Cornerclub** `1.0.0.0` modid=21181
+  - Elda Early‑Dawn refuses to rent rooms to Dark Elves, while New Gnisis Cornerclub innkeepers assist Dunmer.
+- **Store Entrance Doorbells** `2.0.0.0` modid=56196
+  - Adds doorbells to store entrances with animation and sound; rings on entry, optional non‑sneaking condition; supported towns and stores; ESL‑flagged; compatible with interior overhauls
+- **Shame of Skyrim** `2.0.0.0` modid=96804
+  - Distributes over 650 notes randomly to various NPC factions, creating feelings of shame
+- **Sharpen Other Swords II - AnimObject Swapper** `0.2.3.0` modid=75237
+  - Swaps sharpening animations for different swords and daggers in the world.
+- **Ships On The Horizon** `1.1.0.0` modid=79034
+  - Adds animated ships visible on the Sea of Ghosts near Solitude, Raven Rock, and Tel Mithryn.
+- **Dragon Wall Wisdom - Readable Dragon Walls** `1.1.1.0` modid=17591
+  - Adds readable lore on all dragon word walls sourced from UESP and in‑game books; lightweight and 100% compatible except when wall positions are altered.
+- **burn Burn BURN** `1.0.0.0` modid=56892
+  - Adds persistent fire and smoke in a burnt area that vanish after player views it, with FAQ explaining ashes, disappearance, and that items turn to ash
+- **Usable Campfires** `1.4.2.0` modid=140915
+  - Makes campfires interactible for lighting and basic cooking.
+- **Dynamic NPC Hairstyles** `1.1.2.0` modid=161062
+  - Nexus: Adds dynamic hair changes for NPCs over time, random seasonal hairstyles, hair‑scissors interaction, configurable percentage settings, NPC exemptions (bald, Jarls, followers), SPID/KID requirements, fully voiced dialogue for manual hair changes, optional disable of random part
+- **Essentials Knockdown** `1.0.0.0` modid=101027
+  - Prevents essential NPCs from kneeling on knockdown, causing them to ragdoll and become unconscious.
+- **NPCs Ain't Hachikos** `1.0.0.0` modid=81618
+  - Fixes NPCs standing in the same spot continuously by enabling more dynamic AI behavior.
+- **Snores of Skyrim Lite** `1.0.0.0` modid=95114
+  - Lighter version of Snores of Skyrim with reduced volume, less frequent snoring, no lip movement, ESL flagged; cannot be used with original.
+- **City Bag Checks** `1.0.4.0` modid=112212
+  - Introduces random guard bag inspections at major cities for contraband such as moon sugar and skooma, with bypass options via persuasion or bribery, requires SKSE/SkyUI for MCM, ESL flagged and safe to add/remove mid‑game (V82 UPDATED).
+- **NPCs React To Frenzy** `1.0.0.0` modid=107492
+  - Mod makes NPCs react to Frenzy/Fury/Mayhem spells; enemies may hallucinate lines such as "Monsters! Kill them all!" or "ARGHHHH!!!", or say "WHAT ARE YOU DOING?!", "IT'S ME! Don't you recognize me?!", "Stop! I'll kill you if I have to!", "No! We've been betrayed!". Flagged ESL, safe mid‑game, no vanilla edits, no scripts, fully compatible.
+- **Hunters Loot - and skin animals** `1.1.0.0` modid=119348
+  - Allows hunters to loot and skin hunted animals, with optional animations via Papyrus Extender and animation replace mods.
+- **Immersive Dialogue Expansion - Thalmor** `1.0.3.0` modid=168432
+  - Adds 352 new Thalmor lines, increasing their presence and interaction in quests and story.
+- **Followers React to Crafting** `1.1.0.0` modid=157750
+  - Adds the Forgemaster's Fingers quest for Orcs or Blood‑Kin; start by talking to a guard; dialogue varies; small gold reward; no major gameplay changes.
+- **Shouts of Stallholders** `1.0.0.0` modid=139025
+  - Adds new attract lines for vanilla market stall sellers, supporting mod-added traders, lightweight and script‑free
+- **Naked Comments Overhaul** `f1.01` modid=136846
+  - Overhauls NPC comments when player is naked, adding 900+ voice lines across many relationships, races, weather, etc.; highly compatible, ESL, lightweight; may require keyword patches for custom clothing.
+- **Immersive Speechcraft SE** `1.1.0.0` modid=21296
+  - Adds extra dialogue options to most NPCs, compatible with dialogue overhaul mods.
+- **Fare Thee Well - Spouses and Children Give Blessings (TAGS - Family)** `1.3.0.0` modid=56366
+  - Allows spouses and adopted children to give voiced blessings or curses before travel, with 29 voice types and 5‑day effects providing health, magicka or stamina bonuses or penalties.
+- **Denizens of Morthal Finding Helgi Patch** `1.5.0.0` modid=33965
+  - adds expanded dialogue and schedules for Morthal’s residents, fleshing out Benor, Eisa Blackthorn, Valdimar, and Erandur.
+- **Denizens of Morthal RS Children Patch** `1.5.0.0` modid=33965
+  - adds expanded dialogue and schedules for Morthal’s residents, fleshing out Benor, Eisa Blackthorn, Valdimar, and Erandur.
+- **Denizens of Morthal** `1.5.0.0` modid=33965
+  - adds expanded dialogue and schedules for Morthal’s residents, fleshing out Benor, Eisa Blackthorn, Valdimar, and Erandur.
+- **Autographs (Of Skyrim)** `1.3.0.0` modid=100385
+  - Adds ability for NPC authors to sign books, creating separate signed book objects; ESL flagged.
+- **To Your Face SE - AE - VR** `1.0.0.0u` modid=24720
+  - Prevents NPC greetings when player is behind them, SKSE plugin, requires SKSE, configurable deviation angle from default greeting distance.
+- **More Dialogue Options** `1.5.1.0` modid=28905
+  - Adds voiced dialogue choices to improve immersion in conversations
+- **Misc Dialogue Edits** `1.9.5.2` modid=28904
+  - Provides subtle dialogue fixes and improvements with spliced vanilla lines for immersion
+- **Collision Dialogue Overhaul** `f1.01` modid=132325
+  - Adds ~500 new sprint‑collision voice lines for NPCs, with optional disabling of NSFW/racist comments, ESL flagged.
+- **More to Say** `9.0.2.0` modid=22622
+  - Adds fully voiced inconsequential dialogue to NPCs across Whiterun, Riverwood, etc.
+- **Guard Dialogue Overhaul SE** `3.0.0.0` modid=22075
+  - Overhauls guard dialogue to enhance immersion, fixes bugs, expands coverage, adds optional features and SPIKE compatibility; configurable via global variables and console commands; includes MCM add‑on; compatible with many popular mods.
+- **GuardsTalk** `1.0.3.0` modid=104494
+  - Adds keywords for Guard Dialogue Overhaul to many modded armors and weapons via a single file, enabling guard reactions to weapons and armors; safe to install without item references.
+- **Extended Bandit Dialogue** `1.0.2.0` modid=113168
+  - Features
+  - - Recognize Notable Opponents
+  - - More Idle Line Variety
+  - - React to World State
+  - Dialogue generated via TTS and RVC; ESL flagged; safe mid-game; 112 new lines across 11 voice types
+- **Extended Guard Dialogue - Dawnguard VA Fix** `1.0.5.0` modid=106523
+  - Adds new guard dialogue reacting to play style, cleared locations, world state; generated via TTS and RVC; ESL flagged; safe mid-game; 168 new lines across 3 guard voice types
+- **Extended Guard Dialogue** `1.0.5.0` modid=106523
+  - Adds new guard dialogue reacting to play style, cleared locations, world state; generated via TTS and RVC; ESL flagged; safe mid-game; 168 new lines across 3 guard voice types
+- **Cheeky Kids** `1.4.0.0` modid=112455
+  - Has children approach NPCs and insult them with randomized child dialogues using vanilla assets.
+- **Chatty NPCs and Followers** `1.6.1.0` modid=133266
+  - Makes NPCs greet each other, ask about health, and interact with followers using vanilla voice lines.
+- **Dremora Lines Expansion** `1.1.0.0` modid=100562
+  - Expands Dremora lines with 350 new lines and 7 distinct voices; adds new faces and voice diversity; requires Additional Dremora Faces; install via mod manager.
+- **Vampire Lines Expansion - Orc Add-on** `f1.02` modid=83484
+  - Adds ~150 new vampire voice lines with condition‑based triggers; optional file restores orc vampire lines; part of Lines Expansion series; compatible with Requiem; no conflicts in 1000+ modlist
+- **Vampire Lines Expansion** `f1.02` modid=83484
+  - Adds ~150 new vampire voice lines with condition‑based triggers; optional file restores orc vampire lines; part of Lines Expansion series; compatible with Requiem; no conflicts in 1000+ modlist
+- **Forsworn and Thalmor Lines Expansion** `f1.02` modid=80188
+  - Adds ~250 new unique lines for Thalmor and Forsworn, spliced from vanilla; adds personality and variety to combat, idle, warnings; compatible; some lines trigger if wearing Talos amulet; universal lines for generic NPCs.
+- **Falmer Servant Lines Expansion - Unique Abilities** `f1.01` modid=120995
+  - Adds 483 new unique voiced lines for Falmer Servants; optional plugins expand spawn locations and outfit variations; ESL flagged; compatible with everything
+- **Falmer Servant Lines Expansion - More Locations** `f1.01` modid=120995
+  - Adds 483 new unique voiced lines for Falmer Servants; optional plugins expand spawn locations and outfit variations; ESL flagged; compatible with everything
+- **Falmer Servant Lines Expansion** `f1.01` modid=120995
+  - Adds 483 new unique voiced lines for Falmer Servants; optional plugins expand spawn locations and outfit variations; ESL flagged; compatible with everything
+- **Civil War Lines Expansion** `1.1.0.0` modid=77566
+  - FEATURES
+  - - Adds ~500 new voice lines for Imperials and Stormcloaks reacting to events, combat, warnings, idles, racism
+  - - Lines are spliced from vanilla (~100 per voice type); compatible with everything; configurable via MCM
+- **Bandit Lines Expansion - Dark Elf Voices** `f1.09` modid=63733
+  - Adds approximately 500 new, unique bandit dialogue lines with varied personalities and contextual conditions, enhancing immersion without altering vanilla records
+- **Bandit Lines Expansion** `f1.09` modid=63733
+  - Adds approximately 500 new, unique bandit dialogue lines with varied personalities and contextual conditions, enhancing immersion without altering vanilla records
+- **Dialogue Expansion - Imperial Soldiers** `1.0.0.0` modid=113208
+  - Adds over 150 new dialogue lines and 13 new scenes for Imperial soldiers, with AI‑generated voices.
+- **Dialogue Expansion - Windhelm** `1.31.0.0` modid=112415
+  - adds 700+ new dialogue lines and 30 extra scenes for Windhelm residents, overhauling their dialogue to reflect the city’s hostile nature, voiced by 11labs AI.
+- **Soaking Wet - Character Wetness Effect** `1.2.1.0` modid=68025
+  - SKSE plugin adds wetness effect to characters and gear in water, rain, snow with seamless soak/dry transitions and adjustable shine.
+- **Detailed NPCs - Skull Masks for NPCs (SPID)** `2.0.0.0` modid=62994
+  - randomly equips skull masks from Beast Masks of Skyrim to NPCs, configurable per NPC.
+- **Detailed NPCs - Fishing Gear for NPCs (SPID)** `2.0.0.0` modid=63934
+  - equips fishing gear (pole, trap, slaughterfish) to select NPCs, configurable per NPC.
+- **Detailed NPCs - Blanket Scarves for NPCs (SPID)** `2.0.0.0` modid=63951
+  - adds 21 blanket scarf variants for NPCs, configurable per NPC.
+- **Werewolf Revert Effect - Authentic Sinding** `2.0.0.0` modid=76472
+  - Adds an immersive revert animation and sound for werewolf form change, replacing instant poof.
+- **Fjori and Holgeir in Sovngarde** `1.1.0.0` modid=35190
+  - Adds NPCs Fjori and Holgeir to Sovngarde as heroes after freeing them in Ansilvund.
+- **Edmond's SkyTEST - Realistic Animals and Predators - Lite ESL** `3.6.0.0` modid=84539
+  - Lightweight ESL version improving vanilla animal AI (foraging, hunting, pack behavior), fixes bugs, no scripts, highly compatible.
+- **Use Those Horses - Shields** `1.0.0.0` modid=63271
+  - Allows horses to carry items such as weapons and armor via Immersive Equipment Displays.
+- **Use Those Horses** `1.0.0.0` modid=63271
+  - Allows horses to carry items such as weapons and armor via Immersive Equipment Displays.
+- **Riverwood Trader Is A Mess** `1.4.2.0` modid=63631
+  - Turns Riverwood Trader into a mess, lets player clean it for reward, optional patches available.
+- **Akaviri History - Lore-Friendly Additions and Tweaks** `1.1.0.0` modid=76804
+  - Adds Akaviri furniture, unique Esbern equipment, Akaviri weapons in Sky Haven
+  - Adds female Dremora, human brows, vampire eyes, human/elf hairstyles
+  - Adds up to 216 unique Dremora faces
+  - Compatibility patches available
+  - ESL flagged
+- **Environs - The Shrines of Talos - Patch Collection** `f3.02` modid=85141
+  - Adds dynamic details and NPCs to Talos shrines across Skyrim, reacts to Civil War control, includes visual improvements and voiced interactions.
+- **Environs - The Shrines of Talos** `f3.02` modid=85141
+  - Adds dynamic details and NPCs to Talos shrines across Skyrim, reacts to Civil War control, includes visual improvements and voiced interactions.
+- **IDDP - ELFX Patch** `1.0.3.0` modid=4126
+  - Adds a properly sized entrance to Bruma, eliminating the tiny cave entry from the original mod.
+- **Hidden DB Sanctuary Entrances - Majestic Mountains Patch** `1.0.3.0` modid=48146
+  - Hides Dark Brotherhood sanctuary entrances behind everyday objects for immersion.
+- **Immersive Dawnguard Dayspring Pass SE (IDDP)** `1.0.3.0` modid=4126
+  - Adds a properly sized entrance to Bruma, eliminating the tiny cave entry from the original mod.
+- **Hidden DB Sanctuary Entrances** `1.0.3.0` modid=48146
+  - Hides Dark Brotherhood sanctuary entrances behind everyday objects for immersion.
+- **Ryn's Saarthal** `1.1.0.0` modid=74785
+  - Overhauls Saarthal exterior and revamps final bossfight with empowered Jyrik Gauldurson.
+- **Ryn's Karthspire** `1.6.0.0` modid=77059
+  - Massive overhaul of Karthspire with expanded layout, tactical enemy placement, and performance optimizations.
+- **Ryn's Bleak Falls Barrow** `1.0.0.0` modid=70984
+  - Adds exterior additions to Bleak Falls Barrow, ESL flagged, expands dungeon with extra enemies.
+- **Windows for Capital Windhelm Expansion** `2.2.0.0-Final` modid=163647
+  - Adds 252 hand‑placed windows to buildings of the Capital Windhelm Expansion, fixing black‑hole holes.
+- **The Gildergreen Grows** `1.2.0.0` modid=147742
+  - Allows the Gildergreen sapling to progressively grow into a full tree over four months, granting buffs and new dialogue.
+- **Skyrim Reputation Patches for Quest Expansions and Alternate Routes** `1.3.0.0` modid=79631
+  - Provides integration patches that extend the reputation system to recognize choices from quest expansion mods.
+- **Immersive Nurelion Dying** `0.2.0.0` modid=152547
+  - Replaces Nurelion's death message with immersive animations and dialogue, adds groan/cough, five dying lines, integrates with Sleeping Expanded patch, minimal ESL changes.
+- **Vigil's Last Reward** `1.3.0.0` modid=146571
+  - Overhauls the Ebony Warrior boss fight, adding new abilities, unique equipment, and lore‑rich encounters.
+- **Harvest Your Blood for Septimus** `1.1.3.0` modid=69861
+  - Allows harvesting your own blood for Septimus Signus via Essence Extractor.
+- **Voiced Narrative - Pets of Skyrim (Creation Club)** `1.0.0.0` modid=159070
+  - Improves narrative of Pets of Skyrim with new voiced dialogue generated by ElevenLabs, adding greetings for Halvar and more personality.
+- **Voiced Narrative - Farming (Creation Club)** `1.0.0.0a` modid=158966
+  - Feature:
+  - - New random greeting lines for your overseer and farmhands of Goldenhills Plantation.
+  - - Bad use of a generic line (Rin) is replaced with a new line that better reflect the narrative.
+  - - All new lines were written with careful consideration of existing lore, nothing should feel too overdone.
+  - - Voiced lines were generated with ElevenLabs. Many hours were spent experimenting lines repeatedly to hand‑pick the most natural‑sounding deliveries with the right expression for each context.
+  - - Fully compatible with CC Farming - Tweaks Enhancements and Quest Expansion.
+- **CC Farming - TnE - CC Fishing Patch** `1.5.7.0` modid=69029
+  - overhauls CC Farming with NoReset Goldenhills Plantation, new Unquiet Dead quest, recruit farmhands/guards, upgrade planters, hire carriage driver, connect to road, customize gold multiplier and prices via console; adds beggar recruitment, Dark Brotherhood integration; requires Unofficial Skyrim CC Patches; optional MCM.
+- **CC Farming - Tweaks Enhancements and Quest Expansion** `1.5.7.0` modid=69029
+  - overhauls CC Farming with NoReset Goldenhills Plantation, new Unquiet Dead quest, recruit farmhands/guards, upgrade planters, hire carriage driver, connect to road, customize gold multiplier and prices via console; adds beggar recruitment, Dark Brotherhood integration; requires Unofficial Skyrim CC Patches; optional MCM.
+- **Catir Club - Immersive Creation Club Integration - Goldbrand** `1.1.0.0` modid=66864
+  - Integration hub removing vanilla quests; adds content for The Contest, Goldbrand, Sivdur’s Respite; requires CC files; compatible with AE
+- **Catir Club - Immersive Creation Club Integration - The Contest** `1.1.0.0` modid=66864
+  - Integration hub removing vanilla quests; adds content for The Contest, Goldbrand, Sivdur’s Respite; requires CC files; compatible with AE
+- **CC Bittercup - Tweaks and Enhancements** `1.5.0.0` modid=81665
+  - Polishes the Bittercup mod with value adjustments, NPC fixes, pit accessibility upgrades, and navmesh improvements
+- **Sensible Sleepwalking - Wake up at nearest All-Maker Stone** `1.0.0.0` modid=64680
+  - Prevents sleepwalking on Solstheim from sending player to random island locations, waking only at nearest All-Maker Stone
+- **End Times** `2.51.0.0` modid=39201
+  - Adds a customizable timer that forces the player to defeat Alduin within a set period, includes MCM menu.
+- **Courier Delivers to NPCs** `1.0.4.0` modid=42928
+  - Courier now occasionally delivers letters to NPCs.
+- **Immersive Fishing** `1.5.0.0` modid=115249
+  - Adds cast/idle/catch fishing animations, shows rod and caught fish on hands, requires Simple Fishing Overhaul and Open Animation Replacer, must be loaded after those mods, uses Immersive Equipment Displays optionally
+- **Fish Anywhere With Water** `0.5.0.0` modid=60915
+  - Enables fishing from any position facing a body of water; respects water detection, dynamic fish populations; optional VR settings; .ESL flagged
+- **Use Those Blankets Campfire Patch** `2.11.0.0` modid=75481
+  - Adds blanket support for NPCs and players to cover themselves while sleeping.
+- **Use Those Blankets** `2.11.0.0` modid=75481
+  - Adds blanket support for NPCs and players to cover themselves while sleeping.
+- **Go to bed - Patches** `2.0.7.0` modid=4224
+  - Allows character to sleep in beds by lying down after activation; uses Wait(T) to open sleep menu and advance time for jail; select sleepwear via MCM; NPCs may use sleepwear; follower sleep support WIP.
+- **Go to bed** `2.0.7.0` modid=4224
+  - Allows character to sleep in beds by lying down after activation; uses Wait(T) to open sleep menu and advance time for jail; select sleepwear via MCM; NPCs may use sleepwear; follower sleep support WIP.
+- **Take a Nap - Sleep on Chairs** `f1.02` modid=113255
+  - Sleep on chairs with shift‑activate, limited to 3 h, possible back pain, NPC reactions, fully animated via DAR/OAR, compatible with all mods, optional Mfg Fix to close eyes
+- **Wait Carriage in Inns - Fast Travel Improvement** `1.3.0.0` modid=83044
+  - Allows player to wait for a carriage driver in any inn across Tamriel, improving fast travel.
+- **Boats - Operational Animated Travel** `1.6.2.0` modid=110882
+  - Adds animated moving boats and ferries, providing immersive travel across specific water locations
+- **Improved Innkeepers** `1.2.0.0` modid=46659
+  - Features:
+  - - Customizable inn prices
+  - - Customizable room availability
+  - - Innkeepers sleep at night, renting disabled while asleep
+  - - Option to disable sleep/prices
+  - - Register custom inns (5 slots) via MCM
+  - - Voiced with edited vanilla lines
+- **Respect for the Legate** `1.0.1.0` modid=30185
+  - Imperial patrols cease harassment after promotion to Legate.
+- **Serious Civil War Fort Personnel** `1.0.3.0` modid=137106
+  - Adds quartermasters, healers, servants, prisoners to nine forts and improves soldier AI packages
+- **After the Civil War - Siege Damage Repairs** `2.6.5.0` modid=20668
+  - Quests to repair city damage post-Civil War
+  - Donations speed up reconstruction, affect repair time
+  - Optional patches for Immersive Citizens, JK's Temple, etc.
+  - ESL flagged
+- **Campfire - Dynamic Activation Key** `1.5.0.0` modid=124401
+  - Shift+E to light/upgrade campfire or access skills; pick up objects; requires Campfire; optional OAR animation
+- **Simple Campfire Additions** `1.0.2.0` modid=21956
+  - Adds extra craftable items like furniture and workbench options in Campfire
+- **Helmet Toggle 2** `3.6.0.0` modid=100617
+  - Toggles helmets/hoods with animations on location/weather changes using Dynamic Armor Variants; requires Open Animation Replacer, DLH, SkyUI; supports many armor packs.
+- **Simple Dual Sheath** `1.5.7.0` modid=50049
+  - Makes equipped left-hand weapons and staves visible on the player or NPCs, with a lightweight SKSE64 plugin and no scripts or ESPs.
+- **Lights On - Wearable Lanterns for Immersive Equipment Displays** `2.5.1.0` modid=85575
+  - Provides wearable lanterns via Immersive Equipment Displays; 16 models; configurable conditions, placement, and hotkeys
+- **Missile's IED Preset - Immersive Equipment Displays - Better Head Hunter Displays while mounted** `1.3.2.0` modid=67770
+  - Provides presets for item displays, weapon positioning, quiver attachment, and customization options
+- **Missile's IED Preset - Immersive Equipment Displays** `1.3.2.0` modid=67770
+  - Provides presets for item displays, weapon positioning, quiver attachment, and customization options
+- **Immersive Equipment Displays - Extra Skeleton Nodes** `1.5.0.0` modid=92244
+  - Adds extra skeleton nodes for positioning swords, maces, and shields in IED.
+- **Immersive Equipment Displays** `1.7.4.0` modid=62001
+  - Displays all equipped and unequipped gear on player and NPCs, supports every item type, offers configurable positioning, physics, real‑time UI, import/export presets, conditional overrides, requires SKSE64, Address Library, Simple Dual Sheath; optional Weapon Styles; physics based on CBP, CPU‑efficient with sub‑stepping
+- **Werewolf Revert Effect and Animation** `2.0.0.0` modid=76472
+  - Adds an immersive revert animation and sound for werewolf form change, replacing instant poof.
+- **Edmond's Cursed - An Alternate Death Mod** `1.0.0.0` modid=90800
+  - Alternate death for werewolves and vampires that triggers transformation instead of death, configurable core files, compatible with other werewolf/vampire mods.
+- **Contraband Confiscation** `1.0.0.0` modid=34903
+  - Guards confiscate illegal items upon arrest.
+- **Sensible Bribes - Based on Speechcraft Not Level** `1.0.0.0` modid=55450
+  - Adjusts bribery values to depend on speechcraft rather than character level.
+- **Locked Chests Have Keys** `f1.02` modid=74565
+  - Many locked chests now have hidden nearby keys, allowing opening via key in addition to lockpicking.
+- **Nature's Bounty - An Immersive Lore-Friendly Resource Gathering Integration Overhaul Redux for Good Guys Mod - Don't Leave me Hanging - Plants** `1.0.0.0` modid=72194
+  - Adds integration for resource gathering via small mods like Pheasant Encounters and Dreugh Remains, expanding loot options.
+- **Skyforge Immersion Addon** `1.0.0.0` modid=144420
+  - Enhances the Skyforge with dialogue, a 5% improvement to weapons and armor, and optional access restriction via quest completion.
+- **Married NPCs Wear Wedding Bands (SPID - Left Hand Rings)** `1.1.0.0` modid=69048
+  - Distributes left‑handed wedding rings to over 85 married NPCs via Spell Perk Item Distributor for immersion
+- **Heart-To-Heart - Conversations Among Family** `1.1.0.0` modid=133173
+  - Adds over 280 conversation scenes using spliced dialogue to liven up family interactions.
+- **Extended Encounters ESL** `1.7.0.0` modid=44810
+  - Adds 300+ new random road, wilderness, location encounters; includes faction raids and immersive danger; lightweight, ESL flagged; configurable via MCM; compatible with Immersive World Encounters, Immersive Patrols, Radiance, etc.
+- **Paulicus Poison Block (PPB) Updated - Patch Collection** `2.23.0.0` modid=51046
+  - Makes poisons and diseases blockable with shields, weapons, or wards; includes patches for various alchemy mods; no scripts.
+- **Paulicus Poison Block (PPB) Updated** `2.23.0.0` modid=51046
+  - Makes poisons and diseases blockable with shields, weapons, or wards; includes patches for various alchemy mods; no scripts.
+- **Weapon Animation (Miraak's Sword)** `1.1.0.0` modid=52390
+  - Adds an animation to Miraak's Sword via mesh changes, compatible with weapon draw and sheath animations.
+- **Immersive Interactions - Pilgrim FLM** `1.0.0.0` modid=92593
+  - Uses Immersive Interactions idle animations when praying at shrines added by the Pilgrim mod.
+- **Immersive Interactions - Integration Patch** `2.2.2.0` modid=76862
+  - Compatibility patch that adds script adjustments to enable Immersive Interactions to work with Hunterborn, The Dark Arts, Better Vampires, Dynamic Things Alternative, Diverse Firewood, Survival Mode, Wintersun, Extensible Follower Framework, Just Knock, Synergy and other interaction mods.
+- **Immersive Interactions - Animated Actions** `1.78.0.0` modid=47670
+  - Adds context‑aware character animations for interactions (greeting NPCs, pickpocketing, lockpicking, harvesting, opening doors, etc.) with narrative weight; MCM‑customizable; requires FNIS/Nemesis, Dynamic Animation Replacer, Activation Key (1.70+); includes quick interactions: Mourning Friends, Touch Standing Stones, Pet Horse/Dog, Applaud Bards, Pray, Salute Jarls/Commanders, Wave to Children, Open Containers, Harvest flowers, Read Books, Give Gold to Beggars, Loot Animals/NPCs, Pickpocket NPCs, Lockpicking, Pick‑up Items, Follower salute, Spouse hug; special interactions: Woodpiles, Kegs, Put Out Fires.
+- **Simple Bosmer Harvesting - Eating Animations and Sounds Patch** `2.0.0.0` modid=112722
+  - Allows Bosmer to follow the Green Pact.
+- **Wade In Water Redone** `1.1.2.0` modid=71418
+  - SKSE plugin that slows actors in water at the engine level, supporting SSE and AE.
+- **Loki's Wade In Water** `1.0.0.0` modid=42854
+  - SKSE plugin that slows actors based on how much of them is submerged in water.
+- **Simple Bosmer Harvesting** `2.0.0.0` modid=112722
+  - Allows Bosmer to follow the Green Pact.
+- **U Can't Touch Fish (Chance Edition)** `1.1.0.0` modid=94605
+  - blocks player ability to grab fish; basic edition toggles touching, chance edition gives 5% touch chance for non-Argonian/Khajiit with 25% fish escape, optional Immersive Interactions patch, addresses Salmon Roe problem, compatible with various fishing mods
+- **Followers Sit on Carriages** `1.5.0.0` modid=166738
+  - Allows followers to sit on carriages after destination choice, an offshoot of Convenient Carriages.
+- **Press E to Heal Followers SKSE** `1.1.0.0` modid=171733
+  - SKSE‑based patch that instantly heals followers when pressing E, removing script lag.
+- **Press E to Heal Followers** `1.0.0.0` modid=101823
+  - Allows healing downed companions by activating them with a healing potion, triggering voiced responses.
+- **Fixed Script for Holidays** `1.0.0.0` modid=88254
+  - Patches a script in Isoku’s Holidays mod to prevent infinite recursion in inns with fewer than 7 beds.
+- **Holidays** `2.20.0.0A1` modid=1533
+  - Makes villages/cities reflect holidays with NPC participation.
+- **Pumping Iron - Dynamic Muscle Growth** `1.0.0.0` modid=13434
+  - Dynamically increases character muscle size based on combat/smithing skill gains and sleep duration.
+- **The Dragonborn Dreams** `1.3.2.0` modid=60384
+  - Allows character to occasionally wake up having had a written dream.
+- **Wash That Blood Off** `2.1.0.0` modid=62358
+  - Allows cleaning blood off armor and weapons via rain or water using a SKSE64 plugin.
+- **Sink of Scrubbing - Interactive Wash Basins** `1.2.0.0` modid=92844
+  - Adds usable washbasins that grant small buffs to Resist Disease and Speechcraft after four hours of cleaning.
+- **Wounds** `4.0.0.0` modid=17581
+  - Adds a wound system where combat injuries cause localized trauma requiring time and treatment to heal, affecting stats and requiring bandaging, stitching, cauterizing, etc.
+- **EVGAT - Dynamic Climb-able Ladder Doors** `1.3.1.0` modid=108900
+  - Converts ladder doors into animated climbable ladders using BOS and EVGAT for enhanced immersion.
+- **Skyrim Reputation - Manbeast - A Werewolf Overhaul patch** `1.1.2.0` modid=82691
+  - Compatibility patch linking reputation with the Manbeast werewolf overhaul.
+- **Skyrim Reputation** `2.4.0.0` modid=22374
+  - Introduces a reputation system that influences NPC greetings, titles, prices, and dialogue based on player actions and moral score.
+- **Missives - Notes and Announcements** `1.4.0.0` modid=116028
+  - Adds about 90 quest‑aware notices and announcements for Missives, enhancing event feedback while remaining compatible.
+- **DAc0da - CoMAP Addon** `1.4.0.0` modid=147698
+  - Adds custom map markers for the CoMAP addon to Vicn's mods.
+- **VIGILANT - CoMAP Addon** `1.0.0.0` modid=174712
+  - Adds custom map markers for Coldharbour, providing distinct markers for descent.
+- **Valtheim EVGAT Leaps of Faith 2-Way Version** `1.0.0.0` modid=123365
+  - Adds EVG animated traversal vault marker for Leaps of Faith jumps in Valtheim Towers, with 2‑way/1‑way options; requires EVG Animated Traversal.
+- **The Forgotten City Entrance Extended Version** `1.0.5.0` modid=25730
+  - Provides a new concealed entrance to the Forgotten City, hiding its access.
+- **More Racism in Windhelm SSE** `1.2.0.0` modid=14233
+  - Adds six voiced bigoted NPCs to Windhelm and a bookseller with unique books.
+- **Sleeping Expanded for Interesting NPCs (3DNPC)** `1.0.0.0` modid=76753
+  - Adds similar sleeping reaction animations and NPC interactions for 3DNPC followers.
+- **Interesting NPCs Honed Metal Patch for Isobel** `1.26.0.0b` modid=102772
+  - Adds voiced dialogue for Isobel in Honed Metal blacksmithing using vanilla lines, conditional on relationship rank 4 after first date, and modifies Honed Metal records causing intrusive updates.
+- **Immersive Rejections for Interesting NPCs (3DNPC)** `1.0.0.0` modid=75879
+  - Adds voiced rejection dialogues for NPCs in the Interesting NPCs mod.
+- **Apocryphal Library and Undeath Remastered Integration** `1.2.0.0` modid=128168
+  - Adds fully‑readable Black Book ‘Whispers of the Veil’ to Undeath Remastered; includes _SWAP.INI for Base Object Swapper; version 1.2 requires Apocryphal Library v1.2; adds necromancy‑focused books; ESL flagged; requires Undeath Remastered.
+- **Apocryphal Library** `1.53.0.0` modid=121654
+  - Adds Base Object Swapper support to make book stacks searchable; adds ~100 new books, notes, and lore from various TES titles; includes letters, spell tomes, and unique items; optional patches for Ordinator/Vokrii; ESL flagged; installs via Vortex or manual.
+- **JS Badges of Office 1k** `1.0.0.0` modid=128579
+  - Wearable badges of office for Stewards that change with the civil war outcome, available in 1k and 2k resolutions.
+- **IDDP - Beyond Skyrim - Bruma Patch** `1.0.3.0` modid=4126
+  - Adds a properly sized entrance to Bruma, eliminating the tiny cave entry from the original mod.
+- **Khajiit Caravan Mules Enderal Donkey Model** `1.3.0.0` modid=49058
+  - Adds two pack mules per Khajiit caravan (six total) with custom AI, texture variants, optional recoloring or donkey conversion, essential status, designated resting spots with hay linked to caravan camp system, carries crates and unequips on rest; compatible with Cutting Room Floor and Caravan Children patches.
+- **Immersive Khajiit Caravan Mules** `1.3.0.0` modid=49058
+  - Adds two pack mules per Khajiit caravan (six total) with custom AI, texture variants, optional recoloring or donkey conversion, essential status, designated resting spots with hay linked to caravan camp system, carries crates and unequips on rest; compatible with Cutting Room Floor and Caravan Children patches.
+- **Flying Crows SSE** `2.1.0.0b` modid=49270
+  - Adds flying crows that dynamically appear at 30+ locations, reacting to weather and time of day.
+- **Immersive Laundry - Animated** `1.3.0.0` modid=92814
+  - Lightweight add‑on that animates laundry meshes via Base Object Swapper, providing animated wood‑post textures from Immersive Laundry; no collision, showcased by community; requires no additional dependencies.
+- **Immersive Laundry** `1.0.0.0d` modid=2011
+  - Adds decorative clotheslines and washing items throughout Skyrim for realism.
+- **Fortified Imperial Fort Battlements (ESL)** `1.2.0.0` modid=66831
+  - Enhances the fortified appearance of Imperial forts for greater immersion.
+- **Notes with something to read SE by Xtudo - Text Version** `1.3.0.0` modid=35801
+  - Adds readable notes to animation sequences for character or NPC interactions.
+- **Creature Size Variants SE** `f1.07` modid=17736
+  - Adds dynamic size variations for creatures and NPCs, configurable via MCM.
+- **More Hircinic Aspects of Hircine- Mihail's Shards of Immersion** `1.0.0.0` modid=89917
+  - Enhances the spectral appearances of Hircine's Aspects with more epic visuals while staying true to vanilla concepts.
+- **Animated Dwemer Lift Doors** `1.2.0.0` modid=3489
+  - Revives animated Dwemer lift doors with functional animations.
+- **Farmhouse Chimneys SE - USSEP Patch** `4.2.1.0` modid=8766
+  - Adds chimneys to farmhouse exteriors with smoke effects and optional snow shaders, supporting many compatible mods.
+- **Farmhouse Chimneys SE** `4.2.1.0` modid=8766
+  - Adds chimneys to farmhouse exteriors with smoke effects and optional snow shaders, supporting many compatible mods.
+- **Seasonal Wildlife Distribution** `1.4.0.0` modid=63700
+  - Adds seasonal wildlife lists to simulate hibernation and migration effects across seasons
+- **Seasons of Skyrim SKSE** `1.8.6.0` modid=62861
+  - Provides SKSE‑based seasonal framework that swaps models and adds dynamic snow coverage.
+- **Underwater Vision** `2.0.0.0` modid=27869
+  - Adds underwater vision blur with configurable MCM options for immersion.
+- **Splashes of Skyrim** `1.4.1.0` modid=47710
+  - Adds SKSE plugin extending water splashes, ripples and underwater explosions for all projectile types.
+- **Security Overhaul SKSE - Regional Locks** `1.0.1.0` modid=62781
+  - Adds region‑specific lock models such as Solitude, Whiterun, and Windhelm.
+- **Alternate Conversation Camera** `2.4.6.0-AE` modid=21220
+  - Overhauls dialogue camera with zoom and face focus
+  - Configurable INI, dynamic zoom, auto lock-on, third-person position
+  - Supports sitting and lock-on states
+  - ESL flagged
+- **Carry Your Carcasses - Simple Hunting Overhaul** `1.1.0.0` modid=62628
+  - Carries animal carcasses in inventory; supported list (deer, elk, wolf, etc); displays on horse backs; integrates with IED; optional horse mods
+- **Dynamic Things Alternative - Base Object Swapper** `0.4.1.0` modid=60741
+  - Makes many static objects interactable (e.g., mammoth skulls, crates, taproots, hay bales, firewood piles, fishing rods, etc.), adds comprehensive swapping list, ESL‑flagged, requires Base Object Swapper and Papyrus Extender, compatible with SMIM.
+- **The Clever Prisoner** `1.3.1.0` modid=84348
+  - Gives prisoners intelligent behavior in specific quests, enabling them to escape, fight, or assist the player.
+- **Very Important Cannibal Bug Fix** `1.0.0.0` modid=122411
+  - Fixes a bug in the “A Taste Of Death” quest where cannibals eat bread instead of meat, using AnimObjectSwapper to replace bread with meat.
+- **Vanilla Eating Animation Fixes** `1.2.0.0` modid=120727
+  - Fixes NPC eating animations to move mouths, chew, lower sounds, and disable head tracking; works with any mod using vanilla eating animations; sets AnimVarInt NPCC_Chew and requires Payload Interpreter, Behavior Data Injector, Spell Perk Item Distributor, MFG Fix
+- **Fleeting Torches SE - 30 Minutes** `1.0.0.0` modid=71482
+  - Prevents the torch duration reset exploit by locking torch decay timer.
+- **Esbern Voice Consistency Fix** `0.1.0.0` modid=88503
+  - Replaces inconsistent Esbern voice lines with a single AI‑generated voice for uniformity.
+- **Edmond's Assassin of Old - Immersive Vanilla Bug Fix** `1.0.0.0` modid=126561
+  - Fixes the visual inconsistency of the ancient Assassin of Old by remastering him as a proper skeleton; marked as an ESL plugin.
+
+### Visual Environment, Weather, Lighting
+
+- **TMD The Rift Leaves - Seasons Patch** `f1.01` modid=111461
+  - Adds floating autumn leaves to The Rift waters, requiring ENB with complex material and dynamic cubemap.
+- **TMD The Rift Leaves** `f1.01` modid=111461
+  - Adds floating autumn leaves to The Rift waters, requiring ENB with complex material and dynamic cubemap.
+- **JK's Palace of the Kings** `1.2.0.0` modid=48902
+  - Offers an enhanced palace overhaul for Windhelm's Palace of the Kings with performance notes.
+- **JK's The Bards College** `1.0.3.0` modid=71054
+  - Enhanced overhaul of the Bards College.
+- **JK's Septimus Signus's Outpost** `1.0.1.0` modid=66915
+  - Overhauls the Septimus Signus outpost interior and exterior with performance improvements.
+- **Campfire Dynamic Collisions - Normal Collisions** `1.2.0.0` modid=125636
+  - Adds dynamic collisions to all objects placed with Campfire, allowing NPCs to recognize them as obstacles.
+- **Apocryphal Library and The Tale of Tsatampra Xiros Integration** `f1.00` modid=128621
+  - Provides a SWAP.INI file that integrates Apocryphal Library books into The Tale of Tsatampra Xiros areas.
+- **Wind Ruler Armor SE - Fixes by Xtudo** `1.0.0.0` modid=60842
+  - Adds a unique heavy armor set and two‑handed sword unlocked after passing Kyne's Sacred Trials.
+- **Summerset Shadow Armor** `1.0.1.0` modid=64934
+  - Replaces generic Summerset Shadow Armor with a unique Elven Hunter‑inspired design and updates Linwe’s set
+- **Wind Ruler Armor SE** `1.0.0.0` modid=60842
+  - Adds a unique heavy armor set and two‑handed sword unlocked after passing Kyne's Sacred Trials.
+- **Underwater Solstheim** `1.0.2.0` modid=157986
+  - Adds dozens of new underwater locations and points of interest in Solstheim.
+- **Cathedral - 3D Vanilla Eastmarch Grass** `1.0.0.0` modid=141157
+  - Remasters Eastmarch tundra grass with efficient 3D models and BC3 textures, leaving _nograss untouched.
+- **Cathedral - 3D Vanilla Tundra Grass** `1.1.0.0` modid=141074
+  - Upgrades vanilla tundra grass with efficient 3D models and BC3 textures, requiring a grass density setting of 50.
+- **Cathedral - 3D Solstheim Grass** `1.0.0.0` modid=90945
+  - Provides a 3D grass overhaul for Solstheim using photo‑based grass models, requiring the Cathedral Grass Library meshes.
+- **Shrubs of Snow - Seasons of Skyrim SKSE** `0.1.0.0` modid=63463
+  - Adds snowy versions of vanilla shrubs and winter aspens for Seasons of Skyrim SKSE.
+- **Cloud Shadows - Community Shaders** `1.2.0.0` modid=139185
+  - Community Shaders feature adding cloud‑based shadows, supporting SE, AE, and VR.
+- **Terrain Blending - Community Shaders** `1.0.1.0` modid=157076
+  - Adds community shaders that realistically blend terrain into objects.
+- **Sky Sync** `1.0.0.0` modid=153543
+  - Synchronizes lighting and volumetric lighting with the sun and moon cycles, including an alternate sun path and AE/SE/VR support.
+- **Screen-Space Shadows** `2.0.0.0` modid=93209
+  - Adds screen-space shadows enabling grass, map, distant, and self-shadows through Community Shaders.
+- **Grass Lighting** `2.0.0.0` modid=86502
+  - Replaces grass shaders with advanced shading, complex grass support, and lighting fixes.
+- **Ambient Templates for Lighting Mods** `2.6.0.0` modid=153425
+  - Neutralizes ambient light colors and reduces interior fog with eight brightness options for modular lighting.
+- **Grass Sampler Fix** `1.0.1.0` modid=91285
+  - Improves grass density and sharpness using anisotropic filtering and enhances upscaling.
+- **Grass Cache Helper NG** `1.0.1.0` modid=101095
+  - SKSE plugin that fixes grass precache bugs and supports seasonal grass files.
+
+### Texture, Mesh, Visual Replacers
+
+- **Vanilla Hair Textures for KS Hairdos** `1.0.0.0` modid=73159
+  - Provides custom texture maps that replace KS Hairdos hair textures with higher-quality vanilla-style versions.
+- **Seasonal Spiffed Up Tundra Scrubs - Animated** `1.0.0.0` modid=112938
+  - Provides animated tundra scrub textures that change appearance each season.
+- **Cuyi's Bosmeri Antlers - SSE** `1.2.0.0-SSE` modid=26173
+  - Adds five antler variants usable as circlets or scars for Bosmer characters.
+- **First Person Animations - For Some Mods** `1.2.0.0` modid=148289
+  - Adds first‑person animations to mods that normally force third‑person perspective, enabling first‑person exclusive players to use them.
+- **Duncan's Paper Maps for FWMF** `1.7.0.0` modid=55025
+  - Adapts Duncan Larsen’s paper maps for use with Flat World Map Framework, supporting multiple DLC and add‑on segments.
+- **Happy Little Trees 3D LOD - Performance** `2.1.0.0` modid=56907
+  - Provides performance‑optimized DynDOLOD 3D hybrid LOD models for Happy Little Trees compatible with HLT
+- **Lod Model Library for DynDOLOD** `1.6.0.0` modid=87521
+  - Provides matching LOD models for several mods using altered meshes, requiring DynDOLOD generation.
+- **Better Dyndolod Red Mountain Plume** `1.0.0.0` modid=43863
+  - Improves the Red Mountain Plume mesh to look less like a tornado and more like a proper eruption cloud, with new textures and model.
+- **Striding Silt Strider** `1.3.0.0` modid=109619
+  - Silt Striders stride across Solstheim, includes variants like Dusty and Wild, and requires disabling then re‑enabling to update travel markers
+- **Realistic Boat Bobbing Patch Hub - USSEP** `1.0.0.0` modid=44311
+  - Collection of patches for Realistic Boat Bobbing targeting various mods.
+- **Realistic Boat Bobbing SE** `8.2.0.0` modid=26080
+  - Ported Realistic Boat Bobbing to Skyrim Special Edition.
+- **Realistic Elven Children (Aymar and friends reimagined) - No KS Hairdos Patch** `2.1.0.0` modid=40231
+  - Adds 8 adoptable mer children with edited faces styled like Realistic RS Children.
+- **Realistic Elven Children (Aymar and friends reimagined)** `2.1.0.0` modid=40231
+  - Adds 8 adoptable mer children with edited faces styled like Realistic RS Children.
+- **RS Children Overhaul 1.1.3 with hotfix 1** `1.1.3.0` modid=2650
+  - Overhauls appearance of all children, adding outfits and accessories for boys.
+- **Resplendent Royals - Full Version Fixed** `f1.01` modid=69900
+  - Overhauls Jarls and courtiers with unique, lore‑friendly visual appearances.
+- **A decent man - High Poly Sinding Replacer SE** `5.0.0.0` modid=66863
+  - High-poly texture replacement for Sinding to give him a more unique yet vanilla-like appearance.
+- **Elven Ears for Breton NPCs** `1.0.0.0` modid=87737
+  - Distributes four Elven ear meshes to Breton NPCs via SPID, giving them elven‑style ears.
+- **Miraakle - A Miraak Replacer** `2.0.0.0` modid=115974
+  - Replaces Miraak with a custom texture and mesh, offering improved visuals and multiple configuration options.
+- **Nordic Faces - FaceGen - BSA** `5.0.0.0` modid=40658
+  - Supplies high‑quality, lore‑friendly textures and FaceGen data for player and NPCs, enhancing all races while preserving vanilla aesthetics.
+- **Resplendent Royals - Jarl's Court NPC Overhaul** `f1.01` modid=69900
+  - Overhauls Jarls and courtiers with unique, lore‑friendly visual appearances.
+- **Sexier Vanilla - Guards** `1.0.0.0` modid=60399
+  - Adds diverse, immersive heavy and light armor variants to town guards and Stormcloaks while retaining the vanilla aesthetic.
+- **Misc Artificer Patches - Praedy's Staves** `1.3.0.0` modid=99684
+  - Provides texture patches for Artificer items such as jewelry and helmets without altering gameplay.
+- **Misc Artificer Patches - Improved Closefaced Helmets** `1.3.0.0` modid=99684
+  - Provides texture patches for Artificer items such as jewelry and helmets without altering gameplay.
+- **Misc Artificer Patches - Canis Hyseria** `1.3.0.0` modid=99684
+  - Provides texture patches for Artificer items such as jewelry and helmets without altering gameplay.
+- **Misc Artificer Patches - ArteFakes** `1.3.0.0` modid=99684
+  - Provides texture patches for Artificer items such as jewelry and helmets without altering gameplay.
+- **Dragon Priest Retexture SE - Half Res** `1.1.0.0` modid=101101
+  - Retextures all dragon priest masks, weapons, and robes, with optional SPID addon for custom textures on named priests.
+- **Konarik's Accoutrements** `5.5.3.0` modid=22206
+  - Adds textures to enhance encounters with named Dragon Priests.
+- **Cozy Giants** `2.0.0.0` modid=30830
+  - Replaces giant textures with outfits giving a Game of Thrones‑style appearance.
+- **Meekoge - A Meeko Replacer** `1.1.0.0` modid=88585
+  - Replaces Meeko with a Shiba Inu model and 4K textures, optimized for performance.
+- **Horse Whistle Key - Named Horses** `2.3.0.0` modid=72165
+  - Adds a key to call, manage, and interact with your horse, including inventory, renaming, and saddle equipping.
+- **Horse Whistle Key** `2.3.0.0` modid=72165
+  - Adds a key to call, manage, and interact with your horse, including inventory, renaming, and saddle equipping.
+- **zzjay's Horse Overhaul - SE** `1.5.0.0` modid=63640
+  - Overhauls horse appearance with new saddles, improved mane, and unique frost texture.
+- **Obscure's College of Winterhold Meshes Optimized and Merged for Community Shaders** `1.0.0.0` modid=139165
+  - Merges architecture meshes to reduce drawcalls for Community Shaders and Light Limit Fix users.
+- **Solitude Temple Frescoes 2019 - eye cubemap patch** `1.1.0.0` modid=33514
+  - Fixes eye cubemap conflicts in Solitude and Temple Frescoes by remapping to an improved cubemap.
+- **Environs - Hroggar's House - Patch Collection** `2.0.3.0` modid=83457
+  - Makes Eisa Blackthorn reside in Morthal and rebuild Hroggar's burned house, allowing her to be recruited as a follower.
+- **Environs - Riften Warehouse - Patch Collection** `f2.01` modid=88024
+  - Turns the Riften dock warehouse into an East Empire Company outpost after the skooma quest, adding new NPCs and visual changes.
+- **Environs - Hroggar's House** `2.0.3.0` modid=83457
+  - Makes Eisa Blackthorn reside in Morthal and rebuild Hroggar's burned house, allowing her to be recruited as a follower.
+- **Environs - Riften Warehouse** `f2.01` modid=88024
+  - Turns the Riften dock warehouse into an East Empire Company outpost after the skooma quest, adding new NPCs and visual changes.
+- **Orc Exiles - Cracked Tusk 3DNPC Patch** `1.2.0.0` modid=133937
+  - Provides 3DNPC visual patches and navmesh adjustments for Cracked Tusk Keep and Orc Exiles, with optional grass reduction for compatibility.
+- **Eastern Dwemer Towers of Solstheim** `1.0.1.0` modid=67410
+  - Adds Morrowind‑style dwemer towers to Solstheim ruins and fixes a lift mismatch.
+- **Orc Exiles - The Cracked Tusk Keep** `1.6.0.0` modid=133489
+  - Overhauls the Imperial ruin Cracked Tusk Keep into an imposing Orc fortress with expanded size, added bandits, clutter, new meshes, and remade navmesh.
+- **The Great Village of Old Hroldan Patch Collection** `2.4.0.0` modid=37650
+  - Provides ESP patches for The Great Village of Old Hroldan, addressing compatibility with various mods and including miscellaneous patches.
+- **Rob's Bug Fixes - Capital Windhelm Expansion** `2.0.0.0` modid=64740
+  - Fixes record errors and navmesh issues in Capital Windhelm Expansion, forwards USSEP changes and hides remaining conflicts.
+- **Capital Windhelm Expansion Bug fixes** `1.3.5.0` modid=93778
+  - Fixes bugs in Capital Windhelm Expansion, including eastern gate blackscreen and collision clipping issues.
+- **Fixed Meshes for Capital Whiterun Expansion** `1.2.0.0` modid=124352
+  - Fixes collision, UV, and face issues in the Capital Whiterun Expansion’s custom meshes.
+- **Meshes Optimization Project - Capital Whiterun Expansion** `1.0.0.0` modid=160495
+  - Optimizes meshes to reduce draw calls and improve performance with minimal visual loss.
+- **H.O.A. - Hyperspecific Occlusion Addon** `1.3.8.3` modid=149004
+  - Adds or fixes occlusion planes in overhauled cities to improve performance.
+- **Realistic Boat Bobbing Patch Hub - Great City of Solitude** `1.0.0.0` modid=44311
+  - Collection of patches for Realistic Boat Bobbing targeting various mods.
+- **Rob's Bug Fixes - TGC Solitude** `2.0.0.0` modid=72117
+  - Provides a cleaned .esp replacer for The Great City of Solitude with improved navmeshes and forwarded USSEP changes.
+- **Meshes Optimization Project - COTN - Morthal** `1.0.0.0` modid=160495
+  - Optimizes meshes to reduce draw calls and improve performance with minimal visual loss.
+- **Cities of the North - Morthal** `1.2.0.0` modid=34168
+  - Adds unique building designs, giving Morthal its own distinct architecture.
+- **Meshes Optimization Project - COTN - Falkreath** `1.0.0.0` modid=160495
+  - Optimizes meshes to reduce draw calls and improve performance with minimal visual loss.
+- **Cities of the North - Falkreath Patch Collection - CC Elven Hunter Armor Patch** `1.27.0.0` modid=56734
+  - Patch collection adjusting object placements for compatibility with Cities of the North - Falkreath.
+- **Cities of the North - Falkreath Patch Collection** `1.27.0.0` modid=56734
+  - Patch collection adjusting object placements for compatibility with Cities of the North - Falkreath.
+- **Meshes Optimization Project - COTN - Dawnstar** `1.0.0.0` modid=160495
+  - Optimizes meshes to reduce draw calls and improve performance with minimal visual loss.
+- **Sinding Prison Anims** `1.5.1.0` modid=96926
+  - Adds two new DAR/OAR‑based animations for Sinding in the Falkreath prison, enhancing immersion.
+- **Menagerie - A Creation Club Pet Overhaul - Mysticism Add-on** `1.2.0.0` modid=97669
+  - Overhauls Creation Club pets into combat‑ready companions, assigning them stats, names, and enabling them to fight.
+- **Menagerie - A Creation Club Pet Overhaul - Extended Cut - Saints and Seducers Patch** `1.2.0.0` modid=97669
+  - Overhauls Creation Club pets into combat‑ready companions, assigning them stats, names, and enabling them to fight.
+- **Menagerie - A Creation Club Pet Overhaul** `1.2.0.0` modid=97669
+  - Overhauls Creation Club pets into combat‑ready companions, assigning them stats, names, and enabling them to fight.
+- **Campfire Animations** `1.5.1.0` modid=112322
+  - Adds animations for campfire interactions; requires Campfire, OAR, FLM; optional Immersive Equipment Displays; YouTube preview
+- **Weapon Switch Animations Complete** `1.1.0.0` modid=154132
+  - Provides complete draw/sheathe animations for many weapon and hand combos, supporting Immersive Weapon Switch.
+- **Weapon Styles - DrawSheathe Animations for IED** `3.0.1.0` modid=85085
+  - Adds equip/unequip animations for weapons with Immersive Equipment Displays using Open Animation Replacer.
+- **Open Animation Replacer - IED Conditions** `1.0.2.0` modid=98308
+  - Adds conditions to Open Animation Replacer for use with Immersive Equipment Displays and Simple Dual Sheath to enable style‑fitting draw/sheath animations.
+- **Pilgrim and Daedric Shrines Consistency and Tweaks - Map Markers** `2.1.0.0.MM` modid=63617
+  - Patch ensuring Daedric Shrines - All‑in‑One works with Pilgrim, adding map markers and optional statue patches.
+- **Meg's Eversnow (Gourmet) - Eating Animations and Sounds patch** `2.1.0.0` modid=124398
+  - Remodels the drug Eversnow from Gourmet with 1K/2K textures and optional patches for UAPNG or EAS, without a plugin.
+- **Meg's Eversnow (Gourmet) - 1k** `2.1.0.0` modid=124398
+  - Remodels the drug Eversnow from Gourmet with 1K/2K textures and optional patches for UAPNG or EAS, without a plugin.
+- **Seasonal Alchemy Add-on** `1.3.0.0` modid=83636
+  - Extends seasonal changes to critters, fungi, and farm crops with visual variations.
+- **I Just Want to Sit Down and Read** `1.8.2.0` modid=121282
+  - Enables book reading animations in additional contexts such as riding or sitting by allowing mod patches.
+- **Frozen Electrocuted Combustion** `6.1.1.0` modid=3532
+  - Applies visual effects to NPCs and player when killed by magic status effects, with elemental variations like frost, shock, poison, etc.
+- **Ghastly's Open World Loot Equipment Patches - Warmonger Armory** `1.0.0.0` modid=50491
+  - Provides open world loot patches adding items from various mods to leveled lists.
+- **Dismembering Framework - Creature Asset Pack - My patches by Xtudo - Falmer Overhaul** `3.7.0.0` modid=126608
+  - Provides creature-specific texture patches for Draugr, Falmer, and other entities, enabling realistic dismemberment visuals.
+- **Dismembering Framework - Creature Asset Pack - My patches by Xtudo - Draugrs - Dry Blood** `3.7.0.0` modid=126608
+  - Provides creature-specific texture patches for Draugr, Falmer, and other entities, enabling realistic dismemberment visuals.
+- **Dismembering Framework - Creature Asset Pack - My patches by Xtudo - CC Plague of the Dead** `3.7.0.0` modid=126608
+  - Provides creature-specific texture patches for Draugr, Falmer, and other entities, enabling realistic dismemberment visuals.
+- **Dismembering Framework - Creature Asset Pack - My patches by Xtudo - CC Goblins** `3.7.0.0` modid=126608
+  - Provides creature-specific texture patches for Draugr, Falmer, and other entities, enabling realistic dismemberment visuals.
+- **Dismembering Framework - Creature Asset Pack - My patches by Xtudo - CC Bone Wolf** `3.7.0.0` modid=126608
+  - Provides creature-specific texture patches for Draugr, Falmer, and other entities, enabling realistic dismemberment visuals.
+- **Simple Archery Animations** `1.0.3.0` modid=153153
+  - Adds simple first- and third-person archery animations, including optional skill-based variants.
+- **Crosshair-aligned Crossbow** `1.0.1.0` modid=42267
+  - Replaces first‑person crossbow animations to align with the target reticle.
+- **Casual Dog Animations (DAR-OAR)** `1.0.2.0` modid=132398
+  - Adds new idle animations for dogs, such as head-tilting and yawning, via animation replacer.
+- **New Husky Animations SE - DAR OAR** `1.2.0.0` modid=128862
+  - Modifies Dawnguard husky follower animations with confident stance and curved tails via animation replacer.
+- **Eating Animations and Sounds - First Person Patch** `1.2.2.0` modid=133246
+  - Adds first‑person animations to the eating animations and sounds.
+- **Death Animations from Underdog Animations** `1.0.0.0` modid=96603
+  - Replaces spinning death animations with Underdog's death animations via OAR.
+- **Dynamic Block Hit** `1.7.0.0` modid=100570
+  - Adds separate block hit animations for normal and power attacks with random animations per weapon group and additional special animations.
+- **Reanimated NPC Animations - Unofficial Addon** `1.0.0.0` modid=100100
+  - Expands on the original reanimated NPC animation set with additional variants.
+- **Reanimated NPC Animations** `1.2.0.0` modid=79079
+  - Adds new idle, walk, run, sprint animations for reanimated NPCs to appear more soulless.
+- **Expressive Facial Animation -Male Edition-** `1.21.0.0` modid=19532
+  - Updates male facial expression morphs for all animations, affecting lips, eyebrows, and eyes.
+- **Expressive Facial Animation -Female Edition-** `1.7.0.0` modid=19181
+  - Updates female facial expression morphs for all animations, affecting lips, eyebrows, and eyes.
+- **New Praying Animations (OAR) - idlepray.hkx replacer for females** `1.1.0.0` modid=76889
+  - Adds lengthy female-specific praying animations (idlepray.hkx, idlepraycrouched_loop.hkx) that are 25× longer than vanilla and work with Wintersun and similar mods.
+- **Immersive Interactions - Eating ingredients and apply poison animations** `1.4.0.0` modid=117983
+  - Adds varied animations for eating ingredients and applying poisons, triggered via keyword items.
+- **Dynamic Horse Petting Animations for Immersive Interactions** `1.11.0.0` modid=111767
+  - Provides varied horse petting animations based on player angle, requiring Open Animation Replacer and Immersive Interactions, with integration patch.
+- **Ultimate Animated Potions NG** `2.8.0.0` modid=97674
+  - Rewrites Ultimate Potion for SE/AE with updated animations, behavior, and support for all potion models.
+- **Lively cart driver animation OAR** `2.0.1.0` modid=70595
+  - Replaces the cart driver animation with a 50‑second detailed animation, installable at any time as a .hkx file.
+- **Super Fast Get Up Animation** `1.0.0.0` modid=46714
+  - Provides quick standing animations for actors knocked off their feet, reducing downtime
+- **Pristine Vanilla Movement - Sprint - No Camera Shake** `1.1.0.0` modid=66635
+  - Updates run, walk, and sprint animations to remove jitter and provide a smoother, more casual look.
+- **Pristine Vanilla Movement** `1.1.0.0` modid=66635
+  - Updates run, walk, and sprint animations to remove jitter and provide a smoother, more casual look.
+- **Followers Salute Casually (OAR)** `1.1.0.0` modid=95093
+  - Adds seven informal salute animations for followers in Immersive Interactions.
+- **Dynamic Looting and Harvesting Animations** `1.7.0.0` modid=114547
+  - Adds dynamic animations for harvesting flora and looting containers, with various plant-specific animations and optional integrations.
+- **Arm Movement Animations (OAR) - Shield Patch** `2.2.0.0` modid=62849
+  - Adds over 80 dynamic arm movement variants based on armor type, personality, or role, enhancing NPC animation variety.
+- **Arm Movement Animations (OAR)** `2.2.0.0` modid=62849
+  - Adds over 80 dynamic arm movement variants based on armor type, personality, or role, enhancing NPC animation variety.
+- **More powerful mining animations SE** `1.0.0.0` modid=72929
+  - Adds a more powerful mining animation replacer that enhances mining animations.
+- **Look Around - Searching Animations For NPCs** `1.1.0.0` modid=79958
+  - Adds searching animations for NPCs to detect hidden players, with various weapon stances, available via OAR or DAR.
+- **DAR - Dynamic Swimming - Argonian Mastery** `1.0.0.0` modid=34853
+  - Adjusts swimming animations based on stamina and armor weight.
+- **DAR - Dynamic Swimming** `1.0.0.0` modid=34853
+  - Adjusts swimming animations based on stamina and armor weight.
+- **NPC Animation Remix (OAR) - Shield Patch** `2.2.0.0` modid=63471
+  - Adds 22 new idle animations for NPCs to improve variety and prevent synchronization.
+- **NPC Animation Remix (OAR)** `2.2.0.0` modid=63471
+  - Adds 22 new idle animations for NPCs to improve variety and prevent synchronization.
+- **Gesture Animation Remix (OAR) - Shield Patch** `2.3.0.0` modid=64420
+  - Adds dialogue gesture animations based on NPC personality, role, and armor type.
+- **Gesture Animation Remix (OAR)** `2.3.0.0` modid=64420
+  - Adds dialogue gesture animations based on NPC personality, role, and armor type.
+- **Conditional tavern cheering (OAR)** `1.3.0.0` modid=63029
+  - No esp/esl! 4 new applause animations and 3,5 new ways of cheering while bard sings. OAR folders by NPC demographic, voice types, worn armor to add personality to taverns guests. Sam Guevenne inclu...
+- **Jarl Sitting Animation Replacer** `2.0.0.0` modid=37801
+  - Replaces Jarl sitting animation with Arch Curate Vyrthur's animations, randomized via OAR.
+- **Take a Seat - New Sitting Animations for OAR** `f1.01` modid=54193
+  - Adds 14 new sit/meditate animations via DAR/OAR that play randomly for NPCs and player.
+- **Open Animation Replacer - Math Plugin** `1.0.3.0` modid=92607
+  - Plugin adds a complex condition to Open Animation Replacer via exprtk, serving mainly as a programmer example with limited practical use.
+- **Paired Animation Improvements** `1.0.2.0` modid=99621
+  - SKSE plugin that enables paired animations to work like normal animations, freeing animation slots for replacers.
+- **BA Bard Songs** `1.3.0.0` modid=47202
+  - Adds random bard instrumental songs (drum, flute, lute) to taverns without replacing existing music.
+- **Chapter II - Jeremy Soule Inspired Music** `4.0.0.0` modid=37792
+  - Adds several exploration and town tracks inspired by Jeremy Soule, with new music regularly updated.
+- **Tavern Games - Cards Retexture - Forgotten Myths** `1.0.0.0` modid=63326
+  - Redesigns tavern cards with Bilibin's lore‑friendly artwork, using folklore illustrations and ancient giant art.
+- **Tavern Games - Alt Camera Patch and No Silent Voices Fixes** `1.0.0.0` modid=106873
+  - Fixes issues with Alt Camera Patch and ensures compatibility of No Silent Voices by updating assets and providing optional fixes.
+- **Holidays -x- Light Placer** `1.0.0.0` modid=160128
+  - Adds subtle pulsing lights to lanterns and pumpkins via Light Placer configurations.
+- **Dirt and Blood HD Retexture** `1.2.0.0` modid=44162
+  - provides high‑resolution retextures for the dirt and blood overlays, with optional shader tweaks.
+- **Skyrim's Got Talent - Player Reactions Addon (OMA) - Free Movement Patch** `f1.07` modid=78629
+  - Adds player animation reactions to bard performances based on skill level, requiring DAR or OMA patches.
+- **Skyrim's Got Talent - Player Reactions Addon (OMA)** `f1.07` modid=78629
+  - Adds player animation reactions to bard performances based on skill level, requiring DAR or OMA patches.
+- **Open for Business - Lawbringer for Fort Icemoth** `1.0.6.0` modid=110277
+  - Expands on the excellent Lawbringer mod to make Fort Icemoth in the Hjorkvild Isles claimable. Also includes various tweaks for Siege at Icemoth that are not reliant on Lawbringer.
+- **Missives - Notes Retexture - Bruma Patch** `1.0.0.0` modid=46201
+  - Adds nine textured images to replace blank notes on Missive boards, providing visual variety without altering text.
+- **Missives - Notes Retexture - Solstheim Patch** `1.0.0.0` modid=46201
+  - Adds nine textured images to replace blank notes on Missive boards, providing visual variety without altering text.
+- **Missives - Notes Retexture** `1.0.0.0` modid=46201
+  - Adds nine textured images to replace blank notes on Missive boards, providing visual variety without altering text.
+- **Missives - Unique Missive Boards** `1.0.0.0` modid=111375
+  - Adds unique missive board textures to Falkreath, Dawnstar, Morthal, and Winterhold inspired by COTN architecture.
+- **Project AHO - Misc Item Description** `1.0.0.0` modid=80969
+  - Provides modular texture tweaks and edits for Project AHO, including item descriptions, bestiary addons, and boss health bars.
+- **Project AHO - Tweaks** `1.0.0.0` modid=80969
+  - Provides modular texture tweaks and edits for Project AHO, including item descriptions, bestiary addons, and boss health bars.
+- **Vigilant's Molag Bal Dragon Retexture SE** `1.0.0.0` modid=82040
+  - Retextures the Dragon version of Molag Bal from Vicn's Vigilant SE.
+- **Vigilant - Coldharbour Landscape and Architecture Retexture** `1.0.0.0` modid=81411
+  - Provides a complete texture overhaul for Coldharbour in the Vigilant mod, enhancing its visual atmosphere.
+- **VIGILANT - NPC Overhaul** `2.8.3.0` modid=22146
+  - Overhauls NPC appearances in VIGILANT with mesh changes for over 120 NPCs, no ESP.
+- **Vigilant Armors and Weapons Retexture SE - Mid Res 2k-1k (recommended)** `4.0.0.0` modid=45735
+  - Redesigns armors and weapons from the Vigilant mod with mid-resolution textures, recommended at 2k-1k for performance balance.
+- **Meridia's Order - Hammet's Dungeon Pack 1 patch** `2.1.0.0` modid=106422
+  - Distributes Vigilant armor, weapons, ingredients, and consumables into Meridia's Order questline, replacing paladin gear.
+- **Meridia's Order - Pilgrim Synergy Patch** `2.1.0.0` modid=106422
+  - Distributes Vigilant armor, weapons, ingredients, and consumables into Meridia's Order questline, replacing paladin gear.
+- **Carved Brink Generic Assets Replacer (Stranger Mask and Corrupted Shade) ESL** `0.5.0.0` modid=25791
+  - Replaces generic Ebony Dragon Priest mask and Imperial Corrupted Shades in Carved Brink with custom assets.
+- **Sirene Wispmother - A SIRENROOT Replacer** `1.0.0.0` modid=123252
+  - Replaces the texture of the SIRENROOT siren with a more detailed, lore‑friendly look using community assets.
+- **Auri's Unique Pod - Song of the Green Addon** `1.0.0.0` modid=128016
+  - Changes Auri's pod texture to match interior bark, useful with other texture packs.
+- **Gore - Another Replacer** `3.2.0.0` modid=101784
+  - Texture replacer for the Vigilant addon.
+- **Gore Replacer - Vigilant Addon** `3.2.0.0` modid=101784
+  - Texture replacer for the Vigilant addon.
+- **Cat Nessa Replacers - No RSV Version** `1.2.0.0` modid=77637
+  - Provides a high-poly head replacer for Nessa follower, with No RSV skin option.
+- **Assorted 3DNPC Patches - Project AHO Patch** `1.0.0.0` modid=72309
+  - Provides a separate patch for 3DNPC adjustments related to Dungeons1.
+- **Assorted 3DNPC Patches - Vigilant Patch** `1.0.0.0` modid=72309
+  - Provides a separate patch for 3DNPC adjustments related to Dungeons1.
+- **Titus Mede I - My version SE by Xtudo - Emperor Civil War - 2k - Emperor Clothes Replacer Patch** `1.1.0.0` modid=69940
+  - Adds unisex light and heavy armor sets for Emperor Titus Mede I, craftable at any forge, no HDT required, with survival keyword and optional patches.
+- **Gryphonknight Regalia - Breton Noble Armor - SMP Patch** `1.3.0.0` modid=107437
+  - Adds a crafted Breton noble armor set with high protection and thematic heritage.
+- **HDT-SMP for Cloaks and Capes** `1.1.0.0` modid=55030
+  - Provides HDT-SMP physics support for Cloaks and Capes removing conflicts with city guard replacers
+- **Alternative Open Face Wind Ruler Helmet - helm version (no hair mesh) - Male** `1.1.0.0` modid=63642
+  - Provides an open‑face helmet variant of the Wind Ruler Armor with optional hair meshes and updates.
+- **Alternative Open Face Wind Ruler Helmet - helm version (no hair mesh) - Female** `1.1.0.0` modid=63642
+  - Provides an open‑face helmet variant of the Wind Ruler Armor with optional hair meshes and updates.
+- **Alternative Open Face Wind Ruler Helmet - Beastfolk and Orc helm (no braided hair mesh)** `1.1.0.0` modid=63642
+  - Provides an open‑face helmet variant of the Wind Ruler Armor with optional hair meshes and updates.
+- **Alternative Open Face Wind Ruler Helmet - Helm Version** `1.1.0.0` modid=63642
+  - Provides an open‑face helmet variant of the Wind Ruler Armor with optional hair meshes and updates.
+- **Wind Ruler Armor - Male weight sliders SE** `1.2.0.0` modid=60893
+  - Adds feminine-themed patches including 2K textures, HD hair, bigger helmets, and no fur.
+- **Wind Ruler Armor - Female WS - More feminine SE** `1.2.0.0` modid=60893
+  - Adds feminine-themed patches including 2K textures, HD hair, bigger helmets, and no fur.
+- **Finally A Visually Distinct Falmer Hardened Armor for The Elder Scrolls V Skyrim Special Edition** `1.0.0.0` modid=168590
+  - Redesigns Falmer Hardened Armor to visually distinguish it from Falmer Heavy Armor with purple hues and varied coverage.
+- **Armory Extended - Saints and Seducers** `f1.03` modid=164993
+  - Extends the Saints & Seducers weapon sets with about 40 new weapons across various categories.
+- **Rough Leather Armor - Revisited** `1.0.0.0` modid=161264
+  - Adds both dark and brown variants of Rough Leather Armor with balanced stats, craftable via Advanced Armors perk.
+- **ElSopa - Shields Redone (Standalone)** `1.0.0.0` modid=151532
+  - Provides standalone craftable shield textures and meshes, compatible with Sentinel patches and Skypatcher.
+- **Ulags Legacy - Loose Files 2k** `1.0.0.0` modid=20510
+  - Collection of armor mods including Apotheus Light Armor and Duskward's Armor Set at 2k resolution.
+- **FB - Master Thief 2k Textures** `1.0.0.0` modid=141700
+  - Provides new, lore‑friendly 2k armor textures for thieves, with optional replacement of vanilla Thieves Guild armor.
+- **Better Shrouded Armor SSE - Ancient Replacer Only** `1.0.0.0` modid=26111
+  - A texture replacer that only replaces the Ancient Shrouded Armor with a retextured version, improving cowl visibility for Argonians and Khajiit.
+- **Fur-lined Steel Armor - 2k** `1.2.0.0` modid=106305
+  - Adds a heavy fur‑lined steel armor set with 26 pieces, craftable and temperable, with SPID and CID integration for NPC distribution.
+- **Titus Mede I - My version SE by Xtudo - Emperor Civil War - 2k** `1.1.0.0` modid=69940
+  - Adds unisex light and heavy armor sets for Emperor Titus Mede I, craftable at any forge, no HDT required, with survival keyword and optional patches.
+- **Imperial or Stormcloak Ranger Set SE** `1.0.0.0` modid=115132
+  - Adds Imperial and Stormcloak ranger armor sets with separate meshes for each side.
+- **Gryphonknight Regalia - Breton Noble Armor** `1.3.0.0` modid=107437
+  - Adds a crafted Breton noble armor set with high protection and thematic heritage.
+- **Elven Enforcer Armor** `1.31.0.0` modid=109638
+  - Adds a light armor set with multiple variants and textures, craftable and distributable through SPID.
+- **Beyond Skyrim Morrowind - Bonemold Weapon Pack** `1.4.0.0` modid=66906
+  - Adds the Bonemold weapon set from Beyond Skyrim – Morrowind, obtainable at Traitor's Post, with integrated translations.
+- **Archmage Khadgar's Robes SE** `1.4.0.0` modid=32348
+  - Adds Khadgar-themed robes from World of Warcraft in 2K/4K, craftable at the Skyforge, male-only.
+- **Left Hand Rings Modified SE** `4.5.0.0` modid=3240
+  - Adds left-hand rings, including six new variants and a Bond of Matrimony, with extensive compatibility support.
+- **Pierced Ears - Earrings SE** `1.0.0.0SE` modid=13571
+  - Adds 10 earrings (5 per ear) for many races, separate meshes, enchantable, three material options.
+- **Face Masks of Skyrim** `1.1.0.0` modid=1953
+  - Adds craftable face masks in eight colors with full beast‑race support, using slot 44 and compatible with helmets.
+- **Eastern Dwemer Armour SE - 2k** `1.1.0.0` modid=44443
+  - Texture pack for dwemer armor in Skyrim Special Edition.
+- **Moon Monk's Robes - 2k** `f1.03` modid=82495
+  - Adds a new set of Khajiiti style light armor with multiple alternate colors, crafted from scratch using various 3D tools.
+- **Lunar Guard Armor 1k** `1.3.0.0` modid=75349
+  - Adds a craftable ebony-tier heavy armor inspired by Khajiit
+- **Armory Extended - Bonemold Weapon Pack** `1.1.0.0` modid=95179
+  - Adds six new weapons to the Bonemold Weapon Pack, including spears and staves, with patches for other weapon mods.
+- **Armors of the Velothi Pt. I 2K** `1.2.4.0` modid=62752
+  - Adds eight Dunmer-themed armor sets with crafting requirements and patch compatibility.
+- **Ahzidal's Enchanted Armor** `1.0.0.0` modid=97845
+  - Provides a unique mesh replacer for Ahzidal’s armor for male and female beast races, with textures for vanilla‑style bodies
+- **Light Dragonbone Armor** `1.0.0.0` modid=105087
+  - Adds a new set of light armor with eight pieces, craftable and temperable, similar stats to Dragonscale.
+- **Bone Cultist Armor** `1.0.0.0` modid=111224
+  - Adds a new heavy armor set with multiple variants, craftable and compatible with CBBE/HIMBO, distributed via SPID.
+- **Stormlord Armor Reshaped** `2.0.0.0` modid=78223
+  - Reshapes Gechbal’s Stormlord Armor using cape meshes and textures from maty743’s Talos Housecarl Armor for male and female characters with full weight scaling
+- **Stormhold Warrior Armor SSE - Port Plus** `1.3.0.0` modid=96559
+  - Port of SoN6of6TrediS’ Argonian‑inspired Stormhold Warrior Armor with weight‑scaling fixes and Vanilla body support
+- **Barbarian Steel Armor** `1.0.0.0` modid=4458
+  - Adds a craftable light armor set with male/female versions, weight‑slider compatibility, and works with any race or body type.
+- **Assorted 3DNPC Patches - Hammets Dungeons1 Patch** `1.0.0.0` modid=72309
+  - Provides a separate patch for 3DNPC adjustments related to Dungeons1.
+- **Hammet's Dungeon Pack 1 - Unique Rewards by Xtudo SE** `2.2.0.0` modid=102864
+  - Replaces adventure rewards with 44 unique weapons, 3 armors, and 1 follower using visual replacers, ESL safe
+- **Daedric Shrines - Jyggalag - 2k** `1.0.0.0` modid=80679
+  - Adds a Jyggalag shrine texture.
+- **Ruins of the Ideal - New Ruins in Soul Cairn** `2.2.0.0` modid=33319
+  - Adds new ruins to Soul Cairn using edited Witcher 3 models with vanilla textures.
+- **Solstheim Lighthouse** `1.2.0.0` modid=14329
+  - Adds a custom Redoran-style lighthouse with collision to Solstheim docks, preventing crashes.
+- **Realistic Boat Bobbing Patch Hub - Wyrmstooth** `1.0.0.0` modid=44311
+  - Collection of patches for Realistic Boat Bobbing targeting various mods.
+- **CleverCharff's Bruma 1k** `1.0.0.0` modid=41316
+  - Replaces Bruma textures in Beyond Skyrim Bruma, including exteriors and interiors, requiring BS Bruma.
+- **GRAHL - The Ice Troll (Bloodmoon Creature Restoration Project) SE** `1.3.0.0` modid=9311
+  - Restores grahl creatures to Solstheim and surrounding areas with new models, stats, and leveled lists.
+- **New Dogs Replacers - with DLC animals** `2.6.0.0` modid=50753
+  - Replaces all Skyrim dogs with new breeds, offering multiple dog types and DLC animal options.
+- **Frogs- Mihail Monsters and Animals - 2k** `1.0.0.0` modid=120998
+  - Adds small frog critters to lakes and puddles to enhance world immersion.
+- **Sea Turtles- Mihail Monsters and Animals - 2k Version** `1.0.0.0` modid=122141
+  - Adds animated sea turtle critters that swim and eat kelp along coasts.
+- **Nirnroot A Sound to live by** `1.2.0.0` modid=23026
+  - Replaces the Nirnroot sound with a subtle, improved audio cue, with optional FOMOD integration for Immersive Sounds Compendium.
+- **Glowing Mushroom Collision Fixes** `1.2.1.0` modid=69558
+  - Increases hitbox size of glowing mushrooms for easier harvesting.
+- **Darker 3D Cathedral Grass - 1k Textures only** `1.2.0.0` modid=63881
+  - Provides darker 1k grass textures for Cathedral landscapes.
+- **Skyland Happy Little Trees Bark 2k** `1.2.0.0` modid=82491
+  - Provides 1k‑4k tree bark textures, firewood, and chopping blocks for the Happy Little Trees mod.
+- **RUSTIC ANIMATED POTIONS and POISONS 1k** `1.1.0.0` modid=2276
+  - Adds subtle, colorful animations to Rustic Potions and Poisons.
+- **ElSopa - HD Iron Tools Redone Hotfix Patch 1.1** `1.0.0.0` modid=60495
+  - Adds 11 high‑resolution textures for iron tools, weapons, and related items with 4k‑2k options, performance‑friendly.
+- **ElSopa - HD Iron Tools Redone SE** `1.0.0.0` modid=60495
+  - Adds 11 high‑resolution textures for iron tools, weapons, and related items with 4k‑2k options, performance‑friendly.
+- **Gold Septim - Coins Retex** `1.0.0.0` modid=1358
+  - Reskin of coin textures for a fresh look.
+- **Kanjs - Gray Fox Bust and Cowl Animated 1k** `1.0.0.0` modid=106116
+  - Adds 4K remeshed and textured Gray Fox bust and cowl with animated emissive light that persists when static.
+- **JS Instruments of Skyrim 2k** `1.1.0.0` modid=51959
+  - Complete remake of lute, flute, and drum with 2k and 4k textures.
+- **Cathedral - 3D Clover Plant - Hybrid 3D** `4.0.0.0` modid=68793
+  - Performance-friendly 3D replacer for clover plants, using about 765 triangles for efficient rendering.
+- **Cathedral - 3D Mountain Flowers** `2.0.0.0` modid=41312
+  - High‑poly 3D columbine flower textures replace vanilla mountain flowers with improved performance over low‑res vanilla.
+- **Cathedral - 3D Pine Shrubs** `1.2.0.0` modid=94791
+  - 3D pine shrub textures replace vanilla models with higher‑poly geometry while preserving trunk structures and maintaining neutral performance.
+- **Better Butterflies 1k** `1.1.0.0` modid=79332
+  - Replaces Skyrim's butterflies with higher‑detail meshes and textures, adding legs and antennae for a less sausage‑like look.
+- **Deathbrand Armor Replacer - Fixes and Beast Race Support** `1.0.0.0` modid=116527
+  - Fixes helmet drop issues and adds beast race support to Deathbrand armor.
+- **Deathbrand Armor and Weapons Replacer** `1.5.0.0` modid=93374
+  - Provides a Stalhrim Viking pirate aesthetic for Deathbrand armor and weapons.
+- **Racc's Headdress - Forsworn wear Fur Headdress** `1.0.0.0` modid=147060
+  - Replaces Forsworn fur-headdress helmet with an improved version, compatible with most configurations.
+- **Racc's Headdress** `1.0.0.0` modid=147060
+  - Replaces Forsworn fur-headdress helmet with an improved version, compatible with most configurations.
+- **HDT-SMP Vanilla Armors** `1.0.0.0` modid=142450
+  - Adds HDT-SMP physics to most vanilla and DLC armors supporting CBBE 3BA and HIMBO with an extensive armor list
+- **Skyforge Weapons Replacer - From Legacy of Ysgramor** `2.1.0.0` modid=110286
+  - Replaces skyforge weapons with models from Legacy of Ysgramor.
+- **Savior's Hide Replacer** `1.1.0.0` modid=109940
+  - Replaces Savior's Hide appearance with matching boots, gauntlets, and mask, including CBBE 3BA and HIMBO v5 bodyslides.
+- **Hammerfell Garb HDT-SMP Cape (Replacer)** `0.4.0.0` modid=35602
+  - Adds physics to the Hammerfell Garb cape using HDT-SMP with BodySlide support and console spawn info
+- **Reshaped Dwarven Armor** `4.0.0.0` modid=56608
+  - Reshapes Dwarven armor meshes for male and female variants, compatible with retextures
+- **Cuyi's Campfire Backpacks** `1.1.0.0` modid=49532
+  - Replaces Campfire backpack meshes and textures with higher‑resolution models and fixes collision.
+- **Stormfang - Blade of the Unending** `1.1.0.0` modid=24505
+  - Model replacer for the unique weapon Stormfang in Solstheim that adds a craftable unenchanted version after completing the Lost Legacy quest
+- **Frankly HD Dragonbone and Dragonscale - Armor and Weapons - 2k** `1.0.0.0` modid=25110
+  - Provides high‑resolution (up to 8k) textures for Dragonbone and Dragonscale sets and weapons, neural‑upscaled and BC7‑compressed.
+- **ElSopa - Shields Redone - Part I** `1.0.0.0` modid=99142
+  - Part I of shield retextures that converts ElSopa’s shield replacers into standalone assets for greater compatibility.
+- **Lunar Weapon Replacers** `1.3.1.0` modid=43221
+  - Replaces generic Lunar weapons with new models and textures by ClipsyMoon
+- **Creation Club Open Helmets** `1.4.0.0` modid=70992
+  - Enables helmets from all Creation Club mods on all races.
+- **Creation Sunder and Wraithguard - Dwemer Armor Left Gauntlet replacer by Xtudo** `1.1.0.0` modid=83151
+  - Replaces left gauntlet with Dwemer Armor version, includes fixes and weight sliders, no ESP.
+- **ElSopa - Quivers Redone SE 1k** `1.0.0.0` modid=65921
+  - Replaces quiver meshes and textures with higher‑resolution versions, available in 1k and 4k‑2k packs, no ESP.
+- **JS Unique Utopia SE - Daggers - 1k Textures** `1.2.1.0` modid=65394
+  - Complete texture remake for unique daggers such as Alessandra's Dagger, Blade of Sacrifice, and others, with compatibility notes.
+- **JS Unique Utopia SE - Rings - 1k Textures** `1.21.0.0` modid=102226
+  - Complete texture remake for unique rings including Ahzidal's Ring of Arcana and others, with compatibility notes.
+- **Gemling Queen Jewelry SE** `4.1.0.0SE` modid=4294
+  - Ports Saerileth's Jewelry mod to Skyrim SE with textures and mesh optimizations.
+- **TDN Vampire Armor Retexture SE Port** `1.0.0.0` modid=115570
+  - Provides HD retextures for all Vampire armors, including main textures and optional plugins, with compatibility notes for Rustic Clothing.
+- **Dynamic Animal Variants** `1.0.0.0` modid=34763
+  - Adds texture variants for animals, requiring Real Rabbits HD, with examples such as bears, chaurus, chickens, etc., applied via script.
+- **Automaton mesh improvements** `4.0.0.0` modid=105160
+  - Improves Dwarven robot mesh performance by reducing draw calls and smoothing geometry.
+- **Skeleton Replacer HD** `1.1.0.0` modid=52845
+  - Replaces all skeletons, static skeletons, skulls, armored skeletons, and related models with high‑resolution options and optional eye glow or animated effects.
+- **Durnehviir Redone -Graphics only** `1.2.0.0` modid=128325
+  - Remake of Durnehviir with larger undead form, new models/textures, 6 abilities, voiced shouts, improved stats, ally utility; mesh/texture replacer.
+- **Falmer Overhaul - New models and textures - 2k** `f1.01` modid=86338
+  - Replaces Falmer models and textures with new 2k assets, incompatible with other replacements.
+- **Vampire Lord Retextured (Demonic)** `1.0.0.0` modid=8402
+  - Re‑textures vampire lords with a demonic aesthetic.
+- **Draugrs - New models and textures - 2k Version** `1.1.0.0` modid=123170
+  - Replaces draugr models and textures with 2k assets; incompatible with other draugr model or texture mods.
+- **Deiform Alduin - 2k Potato** `1.2.0.0` modid=44329
+  - provides a high‑resolution texture overhaul for Alduin with optional particle‑lit eyes in multiple resolutions.
+- **Zombies Retexture - Desaturated and Less Wet** `1.0.0.0` modid=100372
+  - Provides a desaturated, less wet retexture for zombies.
+- **Fancy Unique Lunar Forge** `1.4.0.0` modid=87686
+  - Adds a uniquely modeled, ENB‑lit Lunar Forge at Silent Moons Camp with optional lower intensity and compatibility patches.
+- **Animated Forge Water** `0.9.0.0` modid=52322
+  - Mesh-only animated water replacer with refraction, includes patches for Elsopa medieval and Embers.
+- **Windmills have Windows - Non Parallax** `1.1.0.0` modid=105465
+  - Adds real window meshes to windmills around Whiterun, allowing visibility through them.
+- **The Pebbles SE** `1.0.0.0SE` modid=49413
+  - Offers simple pebble mesh variations to reduce repetition, compatible with any other mod.
+- **Mehrunes Dagon Unique Shrine** `0.1.2.0` modid=133264
+  - Swaps shrine objects with unique variants, including urns, chests, symbols, sconces, and doors that use Oht and Mehrunes Dagon motifs.
+- **RUGNAROK - Special Edition** `1.1.0.0` modid=5436
+  - Overhauls and expands rugs with unique textures and normal maps for each mesh.
+- **Daedric Shrines - All in One** `f1.02` modid=78772
+  - Adds 16 handcrafted Daedric Lord shrine statues.
+- **Smoking Torches and Candles SSE** `1.76.0.0` modid=8607
+  - Adds smoke particle effects to torches and optionally to candles, with configurable load order.
+- **Water in Wash Basins - Mesh-only Replacer** `1.2.0.0` modid=59333
+  - Adds lightly animated water to wash basins via a mesh-only replacer.
+- **SB - Pressure Plate Trap Blending - Base Object Swapper (BOS)** `2.0.0.0` modid=86053
+  - Rarely retextured Nordic trap blended consistently via Base Object Swapper, conflicts with mesh‑touching mods.
+- **Renthal's waterwheel HD** `1.2.0.0` modid=26567
+  - High‑poly, cubemapped waterwheel with improved textures.
+- **Skyking Signs - Bruma Patch** `2.0.0.0` modid=112902
+  - Provides new meshes and textures for shop and inn signs made of wood, featuring dynamic wind sway.
+- **Skyking Signs - Interesting NPCs** `2.0.0.0` modid=112902
+  - Provides new meshes and textures for shop and inn signs made of wood, featuring dynamic wind sway.
+- **Skyking Signs** `2.0.0.0` modid=112902
+  - Provides new meshes and textures for shop and inn signs made of wood, featuring dynamic wind sway.
+- **Animated Carriage** `1.1.0.0` modid=112397
+  - Allows NPCs to travel via carriages on roads, supporting over 100 radiant quests.
+- **Animated Ships** `1.2.0.0` modid=110260
+  - Adds animated ships that sail ports, beaches and oceans, allowing the player to ride them.
+- **Spider Egg and Sacs Retexture 2k** `1.0.0.0` modid=48802
+  - 2K/4K retextured spider eggs and sacs ingredient.
+- **CleverCharff's Photorealistic Ash Pile 2k** `1.3.0.0` modid=32720
+  - Retextures ash piles with bone pieces and sharper texture, available in 2K resolution.
+- **Hermaeus Mora - Eyes Water and Tentacles - My HD version SE by Xtudo** `1.2.0.0` modid=37330
+  - High‑definition version of Hermaeus Mora with detailed water and tentacles.
+- **Cathedral Snow - Snow and Glaciers (YALO T4R and RS) - Brighter** `4.6.0.0` modid=18033
+  - Retextures snow, ice, and glaciers with reduced tiling via mip‑map fading, offering mid‑range brightness and dynamic snow shader support.
+- **Nordic Northern Roads - Retexture - 2K** `2.1.0.0` modid=79468
+  - Retextures Northern Roads with landscape, architecture, and clutter textures in 2K/4K, supporting parallax.
+- **Northern Roads** `1.3.1.0` modid=77530
+  - Overhauls all roads with diverse surfaces, unique bridges, totems, and runestones, reflecting Nordic cultural themes.
+- **Skyrim 3D Rocks Gray Retexture** `1.0.0.0` modid=93893
+  - Simple gray retexture of the 3D Rocks mod’s rocks to match vanilla aesthetics.
+- **Skyrim 3D Rocks** `1.0.3.0` modid=17732
+  - Replaces many rocks with highly detailed photogrammetry meshes and textures, optimized for performance.
+- **Majestic Mountains - More Accurate Collision - A Mountainous Experience Patch** `4.1.0.0` modid=65042
+  - Improves mountain collision meshes to match exact shapes, preventing floating and arrow bounce issues
+- **Majestic Mountains - More Accurate Collision** `4.1.0.0` modid=65042
+  - Improves mountain collision meshes to match exact shapes, preventing floating and arrow bounce issues
+- **Skyrim Landscape and Water Fixes** `8.9.0.0` modid=26138
+  - Corrects graphic glitches in worldspace, with optional fixes for lights, meshes, and patches.
+- **Enhanced Lights and FX** `f3.06` modid=2424
+  - Enhances lighting with dynamic lights, shadows, smoke, and weather effects while maintaining performance.
+- **Cathedral - 3D Rocky Shores** `1.1.0.0` modid=33474
+  - Adds 3D rocky shoreline textures using low‑poly chamfered rock models distributed as grass, with minimal performance impact.
+- **Skyland AIO** `4.32.0.0` modid=34179
+  - Collection of all Skyland mods offering a high‑resolution texture overhaul for architecture and landscapes.
+- **Assorted mesh fixes** `0.139.2.0` modid=32117
+  - Addresses mesh rendering problems including shadows, collisions, UVs, and geometry errors.
+- **DynDOLOD Resources SE** `Alpha-57` modid=52897
+  - Required texture resources for DynDOLOD 3 improving tree and object LOD generation, intended for early alpha testing.
+- **Turn of the Seasons** `1.0.8.0` modid=63623
+  - Adds separate Summer, Autumn, and Spring seasons for Seasons of Skyrim SKSE.
+- **Simplicity of Sea - Water Mod with ENB Displacement Textures** `0.6.0.0` modid=56520
+  - A lightweight water mod with ENB-compatible displacement maps and an optional ESP that edits water records.
+- **Rainbows Remade - Hotfix Patch** `1.2.0.0` modid=88161
+  - Adds rainbows and moonbows with adjustable chances, using a remade script and upscaled textures.
+- **Rainbows Remade - No Initialization Notification Patch** `1.2.0.0` modid=88161
+  - Adds rainbows and moonbows with adjustable chances, using a remade script and upscaled textures.
+- **ETHEREAL CLOUDS - Special Edition - 2k** `3.0.0.0` modid=2393
+  - Lore‑friendly cloud texture pack that blends with any lighting mods and adds visual interest.
+- **Rainbows Remade - 1K Version** `1.2.0.0` modid=88161
+  - Adds rainbows and moonbows with adjustable chances, using a remade script and upscaled textures.
+- **Azurite III CS** `1.1.2.0` modid=162153
+  - Applies HDR tonemapping from Community Shaders to deliver ENB‑like visuals with better performance.
+- **Terre's Body Fur Textures AIO - 2K** `2.0.0.0` modid=76568
+  - High-detail fur textures for Khajiits with compatibility across body options and enhanced normal mapping.
+- **Vanilla plus presets** `2.1.0.0` modid=101978
+  - Provides 88 character presets covering all races (except Argonians/Khajiits) designed for use with Gates to Sovngarde, requiring Racemenu and related mods.
+- **Kabu's Argonian Fins** `1.0.0.0` modid=65428
+  - Adds high‑poly Argonian fins using model‑space normal maps for consistent lighting, compatible with High Poly Head and combinable with base hairstyles.
+- **Aquatic Elegance - Argonian Koi Whisker Addons HDT-SMP** `1.3.0.0-HDT` modid=97363
+  - Adds four koi‑style whisker options for Argonians, available with or without HDT‑SMP physics.
+- **SV Beards SE** `2.1.0.0` modid=20987
+  - Adds 120 new beard combinations to the male facial hair slider using vanilla assets.
+- **Vanilla hair - Salt and Wind** `1.0.0.0` modid=45147
+  - Offers softer, matte retextures for vanilla hairs, compatible with KS Hairdos and other mods, using accessories from Salt & Wind resources.
+- **Hvergelmir's Aesthetics - Brows** `4.1.0.0` modid=1062
+  - Replaces eyebrow textures with high‑resolution hand‑painted variants, a popular component of the Aesthetics series.
+- **Hvergelmir's Aesthetics - Beards** `5.0.1.0` modid=1067
+  - Overhauls beard textures with high‑resolution hand‑painted options, adding previously missing styles.
+- **Orc Shaved Ponytails for Humans SE** `2.0.0.0` modid=42864
+  - Adds multiple new human hairstyles including Viking long hair, aiming for a sexy look.
+- **Improved Eye** `1.0.0.0` modid=154829
+  - Fixes various eye mesh bugs and improves eye appearance, compatible with texture mods.
+- **Koralina's Freckles and Moles - 4k 2k** `1.1.0.0` modid=62508
+  - Adds 30 RaceMenu overlays with 4k or 2k freckles and moles in various configurations.
+- **Vanilla Makeup HD - HD Racial Colors and Makeup for all Races and Genders - 2k** `1.0.0.0` modid=24482
+  - Upgrades racial makeup and tintmaps to high-resolution textures for all races and genders, offering up to 4K quality.
+- **New Beast Feet** `1.1.0.0` modid=107689
+  - Provides new foot meshes for Argonians and Khajiit, compatible with various body mods.
+- **Male Dragonic Argonian Textures 4k Vanilla** `1.0.0.0` modid=1443
+  - Provides new 4K textures for male Argonians with specular maps and compatibility notes.
+- **Female Dragonic Argonian Textures 4k UNP** `1.0.0.0` modid=1442
+  - Provides high‑resolution female Argonian textures for UNP and CBBE with optional seam fixes.
+- **Tempered Skins for Females** `1.31.0.0` modid=8505
+  - Provides female body and face textures with options for nude, dressed, topless, and varied age and skin conditions, requiring Tempered Skins.
+- **Tempered Skins for Males - Dressed Version** `f2.05` modid=7902
+  - Provides high-quality male body and face textures with options for hair, dirt, muscle smoothness, and various body types, requiring Tempered Skins.
+- **UNP Female Body Renewal** `4.6.0.0` modid=1699
+  - Female face and body replacer with realistic textures and various body options.
+- **Wounds Overlays For RaceMenu** `1.1.0.0` modid=38547
+  - Provides 13 new overlays for RaceMenu to display cuts and bruises as body‑paint injuries.
+- **Tempered Racial Textures - Ring of Disrobing Patch** `1.1.0.0` modid=54573
+  - Gives each vanilla race unique textures unified with Tempered Skins, focusing on muscle definition and body hair variance.
+- **Tempered Racial Textures** `1.1.0.0` modid=54573
+  - Gives each vanilla race unique textures unified with Tempered Skins, focusing on muscle definition and body hair variance.
+- **The Dragonborn's Bestiary - Quest Patch Compendium AIO (FOMOD)** `1.0.0.0` modid=138248
+  - Curated collection of Bestiary patches and images for various mods, packaged as a FOMOD installer.
+- **Security Overhaul SKSE - Some More Locks** `1.0.7.0` modid=59961
+  - Adds extra individual lock types like cages and strongboxes.
+- **Security Overhaul SKSE - Add-ons** `0.1.9.1` modid=59529
+  - Adds additional lock design variants to Security Overhaul.
+- **Security Overhaul SKSE - Lock Variations** `4.0.0.0` modid=58224
+  - Replaces common lock models with unique, animated designs via SKSE.
+- **RaceMenu - Male Khajiit Mouth Expression Fix** `0.4.14.0` modid=39519
+  - Renames a mesh file to fix male Khajiit mouth expression in RaceMenu.
+- **CoMAP - Common Marker Addon Project** `4.3.0.0` modid=56123
+  - Framework for custom map/compass marker designs, allowing edits without ESPs and offering various marker types.
+- **Auto Parallax** `1.0.27.0` modid=79473
+  - SKSE plugin that disables parallax on meshes lacking height textures or conflicting with shaders to improve performance.
+- **Swimming Mount Animation Fix** `1.0.1.0` modid=150241
+  - Fixes swimming mount animation bugs by replacing broken animations with correct ones via Open Animation Replacer, requiring no ESP or additional tools.
+- **Actually flat flat snow drifts - fix hovering snow drift shadow with ENB** `1.0.0.0` modid=71437
+  - Turns flat snow drifts into decals to eliminate shadows when using ENB.
+- **FYX - Water Mesh Optimization - A 32** `1.0.2.0` modid=97713
+  - Reduces unnecessary water mesh triangles for performance, without loss of visual quality.
+- **FYX - The Temple of Mara** `1.0.3.0` modid=73063
+  - Fixes UVs and mesh defects and adds minor details to the Temple of Mara, no ESP.
+- **No Grassias - A Universal Grass Fix For Grass Mods** `1.1.0.0` modid=35639
+  - Fixes overgrown grass and clipping issues by restoring vanilla land textures.
+- **Vanilla Scripting Enhancements - BSA Version** `3.0.0.0` modid=68139
+  - Optimizes vanilla scripts via PO3 Extender to reduce script lag from numerous cloak spells in heavy modlists.
+- **SMP-NPC crash fix** `1.0.0.0` modid=91616
+  - Fixes random crash with SMP hair by patching a single byte in SkyrimSE.exe, required for SMP hair mods.
+- **Navigator - Navmesh Fixes** `1.8.0.0` modid=52641
+  - Provides navmesh improvements for numerous vanilla locations to fix pathing issues.
+- **Script Optimization and Fixes Compilation - Modern Brawl Bug Fix Loose** `1.3.3.0` modid=105144
+  - Compiles various script optimizations and bug fixes into a BSA and ESPFE for easier management.
+- **Script Optimization and Fixes Compilation** `1.3.3.0` modid=105144
+  - Compiles various script optimizations and bug fixes into a BSA and ESPFE for easier management.
+
+### Audio, Sound, Music
+
+- **Mephala Revoiced - Whispering Door Patch - Option4** `1.0.0.0` modid=157081
+  - Revoices Mephala with a new, manipulative voice, no longer using ASMR Lydia.
+- **Mephala Revoiced - Daedric Voices Patch - Option 4** `1.0.0.0` modid=157081
+  - Revoices Mephala with a new, manipulative voice, no longer using ASMR Lydia.
+- **Mephala Revoiced - Mephala's Curse Patch - Option4** `1.0.0.0` modid=157081
+  - Revoices Mephala with a new, manipulative voice, no longer using ASMR Lydia.
+- **Mephala Revoiced - Vanilla - Option 4** `1.0.0.0` modid=157081
+  - Revoices Mephala with a new, manipulative voice, no longer using ASMR Lydia.
+- **Smart No More Stupid Dog Comments** `1.1.0.0` modid=5226
+  - Prevents NPCs from calling player-owned dogs 'Stupid dog!' and uses 'Good dog!' for friendly interactions.
+- **Companions Dialogue Bundle - Dialogue Fix** `1.2.0.0` modid=93592
+  - Adds around 120 new voiced dialogue lines for the Companions, expanding Skjor and Ria with lore‑friendly options.
+- **Companions Dialogue Bundle** `1.2.0.0` modid=93592
+  - Adds around 120 new voiced dialogue lines for the Companions, expanding Skjor and Ria with lore‑friendly options.
+- **Children of the North Wind - Ruins of the Ancient Nords** `LITE-2.1` modid=147701
+  - Enhances Nordic ruin meshes and clutter with toggleable aesthetic variations via FOMOD.
+- **Capital Windhelm Expansion - Collision Fixes** `1.3.0.0` modid=99599
+  - Adds correct collision to custom meshes in Capital Windhelm Expansion, providing proper footstep and impact sounds.
+- **Kyne's Temple Consequences** `1.1.1.0` modid=38260
+  - Increases the impact of The Blessings of Nature choice with four voiced NPCs and adaptive changes to Whiterun's Temple of Kynareth.
+- **Extended Cut Saints and Seducers - Undeath - Bruma** `f1.01` modid=78834
+  - Compatibility patch for Extended Cut: Saints and Seducers and Undeath, adding Bruma support and fixing music issues.
+- **Voiced Narrative - Redguard Elite Armaments (Creation Club)** `2.1.0.0` modid=67532
+  - Improves narrative of Interception quest from Redguard Elite Armaments with new voiced dialogue generated by ElevenLabs.
+- **Voiced Narrative - The Gray Cowl Returns (Creation Club)** `2.1.0.0` modid=67439
+  - Improves narrative of The Gray Cowl Returns quest with new voiced dialogue generated by ElevenLabs.
+- **Voiced Narrative - Ghosts of the Tribunal (Creation Club)** `2.1.0.0` modid=67374
+  - Improves narrative of Ghosts of the Tribunal questline with new voiced dialogue generated by ElevenLabs.
+- **Voiced Narrative - Bittercup (Creation Club)** `1.1.0.0` modid=159925
+  - Improves narrative of Bittercup quest with new voiced dialogue generated by ElevenLabs.
+- **Eating Animations - Xelzaz** `1.0.0.0` modid=95746
+  - Adds eating animations for edibles from Sweets and Such and the Xelzaz follower, independent and ESL‑flagged.
+- **Simple Hunting Overhaul - Eating Animations and Sounds Patch** `1.0.0.0` modid=98077
+  - Adds eating animations and sounds for two new food items from Simple Hunting Overhaul.
+- **Alternate Perspective - Voiced Addon for Version 3.1.1** `1.11.0.0` modid=96865
+  - Voices every line of the Alternate Perspective alternate start mod.
+- **Soldier of Stendarr - Voiced** `1.0.1.0` modid=128739
+  - Adds voice acting to Soldier of Stendarr dialogues; requires original mod.
+- **Dac0da English AI Voiced (Individual Voice Packs) - FemaleElfHaughty** `2.0.0.0` modid=154587
+  - Adds English synth voiced lines for Dac0da characters.
+- **Dac0da English AI Voiced (Individual Voice Packs) - MaleBruteAlternate** `2.0.0.0` modid=154587
+  - Adds English synth voiced lines for Dac0da characters.
+- **DAc0da - ElevenLabs Voiced** `1.0.5.0-3` modid=154663
+  - Adds high‑quality AI‑generated voice lines for DAc0da.
+- **VIGILANT(missing lines) - ElevenLabs Voiced** `180.0.0.0-1.3` modid=161442
+  - Provides high‑quality AI voiceover for missing lines in VIGILANT 1.8.0.
+- **VIGILANT Voiced - English Addon Subtitle Patch** `1.4.0.0` modid=92405
+  - Aligns subtitles with voices in VIGILANT Voiced - English Addon.
+- **Forgotten City Music Fixer - Cassia's Plea Remover Add-on** `2.2.0.0` modid=54019
+  - Fixes the music bug that keeps the Forgotten City soundtrack playing after exiting by scripting removal of songs via formIDs.
+- **Forgotten City Music Fixer ESL** `2.2.0.0` modid=54019
+  - Fixes the music bug that keeps the Forgotten City soundtrack playing after exiting by scripting removal of songs via formIDs.
+- **Fortune's Tradehouse** `2.0.0.0` modid=22755
+  - Adds a new Markarth location with five fully voiced quests for an Argonian cobbler to access Fortune's Tradehouse.
+- **My Little Hatchling SSE- Ram-Ku The Adoptable Argonian Boy** `1.1.0.0` modid=28633
+  - Adds an adoptable male Argonian child NPC named Ram‑Ku, fully voiced with a backstory.
+- **Apocryphal Library and Val Serano Integration** `f1.00` modid=140630
+  - Adds a SWAP.INI patch that integrates Apocryphal Library books into Val Serano’s quest areas.
+- **Reverb Interior Sounds Expansion** `1.5.0.0` modid=77947
+  - Adds improved reverb profiles and interior ambience for immersion.
+- **Realistic Husky Sounds SSE** `1.2.0.0` modid=11038
+  - Adds over 60 new husky sounds for Dawnguard huskies.
+- **Potema Revoiced** `f1.01` modid=123877
+  - Revoices Potema to sound more ghostly, evil, clear, and unique.
+- **Azurite Weathers and Seasons - Azurite Weathers III** `3.35.0.0` modid=42731
+  - Comprehensive weather mod enhancing lighting, storms, and atmospheric effects with high‑quality visuals.
+- **Sound Record Distributor** `1.4.0.0` modid=77815
+  - SKSE framework enabling runtime distribution of sounds, simplifying audio mods and patches.
+- **Left Hand Equipment Overhaul** `1.1.1.0` modid=120078
+  - Adds left-hand equipment swap animation and enables movement of the shield bone.
+- **Fuz Ro D-oh - Silent Voice** `2.5.0.0` modid=15109
+  - SKSE64 plugin that forces a silent voice for unvoiced dialogue to prevent rapid zooming in the UI.
+- **Acoustic Space Improvement Fixes** `1.2.1.0` modid=78992
+  - Standardizes interior acoustic settings so small spaces don't sound overly large.
+- **Actor Limit Fix** `9.0.0.0` modid=32349
+  - Raises actor limits for movement, facial expressions, and lip-syncing to improve performance.
+
+### UI, Interface, HUD
+
+- **Rotols More Icons GTS Version** `1.0.10.0` modid=113657
+  - Replaces default effect menu and inventory icons with higher‑quality icons, requiring load order priority.
+- **DAc0da Paper Map for FWMF by Limon** `1.0.0.0` modid=146754
+  - Replaces default 3D map in DAc0da mod with the drawn flat paper map.
+- **Blackreach Paper Map for FWMF** `1.7.0.0` modid=53878
+  - Adds a handcrafted paper map for Blackreach in the Map Menu, compatible with Flat World Map Framework.
+- **Extended Cut - Saints and Seducers Paper Map for FWMF** `1.1.1.0` modid=88709
+  - Replaces the default 3D map with a drawn paper map in the map menu, supporting isometric navigation and optional angle settings.
+- **Sovngarde Paper Map for FWMF** `1.8.1.0` modid=54255
+  - Adds handmade Sovngarde map to the Map Menu for Flat World Map Framework.
+- **Siege at Icemoth Paper Map for FWMF** `1.1.1.0` modid=119974
+  - Replaces the default 3D map with a drawn flat paper map for the Siege at Icemoth mod.
+- **Bruma - All Fixes for Custom LODs - Non-Seasons** `1.3.0.0` modid=143795
+  - Fixes custom LOD generation issues for Bruma and restores Cyrodiil tree LOD with seasonal support.
+- **Haugbui - A Draugr Overhaul - CC Fishing Patch** `4.2.0.0` modid=26188
+  - Provides balance adjustments, new items, unique boss designs, and variants for draugr enemies.
+- **Haugbui - A Draugr Overhaul** `4.2.0.0` modid=26188
+  - Provides balance adjustments, new items, unique boss designs, and variants for draugr enemies.
+- **Vanilla Style UI for Fancy Fishing** `1.0.1.0` modid=109041
+  - Redesigns the Fancy Fishing UI to match vanilla style, providing a more integrated visual experience.
+- **House Rule - Lawbringer for Solstheim** `1.1.3.0` modid=57243
+  - Extends Lawbringer to enable claimable locations on Solstheim for three factions, adding new buildable sites.
+- **Wizard Hats - Resources** `1.4.0.0` modid=2385
+  - Adds wizard/witch hats in ten colors that match vanilla mage robes and are craftable at forges.
+- **ELFX Shadows - Official Patches Hub - USSEP Patch** `1.1.0.0` modid=64178
+  - Collection of patches for ELFX Shadows that resolves conflicts with other mods via an easy-to-use FOMOD, recommending manual selection for certain patches.
+- **ELFX Shadows - Official Patches Hub** `1.1.0.0` modid=64178
+  - Collection of patches for ELFX Shadows that resolves conflicts with other mods via an easy-to-use FOMOD, recommending manual selection for certain patches.
+- **Hagraven - My patches SE by Xtudo - Vigilant Patch** `1.8.0.0` modid=160430
+  - Adds UI patches and unique appearances for Hagravens with multiple model updates and optional patches
+- **Hagraven - My patches SE by Xtudo - Wormpie Patch** `1.8.0.0` modid=160430
+  - Adds UI patches and unique appearances for Hagravens with multiple model updates and optional patches
+- **Vanilla plus presets 2** `1.5.0.0` modid=113967
+  - Adds 73 additional presets focusing on beast races and males, expanding character customization options.
+- **Valkyr HDT-SMP Hairstyles 02** `1.0.0.0` modid=64259
+  - Adds three unisex HDT‑SMP hairstyles requiring Faster HDT‑SMP.
+- **Valkyr HDT-SMP Hairstyles 01** `1.1.0.0` modid=63181
+  - Adds six unisex HDT‑SMP hairstyles requiring Faster HDT‑SMP.
+- **K.C.C.E Khajiit Character Creation Extended** `1.2.0.0.` modid=95969
+  - Adds around 40 new character creation sliders for Khajiit, including ear, earring, and whisker controls, compatible with High Poly Head.
+- **Weathered Nordic Bodypaints - RaceMenu Overlays and Warpaints** `2.1.0.0` modid=19594
+  - Adds weathered body and face paints for RaceMenu, fitting both genders for a battle-worn look.
+- **Character Menu SE - Hand to Hand Patch** `1.0.0.0` modid=173827
+  - Provides UI icon patches for Hand to Hand when using the Character Menu SE mod.
+- **Player Name Randomizer - Show in UI** `1.0.5.0` modid=119235
+  - Adds a UI hint in the race menu indicating the insert key can generate a random name.
+- **Stand still in RaceMenu (OAR)** `1.0.0.0` modid=96970
+  - Idle animation replacer for RaceMenu using OAR that overwrites other animated idle animations and disables when exiting.
+- **RaceMenu** `0.4.19.16` modid=19080
+  - Complete overhaul of character creation menu with new customization features such as RGBA warpaints and body paints.
+- **Convenient Reading UI - SE** `1.1.0.0` modid=50202
+  - Improves book menu with faster page animations and configurable text size and bottom bar.
+- **Legendary Map** `1.0.2.0` modid=157397
+  - Adds an interactive map legend to toggle off undesired markers and remembers user preferences.
+- **Hold on a sec - Pause Dialogue Menus** `1.1.0.0` modid=123456
+  - SKSE plugin that pauses dialogue menus by pressing the system menu button (Esc/Start) during conversations.
+- **Subtitles** `0.6.2.0` modid=113214
+  - SKSE plugin that displays up to four subtitles simultaneously, configurable via Subtitles.ini
+- **Dialogue Movement Enabler** `2.2.1.0` modid=43708
+  - enables player movement within dialogue menus.
+- **Phenomenally Enriched and Nuanced Ingredients for SkyUI** `1.1.0.0` modid=90526
+  - Adds new item types, colors, and icons for alchemical ingredients in SkyUI.
+- **Skyrim Souls RE - Updated** `2.4.0.0` modid=27859
+  - Unpauses game menus, letting the world keep running while accessing inventory, books, or map.
+- **Favorite Misc Items** `4.0.0.0` modid=42750
+  - SKSE plugin to favorite books, soul gems, keys, and other misc items.
+- **B.O.O.B.I.E.S (aka Immersive Icons)** `2.1.2.0` modid=89241
+  - Enhances SkyUI icons with additional types, colors, and personality for better inventory visuals.
+- **Diseases - I4 icon** `1.2.0.0` modid=94076
+  - Provides appropriate icons for disease effects, compatible with various disease mods.
+- **Inventory Interface Information Injector** `1.1.0.0` modid=85702
+  - Injects item icons and info into inventory UI while ignoring other interface mods.
+- **moreHUD SE** `5.2.2.0` modid=12688
+  - Enhances HUD with detailed info on targeted objects, enemies, ingredients, potions, books, and enemy level
+- **SkyUI** `6.8.0.0` modid=12604
+  - Elegant PC‑friendly interface mod with advanced UI features, requiring SKSE for functionality.
+- **Upscaling - Community Shaders** `1.2.0.0` modid=156952
+  - Provides a full upscaling suite with native integration, DLSS 4, FSR 3.1, frame generation, and performance improvements.
+- **Screen Space Global Illumination (SSGI)** `4.0.1.0` modid=130375
+  - Adds screen-space ambient occlusion and indirect lighting via Community Shaders, supporting SE and AE.
+- **Skylighting** `1.2.3.0` modid=139352
+  - Adds advanced world‑space ambient occlusion via Community Shaders, creating soft shadows and realistic lighting.
+- **Subsurface Scattering** `3.0.1.0` modid=114114
+  - Adds screen‑space subsurface scattering to characters via Community Shaders, configurable for human and beast races
+- **Grass Collision** `3.0.2.0` modid=87816
+  - Adds actor collision to grass, causing it to bend when stepped on.
+- **Hair Colour Sync** `1.0.0.0` modid=121751
+  - SKSE plugin that syncs hair color to a character's true hair, affecting player and NPCs
+- **powerofthree's Papyrus Extender** `6.3.0.0` modid=22854
+  - Extends Papyrus script functionality with over 374 new functions and 37 events.
+- **ImGui Icons** `1.2.0.0` modid=114790
+  - Provides ImGui icons and font assets required by UI mods like Photo Mode and Dialogue History.
+- **Auto Input Switch** `1.2.3.0` modid=54309
+  - Allows on‑the‑fly switching between gamepad and keyboard/mouse while respecting INI settings.
+- **MCM Recorder** `1.0.7.0` modid=61719
+  - Allows recording and replaying MCM configuration settings to automatically set up mod menus across playthroughs
+- **MCM Helper** `1.6.1.0` modid=53000
+  - Provides a framework for creating Mod Configuration Menus with persistent INI settings, hotkey support, and simplified Papyrus scripting
+- **Fix Toggle Walk Run (SKSE plugin)** `3.0.0.0` modid=61671
+  - Fixes the run key getting stuck after opening menus or loading doors, compatible with Skyrim Souls RE.
+
+### Animations
+
+- **RS Children Overhaul - Patch Compendium - Shiny hair texture fix** `1.0.0.0` modid=38091
+  - Fixes a texture path causing shiny hair in patches, preventing the shiny hair appearance.
+- **AI Overhaul - Obscure's College of Winterhold patch** `1.0.0.0` modid=82899
+  - Adjusts idle markers for NPCs in the College of Winterhold to prevent overlapping.
+- **JK's Interiors Patch Collection** `5.20.1.0` modid=35910
+  - Contains patches and tweaks to improve compatibility of JK's Interiors with various mods.
+- **The Great City of Solitude CC Fishing Patch** `1.1.0.0` modid=59874
+  - Patches CC Fishing to relocate fishing supplies at Solitude docks for compatibility.
+- **CC Dawnfang and Duskfang - No Forced Quest** `1.1.0.0` modid=57609
+  - Moves the quest note to a pillar, disables automatic quest trigger, and adds a patch for level scaling.
+- **Better Jumping AE** `1.8.6.0` modid=18967
+  - Allows sprint jumping, double jump, and configurable jump height multiplier via an SKSE64 plugin with no ESP.
+- **Fish Anywhere - Streamlined Fishing (Patch)** `1.0.0.0` modid=85070
+  - Ensures compatibility between Fish Anywhere With Water and Streamlined Fishing by overwriting the fishing script.
+- **Simple Fishing Overhaul - Animations and Improved Quest Dialogue - Tiny Patch for FK Diverse Racial Skeletons** `1.1.0.0` modid=103440
+  - Adds first- and third-person fishing animations and new dialogue lines for fishing quests.
+- **Simple Fishing Overhaul - Animations and Improved Quest Dialogue** `1.1.0.0` modid=103440
+  - Adds first- and third-person fishing animations and new dialogue lines for fishing quests.
+- **Hand to Hand Blocking Animation - DAR Version** `1.0.0.0` modid=43199
+  - SE port of Zartar's hand‑to‑hand blocking animation
+- **Ice skating fixed for real - No more attack sliding movement (NEMESIS compatible)** `1.4.0.0` modid=55417
+  - Fixes vanilla attack‑movement sliding by adjusting behavior files, compatible with Nemesis.
+- **First Person Unarmed Animation** `1.1.0.0` modid=87971
+  - Adds first‑person unarmed animations for idle, running, random blocking, and dodging.
+- **Cross and Jab Speed fix** `1.1.0.0` modid=35003
+  - Fixes the Cross and Jab unarmed animation mod to match in-game unarmed combat speed.
+- **Random parry and block idle** `1.1.0.0` modid=75440
+  - Adds random parry and block idle animations for one‑handed swords in third‑person view.
+- **Shield animations (Captain America)** `1.0.0.0` modid=50299
+  - Provides new shield and unarmed combat animations, including idle, block, bash, and power attack variations.
+- **Simple Pistol Shooting Animation by Loop(Include standalone pistol and crossbow) - SSE** `3.0.0.0` modid=44201
+  - Adds third-person left-hand pistol and crossbow animations, including standalone pistols, with forward aiming when running.
+- **Vanargand Animations - Sneak Archery** `1.4.0.0` modid=56788
+  - Provides animation pack improving sneak archery with smoother animations.
+- **Improved Idle Laydown Animations** `1.1.0.0` modid=99691
+  - Fixes broken arms in idle laydown animation and adds female‑specific animation and ground clipping fixes.
+- **EVG Animation Variance** `1.1.0.0` modid=38534
+  - Adds variety to animations based on NPC personality, conditions, or random factors.
+- **Improved Table Sit Transition Animations** `1.3.0.0` modid=84160
+  - Adds animations to prevent knocking items off tables when sitting.
+- **Immersive Equipping Animations** `f2.02` modid=77187
+  - Adds animations for equipping/unequipping necklaces, helmets, cuirass, gloves, and boots on the player and followers.
+- **Bound hands - Helgen attack DAR animations** `1.0.0.0` modid=89247
+  - Adds bound‑hands animations during the Helgen attack sequence until Ralof or Hadvar frees the player.
+- **Relaxed Sneak Animations** `1.0.0.0` modid=37260
+  - Adds relaxed sneak animations with raised center of gravity and no bent wrists.
+- **Animated Whistling** `1.11.0.0` modid=76733
+  - Adds a whistling animation for the player, usable mid‑playthrough with appropriate patches.
+- **Blind people DAR animations** `1.2.0.0` modid=90947
+  - Adds animations that depict blindness for certain NPCs, giving them appropriate visual cues.
+- **Drunk or drugged animations (DAR)** `1.6.0.0` modid=62191
+  - OAR mod enabling visible intoxication via various needs systems; conflicts as intended.
+- **Lively Children Animations (OAR)** `2.2.0.0` modid=67557
+  - Replaces children animations with over 10 idles and 10 dialogue gestures plus a secret bonus, safe mid‑playthrough.
+- **Male Player Animations (OAR)** `1.1.0.0` modid=89225
+  - Adds 12 new idle animations for the male player character, including various gestures and weight shifts
+- **Female Player Animations (OAR)** `1.1.0.0` modid=85073
+  - Adds 12 new idle animations for female characters
+- **Offset Movement Animation** `1.0.0.0` modid=110408
+  - Provides a framework for playing movement-enabled animations that blend with other actions, usable with Nemesis, DAR, or OAR.
+- **Beginner Bard Animations - For Skyrim's Got Talent** `1.0.0.0` modid=130776
+  - Adds animation packs that let bards play instruments according to the player's skill level.
+- **Offset Movement Animation - Skyrim's Got Talent Demo Patch** `1.0.0.0` modid=110408
+  - Provides a framework for playing movement-enabled animations that blend with other actions, usable with Nemesis, DAR, or OAR.
+- **Skyrim Reputation Improved** `1.3.3.0` modid=52416
+  - Adds bugfixes, new features, and options such as black‑soul trap tracking and presets auto‑load.
+- **Project AHO - Eastern Dwemer Towers of Solstheim Patch** `1.0.0.0` modid=72286
+  - Fixes clipping between Eastern Dwemer Towers of Solstheim and Project AHO by removing a mismatched tower.
+- **Animated Armoury Patch for DAc0da** `1.0.4.0a` modid=158468
+  - Updates DAc0da weapons to use Animated Armoury animations and adds required keywords.
+- **HDT-SMP Ulag's Legacy** `1.0.0.0` modid=144728
+  - Adds realistic cloth physics to Ulag's Legacy armor sets (Apotheus Light, Blooded Heavy, Duskward Light) using HDT-SMP with fixes and conversion options
+- **Animated Armoury - Precision Patch Complete** `1.0.0.0` modid=124195
+  - Ensures Animated Armoury works correctly with the Precision mod, preventing missed weapon swings.
+- **Animated Armoury All Geared Up Derivative (Meshes Only)** `2.3.0.0` modid=35978
+  - Provides mesh assets for the Animated Armoury mod tailored for DAR compatibility.
+- **Skyrim Bandit Expansion - Patches** `1.2.8.0` modid=154352
+  - Adds 14 bandit camps and 2 custom mines with regional themes, lore items, and compatibility patches.
+- **Skyrim Bandit Expansion** `1.2.8.0` modid=154352
+  - Adds 14 bandit camps and 2 custom mines with regional themes, lore items, and compatibility patches.
+- **Shrine to Kyne ESL** `1.0.0.0` modid=43737
+  - Adds a traditional shrine to Kyne on a high mountain peak above Windhelm.
+- **Goblins - Bruma Patch** `2.2.0.0` modid=32182
+  - Adds a passage into Cyrodiil and spears for goblins in the Bruma expansion.
+- **Beyond Skyrim Bruma uses Creation Club Goblins (While keeping Falmer animations)** `1.2.0.0` modid=50840
+  - Makes goblins in Beyond Skyrim – Bruma visually consistent while preserving Falmer animations.
+- **Guar Mount and Wild Guars SE** `sa2E` modid=38857
+  - Adds Guar mounts and wild guars as rideable creatures in specific locations.
+- **Sea of Spirits** `1.2.0.0` modid=4781
+  - Adds numerous animated sea creatures such as whales, narwhals, and sharks to the oceans.
+- **FK's Diverse Racial Skeletons - Aetherius Patch** `1.6.1.0` modid=38563
+  - Provides unique skeleton meshes and height modifiers for each playable race, rebuilt with XPMSSE v4.80 for better compatibility.
+- **FK's Diverse Racial Skeletons** `1.6.1.0` modid=38563
+  - Provides unique skeleton meshes and height modifiers for each playable race, rebuilt with XPMSSE v4.80 for better compatibility.
+- **Mari's flora** `1.1.0.0` modid=45952
+  - Provides a high‑definition plant texture pack with about 100 plant textures, intended for use with Mod Organizer
+- **Cathedral - 3D Mountain Flowers - Base Object Swapper** `0.2.0.0` modid=60756
+  - Uses Base Object Swapper to dynamically swap regular mountain flowers for snowy versions across popular mods without world‑space edits.
+- **HDT-SMP Creation Backpacks** `1.0.0.0a` modid=154157
+  - Adds Havok Dynamic Physics to Creation Club backpacks for dynamic movement.
+- **Absolute Arachnophobia** `1.1.0.0` modid=24058
+  - Replaces Frostbite spider skeleton with a custom, terrifying model for heightened horror.
+- **Animated Ships - Finer Sails** `1.2.0.0` modid=112517
+  - Enhances sail visuals with higher‑detail fabrics, stitching and stains while retaining low performance impact.
+- **Fabled Forests - Exclude Morthal Marsh (Non-EL)** `2.0.0.0` modid=99137
+  - Disables Fabled Forests modifications in the Morthal Marsh area for compatibility, re‑enabling vanilla Reach Trees.
+- **Fabled Forests + Orc Strongholds - BOS Patch - MEG** `0.1.0.0` modid=119657
+  - Resolves clipping between Fabled Forests and Orc Strongholds via Base Object Swapper, no plugin required.
+- **Skyrim - A Mountainous Experience** `1.6.0.0` modid=43866
+  - Improves and fixes mountain meshes, intended to be used with Majestic Mountains.
+- **Cathedral - 3D Pine Grass - Full 3D Coverage** `0.462.0.0` modid=42032
+  - Converts pine forest grass to fully 3D models via photographed assets, offering improved performance and density over traditional grass mods.
+- **Cathedral - 3D Grass Library - Meshes** `16.53.0.0` modid=80687
+  - Provides a grass library of resource models and textures for creating realistic 3D grass overhauls.
+- **Majestic Bruma Mountains - BS-Bruma x Majestic Mountains Patch - Darkside** `2.0.0.0` modid=53152
+  - Updates a compatibility patch for Beyond Skyrim Bruma and Majestic Mountains, making it usable for version 3.2
+- **Majestic Mountains - Bloodchill Manor Patch AE** `1.0.1.0` modid=59802
+  - Patches Bloodchill Manor's entrance to resolve conflicts with Majestic Mountains in the Anniversary Edition
+- **Rainbows Remade - No Notifications** `f1.01` modid=98742
+  - Removes on‑screen rainbow notifications to preserve immersion.
+- **Notification Filter - Remove unwanted notifications** `1.2.1.0` modid=67925
+  - Allows players to hide notifications via customizable rules using a SKSE plugin.
+- **Dynamic Animation Casting - NG** `3.2.4.0` modid=73293
+  - Framework for new spell‑casting mods via SKSE plugin.
+- **Papyrus Tweaks NG** `4.1.1.0` modid=77779
+  - Collection of configurable fixes and performance tweaks for Skyrim's script engine, with optional experimental settings.
+- **No Furniture Camera** `1.0.0.0` modid=100515
+  - Removes the furniture camera, leaving the previous camera mode in control.
+- **Behavior Data Injector** `0.13.0.0` modid=78146
+  - SKSE plugin that injects custom animation variables and events via config files without needing a Nemesis patch.
+- **Some Creature Behavior Bug Fixes** `2.0.4.0` modid=68469
+  - Nemesis patch fixing creature behavior bugs such as stagger transitions for Draugr, Giants, Spriggan, Dwarven Spider, Frost Atronach, and Dwarven Steam Centurion.
+- **Non-Horse Mount Animation Fix** `0.4.0.0` modid=151793
+  - Improves mounting and swimming animations for non-horse mounts.
+- **1st Person Greatsword Idle Animation Fix** `1.0.0.0` modid=75031
+  - Fixes the first-person greatsword idle animation by repurposing and slowing the walk cycle to create a smoother idle.
+- **Drunk Sinking Head Idle Fix SE** `1.0.0.0` modid=22143
+  - Fixes the drunk sinking head idle animation by replacing idle replacers; no ESP required.
+- **RemoveAllItems Freeze Fix** `1.1.0.0` modid=90734
+  - SKSE plugin that fixes random freezes caused by corrupted game state.
+- **First Person Animation Teleport Bug Fix** `1.0.0.0` modid=92795
+  - Fixes a bug that teleports the player when starting first‑person interaction animations; implemented as a lightweight Nemesis patch compatible with other behavior edits.
+- **Horse Save Load Fix** `0.2.0.0` modid=132110
+  - Prevents horse from flying away on load, keeping rider mounted.
+- **Animation Queue Fix** `1.0.1.0` modid=82395
+  - Fixes animation queue overload when many animations are loaded simultaneously.
+- **Wood Chopping Camera Glitch Fix** `1.0.0.0` modid=123984
+  - Fixes a camera bug where the camera follows the wood block during wood chopping animations.
+
+### Armor, Weapons, Equipment
+
+- **RS Children Patch- GTS Bruma Hotfix** `5.0.0.0` modid=164145
+  - Patch fixing RS Children and Dac0da NPC issues, improving appearance and lore consistency.
+- **BloodMoon - Aela Overhaul (Vanilla Armor)** `1.1.0.0` modid=98602
+  - Realistic lore‑friendly overhaul of Aela the Huntress, adding high‑poly head, warpaints, and eye color options, flagged as ESP.
+- **Suspicious City Guards** `5.0.0.0` modid=38762
+  - Adds suspicion behavior to city guards; they notice sneaking and will follow or arrest you if you commit crimes while observed.
+- **RS Children - Great Village of Mixwater Mill Patch** `5.0.0.0` modid=164145
+  - Patch fixing RS Children and Dac0da NPC issues, improving appearance and lore consistency.
+- **RS Children Patch - College of Winterhold Quest Expansion** `5.0.0.0` modid=164145
+  - Patch fixing RS Children and Dac0da NPC issues, improving appearance and lore consistency.
+- **College of Winterhold Quest Start Fixes** `0.4.0.0` modid=53817
+  - Fixes missing quest start triggers by filling reserved aliases for key College of Winterhold quests such as The Staff of Magnus, The Eye of Magnus, Arniel's Endeavor, and Containment.
+- **Sorcerer - A Staff and Scroll Overhaul** `1.0.0.0` modid=95196
+  - Adds two new crafting tables: a scroll enchanter and a staff enchanter
+- **Bows Can Break** `1.1.2.0` modid=104758
+  - SKSE plugin that makes low‑level bows breakable via power attacks, affecting both player and NPCs, similar to Requiem’s bow mechanics.
+- **Dac0da - RS Children Patch** `5.0.0.0` modid=164145
+  - Patch fixing RS Children and Dac0da NPC issues, improving appearance and lore consistency.
+- **Meridia's Order - Vigilant Synergy Patch** `1.2.0.0` modid=104653
+  - Integrates Vigilant items into Meridia's Order, giving paladins unique armor, swords, and gear based on the Summoner set.
+- **Travelling Priest Robes - Clothing Version** `2.1.0.0` modid=118327
+  - Provides a simple vanilla light armor set for traveling priests/monks, compatible with Vanilla Bodies, HIMBO, and CBBE.
+- **Travelling Priest Robes - HDT Vanilla Scarf** `2.1.0.0` modid=118327
+  - Provides a simple vanilla light armor set for traveling priests/monks, compatible with Vanilla Bodies, HIMBO, and CBBE.
+- **Armors of the Velothi (Beast Race Support)** `1.3.1.0` modid=63056
+  - Adds helmet adjustments for Argonian and Khajiit races to fit the Armors of the Velothi, requiring the original mod and loaded after it.
+- **Ancient Imperial Armor for Vigilant SE** `1.1.0.0` modid=142972
+  - Distributes the Ancient Imperial armor sets into Vigilant SE's Coldharbour enemies as generic gear.
+- **Warmonger Armory Tweaks - Loremonger Edition** `1.2.0.0` modid=35899
+  - Rebalances Warmonger Armory weapons and provides a plugin replacer, with intentional conflicts.
+- **New Legion Update** `1.0.0.0` modid=88495
+  - Offers standalone craftable Legion armor sets, including green Legion and Penitus Oculotus-inspired variants, using extra textures.
+- **New Legion Standalone Hotfix** `1.0.0.0` modid=88495
+  - Offers standalone craftable Legion armor sets, including green Legion and Penitus Oculotus-inspired variants, using extra textures.
+- **New Legion Green Female Leather Update** `1.0.0.0` modid=88495
+  - Offers standalone craftable Legion armor sets, including green Legion and Penitus Oculotus-inspired variants, using extra textures.
+- **Imperial Battlemage Robes for Imperial Battlemages - ESL** `1.0.0.0` modid=95233
+  - Adds craftable Imperial heavy and light robes using Steel smithing; heavy matches Dwarven protection, light matches Glass, includes cape and ceremonial sword as non‑protective clothing.
+- **Travelling Priest Robes - Vanilla HIMBO CBBE -** `2.1.0.0` modid=118327
+  - Provides a simple vanilla light armor set for traveling priests/monks, compatible with Vanilla Bodies, HIMBO, and CBBE.
+- **Scout Armor SE** `2.2.0.0z` modid=18910
+  - Adds a full light armor and weapon set with dragonscale stats, craftable and enchantable, converted from Legendary Edition.
+- **Wolf Leather Armor** `1.1.0.0` modid=136189
+  - Introduces a new light armor set for the Companions.
+- **Ancient Imperial Armor SE** `2.0.0.0` modid=142655
+  - Adds two ancient Imperial armor sets—a heavy armor, sword, and shield—drawn from a forgotten state, with lore about aged, tarnished metal.
+- **Dark Brotherhood Armor SE** `2.0.0.0` modid=57539
+  - Redesigns Dark Brotherhood armor as an ESL replacer without an ESP.
+- **New Legion Standalone And Extended AE** `1.0.0.0` modid=88495
+  - Offers standalone craftable Legion armor sets, including green Legion and Penitus Oculotus-inspired variants, using extra textures.
+- **Stormcloak Robes** `1.11.0.0` modid=39827
+  - Adds craftable Stormcloak blue robes for the player character.
+- **Imperial Battlemage Robes for Imperial Battlemages** `1.0.0.0` modid=95233
+  - Adds craftable Imperial heavy and light robes using Steel smithing; heavy matches Dwarven protection, light matches Glass, includes cape and ceremonial sword as non‑protective clothing.
+- **More Varied Clothes** `2.0.0.0` modid=102479
+  - Adds varied outfits for NPCs including farmer, noble, merchant, blacksmith, miner, prisoner, beggar sets, and introduces sandals and bandages using vanilla assets.
+- **Armor Variants Expansion Improved closefaced helmets Add-on** `2.0.0.0` modid=34100
+  - Adds new armor variants to leveled lists to increase variety; lore‑friendly; does not replace models, enhancing armor assortment.
+- **Armor Variants Expansion** `2.0.0.0` modid=34100
+  - Adds new armor variants to leveled lists to increase variety; lore‑friendly; does not replace models, enhancing armor assortment.
+- **Dust Adept Armor - Tweaks and Edits - Loremonger** `1.2.1.0b` modid=58411
+  - Provides tweaks and adjustments to Dust Adept Armor based on aureoy’s fixes.
+- **Traveling Mage HDT-SMP Armor** `1.3.0.0` modid=69394
+  - Adds unisex HDT-SMP armor designed for mages.
+- **Dremora Markynaz Armor SE** `1.0.0.0` modid=79753
+  - Adds new heavy armor with Daedric‑themed design and lore‑consistent backstory.
+- **Berserk Judeau Armor** `1.2.0.0` modid=51060
+  - Adds the character Judeau's armor set from Berserk, including boots, cape, cuirass, gauntlets, invisible helmet, and a cutlass (non‑weapon).
+- **Silver Armor SE** `1.0.0.0` modid=79088
+  - Adds two craftable heavy silver armor sets, requiring ebony equipment craft ability.
+- **Dwemer Armor SE** `1.0.0.0` modid=81043
+  - Adds new heavy armor inspired by Dwemer design, with optional patches for balance and crafting recipes.
+- **Dust Adept Armor SE** `ew` modid=53257
+  - Adds Dust Adept equipment to the game, introducing new gear associated with dust adepts.
+- **Skaal Heavy Armor SE** `1.0.0.0` modid=62256
+  - Adds a new heavy armor set based on Skaal Coat and Iron Armor, includes a custom backpack model and a mini‑boss encounter.
+- **Nord Raven Battle Armor** `1.0.0.0` modid=63402
+  - Adds lightweight, lore‑friendly Raven Clan-inspired leather armor set with male/female variants, craftable at the forge.
+- **Nord Vagabond Armor** `1.0.0.0` modid=63865
+  - Offers lightweight, lore‑friendly leather armor for mercenaries and adventurers, inspired by the Vagabond concept art.
+- **Wyrmstooth - Unique Weapons Reforged** `1.0.0.0` modid=92848
+  - Replaces the appearance of 12 unique weapons and adds unique armaments to select NPCs from Wyrmstooth.
+- **Unique Thane Weapons** `1.3.0.0` modid=35497
+  - Replaces random thane weapons with unique weapons featuring custom models and enchantments.
+- **ElSopa - Iron Weapons Redone SE - Textures Only** `1.1.0.0` modid=52605
+  - Redesigns all iron weapons with new meshes and textures, offering multiple resolutions and no ESP.
+- **Snazzy Common Wardrobes - Base Object Swapper** `1.0.0.0` modid=92809
+  - Randomly distributes custom common wardrobes across vanilla and mod-added wardrobes via Base Object Swapper.
+- **Snazzy Noble Wardrobes - Base Object Swapper** `1.0.0.0` modid=92493
+  - Randomly distributes three custom noble wardrobes to all vanilla and added noble wardrobes via Base Object Swapper.
+- **Snazzy Upper Wardrobes - Base Object Swapper** `1.0.0.0` modid=92752
+  - Randomly distributes three custom upper wardrobes to all vanilla and added upper wardrobes via Base Object Swapper.
+
+### NPCs, Faces, Bodies
+
+- **WIDeadBodyCleanupScript Crash Fix** `0.5.2.0` modid=62413
+  - Fixes a rare crash when saving caused by the WideBodyBodyCleanupScript.
+- **Weight adjustment for Vanilla Hair Remake SMP** `0.8.0.0` modid=161949
+  - Makes vanilla hair heavier to reduce wind movement and adds support for other SMP hairs.
+- **Unique Greybeard Beards** `1.0.0.0` modid=77166
+  - Gives each Greybeard a unique, lore‑appropriate beard while preserving their vanilla look.
+- **Face Sculptor Expanded** `f1.02` modid=110116
+  - Makes Face Sculptor an NPC with voiced scenes, new AI schedules, and removes bounties when altering your face.
+- **Obscure's College of Winterhold NPC Stuck in Staircase Fix** `0.1.0.0` modid=53713
+  - Fixes NPCs getting stuck in the staircase between The Hall of Elements and The Arch-mage's Quarters.
+- **HAG - 3DNPC Patch** `1.0.0.0` modid=138625
+  - Provides patches for Orphan Rock overhaul adding NPC-related adjustments.
+- **Main Quest Delay Reminder** `1.0.0.0` modid=64856
+  - Adds a courier who delivers a note after level 14 to prompt speaking with Farengar, delaying the main quest
+- **Expressive Facegen Morphs SE** `1.0.0.0` modid=35785
+  - Replaces facial morph targets for human and elf characters and adds support for Racemenu.
+- **Unmasking Sybille** `1.2.0.0` modid=109265
+  - Adds a texture unveiling Sybille Stentor's secret and a quest to investigate her fate.
+- **Gold and Silver Reading Glasses** `1.1.0.0` modid=120188
+  - Adds craftable gold and silver reading glasses as wearable accessories.
+- **Bespoke Bruma Black and Brown Bears** `1.0.1.0` modid=135413
+  - Overhauls Bruma's bears to match Oblivion versions, adds missing pelts and replaces trophies.
+- **Improved closefaced helmets** `1.58.0.0` modid=824
+  - Opens eye sockets on close‑faced helmets, fully compatible with texture replacers.
+- **KS Hairdos Lite SE NoNPCs** `1.3.0.0` modid=1932
+  - Lite version adding 20 male/female hairstyles; does not apply to NPCs
+- **SC - Hairstyles of Argonia** `1.0.0.0` modid=68903
+  - Provides hairstyles for Beyond Skyrim: Argonia based on concept art, unisex, uses vanilla textures, no reupload permission.
+- **Modular SMP Hairstyles** `f1.031` modid=93608
+  - Offers over 100 unisex medium-length hairstyles in a semi‑modular SMP format.
+- **Vanilla Hair Variety Plus SE** `8.1.0.0` modid=69046
+  - Adds several hairstyles to vanilla character presets, ported from LE to SE, expanding player hair options.
+- **invisible rune explosion fix** `1.0.4.0` modid=151113
+  - Fixes invisible rune explosions by deleting runes that trigger outside the player's current cell.
+- **NPC AI Process Position Fix - NG** `1.1.1.0` modid=69326
+  - Updates NPC AI position processing to support SE, AE, and VR, fixing NPCs blocking doors.
+- **Face Discoloration Fix** `1.0.3.0` modid=42441
+  - Fixes the “dark face” issue caused by FaceGen errors.
+
+### Followers, Companions
+
+- **Yellow Eyes Fix for Cured Serana - Special Edition** `1.1.0.0` modid=52722
+  - Fixes cured Serana's eye color and provides compatibility patches for various mods.
+- **Companions Conversation Bundle - At Your Own Pace Patch** `1.10.0.0` modid=93761
+  - Provides a patch for the Companions Conversation Bundle and At Your Own Pace mods.
+- **Immersive Dialogue Edit - Companions** `1.1.2.0` modid=162227
+  - Adjusts companion dialogue for better immersion.
+- **Horses for Followers** `1.3.0.0` modid=45500
+  - Adds obtainable horses for followers to ride with the player, allowing followers to mount and travel on horseback.
+- **Skyrim's Got Talent - Interesting NPCs (3DNPC) Addon** `1.21.0.0` modid=74466
+  - Adds follower reactions to player performances, compatible with SGT and 3DNPC, providing NPC-specific responses.
+- **Gore - A Companion Mod - RS Children Patch** `1.0.0.0` modid=106816
+  - Patch enabling children from Gore to be compatible with RS Children mod.
+- **Proving Honor Companions Quest Progression Fix** `1.0.0.0` modid=66128
+  - Ensures Vilkas greets the player when returning with the Fragment of Wuuthrad regardless of entry gate, enabling Companions quest progression.
+- **Dragonborn DLC fixes** `1.1.0.0` modid=141587
+  - Fixes followers getting stuck in Tel Mithryn and Fire Wyrm aggression bug, marked ESL.
+
+### Fixes, Patches, Bugfixes
+
+- **Gate to Sovngarde WJ Edition Extended Credits** `1.2.0.0` modid=172373
+  - Port of Gate to Sovngarde collection to Wabbajack with update notes and version lag warnings.
+- **The Frozen Heart Paper Map for FWMF by Limon** `1.0.0.0` modid=165949
+  - Replaces the default 3D map with a drawn flat paper map.
+- **The Nightmare Paper Map for FWMF by Limon** `1.0.0.0` modid=143113
+  - Replaces the default 3D map in Sleepwalking Into A Nightmare with a drawn flat paper map in the Map Menu; marked as NEW and conflicts as intended (Patch)
+- **Vigilant Paper Map for FWMF by Limon** `1.1.0.0` modid=123407
+  - Replaces the default 3D map in Coldharbour with a flat hand‑drawn paper map.
+- **DynDOLOD DLL NG** `Alpha-36` modid=97720
+  - SKSE64 plugin and accompanying Papyrus scripts that provide large reference bug workarounds for DynDOLOD 3, serving as an alternative to PapyrusUtil/DynDOLOD DLL SE/VR.
+- **AI Overhaul - Artefakes Patch** `1.0.0.0` modid=55555
+  - Patch enabling ArteFakes artifacts and AI Overhaul AI on conflicting NPCs
+  - ESL flagged
+- **AI Overhaul SSE - Official Patch Hub - RDO Patch** `1.0.1.0` modid=35823
+  - Provides official patches for AI Overhaul SSE, including RDO compatibility.
+- **Simply Knock SKSE64 DLL** `5.6.0.0` modid=24297
+  - Replacement SKSE64 DLL for Simply Knock that must be loaded after the Simply Knock mod.
+- **Denizens of Morthal - AI Overhaul Patch ESPFE** `1.0.0.0` modid=52475
+  - provides an ESPFE compatibility patch for the Denizens of Morthal AI overhaul.
+- **Andrealphus Scene Tweaks** `1.0.0.0` modid=115647
+  - Collects various scene tweaks to enhance impact or restore removed content.
+- **Tamrielic Names** `1.2.1.0` modid=73153
+  - Assigns appropriate names to all anonymous humanoid NPCs.
+- **RASS (R.A.S.S) Seasons of Skyrim Patch** `2.0.0.0` modid=93600
+  - Forces cold breaths from R.A.S.S. to appear anywhere in Skyrim during November‑February regardless of region.
+- **Detailed NPCs - Fingerless Gloves for NPCs (SPID)** `2.0.0.0` modid=63943
+  - adds fingerless gloves for NPCs in brown, black, or grey, configurable per NPC.
+- **Conditional Dog Barking (OAR)** `1.2.0.0` modid=72336
+  - Control what dogs are silent and what dogs can bark in your game and when, where and how often with a help of Open Animation Replacer. Customizable alternative to Quiet Dog animation replacer mod....
+- **New Madness 2.0 - Shivering Trees and Mushrooms** `f1.01` modid=128488
+  - Overhauls the Mind of Pelagius and its wing with English location names and an ESL fix to avoid crashes.
+- **New Madness 2.0 - Shivering Sky** `f1.01` modid=128488
+  - Overhauls the Mind of Pelagius and its wing with English location names and an ESL fix to avoid crashes.
+- **New Madness 2.0 - Shivering Pelagius Mind** `f1.01` modid=128488
+  - Overhauls the Mind of Pelagius and its wing with English location names and an ESL fix to avoid crashes.
+- **New Madness 2.0** `f1.01` modid=128488
+  - Overhauls the Mind of Pelagius and its wing with English location names and an ESL fix to avoid crashes.
+- **Solitude and Temple Frescoes 2019** `1.3.0.0` modid=29695
+  - Adds painted frescoes to the Temple of the Divines in Solitude and other temples/halls of the dead.
+- **Juniper's Frostflow Lighthouse** `1.0.0.0` modid=59248
+  - Gives the Frostflow Lighthouse new life and narrative closure after clearing the Frostflow Abyss.
+- **Patches for Ryn's - Ryn's Saarthal - Nordic Ruins Patch** `1.0.0.0` modid=74233
+  - Conflict resolution patches for various mods used alongside Ryn's mods.
+- **The Great Village of Kynesgrove Patch Collection** `1.8.0.0` modid=42957
+  - Collection of ESP patches fixing conflicts for The Great Village of Kynesgrove, ensuring compatibility with AI Overhaul SSE, Enhanced Lights and FX, and other mods.
+- **Capital Whiterun Expansion - More Accurate Collision** `1.0.0.0` modid=66063
+  - Improves collision matching for Capital Whiterun Expansion meshes, preventing falling through objects and arrow bounce issues.
+- **Finding Derkeethus Duplicate FormID Fix** `1.0.0.0` modid=46391
+  - Replaces the ESP to fix a duplicate FormID, eliminating warnings.
+- **Missing In Action - Tweaks** `1.0.0.0` modid=124862
+  - Makes minor adjustments to the Missing In Action quest to improve its logic and flow.
+- **Improved College Entry - Questline Tweaks** `2.8.0.0` modid=22184
+  - Adds school selection and questline improvements for the College of Winterhold.
+- **The Cause - Rare Curios Patch** `1.0.0.0` modid=60405
+  - Swaps duplicate Welkynd Stones in The Cause for Rare Curios counterparts and adds related patches.
+- **CC Bone Colossus Skeleton Fix** `1.0.0.0` modid=63167
+  - Corrects the T‑pose skeleton of the Bone Colossus from Necromantic Grimoire.
+- **Random Mining** `1.7.2.0` modid=4476
+  - Configurable mining that lets you set ore amount and strikes, scale ore gain by skill, and optionally gain smithing or magic XP.
+- **Kynareth Replaces Talos - Civil War Consequence** `2.0.0.0` modid=91440
+  - Replaces the Statue of Talos with a Kynareth statue after Whiterun's capture and replaces associated shrines.
+- **CC's Camping Expansion** `1.3.0.0` modid=73354
+  - Modular camping assets and kits (tents, equipment); craftable at workbench; integrates with Campfire; adds fishing tanks; full basic/intermediate/advanced camping system
+- **SimplyVampireToAshpile** `2.6.0.0` modid=10490
+  - Adds effect that turns vampires to dust when they die or are killed.
+- **Vigil Enforcer and Gallows Hall - Pilgrim Tweaks - Vigil Enforcer** `1.5.0.0` modid=82069
+  - Patches Pilgrim and Vigil Enforcer Creation to align shrine textures for consistency, enabling worship of Molag Bal with appropriate visuals.
+- **Vigil Enforcer and Gallows Hall - Pilgrim Tweaks - Gallows Hall** `1.5.0.0` modid=82069
+  - Patches Pilgrim and Vigil Enforcer Creation to align shrine textures for consistency, enabling worship of Molag Bal with appropriate visuals.
+- **Wait I know You - Forcegreet Tweak - Bruma** `1.3.1.0` modid=74287
+  - Makes guards forcegreet the player after they say “Wait... I know you!”.
+- **Wait I know You - Forcegreet Tweak** `1.3.1.0` modid=74287
+  - Makes guards forcegreet the player after they say “Wait... I know you!”.
+- **Sure of Stealing** `1.1.4.0` modid=93682
+  - SKSE plugin requiring double‑tap activate to steal, sit, or open containers without sneaking
+- **Gourmet Patches by Missile** `1.0.4.0` modid=97285
+  - Offers various Gourmet patches for compatibility with LOTD, WACCF, and other mods.
+- **Gourmet - Beyond Skyrim - Wares of Tamriel Patch** `1.0.0.0` modid=97809
+  - Patches food and drink effects from BS Wares of Tamriel to match Gourmet’s changes.
+- **aljos Apothecary Patches** `4.8.0.0` modid=79641
+  - Provides assorted Apothecary patches not otherwise available.
+- **Hammer and Whetstone - Portable Tempering** `1.0.2.0` modid=89808
+  - Allows tempering armor and weapons anywhere
+- **Sorcerer Patch Page - The Great City of Winterhold Patch** `1.0.0.0` modid=95212
+  - Provides Synthesis‑based patches for Sorcerer to generate compatibility patches with other spell mods
+- **Sorcerer Patch Page - Obscure's College of Winterhold Patch** `1.0.0.0` modid=95212
+  - Provides Synthesis‑based patches for Sorcerer to generate compatibility patches with other spell mods
+- **Sorcerer Patch Page - ELFX Patch** `1.0.0.0` modid=95212
+  - Provides Synthesis‑based patches for Sorcerer to generate compatibility patches with other spell mods
+- **Misc Sorcerer Patches - Praedy's Staves** `1.3.0.0` modid=95219
+  - Provides patches for the Sorcerer overhaul, adjusting staff and scroll mechanics for better compatibility and balance.
+- **Gibberish - Currency Swapper for Skyrim Extended Cut - Saints and Seducers** `1.0.8.0` modid=127871
+  - Fix/patch for currency swapping in Skyrim Extended Cut with Description Framework options.
+- **Some OWL patches - Artefakes** `1.0.0.0` modid=60889
+  - Quick patches for C.O.I.N artifacts.
+- **Encounter Zone Informer** `1.0.4.0` modid=124456
+  - Displays a warning when entering encounter zones whose minimum level exceeds the player's current level.
+- **Angi's Camp Tweaks** `1.1.0.0` modid=44914
+  - Reworks Angi's archery challenge XP gain to be skill‑independent and grants extra XP for practice.
+- **New Beginnings - Alternate Perspective Extension** `1.3.3.0` modid=57818
+  - Ports New Beginnings mod to work with Alternate Perspective, fixing compatibility.
+- **SPID for Footprints fix** `3.0.1.0` modid=70978
+  - Fixes SPID for Footprints by reza9892, addressing file conflicts as intended.
+- **SPID for Footprints** `3.4.0.0` modid=54924
+  - Uses SPID to distribute the footprints spells from the footprints mod, instead of the cloak spell of the original mod
+- **Footprints** `1.6.1.0` modid=3808
+  - Adds footprints to player, NPCs, and creatures with particle FX for snow and ash; custom footprints hook for third‑party races; heavily optimized since v1.00; conflicts as intended.
+- **Skyrim Reputation - Fixed and Patched** `1.2.0.0` modid=42538
+  - Fixes typos and oddities in the reputation dialogue and patches for related mods.
+- **aljos VIGILANT Tweaks - Armor Rebalance** `1.0.0.0` modid=92893
+  - A collection of tweaks and patches for Vicn's VIGILANT mod.
+- **aljos VIGILANT Tweaks - Pilgrim Patch** `1.0.0.0` modid=92893
+  - A collection of tweaks and patches for Vicn's VIGILANT mod.
+- **Vigilant Immersion Tweaks - All In One** `f1.00` modid=131649
+  - Collection of small tweaks to improve the Vigilant mod.
+- **Cale's Patch Compendium - The DoubtSuspended Quest Pack - Myrwatch Patch** `1.0.0.0` modid=66157
+  - Collects patches including DoubtSuspended Quest Pack and Myrwatch patch, intended for both AE and non‑AE versions.
+- **Unofficial Carved Brink Patch** `1.3.0.0` modid=36916
+  - Fixes xEdit errors, broken meshes causing CTDs, and adjusts boss music.
+- **Meridia's Order** `1.5.0.0` modid=102584
+  - Provides hours of new quests, choice‑driven gameplay, fully voiced characters, and new locations as the champion of Meridia.
+- **Interesting NPCs - Quest Requirement Tweaks** `1.3.0.0` modid=77341
+  - Adjusts dialogue and script requirements within Interesting NPCs to modify quest accessibility.
+- **Interesting NPCs - Melea Entius Tweaks - COTN Falkreath Patch** `1.0.0.0` modid=99612
+  - Makes Melea Entius die three weeks after first spoken to.
+- **Snazzy Items for Interesting NPCs (3DNPC)** `1.20.0.0` modid=58811
+  - Model and texture replacer for all unique items in Interesting NPCs (3DNPC).
+- **Interesting NPCs and Obscure's College of Winterhold - Mugnor Patch** `1.1.0.0` modid=94805
+  - Fixes sandbox package issue for the unusual mage in Winterhold.
+- **Interesting NPCs (3DNPC) Script Fixes** `2.1.0.0` modid=87245
+  - Improvements for a couple scripts in 3DNPC.
+- **Interesting NPCs Infinite Loading Screen Freeze Fix - Snapleg Cave - Rift Watchtower** `0.1.0.0` modid=131848
+  - Fixes infinite loading screen or freeze in specific locations.
+- **Reforging - To the Masses - Consistency patches - Tempering** `1.1.0.0` modid=50850
+  - Provides consistency patches to align the expansion with other mods.
+- **Unique Border Gates SE - Better DG Entrance Patch** `2.5.0.0` modid=4819
+  - Redesigns border gates across Cyrodiil, Hammerfell, and Morrowind with unique, immersive designs.
+- **Unique Border Gates SE** `2.5.0.0` modid=4819
+  - Redesigns border gates across Cyrodiil, Hammerfell, and Morrowind with unique, immersive designs.
+- **Buyable Home Patch for Harborside** `1.0.1.0` modid=18305
+  - Makes Harborside – Solitude Bridge Home a purchasable property.
+- **Wares of Wyrmstooth - Wares of Tamriel Alternate Location** `1.1.0.0` modid=59451
+  - Moves the Wares of Tamriel ship docking location to Wyrmstooth's Stonehollow, providing an alternative location.
+- **Wyrmstooth - Mysticism Consistency Patch** `1.0.0.0` modid=80993
+  - Replaces Wyrmstooth spells with matching Mysticism variants and rebalances summons to align with Mysticism.
+- **Wyrmstooth - Creation Club Ingredient Patches - Rare Curios** `1.0.0.0` modid=59459
+  - Patches Wyrmstooth ingredients for compatibility with Rare Curios and The Cause.
+- **Wyrmstooth - Creation Club Ingredient Patches - The Cause** `1.0.0.0` modid=59459
+  - Patches Wyrmstooth ingredients for compatibility with Rare Curios and The Cause.
+- **Rare Curios - BS Bruma Synergy Patch** `2.0.0.0` modid=60412
+  - Integrated Rare Curios items into the Beyond Skyrim – Bruma mod.
+- **Creation Club The Cause - BS Bruma Scamps Synergy** `1.0.0.0` modid=59591
+  - Adds Bruma Scamps to The Cause Deadlands and blocks Dremora aggression.
+- **Merlin the Corgi** `2.0.7.0` modid=56433
+  - Adds a magical corgi companion that follows the player.
+- **Mihail's Farm Geese - More accurate heads** `1.0.0.0` modid=158734
+  - Adjusts geese head shapes to be more realistic by making eyes smaller and cheeks puffier.
+- **Seasonal Unique Flowers and Plants - ESL Version** `1.1.0.0` modid=69130
+  - Hides unique flowers and plants during winter using Seasons of Skyrim.
+- **Edmond's Official Unique Flowers and Plants SSE** `1.4.0.0` modid=29154
+  - Adds hand‑placed new flowers and plants across Skyrim with updated meshes, textures, and a patched ESP for Skyrim SE.
+- **Windhelm Fake Windows Fix** `2.31.0.0` modid=54923
+  - Replaces fake windows in Windhelm with actual window models.
+- **Dust Effects by HHaleyy** `1.0.0.0` modid=2407
+  - Replaces HD dust effect textures from 128px to 3×1024px, providing higher‑resolution dust visuals.
+- **Book Covers Skyrim - USSEP Update (DEPRECATED)** `1.1.0.0` modid=50615
+  - Updates Book Covers Skyrim to incorporate recent USSEP changes, superseded by a newer update.
+- **Savage Wolves** `1.3.0.0` modid=21075
+  - Replaces the vanilla wolf skeleton with a custom one for more realistic wolves.
+- **Simple Snow Improvements - Skyrim Fixes (BOS)** `2.4.0.0` modid=78702
+  - Improves snow visuals on forgotten vanilla objects using Base Object Swapper support.
+- **Seasonal Diverse Tundra Shrubs** `1.0.0.0` modid=112882
+  - Replaces vanilla tundra shrubs with higher‑poly 3D models matching original appearance.
+- **Seasons of Skyrim - The Great Village of Mixwater Mill fix** `1.0.0.0` modid=73827
+  - Fixes missing building meshes when using Seasons of Skyrim with The Great Village.
+- **Seasons of Skyrim - The Great Village series missing building fix** `1.0.0.0` modid=73827
+  - Fixes missing building meshes when using Seasons of Skyrim with The Great Village.
+- **Ashbound - Solstheim Revisited** `2.0.0.0` modid=73278
+  - Expands ash coverage across Solstheim, updating the original Ashbound mod with improved visuals.
+- **Slof's Fluffy Khajiit Tails SSE** `1.1.0.0` modid=30397
+  - Replaces Khajiit tail model with a fluffy version for both male and female Khajiit.
+- **Skull of Corruption Dream Counter - Artificer** `1.0.0.0` modid=130691
+  - Adds a HUD widget that displays the current dream count for the Skull of Corruption mechanic.
+- **Skull of Corruption Dream Counter** `1.0.0.0` modid=130691
+  - Adds a HUD widget that displays the current dream count for the Skull of Corruption mechanic.
+- **Console Commands Extender - Anniversary Edition Update** `1.12.0.0` modid=74390
+  - Updated DLL enabling Console Commands Extender compatibility with Skyrim SE 1.6.629+.
+- **Knotwork Penitus Occulatus Consistency Patch** `1.0.0.0` modid=129414
+  - Applies Knotwork to quests added by the Penitus Occulatus mod.
+- **Unarmed Hotkey - Dual Unarmed** `1.0.0.0` modid=15459
+  - Adds an unarmed weapon that can be hotkeyed to unequip equipped weapons.
+- **Better Third Person Selection - Clearly Activation** `0.1.0.0` modid=127137
+  - Fix that ensures the Better Third Person Selection mod activates properly and resolves related conflicts.
+- **FuzzBeed's Fabulous Resource Repository** `5.1.0.0` modid=134092
+  - Collection of resources for personal mods and public use.
+- **Media Keys Fix SKSE** `1.0.1.0` modid=92948
+  - Fixes media keys (volume, play/next/mute, Windows key, Alt+F4, etc.) by removing the game's exclusive keyboard access, with options to fix deadkeys and enable the Windows key.
+- **Crash Logger SSE AE VR - PDB support** `1.20.1.0` modid=59818
+  - Generates detailed crash logs with PDB support, hotkeys, and optional upload for AE/VR.
+- **SSE Display Tweaks** `0.5.16.0` modid=34705
+  - All-in-one solution for smooth FPS-unlocked gameplay with physics fixes, borderless fullscreen, refresh rate control, and frame rate limiting.
+- **Payload Interpreter** `1.1.0.0` modid=65089
+  - SKSE plugin enabling runtime interpretation of animation payloads for mod authors.
+- **Andrealphus' Papyrus Functions** `1.6.1.0` modid=85252
+  - Adds a library of custom Papyrus functions accessible via SKSE for mod developers.
+- **Sprint Stuttering Fix** `1.0.0.0` modid=140804
+  - Removes twitching/stuttering when running in first-person through an SKSE plugin.
+- **First Person Height Fix SKSE** `1.0.0.0` modid=169904
+  - Adjusts first‑person camera height using an SKSE plugin similar to other height‑fix mods.
+- **USSEP Nemesis or Pandora Patch** `1.1.0.0` modid=139572
+  - Collects updated armor sets from legacy Skyrim LE mods.
+- **Quest Fixes** `1.3.0.0` modid=140181
+  - Various quest fixes for Kolskeggr Mine, Bleak Falls Barrow, Civil War, The Blessings of Nature, Cidhna Mine, Served Cold, Flight or Fight, and more.
+- **Nchuanthumz Papyrus Load Fix** `1.0.0.0` modid=73820
+  - Reduces Papyrus load caused by Nchuanthumz Dwarven Home when moving large inventory amounts.
+- **Floating Ash Pile Fix** `0.3.0.0` modid=63434
+  - Fixes floating ash piles by making them fall to the ground.
+- **Prisoner Cart Opening Fix SE and AE** `1.1.0.0` modid=60968
+  - Fixes the chaotic opening scene of the prisoner cart when many mods are loaded.
+- **Mfg Fix** `1.6.1.0` modid=11669
+  - Fixes the 'mfg' console command and adds additional fixes.
+- **Motionless Rocks Killing People Fix - For Player Too** `1.2.0.0` modid=87111
+  - Fixes motionless rocks that could kill NPCs by preventing them from falling on characters.
+- **Werewolf Feral Beast Run - Vanilla Werewolf Sprint Fix** `2.1.1.0` modid=23996
+  - Makes werewolves run on all fours by default and fixes leg spazz issues in vanilla sprinting.
+- **LeveledList Crash Fix** `1.1.0.0` modid=129136
+  - SKSE mod that prevents crashes by limiting leveled list additions to 255 forms
+
+### Frameworks, SKSE Plugins, Utilities
+
+- **RS Children - Capital Windhelm Expansion** `1.0.0.0` modid=80813
+  - Provides a compatibility patch between RS Children and Capital Windhelm Expansion.
+- **SkyforgeCWE (Capital Whiterun Expansion)** `2.0.0.0` modid=35421
+  - Completes the Skyforge by adding crafting stations such as storage, smelter, tanning rack, and integrates with JK's Whiterun expansions.
+- **Reading Is Good (SKSE)** `1.1.2.0` modid=42026
+  - Reworks skill books to grant permanent leveling speed boost instead of instant levels.
+- **Civil War Couriers Framework** `1.0.1.0` modid=81546
+  - Adds fully voiced Imperial and Stormcloak couriers via adapted scripts.
+- **VIGILANT - Book Covers** `1.5.0.0` modid=32940
+  - Adds cover images to books, journals, and notes in VIGILANT, GLENMORIL, and UNSLAAD.
+- **Cliff Racers on Solstheim** `1.1.0.0` modid=2168
+  - Adds passive cliff racers to Solstheim, including a collectible food item and stew recipe.
+- **Betty Netch** `2.0.0.0` modid=88777
+  - Overhauls the Betty Netch to restore its original jelly‑like translucent appearance with multilayer parallax and a smaller tail.
+- **ConsolePlusPlus** `1.5.0.0` modid=79975
+  - SKSE plugin that adds copy‑paste to console and caches console commands between game sessions.
+- **Smart Optimal Salves - SKSE** `1.1.0.0` modid=172207
+  - SKSE port of Smart Optimal Salves MCM mod.
+- **Rogue's Gallery** `1.0.0.1` modid=99482
+  - A miscellaneous Papyrus library for personal and public use.
+- **FormList Manipulator - FLM** `1.8.1.0` modid=74037
+  - SKSE plugin that adds Forms to FormLists at startup via config files to reduce mod conflicts.
+- **Dynamic Activation Key - DLL NG Edition** `1.12.0.0` modid=96273
+  - Enables customizable Shift+Activate behaviors and contextual activations, serving as a base for many of the author's mods.
+- **ConsoleUtilSSE NG** `1.5.1.0` modid=76649
+  - Enables Papyrus scripts to execute console commands via a unified CLib‑NG DLL for SE and AE.
+- **Address Library for SKSE Plugins** `11.0.0.0` modid=32444
+  - Provides header file and database allowing SKSE plugins to be version‑independent
+- **Skyrim Script Extender (SKSE64)** `2.2.6.0` modid=30379
+  - Tool that expands scripting capabilities, enabling many mods to run; launched via skse64_loader.exe and verified with getskseversion.
+
+### Other Mods
+
+- **SkyLinkAI** `d2026.5.30`
+- **Wyrmstooth Paper Map for FWMF by Limon** `1.0.0.0` modid=124686
+  - Replaces the default 3D map with a drawn flat paper map in the map menu.
+- **Dayspring Canyon Paper Map for FWMF** `1.8.0.0` modid=61917
+  - Adds a handcrafted paper map of Dayspring Canyon to the map menu.
+- **Luminous Atronachs - ESPLite** `2.0.0.0ESPLite` modid=27732
+  - Adds glowing atronachs that emit light in colors matching their elemental type, with an ESPLite version available
+- **Sweeping Organizes Stuff - Use Broom to Clean Mess** `0.4.0.0` modid=51645
+  - Adds a broom interaction to clean physics messes, replacing bugged mount animations via Open Animation Replacer without additional tools.
+- **Carriages and Stables Dialogue Bundle - Carriages and Stables Dialogue Bundle** `1.0.0.0` modid=79297
+  - Adds voiced dialogue for carriage drivers and horse armor, enhancing immersion without requiring CC.
+- **Dovah Names** `1.1.0.0` modid=74053
+  - Assigns unique names to all generic dragons
+- **Daedric Names** `1.2.0.0` modid=74055
+  - Adds unique Daedric names to generic Daedra such as Atronachs and Dremora.
+- **Ashlander Nomads Names - Reduced Chance** `1.1.0.0` modid=73315
+  - Adds Ashlander‑cultural names to NPCs in Solstheim with reduced spawn chance.
+- **Reachmen Tribes Names** `1.2.0.0` modid=73312
+  - Assigns unique Reachmen tribe names to all Forsworn NPCs.
+- **Canine Loyalty - Spriggans Don't Affect Dogs** `1.1.0.0` modid=79560
+  - Spriggan animal‑control spell no longer targets dogs
+- **JK's The Bannered Mare** `1.1.1.0` modid=33845
+  - Lore‑friendly, script‑free overhaul of the Bannered Mare inn.
+- **JK's High Hrothgar** `1.0.2.0` modid=62219
+  - Delivers an enhanced temple overhaul for the High Hrothgar region.
+- **JK's Castle Dour** `1.3.0.0` modid=74309
+  - Provides an enhanced castle overhaul for player housing.
+- **Environs - Master Plugin** `f2.00` modid=91160
+  - Required master plugin for the Environs series that causes intentional conflicts and is needed by multiple mods.
+- **HAG - Occult Orphan Rock - Fabled Forests Patch** `1.3.1.0` modid=137996
+  - Overhauls Orphan Rock location with a horror theme and a small dungeon.
+- **HAG - Occult Orphan Rock** `1.3.1.0` modid=137996
+  - Overhauls Orphan Rock location with a horror theme and a small dungeon.
+- **Whiterun Watchtower Doesn't Start Broken** `f1.04` modid=49305
+  - Fixes the Whiterun Watchtower so it does not start broken before dragons appear.
+- **The Great Village of Kynesgrove** `1.1.0.0` modid=42639
+  - Overhauls the village with custom Nordic meshes and architecture, creating a more detailed and immersive settlement.
+- **ClefJ's Karthwasten** `1.2.0.0` modid=30947
+  - Overhauls Karthwasten town in the Reach with new merchants and aesthetics, lore‑friendly.
+- **The Great Village of Old Hroldan SSE** `f1.03` modid=33189
+  - Overhauls Old Hroldan village with custom meshes and Nordic architecture, restoring its intended look.
+- **Ivarstead Source** `1.0.0.0` modid=118825
+  - Adds a source to the Ivarstead river flagged as ESL.
+- **Farm Fences of Whiterun** `1.1.0.0` modid=47371
+  - Replaces ruined stone walls around Whiterun farms with well‑maintained wooden fences.
+- **Fortified Whiterun** `1.6.0.0` modid=40094
+  - Adds realistic, logical defenses to Whiterun to strengthen its city walls.
+- **Respectful Ravyn** `1.0.0.0` modid=143950
+  - Adds Ravyn, a rude Thieves Guild/Morag Tong member who can be forced to respect the player.
+- **Thieves Guild Requirements SE** `5.3.1.0` modid=33256
+  - Adds skill and radiant requirements, ability to sell Stones of Berenziah, improved shadowmarks, and configurable options via MCM.
+- **All Thieves guild merchants buy stolen goods** `1.0.0.0` modid=121350
+  - Makes all Thieves Guild merchants purchase stolen goods, expanding buying beyond Tonilia
+- **Savos Aren's Regrets Restored - Cut Content Restoration** `1.0.0.0` modid=57677
+  - Restores cut content from the quest 'The Staff of Magnus', adding fully voiced ghost scenes.
+- **Return Aegisbane** `1.2.0.0` modid=108242
+  - Allows returning the weapon Aegisbane to its rightful owners or claiming it
+- **EMPEROR - Giant Crab Overhaul** `1.1.0.0` modid=58612
+  - Overhauls the Ghost Emperor Crab encounter with updated animations, shaders, and audio adjustments.
+- **CC Gray Cowl Returns - Thief Delay** `1.0.1.0` modid=57412
+  - Delays the Gray Cowl thief NPC spawn until the player completes all four Thieves Guild special jobs.
+- **Carriages and Stables Dialogue Bundle - CC Wild Horses Add-on** `1.0.0.0` modid=79297
+  - Adds voiced dialogue for carriage drivers and horse armor, enhancing immersion without requiring CC.
+- **Dawnguard - Hall of Vigilant Requirement** `1.0.0.0` modid=23617
+  - Adds requirement to have visited Hall of Vigilant before starting Dawnguard.
+- **A new Debt Alternate Routes** `2.0.0.0` modid=148427
+  - Adds four fully voiced alternate solutions to the "A New Debt" quest.
+- **Redeeming Fultheim - A Blades Quest Addon** `1.2.0.0` modid=136788
+  - Adds 90+ voiced dialogue lines and a short quest with two endings for Fultheim.
+- **The Choice is Yours** `2.7.0.0` modid=3850
+  - Prevents quests from starting automatically, allowing players to pursue only desired quests.
+- **Vampire Lords Can Fly (With Collision)** `1.0.0.0` modid=46023
+  - Allows vampire lords to fly using a simple collision‑free method.
+- **Streamlined Fishing** `1.0.0.0` modid=80683
+  - Opens a selection menu for fishing rods or equips any available rod when fishing starts
+- **Jarl Balgruuf Dilemma SSE** `0.1.4.0` modid=41132
+  - Adds a civil war overhaul that omits the main quest and enables Jarl Balgruuf to join the Stormcloaks.
+- **Civil War Aftermath SE** `1.9.0.0` modid=3484
+  - Expands the civil war by adding combat against enemy encampments throughout Skyrim.
+- **Realistic AI Detection (RAID) - High Interior High Exterior** `3.1.0.0` modid=2345
+  - Script‑free overhaul enhancing sneaking realism with improved detection formulas.
+- **Use Telekinesis on Traps - po3's Papyrus Extender Version** `0.2.3.0` modid=59350
+  - Allows telekinesis on soul gem traps, trip wires, pressure plates, and similar objects.
+- **NPCs Wear Amulets of Mara PLUS** `f2.03` modid=66125
+  - Adds NPCs wearing amulets of Mara enabling marriage proposals following Nord tradition.
+- **Taunt Your Enemies - Taunting Matters** `f1.03` modid=72023
+  - Adds NPC taunt mechanic granting damage bonus, player can taunt NPCs and hiss.
+- **Simple Dual Wield and Unarmed Block** `1.0.0.0` modid=35718
+  - Allows blocking while dual‑wielding or unarmed, with MCM options, replaces left attack, works with controllers, but not with staves or spells
+- **MaxsuBlockOverhaul** `d2024.12.4.0`
+  - A block overhaul that requires a customized .meta file and is not available on Nexus.
+- **Immersive Carcass Carrying - Simple Hunting Overhaul** `f1.00` modid=99867
+  - Adds new carrying animations for carcasses, improving hunting interaction without weight penalty.
+- **DAC0DA - English Translation** `1.0.5.0` modid=135682
+  - Provides an English translation of the DAc0da mod.
+- **VIGILANT Voiced - English Addon** `1.8.0.0` modid=11894
+  - English translation of VIGILANT with optional partial voice acting.
+- **VIGILANT - English Translation (Silent)** `1.8.0.0` modid=11894
+  - English translation of VIGILANT with optional partial voice acting.
+- **Aran di Kono ESL** `1.1.0.0` modid=98194
+  - Offers a quest involving two Moon‑Priests and a branching narrative with immersive voice acting.
+- **Leaps of Faith - A Misc Quest** `f1.05` modid=53074
+  - Adds 12 epic Leaps of Faith across Skyrim with custom jump/fall animations and small bonuses.
+- **Revealing Rune** `1.1.0.0` modid=120935
+  - Adds a quest to uncover the past of Rune, a Thieves Guild member.
+- **Khajiit Child Maisha SE** `f2.02` modid=8649
+  - Adds a Khajiit child named Ma'isha that can be adopted, with standalone facial textures and expressions, found in Crabber's Shanty, and contains a known neck glitch.
+- **Lucien - Room Markers for Dumzbthar** `1.0.0.0` modid=49918
+  - Lucien adds room markers and occlusion planes to Dumzbthar to improve performance, especially with Dwemer Pipework Reworked
+- **Frozen Familiar** `1.0.0.0` modid=113495
+  - Cold counterpart to Flaming Familiar spell; ESL flagged; safe for SE and AE; adds new spell.
+- **Scarves Of Skyrim** `1.0.0.0` modid=109183
+  - Adds a brand-new scarf with six color variants.
+- **More Varied Clothes - Firebrand Scarf** `1.0.0.0` modid=102467
+  - Adds the Firebrand Armor scarf.
+- **Extended Amulet and Ring Pack** `1.1.0.0` modid=26377
+  - Adds missing gemstone combinations for amulets and rings—6 new rings and 8 new necklaces for crafting.
+- **Wanderer's Backpacks** `1.0.0.0` modid=68965
+  - Adds two new backpacks to the game.
+- **Firebrand Scarf** `1.0.0.0` modid=102467
+  - Adds the Firebrand Armor scarf.
+- **Eastern Brassplate Set** `1.0.0.0` modid=109000
+  - Adds a dwemer‑themed armor set and a matching weapon.
+- **Hammet's Dungeon Pack 2 - Unique Rewards by Xtudo SE** `1.5.0.0` modid=102880
+  - Provides 12 unique weapons and 2 new robes as adventure rewards in ESL format
+- **Lost Passages - New Dungeons for Skyrim** `1.3.0.0` modid=106061
+  - Adds 20 Radiant‑enabled dungeons across various holds.
+- **Unmarked Locations Pack - Apocrypha** `1.1.0.0` modid=144408
+  - Adds new unmarked locations in Apocrypha.
+- **Unmarked Locations Pack - Sovngarde** `1.0.0.0` modid=87899
+  - Adds new unmarked locations to Sovngarde.
+- **Unmarked Locations Pack - Forgotten Vale** `1.1.0.0` modid=95278
+  - Adds new unmarked locations in the Forgotten Vale.
+- **Unmarked Locations Pack - Blackreach** `1.0.0.0` modid=127468
+  - Adds new unmarked locations in Blackreach.
+- **Unmarked Locations Pack - Wyrmstooth Addon** `1.0.0.0` modid=169188
+  - Adds new unmarked locations to Wyrmstooth Isle.
+- **Wyrm Tamer - Lawbringer for Wyrmstooth** `2.0.5.0` modid=55190
+  - Expands the Lawbringer mod to make several locations in Wyrmstooth claimable.
+- **Fishing Extension for Beyond Skyrim - Bruma** `1.1.0.0` modid=152152
+  - Extends fishing into Bruma with custom biomes, new rods, fish, junk, and artifacts
+- **Imperial Law - Lawbringer for Bruma** `1.0.2.0` modid=57099
+  - Expands Lawbringer to make several Cyrodiil locations claimable.
+- **Gladys the Corgi** `2.0.7.0` modid=50164
+  - Adds a friendly corgi companion as a follower.
+- **Quiet Mammoth Babies - No Camera Shake - OAR DAR versions** `1.0.0.0` modid=123582
+  - Removes camera shake from mammoth calf walking animations across various mods.
+- **House Cats - My version SE by Xtudo - Head tracking** `2.1.0.0` modid=100902
+  - Adds multiple cat variants with distinct colors and meow sounds, supporting petting interactions.
+- **House Cats - My version SE by Xtudo - Pet the cats** `2.1.0.0` modid=100902
+  - Adds multiple cat variants with distinct colors and meow sounds, supporting petting interactions.
+- **Standalone Dwarven Spider Elite** `1.0.0.0` modid=161224
+  - Gives Dwemer Spider and Sphere Animunculi a new look resembling those from Elder Scrolls Online.
+- **Standalone Dwarven Sphere Elite** `1.0.0.0` modid=161224
+  - Gives Dwemer Spider and Sphere Animunculi a new look resembling those from Elder Scrolls Online.
+- **Seagulls of Skyrim** `1.4.0.0` modid=52153
+  - Adds animated seagull models with sounds along Skyrim's coasts.
+- **JS Rumpled Rugs SE** `1.44.0.0` modid=70534
+  - Adds over 50 new rug mesh variants for immersive interiors, including interactive fixing and tripping.
+- **HFs - Aretino Family Heirloom - remodel** `1.0.0.0` modid=140723
+  - Mesh replacer for the Aretino Family Heirloom
+- **Better Blended Mushrooms** `1.1.0.0` modid=67725
+  - Replaces all mushroom types in mines and caves with improved blended versions via Base Object Swapper.
+- **Usable Skyrim Bandages** `2.0.0.0` modid=98659
+  - Fixes head bandages to work for all player races.
+- **Hagraven - New models and Textures** `1.0.0.0` modid=160407
+  - Replaces hagraven models and textures without requiring an ESP
+- **Flame Atronach SE** `1.0.0.0` modid=82382
+  - Redesigns Flame Atronach appearance; no .esp included.
+- **Skyrim Snow Dogs (Husky only)** `1.3.0.0` modid=54758
+  - Replaces dog models with a husky model (optionally for all dogs) and adds Dawnguard dog armor.
+- **Skyrim Snow Dogs (Husky)** `1.3.0.0` modid=54758
+  - Replaces dog models with a husky model (optionally for all dogs) and adds Dawnguard dog armor.
+- **Supreme Vampire Lords** `1.1.0.0` modid=19706
+  - Enlarges vampire lord wings, improves upper‑torso and leg animations, and fixes clipping during wing flapping
+- **Wicked Werewolves** `1.3.0.0` modid=31757
+  - Transforms vanilla werewolves with a custom skeleton for a creepier, more realistic appearance.
+- **Grandiose Giants** `1.2.0.0` modid=23889
+  - Replaces vanilla giant skeletons with more intimidating custom skeletons.
+- **Shelter of Skaal - fadingsignal's Skaal Tent for Solstheim (Base Object Swapper)** `1.0.0.0` modid=139614
+  - Replaces several tents near Skaal Village with fadingsignal's Skaal tent mesh using Base Object Swapper.
+- **Windhelm Fence 3D** `0.2.0.0` modid=65346
+  - Replaces 2D fences in Windhelm with 3D fences.
+- **Better Atronach Forge Offering Box - No More Dwemer Dresser - High Polygon Summoning Circle** `0.2.1.0` modid=132887
+  - Replaces the Dwemer dresser with a unique chest.
+- **Thalmor comforts - Aldmeri Cultured Furniture** `2.0.0.0` modid=132317
+  - Refurnishes Thalmor embassy and headquarters with Aldmeri-style furniture for comfort.
+- **Thrones of Skyrim** `1.0.0.0` modid=41198
+  - Replaces generic hold thrones with vanilla-textured meshes; no ESP required and compatible with texture mods.
+- **Night Mother** `1.0.0.0` modid=83527
+  - Replaces the Night Mother character.
+- **Shooting Stars SE** `1.1.0.0` modid=73090
+  - Ports the Shooting Stars visual effect from Isoku into the game.
+- **Dynamic Activation Key - Addons Collection** `2.1.1.0` modid=96430
+  - Adds trade, training, and inventory functionalities for followers and horses, part of the Dynamic Activation Key suite.
+- **Dynamic Activation Key - MCM** `2.1.0.0` modid=96408
+  - MCM interface to change the activation key shortcut without reloading, supporting controller input.
+- **OxygenMeter2** `1.0.7.0` modid=64532
+  - Adds an on‑screen oxygen meter for underwater use via a custom UI and SKSE plugin.
+- **Vanilla Item Descriptions - Uniques Only Version** `1.1.0.0-UO` modid=105970
+  - Adds descriptive UI text for about 400 unique items, enhancing immersion through detailed item information.
+- **Reachman Loading Screens** `1.0.0.0` modid=140207
+  - Adds 20 loading screens based on Reachman lore.
+- **Which Key NG** `1.1.0.0` modid=78971
+  - Replaces lock level display with key name when the key is in inventory, implemented as an SKSE plugin.
+- **Auto Resolution** `1.1.0.0` modid=122915
+  - Automatically sets the game resolution to the Windows display resolution.
+- **SkyInteract** `1.0.1.0` modid=143311
+  - Utility that shows contextual action keybindings in the HUD for mod authors.
+- **Faster HDT-SMP** `3.0.2.0` modid=57339
+  - Provides fast physics simulation for capes, clothing, and hair.
+- **Recursion Monitor** `1.2.0.0` modid=76867
+  - Detects and prevents Papyrus script recursion that can cause severe performance drops.
+- **Behavior Data Injector Universal Support** `0.13.0.1` modid=78159
+  - Latest BDI plugin adds Anniversary and VR support plus a PDB for debugging.
+- **Disk Cache Enabler** `1.2.0.0` modid=100975
+  - Backported disk cache enabler mod.
+- **Truly Neutral Prisoners** `0.1.1.0` modid=73873
+  - Prevents prisoners from snitching, enhancing immersion.
+- **Dynamic Collision Adjustment** `1.1.0.0` modid=76783
+  - Adjusts character controller collision while sneaking and swimming to allow fitting under objects, fixing race-specific scaling issues.
+- **Ash Pile Expiration - Special Edition** `2.0.0.0` modid=5710
+  - Removes ash piles after a set game time to prevent long-term clutter.
+- **Brawling - No Hitting Bystanders** `1.0.0.0` modid=116941
+  - Prevents bystanders from being hit during brawls, stopping accidental bounties.
+- **Opening Scene Horse Stagger** `1.1.0.0` modid=83723
+  - Ensures horses in the opening scene remain evenly spaced to prevent premature advancement of the opening sequence.
+
+## Likely Disabled, Hidden, Replaced, Or Conflict-Managed Features
+
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - GTS-Specific Patches**:  🗺️ A Dynamic World - 🧙 Roleplaying - 🏹 Immersion - 🎈 Performance Friendly - 🖱️ 1-Click Installation - What is \"Gate to Sovngarde\"? An immersion modlist that you can install via Vortex or via MO2 (With or without AE DLC, on the wabbajack gallery). A Dynamic, Living World 🗺️ World Changes Based On Your Actions ❄️ Seasons Change The Fauna and Landscape 🧙 NPCs React To Your Actions, Race and Reputation  Immersion A...
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - GTS - Equip Item Fix**:  🗺️ A Dynamic World - 🧙 Roleplaying - 🏹 Immersion - 🎈 Performance Friendly - 🖱️ 1-Click Installation - What is \"Gate to Sovngarde\"? An immersion modlist that you can install via Vortex or via MO2 (With or without AE DLC, on the wabbajack gallery). A Dynamic, Living World 🗺️ World Changes Based On Your Actions ❄️ Seasons Change The Fauna and Landscape 🧙 NPCs React To Your Actions, Race and Reputation  Immersion A...
+- **WIDeadBodyCleanupScript Crash Fix**: V100: NEW. Files conflict as intended: Checked against Vortex's Rules for V104 on 2026-04-28. See Notes. " p, li { white-space: pre-wrap; } hr { height: 1px; border-width: 0; } li.unchecked::marker { content: \"\\2610\"; } li.checked::marker { content: \"\\2612\"; } Load after Denizens of Morthal
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - DAK Helper**:  🗺️ A Dynamic World - 🧙 Roleplaying - 🏹 Immersion - 🎈 Performance Friendly - 🖱️ 1-Click Installation - What is \"Gate to Sovngarde\"? An immersion modlist that you can install via Vortex or via MO2 (With or without AE DLC, on the wabbajack gallery). A Dynamic, Living World 🗺️ World Changes Based On Your Actions ❄️ Seasons Change The Fauna and Landscape 🧙 NPCs React To Your Actions, Race and Reputation  Immersion A...
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - Left Scabbards Output for IED**:  🗺️ A Dynamic World - 🧙 Roleplaying - 🏹 Immersion - 🎈 Performance Friendly - 🖱️ 1-Click Installation - What is \"Gate to Sovngarde\"? An immersion modlist that you can install via Vortex or via MO2 (With or without AE DLC, on the wabbajack gallery). A Dynamic, Living World 🗺️ World Changes Based On Your Actions ❄️ Seasons Change The Fauna and Landscape 🧙 NPCs React To Your Actions, Race and Reputation  Immersion A...
+- **Vanilla Hair Textures for KS Hairdos**: V93: NEW. Needs to win all file conflicts. " This is just a texture replacer. You'll need the actual hair models from KS Hairdos SSE , as well as whatever replacers you want that actually give them to NPCs. I like the vanilla hair textures, so I took the vanilla hair textures and made a made a custom map that I can easily apply to hair mod textures. Will be releasing more as I make them - typically in order of whe...
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - GtS - ELFX Patch**:  🗺️ A Dynamic World - 🧙 Roleplaying - 🏹 Immersion - 🎈 Performance Friendly - 🖱️ 1-Click Installation - What is \"Gate to Sovngarde\"? An immersion modlist that you can install via Vortex or via MO2 (With or without AE DLC, on the wabbajack gallery). A Dynamic, Living World 🗺️ World Changes Based On Your Actions ❄️ Seasons Change The Fauna and Landscape 🧙 NPCs React To Your Actions, Race and Reputation  Immersion A...
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - ESLified Patches**:  🗺️ A Dynamic World - 🧙 Roleplaying - 🏹 Immersion - 🎈 Performance Friendly - 🖱️ 1-Click Installation - What is \"Gate to Sovngarde\"? An immersion modlist that you can install via Vortex or via MO2 (With or without AE DLC, on the wabbajack gallery). A Dynamic, Living World 🗺️ World Changes Based On Your Actions ❄️ Seasons Change The Fauna and Landscape 🧙 NPCs React To Your Actions, Race and Reputation  Immersion A...
+- **The Pigeon's Nest**: V102: UPDATED. V100: UPDATED. FOMOD (V102 Notes taken). Needs Priority over all the Mods that it patches. Other files conflict as intended (GtS-specific Patches). \nFOMOD Options:\n\nQoL\n\nx Gather Branches for SotW\nx Dynamic Race Based Lich\nx Wounds - Splinted Limbs\nx Train Hand to Hand on Dummies\nx Ultimate Animated Potions\n\nPatches\n\nx Pristine Vanilla Movement\n\nHearthFires\n\nx Bluesky Hall\nx Fort V...
+- **Seasonal Spiffed Up Tundra Scrubs - Animated**: Needs Priority over several other mods. " If you've ever had the misfortune to look down in Whiterun market, you will have seen this  This is Bethesda's 'tundra scrub'. It is a static object with a pretty terrible texture and mesh. And if you use Seasonal Landscapes, you will have the same eyesore but recolored for each season. ICFur made some lovely tundra scrub replacers with 3 color options (green, orange, red...
+- **GATE TO SOVNGARDE (GTS) - Small Mods and Resources - Additional Seasonal Stuff**:  🗺️ A Dynamic World - 🧙 Roleplaying - 🏹 Immersion - 🎈 Performance Friendly - 🖱️ 1-Click Installation - What is \"Gate to Sovngarde\"? An immersion modlist that you can install via Vortex or via MO2 (With or without AE DLC, on the wabbajack gallery). A Dynamic, Living World 🗺️ World Changes Based On Your Actions ❄️ Seasons Change The Fauna and Landscape 🧙 NPCs React To Your Actions, Race and Reputation  Immersion A...
+- **Rotols More Icons GTS Version**: V100: UPDATED. V97: UPDATED. V96: UPDATED. V82: UPDATED. Needs Priority over all the Mods that it patches. Other files conflict as intended (GtS-specific Patches).
+- **Time Flies SE**: V92: UPDATED. V84: UPDATED. Needs to win a conflict about script files with Creature Size Variants SE. Make game time pass when performing actions like crafting, reading, eating, fishing, building homes etc." " NOTE: Time Flies v2 is a port of the mod of the same name from Skyrim Legendary Edition. The authors, dfxyz1 and Akezhar, have graciously given permission to upload and port the mod to Special Edition. Kudo...
+- **Nordic Leather Armor**: Needs to win file conflicts with Lawless - A Bandit Overhaul. Files conflict as intended: Checked against Vortex's Rules for V104 on 2026-04-28. See Notes. " p, li { white-space: pre-wrap; } hr { height: 1px; border-width: 0; } li.unchecked::marker { content: \"\\2610\"; } li.checked::marker { content: \"\\2612\"; } Load after Lawless - A Bandit Overhaul The conflicting files are Bodyslide files and obviously the...
+- **Andrealphus' Exploit Fixes**: V101: UPDATED. FOMOD (V104 Notes taken). Needs to win file conflicts with ElSopa - HD Iron Tools Redone SE. \nFOMOD Options\n\nAndrealphus' Exploit Fixes\n\nx 1. Follower Favor Exploit Fixes\nx 3. Grabbing ModeExploits Fixes\nx 4. Don't Read Elder Scrolls While Swimming\nx 8. Skuldafn - Skip Dragon Priest Exploit Fix\nx 15. Block Pickpocketing Exploitable Targets\nx 16. Attacking Friendlies To Get XP Exploit Fix\n...
+- **PapyrusUtil SE - Modders Scripting Utility Functions**: Needs Priority over other Mods that would add an outdated Version of this mod. VERY IMPORTANT! " This version is for Skyrim Special Edition Get the original version here IMPORTANT: If you are using Skyrim version 1.6+, you must install the AE version of PapyrusUtil and Address Library. It DOES NOT MATTER if you don't have the Anniversary Edition DLC; any version past 1.5.97 is considered AE. Make sure your Address...
+- **First Person Animations - For Some Mods**: V97: UPDATED. V84: NEW. FOMOD (V104 Notes taken). Needs to win conflicts with all mods it patches, except GtS- Equip Item Fix. \nFOMOD Options:\n\nMain Files\n\nx Main Files\n\nEquipping Armor\n\nx Immersive Equipping Animations\n\nReligion\n\nx Pilgrim\n\nCall Mount\n\nx Horse Whistle Key\n\nCrafting\n\nx Hammer and Wetstone\n" " p, li { white-space: pre-wrap; } hr { height: 1px; border-width: 0; } li.unchecked::...
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - GtS Paper Maps for FWMF**:  🗺️ A Dynamic World - 🧙 Roleplaying - 🏹 Immersion - 🎈 Performance Friendly - 🖱️ 1-Click Installation - What is \"Gate to Sovngarde\"? An immersion modlist that you can install via Vortex or via MO2 (With or without AE DLC, on the wabbajack gallery). A Dynamic, Living World 🗺️ World Changes Based On Your Actions ❄️ Seasons Change The Fauna and Landscape 🧙 NPCs React To Your Actions, Race and Reputation  Immersion A...
+- **The Frozen Heart Paper Map for FWMF by Limon**: V97: NEW. Files conflict as intended (Patch).
+- **DAc0da Paper Map for FWMF by Limon**: V97: NEW. Files conflict as intended (Patch). " DAc0da Paper Map for FWMF by Limon It's a paper map for DAc0da mod by Vicn . Hope it will help you to navigate here and will add little bit of immersion. Mod continues series of paper maps for a Flat World Map Framework (FWMF) . Some things to know about this map: Best FWMF package for this map is \"FWMF for Fantasy Paper Maps\", it renders colors closest to original...
+- **The Nightmare Paper Map for FWMF by Limon**: V82: NEW. Files conflict as intended (Patch).
+- **Blackreach Paper Map for FWMF**: FOMOD (V104 Notes taken). Files conflict as intended: Checked against Vortex's Rules for V104 on 2026-04-28. See Notes. \nFOMOD Options\n\nChoose Blackreach Texture\n\nx Without Crimson Nirnroots\n\nChoose Background\n\nx Stairs\n " p, li { white-space: pre-wrap; } hr { height: 1px; border-width: 0; } li.unchecked::marker { content: \"\\2610\"; } li.checked::marker { content: \"\\2612\"; } Load after JaySerpa's Sm...
+- **Vigilant Paper Map for FWMF by Limon**: Files conflict as intended (Patch).
+- **Sovngarde Paper Map for FWMF**: Files conflict as intended: Checked against Vortex's Rules for V104 on 2026-04-28. See Notes. " p, li { white-space: pre-wrap; } hr { height: 1px; border-width: 0; } li.unchecked::marker { content: \"\\2610\"; } li.checked::marker { content: \"\\2612\"; } Load after JaySerpa's Small Mods and Resources (Mostly for GTS) - xLod Terrain " " Sovngarde Paper Map for FWMF Another little map that wasn't available from Map...
+- **Duncan's Paper Maps for FWMF**: V97: UPDATED. FOMOD (V104 Notes taken). Files conflict as intended: Checked against Vortex's Rules for V104 on 2026-04-28. See Notes. Version is 1.7.3, MO2 displays it wrong.\nFOMOD Options\n\nChoose DLC or Addon\n\nx Solstheim\nx Beyond Skyrim: Bruma\n" " p, li { white-space: pre-wrap; } hr { height: 1px; border-width: 0; } li.unchecked::marker { content: \"\\2610\"; } li.checked::marker { content: \"\\2612\"; }...
+- **Flat World Map Framework (FWMF) Lite**: FOMOD (V104 Notes taken). Files conflict as intended: Checked against Vortex's Rules for V104 on 2026-04-28. See Notes. \nFOMOD Options\n\nChoose Flat Map Markers edition\n\nx Flat Map Markers AE Updated (for Skyrim 1.6.629-659)\n\nWhitelisted Worldspaces\n\nx Skyrim + Regional Maps + DLCs + Add-ons\n\nWorld Map FoV\n\nx No\n\nFWMF packages\n\nx FWMF for Fantasy Paper Maps\n\nWeather Overhaul\n\nx Community Shader...
+- **Bruma - All Fixes for Custom LODs - Non-Seasons**: V97: NEW. FOMOD (V104 Notes taken). Files conflict as intended: Checked against Vortex's Rules for V104 on 2026-04-28. See Notes. \nLoad after\n\nJaySerpa's Small Mods and Resources (Mostly for GTS) - xLod Terrain\nJaySerpa's Small Mods and Resources (Mostly for GTS) - DynDOLOD Output\n\nLoad before\n\nDuncan's Paper Maps for FWMF\n\nFOMOD Options\n\nCore Files\n\nx Core Files\n\nInstall Cyrodiil Tree LOD?\n\nx Ye...
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - Texgen Output**:  🗺️ A Dynamic World - 🧙 Roleplaying - 🏹 Immersion - 🎈 Performance Friendly - 🖱️ 1-Click Installation - What is \"Gate to Sovngarde\"? An immersion modlist that you can install via Vortex or via MO2 (With or without AE DLC, on the wabbajack gallery). A Dynamic, Living World 🗺️ World Changes Based On Your Actions ❄️ Seasons Change The Fauna and Landscape 🧙 NPCs React To Your Actions, Race and Reputation  Immersion A...
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - DynDOLOD Output**:  🗺️ A Dynamic World - 🧙 Roleplaying - 🏹 Immersion - 🎈 Performance Friendly - 🖱️ 1-Click Installation - What is \"Gate to Sovngarde\"? An immersion modlist that you can install via Vortex or via MO2 (With or without AE DLC, on the wabbajack gallery). A Dynamic, Living World 🗺️ World Changes Based On Your Actions ❄️ Seasons Change The Fauna and Landscape 🧙 NPCs React To Your Actions, Race and Reputation  Immersion A...
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - xLod Terrain**:  🗺️ A Dynamic World - 🧙 Roleplaying - 🏹 Immersion - 🎈 Performance Friendly - 🖱️ 1-Click Installation - What is \"Gate to Sovngarde\"? An immersion modlist that you can install via Vortex or via MO2 (With or without AE DLC, on the wabbajack gallery). A Dynamic, Living World 🗺️ World Changes Based On Your Actions ❄️ Seasons Change The Fauna and Landscape 🧙 NPCs React To Your Actions, Race and Reputation  Immersion A...
+- **Happy Little Trees 3D LOD - Performance**: Files conflict as intended (Add-on). " Compatibility Works with HLT 1.01 and 2.03. This add-on is incompatible with any mod that alters HLT tree meshes, because changes to the full-model meshes mean changes to the CRC32 checksums of those meshes, which means these LODs will no longer work with them. Example: Fixed Mesh Lighting Description These are DynDOLOD 3D hybrids for Happy Little Trees (HLT). Uploaded with p...
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - Grass**:  🗺️ A Dynamic World - 🧙 Roleplaying - 🏹 Immersion - 🎈 Performance Friendly - 🖱️ 1-Click Installation - What is \"Gate to Sovngarde\"? An immersion modlist that you can install via Vortex or via MO2 (With or without AE DLC, on the wabbajack gallery). A Dynamic, Living World 🗺️ World Changes Based On Your Actions ❄️ Seasons Change The Fauna and Landscape 🧙 NPCs React To Your Actions, Race and Reputation  Immersion A...
+- **Fortified Imperial Fort Battlements (ESL) - LOD Files Addon**: Files conflict as intended (Add-on).
+- **Better Dyndolod Red Mountain Plume**: Files conflict as intended (Add-on). " p, li { white-space: pre-wrap; } hr { height: 1px; border-width: 0; } li.unchecked::marker { content: \"\\2610\"; } li.checked::marker { content: \"\\2612\"; } Load after DynDOLOD Resources SE " "This mod tries to improve the 3D Red Mountain Plume mesh provided by DyndoLod, making it look less like a tornado and more like a proper eruption cloud. Included are: - New plume tex...
+- **Majestic Mountains Main - DynDoLod V 3.0 Lod pack (all versions)**: FOMOD (V104 Notes taken). Files conflict as intended: Checked against Vortex's Rules for V104 on 2026-04-26. See Notes.\n\nLoad after\n\nDynDOLOD Resources SE\nLeanWolf's Better-Shaped Weapons - All in One Installer\n\nLoad before\n\nCathedral Snow - Snow and Glaciers (YALO T4R and RS) - Brighter\nSkyland AIO\nAssorted mesh fixes\nMajestic Mountains - More Accurate Collision\nDaedric Shrines - All in One\nELFX Sha...
+- **DynDOLOD DLL NG**: V96: DOWNGRADED. V95: UPDATED. V82: NEW. Files conflict as intended: Checked against Vortex's Rules for V104 on 2026-04-27. See Notes. " p, li { white-space: pre-wrap; } hr { height: 1px; border-width: 0; } li.unchecked::marker { content: \"\\2610\"; } li.checked::marker { content: \"\\2612\"; } Load after DynDOLOD Resources " "  Large Reference Bugs Workarounds The DynDOLOD website explains the use, requirements,...
+- **S.T.A.R. (So This Aint Right) - Patches by Missile**: V83: UPDATED. FOMOD (V104 Notes taken). IMPORTANT: Uses auto-selection for some mods. Make sure only these 2 Patches are selected. \nFOMOD Options\n\nWormpie Hagraven Tweaks\n\nx Woman of the Pine Tweak\n\nMore Tweaks\n\nx JKs Bannered Mare - Preferred Navmesh Edit\n " p, li { white-space: pre-wrap; } hr { height: 1px; border-width: 0; } li.unchecked::marker { content: \"\\2610\"; } li.checked::marker { content: \...
+- **lilebonymace's patches**: V87: UPDATED. FOMOD (V104 Notes taken). Files conflict as intended (Patches). Auto-selecting - can only be installed if the required mods are present. \nFOMOD Options\n\nUSSEP\n\nx Contraband Confiscation\n\nAOS\n\nx Realistic Husky Sounds\n\nRDO\n\nx Serana Dialogue Edit\n\nThe Choice is Yours\n\nx House of Horrors - Quest Expansion\nx RDO + GDO\n\nLocked Chests have Keys\n\nx ELFX Shadows\nx Save the Icerunner\n...
+- **Arcane Accessories - Rebalance Patch - Adamant + Mysticism**: ANNIVERSARY EDITION UPGRADE. "This mod is a complete rebalance (and in some cases, a rebuild) of the spells in Arcane Accessories to bring them in line with the rest of magic in Skyrim. It's no secret that the AA Creation is both inventive and overpowered beyond comprehension, especially with regards to the Elemental spell line. This mod attempts to maintain the fun and interesting aspects of these spells without...
+- **Creation Club - Adjustments, Rebalancing, and Variants**: FOMOD (V104 Notes taken). ANNIVERSARY EDITION UPGRADE. \nFOMOD Options\n\nArmors\n\nx Daedric Mail\nx Daedric Plate\nx Dragon Plate\nx Dragon Scale\nx Dwarven Mail\nx Dwarven Plate\nx Elven Hunter\nx Lord's Mail\nx Netch Leather\nx Orcish Plate\nx Orcish Scaled\nx Redguard Elite Armaments\nx Stalhrim Fur\nx Steel Soldier\nx Vigil Enforcer\n\nEbony Plate\n\nx Ebony Plate\n\nLeather Scout\n\nx Leather Scout\n\nSilve...
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - No Random Books in Crypts and Dwemer Ruins**:  🗺️ A Dynamic World - 🧙 Roleplaying - 🏹 Immersion - 🎈 Performance Friendly - 🖱️ 1-Click Installation - What is \"Gate to Sovngarde\"? An immersion modlist that you can install via Vortex or via MO2 (With or without AE DLC, on the wabbajack gallery). A Dynamic, Living World 🗺️ World Changes Based On Your Actions ❄️ Seasons Change The Fauna and Landscape 🧙 NPCs React To Your Actions, Race and Reputation  Immersion A...
+- **Grab and Eat - Eat directly from harvestable flora**: V102: UPDATED. Files conflict as intended (GtS-specific Patches). " [font=Georgia]INTRODUCTION[/font] Press Shift + E to eat food or ingredients directly from harvestable flora [font=Georgia]REQUIREMENTS[/font] - Dynamic Activation Key - powerofthree's Papyrus Extender [font=Georgia]MOD PREVIEW[/font]    [font=Georgia]RECOMMENDED MODS[/font] - Dynamic Looting and Harvesting Animations : For picking up ingredient/f...
+- **Immersive Death Cycle - Optional Undead FX Addon**: [font=Trebuchet MS] -IMMERSIVE DEATH CYCLE- [/font] FEATURES Animal corpses decay over time: - 4 hours after death they will look half eaten/half decayed - 12 hours after death, only bones will remain (this can be disabled) Necromancy support: Raised creatured now use custom models. They will trigger the \"half eaten/half rotten\" models. There are up to 6 different models per animal, so the decay is not too repet...
+- **Immersive Death Cycle**: [font=Trebuchet MS] -IMMERSIVE DEATH CYCLE- [/font] FEATURES Animal corpses decay over time: - 4 hours after death they will look half eaten/half decayed - 12 hours after death, only bones will remain (this can be disabled) Necromancy support: Raised creatured now use custom models. They will trigger the \"half eaten/half rotten\" models. There are up to 6 different models per animal, so the decay is not too repet...
+- **Striding Silt Strider**: FOMOD (V104 Notes taken). \nFOMOD Options\n\nPlease select a language\n\nx English\n\nx No Low beams headlight\n " p, li { white-space: pre-wrap; } hr { height: 1px; border-width: 0; } li.unchecked::marker { content: \"\\2610\"; } li.checked::marker { content: \"\\2612\"; } FOMOD Options Please select a language x English x No Low beams headlight " "Silt Striders start to stride Solstheim. Classic Version(LE) [you...
+- **Realistic Boat Bobbing SE**: [font=Comic Sans MS] CHECK MY OTHER FILES FOR SKYRIM SPECIAL EDITION!! [/font]  [font=Comic Sans MS] CHECK MY MODLIST FOR SKYRIM SPECIAL EDITION!! [/font]   Description Ever wondered why boats don't bob while in water? Bethesda made a great job adding idle animations to boats but unfortunately never added them to the game due to clipping issues. Gandaganza fixed it!! Now you can enjoy the gentle bobbing while not...
+- **Burning Bodies Always Trigger Oil Traps**: NPCs (dead or alive) burning from spells like flames or FEC effects, or with fire cloak spells (ex: Flame Atronachs) will trigger oil puddle-like hazards in dungeon.\nNo plugin, just a base game script edit." "Script level edit making sure all NPCs on fire always trigger all hazards using the Oil trap script, base game or mod added, regardless of checkActorMagic property. Compatible with Improved Traps, let this f...
+- **Shame of Skyrim**: FOMOD (V104 Notes taken). Distributes over 450 different notes randomly to bandits, necromancers, warlocks and more. \nFOMOD Options\n\nChoose base plugin\n\nNote names\n\nx Standardized names (Personal Letter)\n\nChoose distribution\n\nx Default - On Spawn\n" " p, li { white-space: pre-wrap; } hr { height: 1px; border-width: 0; } li.unchecked::marker { content: \"\\2610\"; } li.checked::marker { content: \"\\2612...
+- **Sharpen Other Swords II - AnimObject Swapper**: Files conflict as intended (GtS-specific Patches).
+- **Usable Campfires**: FOMOD (V104 Notes taken). Files conflict as intended: Checked against Vortex's Rules for V104 on 2026-04-27. See Notes. \nFOMOD Options\n\nMain\n\nx Usable Campfires\nx Unlit Campfires\n- Rest at the Campfire\n\nVersion\n\n- Vanilla\nx Campfire\n " p, li { white-space: pre-wrap; } hr { height: 1px; border-width: 0; } li.unchecked::marker { content: \"\\2610\"; } li.checked::marker { content: \"\\2612\"; } Load aft...
+- **Rain Extinguishes Fires**: FOMOD (V104 Notes taken). Files conflict as intended: Checked against Vortex's Rules for V104 on 2026-04-27. See Notes. \nFOMOD Options\n\nChoose Files\n\nFires\n\nx Smoke Objects\nx Campfires\nx Embers\n " p, li { white-space: pre-wrap; } hr { height: 1px; border-width: 0; } li.unchecked::marker { content: \"\\2610\"; } li.checked::marker { content: \"\\2612\"; } Load before Usable Campfires FOMOD Options Choose...
+- **RS Children Patch- GTS Bruma Hotfix**: V97: NEW. Files conflict as intended (Patch). "Patches for GTS' rendition of RS Children, and Dac0da by Vicn. Not all of the kids are covered by the patch included in gts, and some seemed to be bugged. I aimed to fix that. Concerning the Dac0da kids: For the half-falmer girl, I was going for a half-elf nord girl who had a hard life as both a Mythic Era Skyrim resident, and the lore of dac0da. Plus it didn't make s...
+- **Alternate Perspective - Alternate Start Version 3.1.1 - RS Children Patch**: Files conflict as intended (GtS-specific Patches, Add-on, Patches). File conflict with faster HDT-SMP can be ignored (\"LICENSE\")." "[font=Arial] LE Version => Alternate Perspective LE [/font]   [font=Georgia] Alternate Perspective [/font] A new yet familiar take on the Alternate Start concept: Rather than simply deleting & skipping the Intro, Alternate Perspective went one step further and completely rewrote it,...
+- **RS Children Patch Compendium - AI Overhaul patch AE ONLY**: Files conflict as intended (ESLified Patch). " This is a collection of RS Children patches for certain mods that are available for SE, and some that are not. Before listing the patches: DISCLAIMER: - I am not the modder, just the caretaker of the page. I volunteered to handle it because I believe in sharing and helping between mod users. - Some of the patches are for mods that have NOT been ported publicly. You wi...
+- **RS Children Patch Compendium - 3DNPC**: Files conflict as intended (ESLified Patch). " This is a collection of RS Children patches for certain mods that are available for SE, and some that are not. Before listing the patches: DISCLAIMER: - I am not the modder, just the caretaker of the page. I volunteered to handle it because I believe in sharing and helping between mod users. - Some of the patches are for mods that have NOT been ported publicly. You wi...
+- **RS Children Overhaul 1.1.3 with hotfix 1**: FOMOD (V104 Notes taken). Files conflict as intended (Patches, ESLified Patch). \nFOMOD Options\n\nMain Patches\n\nx USSEP\nx BS Bruma\n\nExtra Options\n\nx 2k Aventus and Wanderer Outfit\nx Bigger Heads\nx Facial Animations\n" " p, li { white-space: pre-wrap; } hr { height: 1px; border-width: 0; } li.unchecked::marker { content: \"\\2610\"; } li.checked::marker { content: \"\\2612\"; } FOMOD Options Main Patches...
+- **Yellow Eyes Fix for Cured Serana - Special Edition**: FOMOD (V104 Notes taken). Files conflict as intended (Fixes). \nFOMOD Options\n\nMain file selection\n\nx Cured Serana for Tragedian's Fabulous Followers\n " p, li { white-space: pre-wrap; } hr { height: 1px; border-width: 0; } li.unchecked::marker { content: \"\\2610\"; } li.checked::marker { content: \"\\2612\"; } FOMOD Options Main file selection x Cured Serana for Tragedian's Fabulous Followers
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - Redguard Facegen Workaround**:  🗺️ A Dynamic World - 🧙 Roleplaying - 🏹 Immersion - 🎈 Performance Friendly - 🖱️ 1-Click Installation - What is \"Gate to Sovngarde\"? An immersion modlist that you can install via Vortex or via MO2 (With or without AE DLC, on the wabbajack gallery). A Dynamic, Living World 🗺️ World Changes Based On Your Actions ❄️ Seasons Change The Fauna and Landscape 🧙 NPCs React To Your Actions, Race and Reputation  Immersion A...
+- **Resplendent Royals - Full Version Fixed**: FOMOD (V104 Notes taken). Files conflict as intended (Patch). \nFOMOD Options\n\nSelect Version\n\nx Full Version\n\nFacegen\n\nx Skyrim SE\n\nFacetints\n\nx 2k\n\nPatches - Full Version\n\nx AI Overhaul SSE\n " p, li { white-space: pre-wrap; } hr { height: 1px; border-width: 0; } li.unchecked::marker { content: \"\\2610\"; } li.checked::marker { content: \"\\2612\"; } FOMOD Options Select Version x Full Version F...
+- **Dynamic NPC Hairstyles**: V97: NEW. FOMOD (V104 Notes taken). \nFOMOD Options\n\nMandatory\n\nx Main File\n\nPatches\n\nx Dirt and Blood\n\nDynamic Percentage\n\nx 25%\n\nNPC Exceptions\n\nx Bald or Balding NPCs\nx Jarls\n " p, li { white-space: pre-wrap; } hr { height: 1px; border-width: 0; } li.unchecked::marker { content: \"\\2610\"; } li.checked::marker { content: \"\\2612\"; } FOMOD Options Mandatory x Main File Patches x Dirt and Blo...
+- **Elven Ears for Breton NPCs**: FOMOD (V100 Notes taken). \nFOMOD Options\n\nElven Ear percentage\n\nx 50%\n " p, li { white-space: pre-wrap; } hr { height: 1px; border-width: 0; } li.unchecked::marker { content: \"\\2610\"; } li.checked::marker { content: \"\\2612\"; } FOMOD Options Elven Ear percentage x 50% " "[font=Tahoma] [/font] [font=Tahoma] [/font] [font=Tahoma] [/font] [font=Tahoma] [/font] [font=Tahoma] DESCRIPTION [/font] According to...
+- **Weight adjustment for Vanilla Hair Remake SMP**: V97: NEW. Files conflict as intended (Fixes). " p, li { white-space: pre-wrap; } hr { height: 1px; border-width: 0; } li.unchecked::marker { content: \"\\2610\"; } li.checked::marker { content: \"\\2612\"; } Load after Nordic Faces - FaceGen - BSA Vanilla hair remake SMP Vanilla hair remake SMP - Wigs
+- **Miraakle - A Miraak Replacer**: V82: NEW. FOMOD (V104 Notes taken). \nFOMOD Options\n\nChoose one\n\nx Vanilla\n\nChoose Patches\n\nx None\n " p, li { white-space: pre-wrap; } hr { height: 1px; border-width: 0; } li.unchecked::marker { content: \"\\2610\"; } li.checked::marker { content: \"\\2612\"; } FOMOD Options Choose one x Vanilla Choose Patches x None " "[font=Times New Roman] [font=Trebuchet MS]  (*ᴗ͈ˬᴗ͈) Please do take the time to read t...
+- **Nordic Faces - FaceGen - BSA**: FOMOD (V104 Notes taken). Files conflict as intended: Checked against Vortex's Rules for V104 on 2026-04-27. See Notes. \nLoad after\n\nVanilla hair remake SMP\nVanilla hair remake SMP - Wigs\n\nLoad before\n\nWeight adjustment for Vanilla hair remake SMP\n\nFOMOD Options\n\nFaceGen\n\nx FaceGeom SMP Hair\nx FaceTint\n " p, li { white-space: pre-wrap; } hr { height: 1px; border-width: 0; } li.unchecked::marker { c...
+- **BloodMoon - Aela Overhaul (Vanilla Armor)**: V82: NEW. FOMOD (V104 Notes taken). Files conflict as intended: Checked against Vortex's Rules for V104 on 2026-04-27. See Notes. \nFOMOD Options\n\nMakeup Options\n\nx Huntress (Vanilla Like)\n\nEye Colors\n\nx Yellow (Authors choice)\n " p, li { white-space: pre-wrap; } hr { height: 1px; border-width: 0; } li.unchecked::marker { content: \"\\2610\"; } li.checked::marker { content: \"\\2612\"; } Load after Traged...
+- **Tragedian's Fabulous Followers AIO**: FOMOD (V104 Notes taken). Files conflict as intended: Checked against Vortex's Rules for V104 on 2026-04-27. See Notes. \nLoad after\n\nDenizens of Morthal\n\nLoad before\n\nBloodMoon - Aela Overhaul\nYellow Eyes Fix for Cured Serana - Special Edition\nGATE TO SOVNGARDE (GTS) - Small Mods and Resources - Specific Patches\nGATE TO SOVNGARDE (GTS) - Small Mods and Resources - ESLified Patches\nJaySerpa's Small Mods...
+- **Resplendent Royals - Jarl's Court NPC Overhaul**: FOMOD (V104 Notes taken). Files conflict as intended (Patch). \nFOMOD Options\n\nSelect Version\n\nx Full Version\n\nFacegen\n\nx Skyrim SE\n\nFacetints\n\nx 2k\n\nPatches - Full Version\n\nx AI Overhaul SSE\n " p, li { white-space: pre-wrap; } hr { height: 1px; border-width: 0; } li.unchecked::marker { content: \"\\2610\"; } li.checked::marker { content: \"\\2612\"; } FOMOD Options Select Version x Full Version F...
+- **Unique Greybeard Beards**: [font=bebas_neuebook]Unique Greybeard Beards[/font] Have you ever been miffed that the Greybeards, an order literally named after their facial hair, have generic, mostly pretty reasonably-sized beards shared by tons of other NPCs? Yes? Me too. Now, the Greybeards have their own unique beards, with all the volume and splendor that you first imagined on the way up the \"7,000\" steps back in November of 2011. Best o...
+- **Better Skyrim Parties - Choice is yours Patch Da05**: V97: UPDATED. FOMOD (V104 Notes taken). Files conflict as intended: Checked against Vortex's Rules for V104 on 2026-04-27. See Notes. Load after\n\nVittorias Alternate Wedding\n\nFOMOD Options\n\nChoose a mod version\n\nx All in one - Interesting NPCs Version\n\nPatches\n\nx AI Overhaul\nx USSEP\n\nPatches misc\n\nx Tales of Berserkyr\n\nOptional\n\nx Alternate Vittoria Wedding integration\n\nPatches - 3dNPCs\n\nx...
+- **Better Skyrim Parties - Weddings - Funerals - Crowd Events Overhaul**: V97: UPDATED. FOMOD (V104 Notes taken). Files conflict as intended: Checked against Vortex's Rules for V104 on 2026-04-27. See Notes. Load after\n\nVittorias Alternate Wedding\n\nFOMOD Options\n\nChoose a mod version\n\nx All in one - Interesting NPCs Version\n\nPatches\n\nx AI Overhaul\nx USSEP\n\nPatches misc\n\nx Tales of Berserkyr\n\nOptional\n\nx Alternate Vittoria Wedding integration\n\nPatches - 3dNPCs\n\nx...
+- **Immersive Aggressive Opponents - Armor-Based Opposite Faction Aggression**: V102: UPDATED. FOMOD (V102 Notes taken). Files conflict as intended (GtS-specific Patches). \nFOMOD Options\n\nOptional Modules\n\nx Forsworn Armor\n\nWhich Armor slots to check?\n\nx Cuirasses only\n " p, li { white-space: pre-wrap; } hr { height: 1px; border-width: 0; } li.unchecked::marker { content: \"\\2610\"; } li.checked::marker { content: \"\\2612\"; } FOMOD Options Optional Modules x Forsworn Armor Which...
+- **Essentials Knockdown**: Files conflict as intended (GtS-specific Patches). Essential NPCs will not kneel on knockdown, instead they will ragdoll and fell unconscious to the floor.
+- **Smart NPC Potions - Enemies Use Potions and Poisons**: V102: UPDATED. Files conflict as intended (GtS-specific Patches). "    Smart NPC Potions ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Features ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ NPCs use potions: Enemy bandits, mages and assassins have a chance to carry a couple of potions or poisons that they will use when fighting you. Well-balanced : These potions wo...
+- **NPC Loots in Combat**: Updated to version 2.0! Recommend a new game when updating! Feature When a humanoid NPC dies, other nearby humanoid NPCs will now loots items from dead body. By using the MCM menu, you can set the upper and lower limits of the amount of the item to be looted. Setting the lower limits to 0 gold will allow all items to be looted. Regardless of the value you set, all hostile NPC gold and ammunition will looted. It al...
+- **Neutral Whiterun Guards**: V102: UPDATED. V97: NEW. FOMOD (V104 Notes taken). " p, li { white-space: pre-wrap; } hr { height: 1px; border-width: 0; } li.unchecked::marker { content: \"\\2610\"; } li.checked::marker { content: \"\\2612\"; } FOMOD Options Patches - Crime Overhaul V102: Had an error during installation with Vortex (did ask for Fomod options). JaySerpa confirmed that it is correct to select no patch. " " Description Balgruuf is...
+- **Don't Stay in The Water - NPC Water AI Fix**: [font=Comic Sans MS] Don't Stay in The Water ! [/font]  [font=Comic Sans MS] When you happen to be fighting an enemy in the water, because Skyrim cannot fight underwater, you must go ashore to continue the fight. But your enemy, just staring at you angrily, just won't go ashore. Do you think this is an AI error? Each race has a flag to control whether they will fight in the water, but its setting is stupid, just l...
+- **Snores of Skyrim Lite**: This is a lighter version of my mod Snores of Skyrim , based on feedback and partly inspired by a suggestion from Jayserpa to make a 'lite' version. You can read the full description on the original mod page but here's a list of what's different. Most voice types have had the volume reduced Lip files have been removed so there is no eye or mouth movement at all Frequency of snores has been reduced slightly so you...
+- **City Bag Checks**: V82: UPDATED. "  Features Guards will now: Check for Narcotics : Guards will do an inventory check on you and your companion for Moon Sugar, Skooma, Sleeping Tree Sap, Balmora Blue and Double Distilled Skooma. Seized narcotics will be taken to the stolen items evidence chest at the local jail. Provide Options for Bypassing : You can attempt to bypass a bag check numerous ways, including persuasion, bribery, or rem...
+- **GATE TO SOVNGARDE (GTS) - Small Mods and Resources - NPCs Always React to Healing Spells**:  🗺️ A Dynamic World - 🧙 Roleplaying - 🏹 Immersion - 🎈 Performance Friendly - 🖱️ 1-Click Installation - What is \"Gate to Sovngarde\"? An immersion modlist that you can install via Vortex or via MO2 (With or without AE DLC, on the wabbajack gallery). A Dynamic, Living World 🗺️ World Changes Based On Your Actions ❄️ Seasons Change The Fauna and Landscape 🧙 NPCs React To Your Actions, Race and Reputation  Immersion A...
+- **NPCs React To Necromancy (And More)**: V82: UPDATED. "    - NPCs React To Necromancy - When I was working on a certain magical quest mod , I realized the conjuration scholar Phinis is always talking about how Nords don't like magic, how you shouldn't summon atronachs or similar near them and how you should under no circumstances resurrect corpses near towns, as it's especially frowned upon. However, NPCs barely react to anything you summon, so I though...
+
+## All Enabled Mods Appendix
+
+This appendix is intentionally broad so the document can be searched directly.
+
+- **SkyLinkAI** `d2026.5.30`
+- **Gate to Sovngarde WJ Edition Extended Credits** `1.2.0.0` modid=172373
+  - Port of Gate to Sovngarde collection to Wabbajack with update notes and version lag warnings.
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - GTS-Specific Patches** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - GTS - Equip Item Fix** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **WIDeadBodyCleanupScript Crash Fix** `0.5.2.0` modid=62413
+  - Fixes a rare crash when saving caused by the WideBodyBodyCleanupScript.
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - DAK Helper** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - Left Scabbards Output for IED** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Vanilla Hair Textures for KS Hairdos** `1.0.0.0` modid=73159
+  - Provides custom texture maps that replace KS Hairdos hair textures with higher-quality vanilla-style versions.
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - GtS - ELFX Patch** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - ESLified Patches** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **The Pigeon's Nest** `1.8.4.0` modid=154661
+  - Collection of QoL patches, fixes, and small mods for GTS including gather‑branches for Skills of the Wild, dynamic race lich, wounds splinted limbs, hand‑to‑hand training on dummies, animated potions, movement and Hearthfire house patches, Interesting NPCs integration, and various bug fixes with specified dependencies
+- **Seasonal Spiffed Up Tundra Scrubs - Animated** `1.0.0.0` modid=112938
+  - Provides animated tundra scrub textures that change appearance each season.
+- **GATE TO SOVNGARDE (GTS) - Small Mods and Resources - Additional Seasonal Stuff** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Rotols More Icons GTS Version** `1.0.10.0` modid=113657
+  - Replaces default effect menu and inventory icons with higher‑quality icons, requiring load order priority.
+- **Time Flies SE** `8.2.2.0` modid=39426
+  - Makes game time advance during crafting, reading, eating, fishing, building, etc., highly configurable, adds mod support and notifications, version 8 adds Wounds, Shovels, Pilgrim, Wintersun compatibility.
+- **Nordic Leather Armor** `2.0.0.0` modid=59296
+  - Adds Nordic Leather Armor set (Cuirass 32 armor 6 weight, Helmet 14.5 armor 3 weight, Gauntlets 9 armor 1.5 weight, Boots 9 armor 1.5 weight, Circlet 13 armor 1 weight); craftable with Advanced Armors; CBBBodyslide included; recommended aMidianBorn Book of Silence SE.
+- **Andrealphus' Exploit Fixes** `1.2.19.2` modid=46753
+  - Compilation of exploit fixes for followers, duplicate items, looting, player grab stealing, backward power attacks, etc.
+  - Includes fixes for horse exploits, elder scrolls reading, etc.
+  - ESL flagged
+- **PapyrusUtil SE - Modders Scripting Utility Functions** `4.6.0.0` modid=13048
+  - SKSE plugin adding scripting utility functions for data storage, including global/int/float/form variables, list support, JsonUtil for external JSON files, StorageUtil for key‑value storage, and various utility scripts, requiring up‑to‑date SKSE and Address Library for AE compatibility.
+- **Cuyi's Bosmeri Antlers - SSE** `1.2.0.0-SSE` modid=26173
+  - Adds five antler variants usable as circlets or scars for Bosmer characters.
+- **First Person Animations - For Some Mods** `1.2.0.0` modid=148289
+  - Adds first‑person animations to mods that normally force third‑person perspective, enabling first‑person exclusive players to use them.
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - GtS Paper Maps for FWMF** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **The Frozen Heart Paper Map for FWMF by Limon** `1.0.0.0` modid=165949
+  - Replaces the default 3D map with a drawn flat paper map.
+- **DAc0da Paper Map for FWMF by Limon** `1.0.0.0` modid=146754
+  - Replaces default 3D map in DAc0da mod with the drawn flat paper map.
+- **Wyrmstooth Paper Map for FWMF by Limon** `1.0.0.0` modid=124686
+  - Replaces the default 3D map with a drawn flat paper map in the map menu.
+- **The Nightmare Paper Map for FWMF by Limon** `1.0.0.0` modid=143113
+  - Replaces the default 3D map in Sleepwalking Into A Nightmare with a drawn flat paper map in the Map Menu; marked as NEW and conflicts as intended (Patch)
+- **Blackreach Paper Map for FWMF** `1.7.0.0` modid=53878
+  - Adds a handcrafted paper map for Blackreach in the Map Menu, compatible with Flat World Map Framework.
+- **Dayspring Canyon Paper Map for FWMF** `1.8.0.0` modid=61917
+  - Adds a handcrafted paper map of Dayspring Canyon to the map menu.
+- **Extended Cut - Saints and Seducers Paper Map for FWMF** `1.1.1.0` modid=88709
+  - Replaces the default 3D map with a drawn paper map in the map menu, supporting isometric navigation and optional angle settings.
+- **Soul Cairn Paper Map for FWMF** `1.8.0.0` modid=55387
+  - Adds handmade Soul Cairn map to map menu for Flat World Map Framework; requires FWMF and must be installed last; compatible only with FMWF; recommend Atlas Map Markers; future plan for better gamma and isometric ruins
+- **Vigilant Paper Map for FWMF by Limon** `1.1.0.0` modid=123407
+  - Replaces the default 3D map in Coldharbour with a flat hand‑drawn paper map.
+- **Sovngarde Paper Map for FWMF** `1.8.1.0` modid=54255
+  - Adds handmade Sovngarde map to the Map Menu for Flat World Map Framework.
+- **Forgotten Vale Paper Map for FWMF** `1.9.1.0` modid=54628
+  - Implements handmade Forgotten Vale map in map menu; requires Flat World Map Framework; adds marker with editorID DLC01FalmerValley; config tweaks; compatible with Flat Map Markers; soft compatibility.
+- **Siege at Icemoth Paper Map for FWMF** `1.1.1.0` modid=119974
+  - Replaces the default 3D map with a drawn flat paper map for the Siege at Icemoth mod.
+- **Duncan's Paper Maps for FWMF** `1.7.0.0` modid=55025
+  - Adapts Duncan Larsen’s paper maps for use with Flat World Map Framework, supporting multiple DLC and add‑on segments.
+- **Flat World Map Framework (FWMF) Lite** `1.9.5.0` modid=29932
+  - Changes default 3D map to flat paper‑like maps with marked/clean variants, compatibility selector, optional FOV settings; requires Baka World Map FOV for FOV adjustments; compatible with many worldspaces
+- **Bruma - All Fixes for Custom LODs - Non-Seasons** `1.3.0.0` modid=143795
+  - Fixes custom LOD generation issues for Bruma and restores Cyrodiil tree LOD with seasonal support.
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - Texgen Output** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - DynDOLOD Output** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - xLod Terrain** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Happy Little Trees 3D LOD - Performance** `2.1.0.0` modid=56907
+  - Provides performance‑optimized DynDOLOD 3D hybrid LOD models for Happy Little Trees compatible with HLT
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - Grass** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Fortified Imperial Fort Battlements (ESL) - LOD Files Addon** `1.2.0.0` modid=66831
+  - Enhances the fortified appearance of Imperial forts for greater immersion.
+- **Lod Model Library for DynDOLOD** `1.6.0.0` modid=87521
+  - Provides matching LOD models for several mods using altered meshes, requiring DynDOLOD generation.
+- **Better Dyndolod Red Mountain Plume** `1.0.0.0` modid=43863
+  - Improves the Red Mountain Plume mesh to look less like a tornado and more like a proper eruption cloud, with new textures and model.
+- **Majestic Mountains Main - DynDoLod V 3.0 Lod pack (all versions)** `f4.02` modid=11052
+  - Redesigns mountain textures with single 8k map, improved LOD, snow shader, optional packs; requires DynDoLOD for proper LOD generation
+- **DynDOLOD DLL NG** `Alpha-36` modid=97720
+  - SKSE64 plugin and accompanying Papyrus scripts that provide large reference bug workarounds for DynDOLOD 3, serving as an alternative to PapyrusUtil/DynDOLOD DLL SE/VR.
+- **S.T.A.R. (So This Aint Right) - Patches by Missile** `1.0.8.0` modid=121047
+  - Collection of assorted patches fixing conflicts like carriage drivers, ferry addons, NPC placements, etc., most ESL flagged.
+- **lilebonymace's patches** `2.45.0.0` modid=36042
+  - Compilation of compatibility patches and xEdit scripts for mods like USSEP, AOS, RDO, and others, with automatic installer options and load‑order guidance
+- **Weapon Armor Attribute Tweaks** `1.0.0.0` modid=59951
+  - Rebalances weapon and armor attributes: aligns Dwarven/Elven/Orcish weapons with armor tier progression, makes Dragonplate tier higher than Daedric, standardizes non‑unique weapon traits by type, categorizes bows into light/medium/heavy, rebalances faction gear, and includes bug fixes from USSEP and WACCF.
+- **Arcane Accessories - Rebalance Patch - Adamant + Mysticism** `1.6.0.0` modid=61559
+  - Rebalances Arcane Accessories spells to vanilla/Mysticism levels, offering Rebalance and Adamant versions; adjusts magnitudes, costs, and effects while preserving unique mechanics; compatible with Mysticism and latest Arcane Accessories.
+- **Creation Club - Adjustments, Rebalancing, and Variants** `1.0.0.0` modid=59370
+  - Reduces stat bloat of Creation Club items, adds flavor and nostalgic effects while balancing stats.
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - No Random Books in Crypts and Dwemer Ruins** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Grab and Eat - Eat directly from harvestable flora** `1.1.0.0` modid=118899
+  - INTRODUCTION
+  -
+  - Press Shift+E to eat food or ingredients directly from harvestable flora
+  -
+  - REQUIREMENTS
+  - -Dynamic Activation Key
+  - -PowerOfThree's Papyrus Extender
+  -
+  - MOD PREVIEW
+  -
+  - RECOMMENDED MODS
+  - -Dynamic Looting and Harvesting Animations: for picking up ingredient/food animations
+  - -Immersive Interactions - Eating ingredients and apply poison animations
+  - -Eating Animations and Sounds SE
+  -
+  - Q&A
+  - -Q: ESL flagged? A: Yes
+  - -Q: Animations? A: No animations or displays for this mod :O, you'll need another mod
+  - -Q: Limitations? Only food/ingredients consumed via Dynamic Activation Key; some flora via scripts not consumed
+  - -Q: This xxx flora shouldn't be consumed! Add to EFlora_IgnoreList via FormList Manipulator
+  -
+  - Comments: V102: UPDATED. Files conflict as intended (GtS-specific Patches).
+  - Gravewind: Quest about a realm lost to myth, an ancient city of ghosts, and a small house in the woods; includes three new magic groups, unique boss fights, custom enemies, two endings, and more.
+  - Guard Dialogue Overhaul SE: Alters guard dialogue to increase immersion; fixes bugs, expands dialogue variety, integrates SPIKE compatibility, adds console commands to adjust skill thresholds, global values, and optional MCM settings; requires DAV, FLM, KID, SPID; compatible with many armor and perk mods.
+  - GuardsTalk: Adds keywords for Guard Dialogue Overhaul to many items via Keyword Item Distributor.
+  - HammerHair V1.6.1: Adds 77 male and 77 female Redguard hairstyles (wigs included); recommends texture packs SC - Vanilla Hair Retex and BnP - Female Skin, BnP - Male Skin.
+  - Hammet Dungeon Pack 2 SE: Compilation of 16 dungeons across Skyrim and Solstheim; features vanilla assets, radiant quests, unique weapons and armor enchantments, compatibility notes, requires Skyrim SE v1.5.97.0.8 or later, works with AE versions.
+  - Hammet's Dungeon Pack 1 SE: Adds 30 dungeons to Skyrim and Solstheim for exploration; includes unique rooms, difficulty scaling, radiant quests, and is Nexus‑only.
+  - Hand to Hand - An Adamant Addon: Merges lockpicking and pickpocketing into Security skill, adds new Hand to Hand perk tree, adjusts Light and Heavy Armor trees for unarmed combat, adds perks like Bracer’s Stance, Overwhelm, Finisher, and integrates with Adamant’s perk system; requires Address Library, SPID, KID, Scrambled Bugs.
+  - Hawk Replacer and Eagles- Mihail Monsters and Animals: Replaces vanilla hawk with high‑quality model and textures, adds three eagle types, improves sounds and nests, enables interaction such as destruction and looting, includes detailed installation notes and compatibility warnings.
+  - Headhunter - Bounties Redone: Expands bounty system with proof requirement, captures prisoners, options to spare giants, integrates with Missives, AllGUD, SRC; adds head loss visual, follower reward, configurable via MCM; requires main file and optional patches.
+  - Heart of the Reach - High Resolution Textures: Quest to heal the Heart of the Reach in an underground swamp; includes new quest, weapons, ring, and spell.
+  - Hearth Craft: Adds craftable, placeable furniture, clutter, and structures using Campfire framework; designed for survival play, integrates with Complete Crafting Overhaul, Requires Campfire.
+  - Helmet Toggle 2: Hides or shows helmets/hoods via Dynamic Armor Variants with animations; requires Open Animation Replacer, Papyrus Extender, DAV, optional Immersive Equipment Displays; includes MCM options, spells, keywords, and config files for managing headgear behavior.
+  - Hidden Hideouts of Skyrim - Merged: Provides 21 small wilderness hideouts with Standard, No Map Marker, and Deep Immersion versions; includes rare book guide, optional follower‑friendly NavMeshed file, recommended survival mods, installation and uninstallation instructions.
+  - Hold on a sec - Pause Dialogue Menus: Lightweight SKSE plugin that lets you press the system menu button during conversations to pause dialogue; dialogue resumes after closing the menu.
+  - Honed Metal -NPC Crafting and Enchanting Services-: Adds NPC blacksmiths and mages to craft, temper, and enchant player equipment; cost and quality depend on NPC skill and barter; configurable via MCM; compatible with most mods, requires SKSE and SkyUI.
+  - Honed Thaumaturgy (FLM): Patch enabling Honed Metal to access enchantments added by Thaumaturgy via FormList Manipulator; optional plugin for non‑FLM users.
+  - Horns Are Forever (Persistent Argonian Horns): Ensures Argonian horns remain visible except when wearing full‑head headgear; works with vanilla NPCs and custom subraces; simple drop‑in ESP/BSA.
+  - HorsePower - Modernized Horse Riding (Total Riding Overhaul): Overhauls horse riding with directional animations, improved speed/turning, follow‑up attacks, ragdoll physics, sprint swimming, in‑place turns, jump height increases, and related fixes; requires SKSE, Address Library, Nemesis/Pandora behavior engine.
+  - Horsemen Torch Wield Fix and Mount Tweaks SE: Customizes horse behavior for proper torch wielding and extra mount benefits for player and NPCs; behavioral customization for rider actions.
+  - Hotkey Reminder: Custom menu to view and edit all hotkeys; saves data to interface/hotkeysreminder_data.json; can lock editing via MCM; lightweight ESP‑FE, no load‑order impact.
+  - House Cats- Mihail Monsters and Animals: Adds house cats as docile creatures in towns and farms, including a unique named cat Puss in Boots; part of Mihail’s creature series with high‑quality models and textures.
+  - House of Horrors - Quest Expansion: Expands Molag Bal’s daedric quest with alternative good‑guy path, new scenes, fully voiced, optional follower reward; integrates with Missives and other patches; requires main file and patches.
+  - Housecarl Companions Refine Add-on: Provides unique, balanced buffs for housecarl followers; standalone low‑fantasy appearance package; includes perks like Sworn To Carry Burdens, Region Familiarity, etc.; requires expressive facegen and skin mods.
+  - Hunters Not Bandits: Prevents NPCs from using taunts or insults when fighting animals; fixes unrealistic dialogues like ‘Can I help you?’ after killing player; improves realism of animal interactions.
+  - INIGO: Fully voiced Khajiit companion with 7000+ lines, levels with player, avoids traps, whispers when sneaking, can run out of arrows; includes whistle key, quest progression, and optional patches.
+  - Ice Titans- Mihail Monsters and Animals: Adds Ice Titan creature with blue skin, warts, snow‑covered hair, powerful hands and feet; lore about Titans, elemental magic, compatibility notes; part of Mihail’s monster pack.
+  - Igniting Animation for Campfire: Adds animated campfire ignition; flagged as ESL; lightweight.
+  - Immersive Aggressive Opponents - Armor-Based Opposite Faction Aggression: Makes Imperial, Thalmor, Stormcloak, Penitus Oculatus, and Reach guards attack player when wearing opposite faction armor; configurable via slots; optional Forsworn Armor module; no direct conflicts.
+  - Immersive Death Cycle: Animals decay over time: half‑eaten model after 4h, bones after 12h; supports necromancy, no vanilla edits; configurable via console commands; optional Undead FX addon.
+- **Torch Bash Ignites Traps** `1.0.1.0` modid=80807
+  - Enables torch attacks to ignite or trigger environmental traps and interact with ignitable objects and NPCs.
+- **TMD The Rift Leaves - Seasons Patch** `f1.01` modid=111461
+  - Adds floating autumn leaves to The Rift waters, requiring ENB with complex material and dynamic cubemap.
+- **TMD The Rift Leaves** `f1.01` modid=111461
+  - Adds floating autumn leaves to The Rift waters, requiring ENB with complex material and dynamic cubemap.
+- **Immersive Death Cycle - Optional Undead FX Addon** `f1.04` modid=97048
+  - Causes animal corpses to decay through half‑eaten to bone models over 4‑12 hours, supports necromancy, bone removal, optional undead FX addon, no vanilla edits, compatible with Simple Hunting Overhaul
+- **Immersive Death Cycle** `f1.04` modid=97048
+  - Causes animal corpses to decay through half‑eaten to bone models over 4‑12 hours, supports necromancy, bone removal, optional undead FX addon, no vanilla edits, compatible with Simple Hunting Overhaul
+- **Windhelm Segregation - Stay at New Gnisis Cornerclub** `1.0.0.0` modid=21181
+  - Elda Early‑Dawn refuses to rent rooms to Dark Elves, while New Gnisis Cornerclub innkeepers assist Dunmer.
+- **Striding Silt Strider** `1.3.0.0` modid=109619
+  - Silt Striders stride across Solstheim, includes variants like Dusty and Wild, and requires disabling then re‑enabling to update travel markers
+- **Luminous Atronachs - ESPLite** `2.0.0.0ESPLite` modid=27732
+  - Adds glowing atronachs that emit light in colors matching their elemental type, with an ESPLite version available
+- **Realistic Boat Bobbing Patch Hub - USSEP** `1.0.0.0` modid=44311
+  - Collection of patches for Realistic Boat Bobbing targeting various mods.
+- **Realistic Boat Bobbing SE** `8.2.0.0` modid=26080
+  - Ported Realistic Boat Bobbing to Skyrim Special Edition.
+- **Store Entrance Doorbells** `2.0.0.0` modid=56196
+  - Adds doorbells to store entrances with animation and sound; rings on entry, optional non‑sneaking condition; supported towns and stores; ESL‑flagged; compatible with interior overhauls
+- **Sweeping Organizes Stuff - Use Broom to Clean Mess** `0.4.0.0` modid=51645
+  - Adds a broom interaction to clean physics messes, replacing bugged mount animations via Open Animation Replacer without additional tools.
+- **Burning Bodies Always Trigger Oil Traps** `1.1.0.0` modid=115830
+  - Script change that forces burning NPCs to trigger oil trap hazards universally, compatible with Improved Traps
+- **Shame of Skyrim** `2.0.0.0` modid=96804
+  - Distributes over 650 notes randomly to various NPC factions, creating feelings of shame
+- **Sharpen Other Swords II - AnimObject Swapper** `0.2.3.0` modid=75237
+  - Swaps sharpening animations for different swords and daggers in the world.
+- **Ships On The Horizon** `1.1.0.0` modid=79034
+  - Adds animated ships visible on the Sea of Ghosts near Solitude, Raven Rock, and Tel Mithryn.
+- **Dragon Wall Wisdom - Readable Dragon Walls** `1.1.1.0` modid=17591
+  - Adds readable lore on all dragon word walls sourced from UESP and in‑game books; lightweight and 100% compatible except when wall positions are altered.
+- **burn Burn BURN** `1.0.0.0` modid=56892
+  - Adds persistent fire and smoke in a burnt area that vanish after player views it, with FAQ explaining ashes, disappearance, and that items turn to ash
+- **Usable Campfires** `1.4.2.0` modid=140915
+  - Makes campfires interactible for lighting and basic cooking.
+- **Rain Extinguishes Fires** `5.0.3.0` modid=80419
+  - Makes fires extinguishable by rain, snow, or frost spells and relightable by fire spells, configurable via JSON, ESL flagged, performance friendly.
+- **RS Children Patch- GTS Bruma Hotfix** `5.0.0.0` modid=164145
+  - Patch fixing RS Children and Dac0da NPC issues, improving appearance and lore consistency.
+- **Realistic Elven Children (Aymar and friends reimagined) - No KS Hairdos Patch** `2.1.0.0` modid=40231
+  - Adds 8 adoptable mer children with edited faces styled like Realistic RS Children.
+- **Realistic Elven Children (Aymar and friends reimagined)** `2.1.0.0` modid=40231
+  - Adds 8 adoptable mer children with edited faces styled like Realistic RS Children.
+- **Alternate Perspective - Alternate Start Version 3.1.1 - RS Children Patch** `3.1.1.0` modid=50307
+  - New Alternate Start experience
+  - Spawns in Helgen inn, choose from various scenarios (roadside ambush, bounty hunter, etc.)
+  - Preserves Helgen as functional town until main quest
+  - Safe mid-game, expands gameplay options
+  - ESL flagged
+- **RS Children Overhaul - Patch Compendium - Shiny hair texture fix** `1.0.0.0` modid=38091
+  - Fixes a texture path causing shiny hair in patches, preventing the shiny hair appearance.
+- **RS Children Patch Compendium - AI Overhaul patch AE ONLY** `1.0.0.0` modid=13409
+  - Collection of RS Children patches for many mods requiring RS Children Overhaul, may conflict as intended (ESLified Patch).
+- **RS Children Patch Compendium - 3DNPC** `1.0.0.0` modid=13409
+  - Collection of RS Children patches for many mods requiring RS Children Overhaul, may conflict as intended (ESLified Patch).
+- **RS Children Overhaul 1.1.3 with hotfix 1** `1.1.3.0` modid=2650
+  - Overhauls appearance of all children, adding outfits and accessories for boys.
+- **Yellow Eyes Fix for Cured Serana - Special Edition** `1.1.0.0` modid=52722
+  - Fixes cured Serana's eye color and provides compatibility patches for various mods.
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - Redguard Facegen Workaround** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Resplendent Royals - Full Version Fixed** `f1.01` modid=69900
+  - Overhauls Jarls and courtiers with unique, lore‑friendly visual appearances.
+- **Dynamic NPC Hairstyles** `1.1.2.0` modid=161062
+  - Nexus: Adds dynamic hair changes for NPCs over time, random seasonal hairstyles, hair‑scissors interaction, configurable percentage settings, NPC exemptions (bald, Jarls, followers), SPID/KID requirements, fully voiced dialogue for manual hair changes, optional disable of random part
+- **A decent man - High Poly Sinding Replacer SE** `5.0.0.0` modid=66863
+  - High-poly texture replacement for Sinding to give him a more unique yet vanilla-like appearance.
+- **Elven Ears for Breton NPCs** `1.0.0.0` modid=87737
+  - Distributes four Elven ear meshes to Breton NPCs via SPID, giving them elven‑style ears.
+- **Weight adjustment for Vanilla Hair Remake SMP** `0.8.0.0` modid=161949
+  - Makes vanilla hair heavier to reduce wind movement and adds support for other SMP hairs.
+- **Miraakle - A Miraak Replacer** `2.0.0.0` modid=115974
+  - Replaces Miraak with a custom texture and mesh, offering improved visuals and multiple configuration options.
+- **Nordic Faces - FaceGen - BSA** `5.0.0.0` modid=40658
+  - Supplies high‑quality, lore‑friendly textures and FaceGen data for player and NPCs, enhancing all races while preserving vanilla aesthetics.
+- **BloodMoon - Aela Overhaul (Vanilla Armor)** `1.1.0.0` modid=98602
+  - Realistic lore‑friendly overhaul of Aela the Huntress, adding high‑poly head, warpaints, and eye color options, flagged as ESP.
+- **Tragedian's Fabulous Followers AIO** `f1.05` modid=57284
+  - Redesigns follower appearances and grants them new combat perks, allowing them to level up to 60 and improve gear.
+- **Housecarl Companions Refine Add-on** `1.1.0.0` modid=38405
+  - Adds appearance packages and unique buffs for housecarl followers, each with named perks (e.g., Sworn To Carry Burdens +25 carry weight) and optional visual enhancements
+- **Resplendent Royals - Jarl's Court NPC Overhaul** `f1.01` modid=69900
+  - Overhauls Jarls and courtiers with unique, lore‑friendly visual appearances.
+- **Filling In The Blanks - Unique Faces For Bandits and Guards - New Guards Recruits - EFM Version** `1.1.0.0` modid=51174
+  - Adds unique faces for bandits, generic NPCs, and guards; expands guard pool with 72 new Nord faces and female guards; offers EFM and Vanilla morph versions; requires USSEP; optional patches for AI Overhaul, OBIS, etc.; reduces face repetition
+- **Unique Greybeard Beards** `1.0.0.0` modid=77166
+  - Gives each Greybeard a unique, lore‑appropriate beard while preserving their vanilla look.
+- **Better Skyrim Parties - Choice is yours Patch Da05** `2.3.0.0` modid=102594
+  - Overhauls weddings, funerals, and crowd events, adding detail and attendees while remaining compatible with major mods
+- **Better Skyrim Parties - Weddings - Funerals - Crowd Events Overhaul** `2.3.0.0` modid=102594
+  - Overhauls weddings, funerals, and crowd events, adding detail and attendees while remaining compatible with major mods
+- **Immersive Aggressive Opponents - Armor-Based Opposite Faction Aggression** `1.18.0.0` modid=70236
+  - Causes NPCs of opposing factions to attack when player wears opposite faction armor, checking body/head/circlet/hands/feet slots; optional Forsworn module; no direct conflicts, requires Papyrus Extender
+- **Essentials Knockdown** `1.0.0.0` modid=101027
+  - Prevents essential NPCs from kneeling on knockdown, causing them to ragdoll and become unconscious.
+- **Sleeping Expanded - Animations and NPC reactions - Reduced Version** `1.23.0.0` modid=59250
+  - Adds NPC wake‑up reactions, breathing animations, and bed transition details, providing subtle immersion for sleeping.
+- **Fishermen Fish - Whispers of the Depths Patch** `1.4.0.0` modid=134408
+  - Adds new fishing animations to NPCs such as lake fishermen, standing stones fisher, Riften docks; uses OAR; adds fishing furniture; .ESL flagged
+- **Fishermen Fish** `1.4.0.0` modid=134408
+  - Adds new fishing animations to NPCs such as lake fishermen, standing stones fisher, Riften docks; uses OAR; adds fishing furniture; .ESL flagged
+- **Smart NPC Potions - Enemies Use Potions and Poisons** `1.30.0.0` modid=40102
+  - Gives enemies a chance to carry and use potions or poisons, with probabilities based on NPC type, voiced reactions, and compatibility with SKSE.
+- **NPC Loots in Combat** `2.1.0.0` modid=57855
+  - Allows NPCs to loot items from dead bodies, with configurable gold/item limits
+- **Neutral Whiterun Guards** `4.6.0.0` modid=70197
+  - Makes Whiterun guards neutral to both Stormcloak and Imperial factions before battle; dynamically changes factions; requires Papyrus Extender, Spell Perk Item Distributor, USSEP; compatible with patches.
+- **NPCs Ain't Hachikos** `1.0.0.0` modid=81618
+  - Fixes NPCs standing in the same spot continuously by enabling more dynamic AI behavior.
+- **Don't Stay in The Water - NPC Water AI Fix** `5.1.0.0` modid=52164
+  - SKSE64 plugin fixes NPCs stuck in water by correcting AI flag; safe, no esp; install via mod manager.
+- **Snores of Skyrim Lite** `1.0.0.0` modid=95114
+  - Lighter version of Snores of Skyrim with reduced volume, less frequent snoring, no lip movement, ESL flagged; cannot be used with original.
+- **City Bag Checks** `1.0.4.0` modid=112212
+  - Introduces random guard bag inspections at major cities for contraband such as moon sugar and skooma, with bypass options via persuasion or bribery, requires SKSE/SkyUI for MCM, ESL flagged and safe to add/remove mid‑game (V82 UPDATED).
+- **GATE TO SOVNGARDE (GTS) - Small Mods and Resources - NPCs Always React to Healing Spells** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **NPCs React To Frenzy** `1.0.0.0` modid=107492
+  - Mod makes NPCs react to Frenzy/Fury/Mayhem spells; enemies may hallucinate lines such as "Monsters! Kill them all!" or "ARGHHHH!!!", or say "WHAT ARE YOU DOING?!", "IT'S ME! Don't you recognize me?!", "Stop! I'll kill you if I have to!", "No! We've been betrayed!". Flagged ESL, safe mid‑game, no vanilla edits, no scripts, fully compatible.
+- **NPCs React To Necromancy (And More)** `f1.03` modid=70428
+  - Adds ~150 vanilla‑spliced reactions to necromancy; NPCs react shocked or hostile to undead summons, can lower relationship rank to -1, guards may warn or arrest; no vanilla edits, ESL, safe mid‑game, fully compatible.
+- **NPCs React To Invisibility - Apothecary Ethereal Potion Patch** `1.11.0.0` modid=91480
+  - Adds ~300+ voiced reactions to invisibility; NPCs react when you disappear or appear, e.g., "Ahh!! Where did you come from?!", spliced from vanilla lines; only sensible NPCs react; ESL, safe mid‑game, no vanilla edits, fully compatible.
+- **NPCs React To Invisibility - CC Bow of Shadows Patch** `1.11.0.0` modid=91480
+  - Adds ~300+ voiced reactions to invisibility; NPCs react when you disappear or appear, e.g., "Ahh!! Where did you come from?!", spliced from vanilla lines; only sensible NPCs react; ESL, safe mid‑game, no vanilla edits, fully compatible.
+- **NPCs React To Invisibility** `1.11.0.0` modid=91480
+  - Adds ~300+ voiced reactions to invisibility; NPCs react when you disappear or appear, e.g., "Ahh!! Where did you come from?!", spliced from vanilla lines; only sensible NPCs react; ESL, safe mid‑game, no vanilla edits, fully compatible.
+- **NPCs Take Cover - Smarter Anti-Cheese AI** `f1.01` modid=111890
+  - Improves NPC AI to seek cover and relocate when players exploit unreachable positions; includes 200+ voiced reactions like "Fight me like a warrior!" or "Take cover!". Dynamic AI, super lite, compatible with most mods.
+- **Suspicious City Guards** `5.0.0.0` modid=38762
+  - Adds suspicion behavior to city guards; they notice sneaking and will follow or arrest you if you commit crimes while observed.
+- **Hunters Loot - and skin animals** `1.1.0.0` modid=119348
+  - Allows hunters to loot and skin hunted animals, with optional animations via Papyrus Extender and animation replace mods.
+- **AI Overhaul - Artefakes Patch** `1.0.0.0` modid=55555
+  - Patch enabling ArteFakes artifacts and AI Overhaul AI on conflicting NPCs
+  - ESL flagged
+- **AI Overhaul - Obscure's College of Winterhold patch** `1.0.0.0` modid=82899
+  - Adjusts idle markers for NPCs in the College of Winterhold to prevent overlapping.
+- **AI Overhaul SSE - Official Patch Hub - RDO Patch** `1.0.1.0` modid=35823
+  - Provides official patches for AI Overhaul SSE, including RDO compatibility.
+- **AI Overhaul SSE** `1.9.0.0` modid=21654
+  - Overhauls vanilla NPC AI for realistic behavior
+  - Adds radiant AI, varied schedules, scripted scenes
+  - Improves companion behavior, theft detection, etc.
+  - Optional script usage, compatible with many mods
+  - ESL flagged
+- **Immersive Dialogue Expansion - Thalmor** `1.0.3.0` modid=168432
+  - Adds 352 new Thalmor lines, increasing their presence and interaction in quests and story.
+- **Considerate Followers - Followers are Silent During Dialogue** `1.3.0.0` modid=133659
+  - Prevents followers from speaking during player dialogue or while others are speaking.
+- **Followers React to Crafting** `1.1.0.0` modid=157750
+  - Adds the Forgemaster's Fingers quest for Orcs or Blood‑Kin; start by talking to a guard; dialogue varies; small gold reward; no major gameplay changes.
+- **Mephala Revoiced - Whispering Door Patch - Option4** `1.0.0.0` modid=157081
+  - Revoices Mephala with a new, manipulative voice, no longer using ASMR Lydia.
+- **Mephala Revoiced - Daedric Voices Patch - Option 4** `1.0.0.0` modid=157081
+  - Revoices Mephala with a new, manipulative voice, no longer using ASMR Lydia.
+- **Mephala Revoiced - Mephala's Curse Patch - Option4** `1.0.0.0` modid=157081
+  - Revoices Mephala with a new, manipulative voice, no longer using ASMR Lydia.
+- **Mephala Revoiced - Vanilla - Option 4** `1.0.0.0` modid=157081
+  - Revoices Mephala with a new, manipulative voice, no longer using ASMR Lydia.
+- **Arch-Curate Vyrthur Revoiced** `1.0.0.0` modid=145795
+  - Revoices Arch‑Curate Vyrthur with unique voice acting; requires Skyrim and Dawnguard; provides loose audio files; safe to add/remove; load after voice‑modifying mods.
+- **Shouts of Stallholders** `1.0.0.0` modid=139025
+  - Adds new attract lines for vanilla market stall sellers, supporting mod-added traders, lightweight and script‑free
+- **Naked Comments Overhaul** `f1.01` modid=136846
+  - Overhauls NPC comments when player is naked, adding 900+ voice lines across many relationships, races, weather, etc.; highly compatible, ESL, lightweight; may require keyword patches for custom clothing.
+- **Simply Knock SKSE64 DLL** `5.6.0.0` modid=24297
+  - Replacement SKSE64 DLL for Simply Knock that must be loaded after the Simply Knock mod.
+- **Simply Knock SE** `1.0.3.0` modid=14098
+  - Adds knock functionality on locked doors, offering knock, leave, unlock choices, NPC reactions, optional friend entry, and configurable settings.
+- **Remote Interactions** `f1.06` modid=89676
+  - Enables remote NPC interactions (shout, command, taunt, surrender) with contextual animations; ESL flagged and requires Taunt Your Enemies.
+- **Immersive Speechcraft SE** `1.1.0.0` modid=21296
+  - Adds extra dialogue options to most NPCs, compatible with dialogue overhaul mods.
+- **Fare Thee Well - Spouses and Children Give Blessings (TAGS - Family)** `1.3.0.0` modid=56366
+  - Allows spouses and adopted children to give voiced blessings or curses before travel, with 29 voice types and 5‑day effects providing health, magicka or stamina bonuses or penalties.
+- **Sinding's Werewolf Voice Overhaul- Mihail NPCs and Followers** `1.0.0.0` modid=88230
+  - Replaces Sinding's human voice with proper werewolf voice and sound effects when transformed, adding immersive audio and compatibility with Mihail NPCs.
+- **Denizens of Morthal - AI Overhaul Patch ESPFE** `1.0.0.0` modid=52475
+  - provides an ESPFE compatibility patch for the Denizens of Morthal AI overhaul.
+- **Denizens of Morthal Finding Helgi Patch** `1.5.0.0` modid=33965
+  - adds expanded dialogue and schedules for Morthal’s residents, fleshing out Benor, Eisa Blackthorn, Valdimar, and Erandur.
+- **Denizens of Morthal RS Children Patch** `1.5.0.0` modid=33965
+  - adds expanded dialogue and schedules for Morthal’s residents, fleshing out Benor, Eisa Blackthorn, Valdimar, and Erandur.
+- **Denizens of Morthal** `1.5.0.0` modid=33965
+  - adds expanded dialogue and schedules for Morthal’s residents, fleshing out Benor, Eisa Blackthorn, Valdimar, and Erandur.
+- **Autographs (Of Skyrim)** `1.3.0.0` modid=100385
+  - Adds ability for NPC authors to sign books, creating separate signed book objects; ESL flagged.
+- **GATE TO SOVNGARDE (GTS) - Small Mods and Resources - Additional Healing Reactions** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Honed Metal -NPC Crafting and Enchanting Services-** `1.26.1.0` modid=61015
+  - Provides NPC blacksmiths and mages to craft, temper, and enchant gear; fully customizable via MCM; blacksmith/enchanter skill determines perks, equipment type, cost, and item stats
+  - Uses own materials and charges go to their inventory; players can adjust skill via MCM; generally compatible but may conflict with perk‑tree or container‑modifying mods like Requiem or Dynamic Things
+- **Andrealphus Scene Tweaks** `1.0.0.0` modid=115647
+  - Collects various scene tweaks to enhance impact or restore removed content.
+- **Relationship Dialogue Overhaul Lite** `1.69.0.0SE` modid=42068
+  - Lightweight port of RDO adding dialogue overhaul features.
+- **To Your Face SE - AE - VR** `1.0.0.0u` modid=24720
+  - Prevents NPC greetings when player is behind them, SKSE plugin, requires SKSE, configurable deviation angle from default greeting distance.
+- **Carriages and Stables Dialogue Bundle - Carriages and Stables Dialogue Bundle** `1.0.0.0` modid=79297
+  - Adds voiced dialogue for carriage drivers and horse armor, enhancing immersion without requiring CC.
+- **More Dialogue Options** `1.5.1.0` modid=28905
+  - Adds voiced dialogue choices to improve immersion in conversations
+- **Misc Dialogue Edits** `1.9.5.2` modid=28904
+  - Provides subtle dialogue fixes and improvements with spliced vanilla lines for immersion
+- **Smart No More Stupid Dog Comments** `1.1.0.0` modid=5226
+  - Prevents NPCs from calling player-owned dogs 'Stupid dog!' and uses 'Good dog!' for friendly interactions.
+- **Companions Conversation Bundle - At Your Own Pace Patch** `1.10.0.0` modid=93761
+  - Provides a patch for the Companions Conversation Bundle and At Your Own Pace mods.
+- **Companions Dialogue Bundle - Dialogue Fix** `1.2.0.0` modid=93592
+  - Adds around 120 new voiced dialogue lines for the Companions, expanding Skjor and Ria with lore‑friendly options.
+- **Companions Dialogue Bundle** `1.2.0.0` modid=93592
+  - Adds around 120 new voiced dialogue lines for the Companions, expanding Skjor and Ria with lore‑friendly options.
+- **Collision Dialogue Overhaul** `f1.01` modid=132325
+  - Adds ~500 new sprint‑collision voice lines for NPCs, with optional disabling of NSFW/racist comments, ESL flagged.
+- **More to Say** `9.0.2.0` modid=22622
+  - Adds fully voiced inconsequential dialogue to NPCs across Whiterun, Riverwood, etc.
+- **Guard Dialogue Overhaul SE** `3.0.0.0` modid=22075
+  - Overhauls guard dialogue to enhance immersion, fixes bugs, expands coverage, adds optional features and SPIKE compatibility; configurable via global variables and console commands; includes MCM add‑on; compatible with many popular mods.
+- **GuardsTalk** `1.0.3.0` modid=104494
+  - Adds keywords for Guard Dialogue Overhaul to many modded armors and weapons via a single file, enabling guard reactions to weapons and armors; safe to install without item references.
+- **Dialogue Tweak - Civil War Quartermasters** `1.0.0.0` modid=91087
+  - Modifies vendor greetings for Eorlund Gray‑Mane and Civil War quartermasters to be more natural.
+- **Extended Bandit Dialogue** `1.0.2.0` modid=113168
+  - Features
+  - - Recognize Notable Opponents
+  - - More Idle Line Variety
+  - - React to World State
+  - Dialogue generated via TTS and RVC; ESL flagged; safe mid-game; 112 new lines across 11 voice types
+- **Extended Guard Dialogue - Dawnguard VA Fix** `1.0.5.0` modid=106523
+  - Adds new guard dialogue reacting to play style, cleared locations, world state; generated via TTS and RVC; ESL flagged; safe mid-game; 168 new lines across 3 guard voice types
+- **Extended Guard Dialogue** `1.0.5.0` modid=106523
+  - Adds new guard dialogue reacting to play style, cleared locations, world state; generated via TTS and RVC; ESL flagged; safe mid-game; 168 new lines across 3 guard voice types
+- **Cheeky Kids** `1.4.0.0` modid=112455
+  - Has children approach NPCs and insult them with randomized child dialogues using vanilla assets.
+- **Chatty NPCs and Followers** `1.6.1.0` modid=133266
+  - Makes NPCs greet each other, ask about health, and interact with followers using vanilla voice lines.
+- **Dremora Lines Expansion** `1.1.0.0` modid=100562
+  - Expands Dremora lines with 350 new lines and 7 distinct voices; adds new faces and voice diversity; requires Additional Dremora Faces; install via mod manager.
+- **Brawl Lines Expansion and Fixes** `f1.02` modid=94070
+  - Repairs brawl dialogue bugs and adds new contextual lines, including cheer animations and repeat‑prevention for bystanders
+- **Vampire Lines Expansion - Orc Add-on** `f1.02` modid=83484
+  - Adds ~150 new vampire voice lines with condition‑based triggers; optional file restores orc vampire lines; part of Lines Expansion series; compatible with Requiem; no conflicts in 1000+ modlist
+- **Vampire Lines Expansion** `f1.02` modid=83484
+  - Adds ~150 new vampire voice lines with condition‑based triggers; optional file restores orc vampire lines; part of Lines Expansion series; compatible with Requiem; no conflicts in 1000+ modlist
+- **Forsworn and Thalmor Lines Expansion** `f1.02` modid=80188
+  - Adds ~250 new unique lines for Thalmor and Forsworn, spliced from vanilla; adds personality and variety to combat, idle, warnings; compatible; some lines trigger if wearing Talos amulet; universal lines for generic NPCs.
+- **Falmer Servant Lines Expansion - Unique Abilities** `f1.01` modid=120995
+  - Adds 483 new unique voiced lines for Falmer Servants; optional plugins expand spawn locations and outfit variations; ESL flagged; compatible with everything
+- **Falmer Servant Lines Expansion - More Locations** `f1.01` modid=120995
+  - Adds 483 new unique voiced lines for Falmer Servants; optional plugins expand spawn locations and outfit variations; ESL flagged; compatible with everything
+- **Falmer Servant Lines Expansion** `f1.01` modid=120995
+  - Adds 483 new unique voiced lines for Falmer Servants; optional plugins expand spawn locations and outfit variations; ESL flagged; compatible with everything
+- **Civil War Lines Expansion** `1.1.0.0` modid=77566
+  - FEATURES
+  - - Adds ~500 new voice lines for Imperials and Stormcloaks reacting to events, combat, warnings, idles, racism
+  - - Lines are spliced from vanilla (~100 per voice type); compatible with everything; configurable via MCM
+- **Bandit Lines Expansion - Dark Elf Voices** `f1.09` modid=63733
+  - Adds approximately 500 new, unique bandit dialogue lines with varied personalities and contextual conditions, enhancing immersion without altering vanilla records
+- **Bandit Lines Expansion** `f1.09` modid=63733
+  - Adds approximately 500 new, unique bandit dialogue lines with varied personalities and contextual conditions, enhancing immersion without altering vanilla records
+- **Dialogue Expansion - Imperial Soldiers** `1.0.0.0` modid=113208
+  - Adds over 150 new dialogue lines and 13 new scenes for Imperial soldiers, with AI‑generated voices.
+- **Dialogue Expansion - Windhelm** `1.31.0.0` modid=112415
+  - adds 700+ new dialogue lines and 30 extra scenes for Windhelm residents, overhauling their dialogue to reflect the city’s hostile nature, voiced by 11labs AI.
+- **Dovah Names** `1.1.0.0` modid=74053
+  - Assigns unique names to all generic dragons
+- **Daedric Names** `1.2.0.0` modid=74055
+  - Adds unique Daedric names to generic Daedra such as Atronachs and Dremora.
+- **Ashlander Nomads Names - Reduced Chance** `1.1.0.0` modid=73315
+  - Adds Ashlander‑cultural names to NPCs in Solstheim with reduced spawn chance.
+- **Reachmen Tribes Names** `1.2.0.0` modid=73312
+  - Assigns unique Reachmen tribe names to all Forsworn NPCs.
+- **Tamrielic Names** `1.2.1.0` modid=73153
+  - Assigns appropriate names to all anonymous humanoid NPCs.
+- **Soaking Wet - Character Wetness Effect** `1.2.1.0` modid=68025
+  - SKSE plugin adds wetness effect to characters and gear in water, rain, snow with seamless soak/dry transitions and adjustable shine.
+- **RASS (R.A.S.S) Seasons of Skyrim Patch** `2.0.0.0` modid=93600
+  - Forces cold breaths from R.A.S.S. to appear anywhere in Skyrim during November‑February regardless of region.
+- **R.A.S.S. - Rain Ash And Snow Shaders** `3.5.1.0` modid=22780
+  - Adds visual effects such as ash, wetness, frost, bubbles, camera lens, and immersion effects to player and NPCs under certain weather conditions, toggleable via MCM.
+- **Tamrielic Distribution** `1.4.1.0` modid=71372
+  - Framework that integrates modules such as Alternative Armors (Ebony, Elven Hunter, Iron, Leather, Silver, Steel) and other content via selectable FOMOD options.
+- **Nostromo79's Earrings - Integrated** `1.1.0.0` modid=29064
+  - Integrates earrings into leveled lists and NPC outfits; visible/invisible based on headgear; compatible with Wearable Lanterns and Bandolier; patches for many mods.
+- **Detailed NPCs - Skull Masks for NPCs (SPID)** `2.0.0.0` modid=62994
+  - randomly equips skull masks from Beast Masks of Skyrim to NPCs, configurable per NPC.
+- **Detailed NPCs - Scarves for NPCs (SPID)** `2.0.0.0` modid=67464
+  - Distributes scarves to NPCs via Spell Perk Item Distributor with configurable NPCs and textures.
+- **Detailed NPCs - Fishing Gear for NPCs (SPID)** `2.0.0.0` modid=63934
+  - equips fishing gear (pole, trap, slaughterfish) to select NPCs, configurable per NPC.
+- **Detailed NPCs - Fingerless Gloves for NPCs (SPID)** `2.0.0.0` modid=63943
+  - adds fingerless gloves for NPCs in brown, black, or grey, configurable per NPC.
+- **Detailed NPCs - Blanket Scarves for NPCs (SPID)** `2.0.0.0` modid=63951
+  - adds 21 blanket scarf variants for NPCs, configurable per NPC.
+- **Sexier Vanilla - Guards** `1.0.0.0` modid=60399
+  - Adds diverse, immersive heavy and light armor variants to town guards and Stormcloaks while retaining the vanilla aesthetic.
+- **Werewolf Revert Effect - Authentic Sinding** `2.0.0.0` modid=76472
+  - Adds an immersive revert animation and sound for werewolf form change, replacing instant poof.
+- **Family-man Sinding SE** `6.7.5.0` modid=33517
+  - Transforms Sinding into a fully voiced follower with 200+ lines; requires ESPFE conversion; offers unique dialogue and marriage option.
+- **Teldryn Sero Dialogue Expansion - Unofficial Update** `1.1.0.1` modid=141729
+  - Tweaks dialogue frequency and adds conditions, reducing line repetition and adjusting location triggers.
+- **A Serious Wedding - Teldryn Sero Marriage Mod SSE** `2.1.0.0` modid=10238
+  - 105-line Dunmeri wedding quest
+  - Free hugs grant +10% XP boost
+  - Allows marriage to Teldryn (any gender)
+  - Safe mid-game, no vanilla edits
+  - Requires day in Raven Rock, alive priests
+- **Authentic Civil War Followers Hadvar and Ralof - Hearthfire Update** `2.3.0.0` modid=72000
+  - Makes Hadvar and Ralof recruitable as followers after Civil War; marriageable; attend final battle; optional high‑poly faces; compatible with Alternate Start.
+- **FDE Jenassa Auri Patch** `7.0.0.0` modid=120255
+  - Expands Jenassa with 1785 AI‑voiced lines; quest awareness for all guilds, main, DLC, Daedric quests; romance quest, marriage lines, approval system, location & weather awareness; 100% compatible; includes Inigo & Elysium Estate patches.
+  - Personality: cynical mercenary with tragic past, values rewards.
+- **Follower Dialogue Expansion - Jenassa - Inigo Patch** `7.0.0.0` modid=120255
+  - Expands Jenassa with 1785 AI‑voiced lines; quest awareness for all guilds, main, DLC, Daedric quests; romance quest, marriage lines, approval system, location & weather awareness; 100% compatible; includes Inigo & Elysium Estate patches.
+  - Personality: cynical mercenary with tragic past, values rewards.
+- **Follower Dialogue Expansion - Aela the Huntress - Auri Patch** `9.0.0.0` modid=114801
+  - Expands Aela with 2743 voiced lines, quest and location awareness, romance options, combat lines, ESL flagged; fully compatible with other mods
+- **Follower Dialogue Expansion - Aela the Huntress - Inigo Patch** `9.0.0.0` modid=114801
+  - Expands Aela with 2743 voiced lines, quest and location awareness, romance options, combat lines, ESL flagged; fully compatible with other mods
+- **Follower Dialogue Expansion - Aela the Huntress - Lucien Patch** `9.0.0.0` modid=114801
+  - Expands Aela with 2743 voiced lines, quest and location awareness, romance options, combat lines, ESL flagged; fully compatible with other mods
+- **Follower Dialogue Expansion - Aela the Huntress - Remiel Patch** `9.0.0.0` modid=114801
+  - Expands Aela with 2743 voiced lines, quest and location awareness, romance options, combat lines, ESL flagged; fully compatible with other mods
+- **Follower Dialogue Expansion - Aela the Huntress - Xelzaz Patch** `9.0.0.0` modid=114801
+  - Expands Aela with 2743 voiced lines, quest and location awareness, romance options, combat lines, ESL flagged; fully compatible with other mods
+- **Follower Dialogue Expansion - Marcurio (FDE)** `1.0.2.0` modid=174725
+  - Expands Marcurio with 210 AI‑voiced lines; arrogant wizard, quest awareness for College of Winterhold, Dark Brotherhood, main & DLC; romance; location awareness; 100% compatible.
+- **Extended Hireling Dialogue - Teldryn** `1.0.0.0` modid=167886
+  - Expands Teldryn Sero's dialogue with ~770 new lines plus ~300 for other NPCs, ESL‑flagged.
+- **Authentic Sinding Follower** `6.7.5.0` modid=33517
+  - Transforms Sinding into a fully voiced follower with 200+ lines; requires ESPFE conversion; offers unique dialogue and marriage option.
+- **Teldryn Sero Dialogue Expansion** `1.0.0.0` modid=42434
+  - Adds ~210 unique Teldryn dialogue lines with conditional commentary and player options, built on synthetic xVASynth lines.
+- **Less Generic Housecarls - Argis (Markarth) Dialogue Expansion and Quest** `1.3.0.0` modid=48194
+  - Fix that adds dialogue expansion and personal quest for Argis the Bulwark, your Markarth housecarl.
+- **Serana Dialogue Edit - Skyrim Special Edition** `f1.02` modid=16222
+  - Overhauls Serana's dialogue with bug fixes, custom branches, expanded radiant dialogue, and expansions into Hearthfire and Dragonborn
+- **Authentic Civil War Followers Hadvar and Ralof** `2.3.0.0` modid=72000
+  - Makes Hadvar and Ralof recruitable as followers after Civil War; marriageable; attend final battle; optional high‑poly faces; compatible with Alternate Start.
+- **Vanilla Follower Expansion - Illia (VFE)** `1.2.0.0` modid=92333
+  - Adds new dialogue and idle animations to Illia, the ex-witch from Darklight Tower, with lore-friendly backstory and location-specific comments.
+- **Vanilla Follower Expansion - Brelyna (VFE)** `1.0.0.0` modid=93973
+  - Adds new dialogue and idle comments for Brelyna, a vanilla follower at the College of Winterhold.
+- **Follower Dialogue Expansion - Eola** `1.0.0.0` modid=157012
+  - Expands Eola, a Namira cultist, with 233 new lore‑friendly dialogue lines and quest awareness.
+- **Follower Dialogue Expansion - Rayya** `3.0.0.0` modid=143288
+  - Expands Rayya with 740 immersive voiced lines; desert warrior redemption backstory; quest awareness for main, DLC, Dark Brotherhood, Thieves Guild, Companions, In My Time of Need, Ansilvund; romance lines, approval system, location & weather awareness, banter with Erik; explores Redguard culture; 100% compatible; notes synergy with Shezarrine.
+- **Follower Dialogue Expansion - Uthgerd the Unbroken** `2.0.0.0` modid=122487
+  - Expands Uthgerd the Unbroken with 233 voiced lines, adds quest awareness for Dark Brotherhood, main quest, Companions, DLC, new story‑driven interactions, romance, location awareness, banter with Aela the Huntress; lore‑friendly; safe mid‑save.
+- **Follower Dialogue Expansion - Mjoll the Lioness** `2.0.0.0` modid=116025
+  - Expands Mjoll with 451 AI‑voiced lines; courageous heroine, quest awareness, romance arc, personal quest; location awareness; combat lines; 100% compatible; recruit after sword retrieval; lore‑friendly.
+- **Follower Dialogue Expansion - Lydia** `1.5.0.0` modid=119226
+  - Expands Lydia with 300 AI‑voiced lines; quest awareness for Companions, main & DLC; romance lines; location awareness; lore‑friendly; 100% compatible; includes comments on other followers, banter with Jenassa & Erik; safe mid‑save.
+- **Follower Dialogue Expansion - Jordis the Sword-Maiden** `1.1.3.0` modid=117930
+  - Expands Jordis with 191 AI‑voiced lines; quest awareness for Dark Brotherhood, main & DLC; romance options; location awareness; lore‑friendly; 100% compatible.
+- **Follower Dialogue Expansion - Jenassa** `7.0.0.0` modid=120255
+  - Expands Jenassa with 1785 AI‑voiced lines; quest awareness for all guilds, main, DLC, Daedric quests; romance quest, marriage lines, approval system, location & weather awareness; 100% compatible; includes Inigo & Elysium Estate patches.
+  - Personality: cynical mercenary with tragic past, values rewards.
+- **Follower Dialogue Expansion - Faendal** `1.1.0.0` modid=130418
+  - Expands Faendal with 240 AI‑voiced lines; quest awareness for Thieves Guild, Dark Brotherhood, Companions, main & DLC quests; romance lines with Camilla; location awareness; 100% compatible.
+  - Features include humorous Bosmer archer backstory, sarcasm, down‑to‑earth perspective.
+- **Follower Dialogue Expansion - Erik the Slayer** `2.0.1.1` modid=116719
+  - Expands Erik the Slayer with 222 AI‑voiced lines; quest & location awareness; romance options; marriageable; 100% compatible.
+  - Features: 222 voiced lines, quest awareness for vanilla main quest, DLC, guilds, new story‑driven interactions, marriage lines, location awareness, lore‑friendly expansion.
+- **Follower Dialogue Expansion - Aela the Huntress** `9.0.0.0` modid=114801
+  - Expands Aela with 2743 voiced lines, quest and location awareness, romance options, combat lines, ESL flagged; fully compatible with other mods
+- **Lawless Simonrim** `2.1.0.0` modid=88080
+  - Overhauls bandit enemies with multiple tiers, new archetypes, enhanced stats, perks, spells, gold scaling and unique loot
+- **Madmen - A Forsworn Overhaul - Patch FOMOD** `2.0.1.0` modid=98579
+  - Overhauls Forsworn, Hagraven and Witch enemies with multiple tiers, unique magic, stats, perks, and expanded loot
+- **Lawless - A Bandit Overhaul - Patches FOMOD** `2.1.0.0` modid=88080
+  - Overhauls bandit enemies with multiple tiers, new archetypes, enhanced stats, perks, spells, gold scaling and unique loot
+- **Lawless - A Bandit Overhaul** `2.1.0.0` modid=88080
+  - Overhauls bandit enemies with multiple tiers, new archetypes, enhanced stats, perks, spells, gold scaling and unique loot
+- **Madmen - A Forsworn Overhaul** `2.0.1.0` modid=98579
+  - Overhauls Forsworn, Hagraven and Witch enemies with multiple tiers, unique magic, stats, perks, and expanded loot
+- **Fjori and Holgeir in Sovngarde** `1.1.0.0` modid=35190
+  - Adds NPCs Fjori and Holgeir to Sovngarde as heroes after freeing them in Ansilvund.
+- **Face Sculptor Expanded** `f1.02` modid=110116
+  - Makes Face Sculptor an NPC with voiced scenes, new AI schedules, and removes bounties when altering your face.
+- **ArteFakes - Unique Artifacts Replacer - Updated Plug-In** `2.0.0.0` modid=41254
+  - Replaces models of many unique artifacts with higher‑detail versions using vanilla textures; includes updates like shine fixes and forging recipes; optional compatibility patches.
+- **Misc Artificer Patches - Praedy's Staves** `1.3.0.0` modid=99684
+  - Provides texture patches for Artificer items such as jewelry and helmets without altering gameplay.
+- **Misc Artificer Patches - Improved Closefaced Helmets** `1.3.0.0` modid=99684
+  - Provides texture patches for Artificer items such as jewelry and helmets without altering gameplay.
+- **Misc Artificer Patches - Canis Hyseria** `1.3.0.0` modid=99684
+  - Provides texture patches for Artificer items such as jewelry and helmets without altering gameplay.
+- **Misc Artificer Patches - ArteFakes** `1.3.0.0` modid=99684
+  - Provides texture patches for Artificer items such as jewelry and helmets without altering gameplay.
+- **Artificer - An Artifact Overhaul - Unique Utopia Patch** `1.0.11.0` modid=99619
+  - Overhauls artifacts to distribute Thaumaturgy and Mysticism enchantments; adds powerful artifacts with unique bonuses; requires Mysticism and Thaumaturgy; balances stats and adds new enchantments.
+- **Artificer - An Artifact Overhaul - Ahzidal Armor Patch** `1.0.11.0` modid=99619
+  - Overhauls artifacts to distribute Thaumaturgy and Mysticism enchantments; adds powerful artifacts with unique bonuses; requires Mysticism and Thaumaturgy; balances stats and adds new enchantments.
+- **Artificer - An Artifact Overhaul - USSEP Patch** `1.0.11.0` modid=99619
+  - Overhauls artifacts to distribute Thaumaturgy and Mysticism enchantments; adds powerful artifacts with unique bonuses; requires Mysticism and Thaumaturgy; balances stats and adds new enchantments.
+- **Artificer - An Artifact Overhaul - Dragon Priest Staves** `1.0.11.0` modid=99619
+  - Overhauls artifacts to distribute Thaumaturgy and Mysticism enchantments; adds powerful artifacts with unique bonuses; requires Mysticism and Thaumaturgy; balances stats and adds new enchantments.
+- **Daedric Voices - Hircine** `0.5.0.0` modid=32090
+  - Adds Daedric Prince voice lines triggered when using their artifacts, with configurable chances and console commands.
+- **ArteFakes - Unique Artifacts Replacer** `2.0.0.0` modid=41254
+  - Replaces models of many unique artifacts with higher‑detail versions using vanilla textures; includes updates like shine fixes and forging recipes; optional compatibility patches.
+- **Artificer - An Artifact Overhaul** `1.0.11.0` modid=99619
+  - Overhauls artifacts to distribute Thaumaturgy and Mysticism enchantments; adds powerful artifacts with unique bonuses; requires Mysticism and Thaumaturgy; balances stats and adds new enchantments.
+- **King-Priest - Enhanced Dragon Priests** `4.0.1.0` modid=59652
+  - Increases difficulty of Dragon Priest encounters, balancing them for high‑level play
+- **Dragon Priest Retexture SE - Half Res** `1.1.0.0` modid=101101
+  - Retextures all dragon priest masks, weapons, and robes, with optional SPID addon for custom textures on named priests.
+- **Konarik's Accoutrements** `5.5.3.0` modid=22206
+  - Adds textures to enhance encounters with named Dragon Priests.
+- **Falmer 'Dialogue' Overhaul - Echolocation - Standalone Version** `1.1.0.0` modid=114625
+  - Overhauls Falmer sounds to echolocation, adds new idle, alert, and taunt lines; script‑free, feral atmosphere, ESL flagged, compatible with custom creature mods
+- **Doge Cheems Sploot DAR OAR Randomizer SE** `1.2.0.0` modid=125043
+  - Modifies dog idle animations.
+- **Cozy Giants** `2.0.0.0` modid=30830
+  - Replaces giant textures with outfits giving a Game of Thrones‑style appearance.
+- **Conditional Dog Barking (OAR)** `1.2.0.0` modid=72336
+  - Control what dogs are silent and what dogs can bark in your game and when, where and how often with a help of Open Animation Replacer. Customizable alternative to Quiet Dog animation replacer mod. No esp/esl, just conditional OAR folders...
+- **Canine Loyalty - Spriggans Don't Affect Dogs** `1.1.0.0` modid=79560
+  - Spriggan animal‑control spell no longer targets dogs
+- **Edmond's SkyTEST - Realistic Animals and Predators - Lite ESL** `3.6.0.0` modid=84539
+  - Lightweight ESL version improving vanilla animal AI (foraging, hunting, pack behavior), fixes bugs, no scripts, highly compatible.
+- **Meekoge - A Meeko Replacer** `1.1.0.0` modid=88585
+  - Replaces Meeko with a Shiba Inu model and 4K textures, optimized for performance.
+- **Talkative Hagravens - 2023 Halloween Special** `1.1.0.0` modid=103488
+  - adds 12 new immersive dialogue lines for Hagravens, featuring combat taunts and unique lines for named Hagravens, compatible with most Hagraven mods, voice by Elizabeth Plant, uses .lip/.wav fusion
+- **Talkative Dragon Priests- Mihail Monsters and Animals** `1.0.0.0` modid=83735
+  - Adds 32 custom Dragon Priest dialogue lines for epic battles; part of Mihail Monsters and Animals series; compatible with most Dragon Priest mods.
+- **Haugbui - A Draugr Overhaul - CC Fishing Patch** `4.2.0.0` modid=26188
+  - Provides balance adjustments, new items, unique boss designs, and variants for draugr enemies.
+- **Haugbui - A Draugr Overhaul** `4.2.0.0` modid=26188
+  - Provides balance adjustments, new items, unique boss designs, and variants for draugr enemies.
+- **Animals Swim (Sort of)** `1.0.0.0` modid=78267
+  - Makes rabbits, deer, etc. float near surface instead of walking underwater
+  - Slows movement in water, simple ESL flagged mod
+  - ESL flagged
+- **Dragon Random Stagger Animation** `1.0.0.0` modid=155346
+  - Adds three extra random stagger animations for dragons on ground, rock, wall, and tower surfaces, totaling four including the original
+- **DCA - Dragon Combat Animations** `1.0.0.0` modid=123113
+  - Overhauls dragon attack animations for more balanced combat.
+- **Dragons Fall Down - Immersive Airborne Death** `1.0.3.0` modid=56317
+  - Makes dragons ragdoll and plummet instantly when they die mid‑air, enhancing immersion.
+- **Infinite Dragon Variants** `2.0.1.0` modid=74983
+  - Provides unique colorful visual variants for dragons.
+- **Dragon War - A Dragon Overhaul** `4.1.6.0` modid=51310
+  - Overhauls dragons with new AI, elemental shouts (Shock, Poison, Sun, Coldfire), tiered levels, injury system, and enhanced loot, increasing difficulty and altering progression.
+- **Horse Whistle Key - Named Horses** `2.3.0.0` modid=72165
+  - Adds a key to call, manage, and interact with your horse, including inventory, renaming, and saddle equipping.
+- **Use Those Horses - Shields** `1.0.0.0` modid=63271
+  - Allows horses to carry items such as weapons and armor via Immersive Equipment Displays.
+- **Horsepower - Skills of the Wild Horse Speed Patch** `1.2.0.0` modid=169335
+  - Adds directional horse animations for walk, trot, run, sprint, swim, jump, and land; improves handling, speed, turning, and instant jumps; introduces follow‑up attacks chainable with left/right variants and power attacks; adds rear‑up jump with increased height; supports in‑place turning up to 180° and interruptible turns; adds ragdoll for horses, reduces fall damage, sprint swimming, and petting idle; requires SKSE/Address Library, Animation Motion Revolution, Nemesis or Pandora; compatible with most horse mods but conflicts with those editing horse race or behavior hkx
+- **HorsePower - Modernized Horse Riding (Total Riding Overhaul)** `1.2.0.0` modid=169335
+  - Adds directional horse animations for walk, trot, run, sprint, swim, jump, and land; improves handling, speed, turning, and instant jumps; introduces follow‑up attacks chainable with left/right variants and power attacks; adds rear‑up jump with increased height; supports in‑place turning up to 180° and interruptible turns; adds ragdoll for horses, reduces fall damage, sprint swimming, and petting idle; requires SKSE/Address Library, Animation Motion Revolution, Nemesis or Pandora; compatible with most horse mods but conflicts with those editing horse race or behavior hkx
+- **Use Those Horses** `1.0.0.0` modid=63271
+  - Allows horses to carry items such as weapons and armor via Immersive Equipment Displays.
+- **Animated Mounted Casting - Cast Spells On Horseback And Dismiss Horse** `2.22.0.0` modid=81270
+  - Cast spells while on horseback, animated spell casting
+  - Adds summon horse spell, dismisses regular horse, compatible with SKSE, ESL flagged
+- **Horse Whistle Key** `2.3.0.0` modid=72165
+  - Adds a key to call, manage, and interact with your horse, including inventory, renaming, and saddle equipping.
+- **zzjay's Horse Overhaul - SE** `1.5.0.0` modid=63640
+  - Overhauls horse appearance with new saddles, improved mane, and unique frost texture.
+- **JK's Interiors Patch Collection** `5.20.1.0` modid=35910
+  - Contains patches and tweaks to improve compatibility of JK's Interiors with various mods.
+- **New Madness 2.0 - Shivering Trees and Mushrooms** `f1.01` modid=128488
+  - Overhauls the Mind of Pelagius and its wing with English location names and an ESL fix to avoid crashes.
+- **New Madness 2.0 - Shivering Sky** `f1.01` modid=128488
+  - Overhauls the Mind of Pelagius and its wing with English location names and an ESL fix to avoid crashes.
+- **New Madness 2.0 - Shivering Pelagius Mind** `f1.01` modid=128488
+  - Overhauls the Mind of Pelagius and its wing with English location names and an ESL fix to avoid crashes.
+- **New Madness 2.0** `f1.01` modid=128488
+  - Overhauls the Mind of Pelagius and its wing with English location names and an ESL fix to avoid crashes.
+- **JK's Palace of the Kings** `1.2.0.0` modid=48902
+  - Offers an enhanced palace overhaul for Windhelm's Palace of the Kings with performance notes.
+- **JK's The Bannered Mare** `1.1.1.0` modid=33845
+  - Lore‑friendly, script‑free overhaul of the Bannered Mare inn.
+- **Riverwood Trader Is A Mess** `1.4.2.0` modid=63631
+  - Turns Riverwood Trader into a mess, lets player clean it for reward, optional patches available.
+- **Obscure's College of Winterhold Meshes Optimized and Merged for Community Shaders** `1.0.0.0` modid=139165
+  - Merges architecture meshes to reduce drawcalls for Community Shaders and Light Limit Fix users.
+- **Solitude Temple Frescoes 2019 - eye cubemap patch** `1.1.0.0` modid=33514
+  - Fixes eye cubemap conflicts in Solitude and Temple Frescoes by remapping to an improved cubemap.
+- **Obscure's College of Winterhold Loot Rebalancing** `1.0.0.0` modid=89173
+  - Replaces placed loot with leveled variants to scale with player; halves gold, changes Ancano's dagger; must install before visiting College; not to be uninstalled mid‑playthrough.
+- **Obscure's College of Winterhold NPC Stuck in Staircase Fix** `0.1.0.0` modid=53713
+  - Fixes NPCs getting stuck in the staircase between The Hall of Elements and The Arch-mage's Quarters.
+- **JKs Guild HQ Interiors Patch Collection** `1.23.0.0` modid=61416
+  - Offers separate patches for JK's Interiors Guild HQs with optional compatibility patches for various mods like Bards College, Castle Dour, and others.
+- **JK's High Hrothgar** `1.0.2.0` modid=62219
+  - Delivers an enhanced temple overhaul for the High Hrothgar region.
+- **Solitude and Temple Frescoes 2019** `1.3.0.0` modid=29695
+  - Adds painted frescoes to the Temple of the Divines in Solitude and other temples/halls of the dead.
+- **Akaviri History - Lore-Friendly Additions and Tweaks** `1.1.0.0` modid=76804
+  - Adds Akaviri furniture, unique Esbern equipment, Akaviri weapons in Sky Haven
+  - Adds female Dremora, human brows, vampire eyes, human/elf hairstyles
+  - Adds up to 216 unique Dremora faces
+  - Compatibility patches available
+  - ESL flagged
+- **Obscure's College of Winterhold** `1.6.1.0` modid=20514
+  - Expands College of Winterhold with new towers, reimagined Arcanaeum, Hall of Elements, revised set dressing, dynamic changes; aims for immersion and compatibility.
+- **Immersive Fort Dawnguard** `1.2.0.0` modid=40436
+  - Overhauls Dayspring Canyon with new fortifications, interior spaces, greenhouses, library, bathhouse, JIT lighting, additional areas and quest integrations, compatible with many texture and performance mods, requires back‑up and load order adjustments
+- **RedBag's Dragonsreach - SE** `1.5.0.0` modid=41870
+  - Adds custom 3D objects to Dragonsreach interior.
+- **JK's Castle Dour** `1.3.0.0` modid=74309
+  - Provides an enhanced castle overhaul for player housing.
+- **JK's The Bards College** `1.0.3.0` modid=71054
+  - Enhanced overhaul of the Bards College.
+- **GATE TO SOVNGARDE (GTS) - Small Mods and Resources - Juniper's Frostflow Lighthouse GtS Patch** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Juniper's Frostflow Lighthouse** `1.0.0.0` modid=59248
+  - Gives the Frostflow Lighthouse new life and narrative closure after clearing the Frostflow Abyss.
+- **Dungeons - Revisited** `1.1.1.0` modid=51798
+  - Overhauls Skyrim dungeons, doubles size, adds new paths, rooms, enemies; lore‑friendly; install via mod manager; compatible with lighting mods.
+- **JK's Septimus Signus's Outpost** `1.0.1.0` modid=66915
+  - Overhauls the Septimus Signus outpost interior and exterior with performance improvements.
+- **No Alchemical Ingredients in Vanilla Player Homes** `1.0.0.0` modid=91382
+  - Disables all alchemical ingredients in vanilla player homes.
+- **CC Myrwatch - Tweaks and Enhancements - Sorcerer Patch** `1.5.5.0` modid=97659
+  - Adds stairway, vestibule, balcony; removes staff enchanter & forge; adds carpenter workbench for crafting stations; acquire via College of Winterhold, Shalidor’s Maze, or hard persuasion; price adjustable
+- **CC Myrwatch - Tweaks and Enhancements - CC Fishing Patch** `1.5.5.0` modid=97659
+  - Adds stairway, vestibule, balcony; removes staff enchanter & forge; adds carpenter workbench for crafting stations; acquire via College of Winterhold, Shalidor’s Maze, or hard persuasion; price adjustable
+- **CC Myrwatch - Tweaks and Enhancements** `1.5.5.0` modid=97659
+  - Adds stairway, vestibule, balcony; removes staff enchanter & forge; adds carpenter workbench for crafting stations; acquire via College of Winterhold, Shalidor’s Maze, or hard persuasion; price adjustable
+- **Skyfall's Sleeping Hist Tree Overhaul - Seasonal Patch** `1.4.0.0` modid=116792
+  - Overhauls the Sleeping Tree area with an ancient Hist tree, vines, lanterns, fog, ambient sounds, and lore‑friendly details.
+- **Skyfall's Sleeping Hist Tree Overhaul - Xelzaz Patch** `1.4.0.0` modid=116792
+  - Overhauls the Sleeping Tree area with an ancient Hist tree, vines, lanterns, fog, ambient sounds, and lore‑friendly details.
+- **Environs - Whiterun Watchtower Doesn't Stay Broken - Northern Roads Patch** `f3.00` modid=76261
+  - Gradually rebuilds Western Watchtower after dragon attack with time‑based stages, adds walls, workers, guards.
+- **Environs - The Shrines of Talos - Patch Collection** `f3.02` modid=85141
+  - Adds dynamic details and NPCs to Talos shrines across Skyrim, reacts to Civil War control, includes visual improvements and voiced interactions.
+- **Environs - Kolskeggr - Patch Collection** `f3.03` modid=78477
+  - Overhauls Kolskeggr Mine area with dynamic post‑quest changes—rebuilding house, adding miners/guards, time‑based stages, improves immersion.
+- **Environs - Hroggar's House - Patch Collection** `2.0.3.0` modid=83457
+  - Makes Eisa Blackthorn reside in Morthal and rebuild Hroggar's burned house, allowing her to be recruited as a follower.
+- **Environs - Abandoned Abodes - Patch Collection** `1.0.4.0` modid=82410
+  - Adds dynamic NPCs to previously empty interiors after quests, affects 7 locations, gradual changes over ~15 days, adds furniture and voice lines, compatible with many city overhauls.
+- **Environs - The Greenwood Shack - Alternative Perspective New Beginnings Patch** `3.0.1.0` modid=73732
+  - Dynamic changes to Greenwood Shack over time—intact start, dragon‑attack destruction, rebuilding stages, configurable triggers, lightweight immersion mod.
+- **Environs - Riften Warehouse - Patch Collection** `f2.01` modid=88024
+  - Turns the Riften dock warehouse into an East Empire Company outpost after the skooma quest, adding new NPCs and visual changes.
+- **Environs - The Ruined Tundra Farmhouse - Patch Collection** `3.0.2.0` modid=72981
+  - Dynamic changes to ruined farmhouse near Whiterun with stages from intact to rebuilt, time‑based progression, optional versions, lightweight.
+- **Skyfall's Sleeping Hist Tree Overhaul** `1.4.0.0` modid=116792
+  - Overhauls the Sleeping Tree area with an ancient Hist tree, vines, lanterns, fog, ambient sounds, and lore‑friendly details.
+- **Environs - The Shrines of Talos** `f3.02` modid=85141
+  - Adds dynamic details and NPCs to Talos shrines across Skyrim, reacts to Civil War control, includes visual improvements and voiced interactions.
+- **Environs - Kolskeggr** `f3.03` modid=78477
+  - Overhauls Kolskeggr Mine area with dynamic post‑quest changes—rebuilding house, adding miners/guards, time‑based stages, improves immersion.
+- **Environs - Hroggar's House** `2.0.3.0` modid=83457
+  - Makes Eisa Blackthorn reside in Morthal and rebuild Hroggar's burned house, allowing her to be recruited as a follower.
+- **Environs - Abandoned Abodes** `1.0.4.0` modid=82410
+  - Adds dynamic NPCs to previously empty interiors after quests, affects 7 locations, gradual changes over ~15 days, adds furniture and voice lines, compatible with many city overhauls.
+- **Environs - Whiterun Watchtower Doesn't Stay Broken** `f3.00` modid=76261
+  - Gradually rebuilds Western Watchtower after dragon attack with time‑based stages, adds walls, workers, guards.
+- **Environs - The Greenwood Shack** `3.0.1.0` modid=73732
+  - Dynamic changes to Greenwood Shack over time—intact start, dragon‑attack destruction, rebuilding stages, configurable triggers, lightweight immersion mod.
+- **Environs - Riften Warehouse** `f2.01` modid=88024
+  - Turns the Riften dock warehouse into an East Empire Company outpost after the skooma quest, adding new NPCs and visual changes.
+- **Environs - The Ruined Tundra Farmhouse** `3.0.2.0` modid=72981
+  - Dynamic changes to ruined farmhouse near Whiterun with stages from intact to rebuilt, time‑based progression, optional versions, lightweight.
+- **Environs - Master Plugin** `f2.00` modid=91160
+  - Required master plugin for the Environs series that causes intentional conflicts and is needed by multiple mods.
+- **HAG - Occult Orphan Rock - Fabled Forests Patch** `1.3.1.0` modid=137996
+  - Overhauls Orphan Rock location with a horror theme and a small dungeon.
+- **HAG - 3DNPC Patch** `1.0.0.0` modid=138625
+  - Provides patches for Orphan Rock overhaul adding NPC-related adjustments.
+- **Orc Exiles - Cracked Tusk 3DNPC Patch** `1.2.0.0` modid=133937
+  - Provides 3DNPC visual patches and navmesh adjustments for Cracked Tusk Keep and Orc Exiles, with optional grass reduction for compatibility.
+- **IDDP - ELFX Patch** `1.0.3.0` modid=4126
+  - Adds a properly sized entrance to Bruma, eliminating the tiny cave entry from the original mod.
+- **Skybound Underhang Camp - Lawbringer Patch** `7.0.0.0` modid=54993
+  - Expands the bandit camp southeast of Riverwood with additional bandits, structures, easter eggs, and optional quest integration.
+- **Skybound Underhang Camp - Arena Consistency Patch** `7.0.0.0` modid=54993
+  - Expands the bandit camp southeast of Riverwood with additional bandits, structures, easter eggs, and optional quest integration.
+- **Hidden DB Sanctuary Entrances - Majestic Mountains Patch** `1.0.3.0` modid=48146
+  - Hides Dark Brotherhood sanctuary entrances behind everyday objects for immersion.
+- **Ryn's Karthspire Patches - CC Spell Knight Armor Patch** `f1.01` modid=82657
+  - Provides patches for Spell Knight Armor and Requiem balancing in Ryn's Karthspire.
+- **Patches for Ryn's - Ryn's Saarthal - Nordic Ruins Patch** `1.0.0.0` modid=74233
+  - Conflict resolution patches for various mods used alongside Ryn's mods.
+- **Children of the North Wind - Ruins of the Ancient Nords** `LITE-2.1` modid=147701
+  - Enhances Nordic ruin meshes and clutter with toggleable aesthetic variations via FOMOD.
+- **HAG - Occult Orphan Rock** `1.3.1.0` modid=137996
+  - Overhauls Orphan Rock location with a horror theme and a small dungeon.
+- **New Embershard Miners - With Voiced Dialogue** `2.1.0.0` modid=35031
+  - Adds Stalgar and Goronk miners to Embershard Mine after clearing bandits; they set up camp, have repeatable quest, optional voiced dialogue; safe mid‑game, compatible.
+- **Bards College Excavation** `1.0.0.0` modid=36950
+  - Adds a bard excavation at Dead Men's Respite post‑“Tending the Flames” with two fully voiced NPCs and a repeatable quest to clear the site
+- **Skybound Underhang Camp** `7.0.0.0` modid=54993
+  - Expands the bandit camp southeast of Riverwood with additional bandits, structures, easter eggs, and optional quest integration.
+- **Eastern Dwemer Towers of Solstheim** `1.0.1.0` modid=67410
+  - Adds Morrowind‑style dwemer towers to Solstheim ruins and fixes a lift mismatch.
+- **The Stumbling Sabrecat** `1.2.1.0` modid=35969
+  - Overhauls radiant Thieves Guild quests with selectable hold jobs, concurrent tasks, targets in all holds, fixed failure conditions, compatible with stock locations and mods
+- **Whiterun Watchtower Doesn't Start Broken** `f1.04` modid=49305
+  - Fixes the Whiterun Watchtower so it does not start broken before dragons appear.
+- **Orc Exiles - The Cracked Tusk Keep** `1.6.0.0` modid=133489
+  - Overhauls the Imperial ruin Cracked Tusk Keep into an imposing Orc fortress with expanded size, added bandits, clutter, new meshes, and remade navmesh.
+- **Nordic Ruins of Skyrim SSE** `2.0.0.0` modid=20382
+  - Overhauls exteriors of Nordic ruins (Forelhost, High Gate Ruins, etc.) for better aesthetics; recommends LOD generator; interiors unchanged.
+- **Immersive Dawnguard Dayspring Pass SE (IDDP)** `1.0.3.0` modid=4126
+  - Adds a properly sized entrance to Bruma, eliminating the tiny cave entry from the original mod.
+- **Hidden DB Sanctuary Entrances** `1.0.3.0` modid=48146
+  - Hides Dark Brotherhood sanctuary entrances behind everyday objects for immersion.
+- **Ryn's Saarthal** `1.1.0.0` modid=74785
+  - Overhauls Saarthal exterior and revamps final bossfight with empowered Jyrik Gauldurson.
+- **Ryn's Karthspire** `1.6.0.0` modid=77059
+  - Massive overhaul of Karthspire with expanded layout, tactical enemy placement, and performance optimizations.
+- **Ryn's Bleak Falls Barrow** `1.0.0.0` modid=70984
+  - Adds exterior additions to Bleak Falls Barrow, ESL flagged, expands dungeon with extra enemies.
+- **Orc Strongholds - Narzulbur** `2.5.4.0` modid=88809
+  - Exterior overhaul of Narzulbur stronghold, expanding and upgrading its exterior with new meshes and clutter.
+- **Orc Strongholds - Largashbur** `2.1.3.0` modid=89354
+  - Exterior overhaul of Largashbur stronghold, redesigning it as a fortified stronghold with a unique visual personality.
+- **Orc Strongholds - Dushnikh Yal** `2.5.0.0` modid=92485
+  - Exterior overhaul of Dushnikh Yal stronghold, redesigning it as a fortified encampment.
+- **Orc Strongholds - Mor Khazgur** `1.6.0.0` modid=94796
+  - Exterior overhaul of Mor Khazgur stronghold, redesigning it as a fortified stronghold, the final entry in the series.
+- **The Great Village of Kynesgrove Patch Collection** `1.8.0.0` modid=42957
+  - Collection of ESP patches fixing conflicts for The Great Village of Kynesgrove, ensuring compatibility with AI Overhaul SSE, Enhanced Lights and FX, and other mods.
+- **RS Children - Great Village of Mixwater Mill Patch** `5.0.0.0` modid=164145
+  - Patch fixing RS Children and Dac0da NPC issues, improving appearance and lore consistency.
+- **The Great Village of Mixwater Mill SSE - 3DNPC Patch** `1.1.0.0` modid=36350
+  - Transforms Mixwater Mill into a custom Nordic lumber mill with new meshes and foliage, compatible with texture overhauls.
+- **Tel Mithryn Overhaul - USSEP Patch** `1.0.0.0` modid=104813
+  - Exterior and interior overhaul of Tel Mithryn with unique objects, clutter, high-quality models, and magical clutter, flagged as ESL.
+- **The Great Village of Old Hroldan Patch Collection** `2.4.0.0` modid=37650
+  - Provides ESP patches for The Great Village of Old Hroldan, addressing compatibility with various mods and including miscellaneous patches.
+- **The Great Village of Mixwater Mill SSE** `1.1.0.0` modid=36350
+  - Transforms Mixwater Mill into a custom Nordic lumber mill with new meshes and foliage, compatible with texture overhauls.
+- **The Great Village of Kynesgrove** `1.1.0.0` modid=42639
+  - Overhauls the village with custom Nordic meshes and architecture, creating a more detailed and immersive settlement.
+- **Half-Moon Mill - Cities of the North Addon** `1.5.0.0` modid=64360
+  - Edits Half-Moon Mill to use custom assets from Cities of the North Falkreath, recommended with that mod
+- **Tel Mithryn Overhaul - Exterior and Interior Improvements** `1.0.0.0` modid=104813
+  - Exterior and interior overhaul of Tel Mithryn with unique objects, clutter, high-quality models, and magical clutter, flagged as ESL.
+- **ClefJ's Karthwasten** `1.2.0.0` modid=30947
+  - Overhauls Karthwasten town in the Reach with new merchants and aesthetics, lore‑friendly.
+- **The Great Village of Old Hroldan SSE** `f1.03` modid=33189
+  - Overhauls Old Hroldan village with custom meshes and Nordic architecture, restoring its intended look.
+- **Ivarstead Source** `1.0.0.0` modid=118825
+  - Adds a source to the Ivarstead river flagged as ESL.
+- **Farm Fences of Whiterun** `1.1.0.0` modid=47371
+  - Replaces ruined stone walls around Whiterun farms with well‑maintained wooden fences.
+- **Pseudoloaddoors for Walled Cities** `1.4.0.0` modid=135112
+  - Adds pseudoloaddoors to city borders, transporting players inside; compatible with flying and traversal mods.
+- **The Great City of Winterhold Patch Collection** `2.9.2.0` modid=74560
+  - AI Overhaul SSE shifts placed idle markers; Alternate Start adjusts markers; Ambriel moves house; Amulets of Skyrim moves amulets; Animated Armoury shifts books; Artifacts of Skyrim shifts objects; Atlas Map Markers updates map markers; At Your Own Pace shifts thieves guild records; BadGremlin moves fish; Birds of Skyrim adjusts bird ground position; Blowing in the Wind applies CR on ELFX items; The Brotherhood shifts NPC and chest; Carriage and Ferry Travel Overhaul moves carriage; Carriage Stops modifies stops; Citizens of Tamriel Complete SSE shifts NPC/idle; Cathedral 3D Mountain Flowers resolves conflicts; Cheesemod shifts cheese; Cidhna Mine Expanded moves NPC; Cities of the North changes layout; Cloaks of Skyrim moves cloaks; Clockwork provides navmesh CR; College of Winterhold patches wolves; Complete Alchemy and Cooking repositions vegetables; Cooking Adventures adjusts references; Creation Club Nchuanthumz adjusts journal; Curse of Akavir shifts NPC/headings; Dawnguard Sentires Plus modifies spawns; Distinct Interiors resolves conflicts; DootY moves outhouses; Drunks of Skyrim shifts marker/NPC; Dwemer Colosseum shifts anchor/teleport; DX Ursine Armor shifts book; etc.
+- **The Great City Of Winterhold SSE Edition** `4.2.3.0` modid=17127
+  - Adds grand ruins of an ancient city with detailed lore and visuals.
+- **Windows for Capital Windhelm Expansion** `2.2.0.0-Final` modid=163647
+  - Adds 252 hand‑placed windows to buildings of the Capital Windhelm Expansion, fixing black‑hole holes.
+- **Rob's Bug Fixes - Capital Windhelm Expansion** `2.0.0.0` modid=64740
+  - Fixes record errors and navmesh issues in Capital Windhelm Expansion, forwards USSEP changes and hides remaining conflicts.
+- **Capital Windhelm Expansion - Collision Fixes** `1.3.0.0` modid=99599
+  - Adds correct collision to custom meshes in Capital Windhelm Expansion, providing proper footstep and impact sounds.
+- **RS Children - Capital Windhelm Expansion** `1.0.0.0` modid=80813
+  - Provides a compatibility patch between RS Children and Capital Windhelm Expansion.
+- **Capital Windhelm Expansion Bug fixes** `1.3.5.0` modid=93778
+  - Fixes bugs in Capital Windhelm Expansion, including eastern gate blackscreen and collision clipping issues.
+- **Capital Windhelm Expansion - USSEP Patch** `1.3.0.0` modid=42990
+  - Expands Windhelm with new buildings, shops, NPCs, and quests, adding extensive city overhaul features.
+- **Capital Windhelm Expansion - AI Overhaul Patch** `1.3.0.0` modid=42990
+  - Expands Windhelm with new buildings, shops, NPCs, and quests, adding extensive city overhaul features.
+- **Capital Windhelm Expansion - Normal Version** `1.3.0.0` modid=42990
+  - Expands Windhelm with new buildings, shops, NPCs, and quests, adding extensive city overhaul features.
+- **Capital Whiterun Expansion - More Accurate Collision** `1.0.0.0` modid=66063
+  - Improves collision matching for Capital Whiterun Expansion meshes, preventing falling through objects and arrow bounce issues.
+- **Fixed Meshes for Capital Whiterun Expansion** `1.2.0.0` modid=124352
+  - Fixes collision, UV, and face issues in the Capital Whiterun Expansion’s custom meshes.
+- **Meshes Optimization Project - Capital Whiterun Expansion** `1.0.0.0` modid=160495
+  - Optimizes meshes to reduce draw calls and improve performance with minimal visual loss.
+- **H.O.A. - Hyperspecific Occlusion Addon** `1.3.8.3` modid=149004
+  - Adds or fixes occlusion planes in overhauled cities to improve performance.
+- **The Gildergreen Grows** `1.2.0.0` modid=147742
+  - Allows the Gildergreen sapling to progressively grow into a full tree over four months, granting buffs and new dialogue.
+- **SkyforgeCWE (Capital Whiterun Expansion)** `2.0.0.0` modid=35421
+  - Completes the Skyforge by adding crafting stations such as storage, smelter, tanning rack, and integrates with JK's Whiterun expansions.
+- **Capital Whiterun Expansion - Realistic RS Children Patch** `1.5.0.0` modid=37982
+  - Expands Whiterun with new districts, buildings, shops, merchants, NPCs, a player home, and quests.
+- **Fortified Whiterun** `1.6.0.0` modid=40094
+  - Adds realistic, logical defenses to Whiterun to strengthen its city walls.
+- **Capital Whiterun Expansion - Normal Version** `1.5.0.0` modid=37982
+  - Expands Whiterun with new districts, buildings, shops, merchants, NPCs, a player home, and quests.
+- **Realistic Boat Bobbing Patch Hub - Great City of Solitude** `1.0.0.0` modid=44311
+  - Collection of patches for Realistic Boat Bobbing targeting various mods.
+- **The Great City of Solitude CC Fishing Patch** `1.1.0.0` modid=59874
+  - Patches CC Fishing to relocate fishing supplies at Solitude docks for compatibility.
+- **Rob's Bug Fixes - TGC Solitude** `2.0.0.0` modid=72117
+  - Provides a cleaned .esp replacer for The Great City of Solitude with improved navmeshes and forwarded USSEP changes.
+- **Skyfall's Blue Palace Courtyard** `1.3.1.0` modid=130890
+  - Reworks the Blue Palace entrance with a grand staircase, organized garden, banners, wishing wells, and ESL flagging for immersion.
+- **The Great City of Solitude SSE** `f2.02` modid=22243
+  - Expands Solitude port with new homes, shops, vendors, guards, reshapes stone arch, improves exterior, low in load order.
+- **Meshes Optimization Project - COTN - Morthal** `1.0.0.0` modid=160495
+  - Optimizes meshes to reduce draw calls and improve performance with minimal visual loss.
+- **COTN Morthal Patch Collection** `3.6.1.0` modid=34228
+  - Patch suite adjusting object placements in Morthal interiors; resolves conflicts with numerous mods (AI Overhaul, Book Covers, etc); ESL flagged
+- **Cities of the North - Morthal** `1.2.0.0` modid=34168
+  - Adds unique building designs, giving Morthal its own distinct architecture.
+- **Meshes Optimization Project - COTN - Falkreath** `1.0.0.0` modid=160495
+  - Optimizes meshes to reduce draw calls and improve performance with minimal visual loss.
+- **Cities of the North - Falkreath - Ladder Animations Add-on** `1.3.0.0` modid=56731
+  - Adds unique building designs, giving Falkreath its own distinct architecture.
+- **Cities of the North - Falkreath - Custom Doors Add-on** `1.3.0.0` modid=56731
+  - Adds unique building designs, giving Falkreath its own distinct architecture.
+- **Cities of the North - Falkreath Patch Collection - CC Elven Hunter Armor Patch** `1.27.0.0` modid=56734
+  - Patch collection adjusting object placements for compatibility with Cities of the North - Falkreath.
+- **Cities of the North - Falkreath Patch Collection** `1.27.0.0` modid=56734
+  - Patch collection adjusting object placements for compatibility with Cities of the North - Falkreath.
+- **Cities of the North - Falkreath** `1.3.0.0` modid=56731
+  - Adds unique building designs, giving Falkreath its own distinct architecture.
+- **Meshes Optimization Project - COTN - Dawnstar** `1.0.0.0` modid=160495
+  - Optimizes meshes to reduce draw calls and improve performance with minimal visual loss.
+- **Cities of the North - Dawnstar Patch Collection - CC Vigil Enforcer Patch** `5.9.0.0` modid=30885
+  - Collection of patches that relocate objects to match new interiors for the Cities of the North - Dawnstar mod.
+- **Cities of the North - Dawnstar Patch Collection** `5.9.0.0` modid=30885
+  - Collection of patches that relocate objects to match new interiors for the Cities of the North - Dawnstar mod.
+- **Cities of the North - Dawnstar** `1.4.0.0` modid=28952
+  - Adds unique building designs, giving Dawnstar its own distinct architecture.
+- **The Great Cities- Resources** `1.1.1.0` modid=104373
+  - Provides base files and assets required for overhauling The Great Cities series.
+- **Headhunter - Bounties Redone** `1.60.0.0` modid=51847
+  - Expands bounty system with proof requirement (head loss on loot), captures bandit giants/dragons, integrates with Missives, AllGUD, SRC; allows prisoner capture, giant forgiveness, up to 7‑8 prison slots, visible decapitations, optional backpack display via AllGUD, configurable rewards via MCM, supports notice board and other patches
+- **Infiltration - Quest Expansion - Lawless Patch** `f1.02` modid=114054
+  - Expands vanilla Infiltration quest into an epic choice‑driven quest, fully voiced, restores cut content, fixes lever‑activation exploit, adds dynamic NPC comments, warns about mid‑game install restrictions, includes patches for compatibility.
+- **The Heart of Dibella - Quest Expansion - RS Children Patch** `f1.07` modid=94863
+  - Adds optional pathway to start the Dibella quest without breaking in, new voiced dialogue, choice of blessing effects (extra damage vs same sex, both sexes, or none), preserves vanilla path, optional customization, fully voiced, ESL, compatible with most mods, requires load after quest‑modifying mods.
+- **Caught Red Handed - Quest expansion patch for navigate VR or Even Better Quest Objectives** `1.0.0.0a` modid=112430
+  - Tweaks quest objectives with specific locations; ideal for Navigate VR or EVQO
+- **Finding Derkeethus Duplicate FormID Fix** `1.0.0.0` modid=46391
+  - Replaces the ESP to fix a duplicate FormID, eliminating warnings.
+- **Skyrim Reputation Patches for Quest Expansions and Alternate Routes** `1.3.0.0` modid=79631
+  - Provides integration patches that extend the reputation system to recognize choices from quest expansion mods.
+- **Peryite's Fetid Dead - Eye Glow Patch** `1.0.0.0` modid=133253
+  - Adds Fetid Skeleton Daedra (three tiers) to Bthardamz, summonable via spells, compatible with other Daedra mods.
+- **Peryite's Fetid Dead** `1.0.0.0` modid=133253
+  - Adds Fetid Skeleton Daedra (three tiers) to Bthardamz, summonable via spells, compatible with other Daedra mods.
+- **A Steward for Dawnstar** `1.0.1.0` modid=129588
+  - Adds Dawnstar's housecarls as stewards to handle bounty quests in the Pale.
+- **Miscellaneous Quests are Favors** `1.2.1.0` modid=121610
+  - Adds disposition increases to miscellaneous quests, contributing to Thane progression
+- **Immersive Nurelion Dying** `0.2.0.0` modid=152547
+  - Replaces Nurelion's death message with immersive animations and dialogue, adds groan/cough, five dying lines, integrates with Sleeping Expanded patch, minimal ESL changes.
+- **Vigil's Last Reward** `1.3.0.0` modid=146571
+  - Overhauls the Ebony Warrior boss fight, adding new abilities, unique equipment, and lore‑rich encounters.
+- **Forgemaster's Fingers Quest for Orcs and Blood-Kin** `0.1.0.0` modid=145145
+  - Enables The Forgemaster's Fingers quest for Orcs/Blood‑Kin by talking to a guard; quest proceeds normally with dialogue tweaks and a small gold reward.
+- **Camilla Gets Married** `1.0.2.0` modid=138804
+  - Allows Camilla Valerius to become engaged after completing a quest, send a wedding invitation, and marry the player.
+- **Sinding Prison Anims** `1.5.1.0` modid=96926
+  - Adds two new DAR/OAR‑based animations for Sinding in the Falkreath prison, enhancing immersion.
+- **A Lovely Letter Alternate Routes** `1.0.0.0` modid=21916
+  - Provides alternate quest routes for "A Lovely Letter" allowing you to reject letters, expose both parties, and gain Camilla's favor.
+- **Quests Are In Skyrim USSEP Version** `1.3.0.0` modid=18416
+  - Prevents radiant quests from sending players to locations outside Skyrim's nine holds.
+- **Mehrunes Dagon's Shrine Unlocked - Pieces of the Past Alternate Ending** `4.4.0.0` modid=119502
+  - Allows entering shrine without helping Silus; adds journal, key, talk options; enables reforge Razer without Dagon (master smith, Daedric perks); provides alternate quest ending
+- **Missing In Action - Tweaks** `1.0.0.0` modid=124862
+  - Makes minor adjustments to the Missing In Action quest to improve its logic and flow.
+- **Save the Icerunner - Lights Out Alternate Routes** `1.1.2.0` modid=34681
+  - Adds alternate routes and choices for the Icerunner side quest, allowing players to avoid forced outcomes.
+- **Boethiah's Calling - Alternate Questline** `2.3.0.0a` modid=121499
+  - Adds a fully voiced alternate quest to acquire the Ebony Mail, involving a deceptive sacrifice and optional ambush
+- **Mephala's Curse - Whispering Door Quest Addon** `2.6.0.0` modid=120650
+  - Adds curse to Ebony Blade causing stress, summons Spider Daedra, introduces madness system, new encounters
+- **Harvest Your Blood for Septimus** `1.1.3.0` modid=69861
+  - Allows harvesting your own blood for Septimus Signus via Essence Extractor.
+- **The Taste of Death - Quest Addon** `4.0.0.0a` modid=123173
+  - Adds over 50 voiced dialogue lines and new enemies to the quest, with optional modular installs.
+- **Finding Derkeethus** `1.1.0.0` modid=19550
+  - Fixes Derkeethus quest by moving cell key, moving quest out of Misc, adding journal info and optional marker, expands dialog options, compatible with USSEP and Better Quest Objectives; ESP‑FE format
+- **Finding Helgi and Laelette** `1.1.0.0` modid=28973
+  - Overhauls Laid to Rest quest with investigative beats, new scenes and dialogues, expanded narrative, optional patches for lights and grass, safe to install pre‑Morthal; ESP‑FE format
+- **Bring Meeko To Lod** `1.2.0.0` modid=25246
+  - Adds a dialogue option to give Meeko to Lod in Falkreath, unlocked when Meeko follows the player and prior quests are completed
+- **Kyne's Temple Consequences** `1.1.1.0` modid=38260
+  - Increases the impact of The Blessings of Nature choice with four voiced NPCs and adaptive changes to Whiterun's Temple of Kynareth.
+- **Caught Red Handed - Quest Expansion** `f1.07` modid=65708
+  - Expands Riften misc quest with new choices; voiced outcomes; protect Haelga, confront Tythis; optional rewards like Mark of Dibella
+- **Nilheim - Misc Quest Expansion** `1.14.0.0` modid=53792
+  - Expands Nilheim quest with additional dialogue choices, roleplay options, optional consequences; fixes bandit behavior and quest flow.
+- **The Heart of Dibella - Quest Expansion** `f1.07` modid=94863
+  - Adds optional pathway to start the Dibella quest without breaking in, new voiced dialogue, choice of blessing effects (extra damage vs same sex, both sexes, or none), preserves vanilla path, optional customization, fully voiced, ESL, compatible with most mods, requires load after quest‑modifying mods.
+- **The Only Cure - Quest Expansion** `f1.05` modid=57683
+  - COMPLETELY VOICED: Every option explained with new voiced lines
+  - VANILLA PATH AVAILABLE: Vanilla path still there, expanded with options
+  - ATTACK KESH: New dialogue to start combat after learning Kesh worships Peryite
+  - KESH'S JOURNAL: Journal explains motives at Bthardamz; can be looted
+  - NO CAVORTING!: Can destroy altar at any time, choose outcomes
+  - OPTIONS: Accept Spellbreaker, mock, refuse, destroy altar, burn tree
+  - CONSEQUENCES: Betraying Peryite after accepting Spellbreaker curses shield with poison
+- **The Whispering Door - Quest Expansion** `1.15.0.0` modid=76606
+  - Expands Mephala's Daedric quest with a longer storyline, additional dialogue, and darker choices.
+- **Infiltration - Quest Expansion** `f1.02` modid=114054
+  - Expands vanilla Infiltration quest into an epic choice‑driven quest, fully voiced, restores cut content, fixes lever‑activation exploit, adds dynamic NPC comments, warns about mid‑game install restrictions, includes patches for compatibility.
+- **House of Horrors - Quest Expansion** `1.13.0.0` modid=57285
+  - Expands Molag Bal’s daedric quest with an optional good‑guy path, new fully voiced scenes, a custom follower reward, and alternative altar destruction mechanics
+- **Thieves' Night On the Town - CotN Dawnstar Patch** `1.0.8.0` modid=42069
+  - Overhauls radiant Thieves Guild quests with hold‑selectable jobs, concurrent tasks, fixed failure conditions, targets in all holds, compatible with stock locations and mods
+- **Thieves' Night On the Town** `1.0.8.0` modid=42069
+  - Overhauls radiant Thieves Guild quests with hold‑selectable jobs, concurrent tasks, fixed failure conditions, targets in all holds, compatible with stock locations and mods
+- **Respectful Ravyn** `1.0.0.0` modid=143950
+  - Adds Ravyn, a rude Thieves Guild/Morag Tong member who can be forced to respect the player.
+- **Thieves Guild Alternative Endings** `2.1.1.0` modid=114558
+  - Adds 4 new voice‑acted endings to the Thieves Guild questline with new story, rewards, boss fights, including defy Nocturnal, exploit key, exorcise key, refuse nightingale, modular install
+- **Thieves Guild Requirements SE** `5.3.1.0` modid=33256
+  - Adds skill and radiant requirements, ability to sell Stones of Berenziah, improved shadowmarks, and configurable options via MCM.
+- **All Thieves guild merchants buy stolen goods** `1.0.0.0` modid=121350
+  - Makes all Thieves Guild merchants purchase stolen goods, expanding buying beyond Tonilia
+- **WWwW - Savos Aren's Regrets Patch** `1.0.1.0` modid=164328
+  - Allows access to Saarthal and Labyrinthian, their bosses, unique artifacts and word walls, without joining the College of Winterhold.
+- **Word Walls without Winterhold - Saarthal and Labyrinthian for Non-Mages** `1.0.1.0` modid=164328
+  - Allows access to Saarthal and Labyrinthian, their bosses, unique artifacts and word walls, without joining the College of Winterhold.
+- **Savos Aren's Regrets Restored - Cut Content Restoration** `1.0.0.0` modid=57677
+  - Restores cut content from the quest 'The Staff of Magnus', adding fully voiced ghost scenes.
+- **Improved College Entry - Questline Tweaks** `2.8.0.0` modid=22184
+  - Adds school selection and questline improvements for the College of Winterhold.
+- **GATE TO SOVNGARDE (GTS) - Small Mods and Resources - Ilas-Tei doesn't Evaporate** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - College of Winterhold Fee Tuition** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **OMEAR Addition - CoW Quest Expansion** `1.8.2.0` modid=67968
+  - Replaces frequent OnMagicEffectApply calls to reduce VM overstress; supports many scripts and optional fixes for popular mods.
+- **RS Children Patch - College of Winterhold Quest Expansion** `5.0.0.0` modid=164145
+  - Patch fixing RS Children and Dac0da NPC issues, improving appearance and lore consistency.
+- **College of Winterhold - Quest Expansion - Easy Mode (Show Direct Quest Markers)** `1.16.0.0` modid=66666
+  - 7 new apprentice quests teaching each magic school – ALTERATION (Waterbreathing, Dwemer artifact), DESTRUCTION (Firebolt, kill enemy), ILLUSION (Fury, confuse skeevers), ENCHANTING (enchant weapon for client), CONJURATION (familiar summoning), RESTORATION (turn undead), KNOWLEDGE (analyze books); fully voiced, journal markers guide, compatible with most college mods.
+- **College of Winterhold - Quest Expansion** `1.16.0.0` modid=66666
+  - 7 new apprentice quests teaching each magic school – ALTERATION (Waterbreathing, Dwemer artifact), DESTRUCTION (Firebolt, kill enemy), ILLUSION (Fury, confuse skeevers), ENCHANTING (enchant weapon for client), CONJURATION (familiar summoning), RESTORATION (turn undead), KNOWLEDGE (analyze books); fully voiced, journal markers guide, compatible with most college mods.
+- **College of Winterhold Quest Start Fixes** `0.4.0.0` modid=53817
+  - Fixes missing quest start triggers by filling reserved aliases for key College of Winterhold quests such as The Staff of Magnus, The Eye of Magnus, Arniel's Endeavor, and Containment.
+- **Misc. College of Winterhold Tweaks** `1.5.1.0` modid=22653
+  - Restores Augur lines, fixes light pillars, improves gate behavior, adds waiting option, corrects cadaver placement
+- **Vittorias Alternate Wedding Patches** `1.4.0.0` modid=72240
+  - Provides additional patches for the Vittorias Alternate Wedding mod.
+- **Vittorias Alternate Wedding** `1.3.3.0` modid=62466
+  - Allows the player to attend Vittoria’s wedding after destroying the Dark Brotherhood.
+- **Return Aegisbane** `1.2.0.0` modid=108242
+  - Allows returning the weapon Aegisbane to its rightful owners or claiming it
+- **Penitus Oculatus** `0.18.4.0` modid=21061
+  - Adds a Penitus Oculatus questline after the Dark Brotherhood quest, offering radiant missions, unique artifacts, and access to DB sanctuaries.
+- **Restoring the Aretino Residence SE** `1.1.0.0` modid=30447
+  - Restores and upgrades Aretino residence into a player home with multiple upgrade paths and voiced quest.
+- **Listen - Dark Brotherhood Radiant Quests** `1.0.1.0` modid=59659
+  - Adds radiant contracts from Night Mother with up to five quests per talk, 60 targets, configurable payment, and MCM customization
+- **Destroy The Dark Brotherhood - Quest Expansion** `f1.03` modid=118229
+  - Introduces new kidnapping mechanics and expands DB destruction quest with dialogue, choices, and memorable fights.
+- **The Innocence Lost - Quest Expansion** `1.11.0.0` modid=80974
+  - Introduces two distinct paths (hitman or arrest) to complete the Dark Brotherhood first quest, fully voiced with spliced lines, includes options to poison, push, pay bribe, arrest Grelod, new dialogue and easter eggs, locks DB joining unless paired with Destroy The Dark Brotherhood mod, provides markers and outcomes.
+- **HOUSE OF WARRIORS - Immersive Dialogue Expansion - Jorrvaskr (Companions)** `1.0.0.0` modid=173134
+  - Enhances Jorrvaskr with immersive dialogue, interactions, and banter for Companions
+- **Immersive Dialogue Edit - Companions** `1.1.2.0` modid=162227
+  - Adjusts companion dialogue for better immersion.
+- **At Your Own Pace - Companions** `3.0.4.0CP` modid=52704
+  - Overhauls questlines to provide breaks and role‑playing opportunities; slows progression; adds options to skip or delay quests; compatible with Alternate Start and other mods.
+- **CC Gallows Hall - Tweaks and Enhancements (GHTE) - CC Fishing Patch** `1.0.6.0` modid=163783
+  - Hardened entry via persuasion/pay Wuunferth; cryptic escape‑room quest; nerfed & renamed artifacts; new Bone Forge crafting (skeleton summons, Staff of Worms tiers with shock damage, stamina/magicka absorb, soul‑gem fill); portal to Soul Cairn; crafting recipes for stations; detailed artifact tier effects
+- **CC Gallows Hall - Tweaks and Enhancements (GHTE) - CC Necro Patch** `1.0.6.0` modid=163783
+  - Hardened entry via persuasion/pay Wuunferth; cryptic escape‑room quest; nerfed & renamed artifacts; new Bone Forge crafting (skeleton summons, Staff of Worms tiers with shock damage, stamina/magicka absorb, soul‑gem fill); portal to Soul Cairn; crafting recipes for stations; detailed artifact tier effects
+- **CC Gallows Hall - Tweaks and Enhancements (GHTE) - No Entry Reqs** `1.0.6.0` modid=163783
+  - Hardened entry via persuasion/pay Wuunferth; cryptic escape‑room quest; nerfed & renamed artifacts; new Bone Forge crafting (skeleton summons, Staff of Worms tiers with shock damage, stamina/magicka absorb, soul‑gem fill); portal to Soul Cairn; crafting recipes for stations; detailed artifact tier effects
+- **CC Gallows Hall - Tweaks and Enhancements (GHTE) - Sorcerer Patch** `1.0.6.0` modid=163783
+  - Hardened entry via persuasion/pay Wuunferth; cryptic escape‑room quest; nerfed & renamed artifacts; new Bone Forge crafting (skeleton summons, Staff of Worms tiers with shock damage, stamina/magicka absorb, soul‑gem fill); portal to Soul Cairn; crafting recipes for stations; detailed artifact tier effects
+- **CC Gallows Hall - Tweaks and Enhancements (GHTE) - Undeath Patch** `1.0.6.0` modid=163783
+  - Hardened entry via persuasion/pay Wuunferth; cryptic escape‑room quest; nerfed & renamed artifacts; new Bone Forge crafting (skeleton summons, Staff of Worms tiers with shock damage, stamina/magicka absorb, soul‑gem fill); portal to Soul Cairn; crafting recipes for stations; detailed artifact tier effects
+- **CC Gallows Hall - Tweaks and Enhancements (GHTE)** `1.0.6.0` modid=163783
+  - Hardened entry via persuasion/pay Wuunferth; cryptic escape‑room quest; nerfed & renamed artifacts; new Bone Forge crafting (skeleton summons, Staff of Worms tiers with shock damage, stamina/magicka absorb, soul‑gem fill); portal to Soul Cairn; crafting recipes for stations; detailed artifact tier effects
+- **Voiced Narrative - Pets of Skyrim (Creation Club)** `1.0.0.0` modid=159070
+  - Improves narrative of Pets of Skyrim with new voiced dialogue generated by ElevenLabs, adding greetings for Halvar and more personality.
+- **Voiced Narrative - Farming (Creation Club)** `1.0.0.0a` modid=158966
+  - Feature:
+  - - New random greeting lines for your overseer and farmhands of Goldenhills Plantation.
+  - - Bad use of a generic line (Rin) is replaced with a new line that better reflect the narrative.
+  - - All new lines were written with careful consideration of existing lore, nothing should feel too overdone.
+  - - Voiced lines were generated with ElevenLabs. Many hours were spent experimenting lines repeatedly to hand‑pick the most natural‑sounding deliveries with the right expression for each context.
+  - - Fully compatible with CC Farming - Tweaks Enhancements and Quest Expansion.
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - GTS - Anniversary Edition Full Upgrade Patch** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Stendarr's Chosen - Possible Site Expansion - Wyrmstooth** `2.0.0.0` modid=110617
+  - Places Stendarr's Hammer in world with level 15 requirement, random impact sites, drops in crater; requires divine worthiness; disables museum spawn
+- **Stendarr's Chosen - Possible Site Expansion - Beyond Skyrim Bruma** `2.0.0.0` modid=110617
+  - Places Stendarr's Hammer in world with level 15 requirement, random impact sites, drops in crater; requires divine worthiness; disables museum spawn
+- **Stendarr's Chosen - Disable Skyrim Sites** `2.0.0.0` modid=110617
+  - Places Stendarr's Hammer in world with level 15 requirement, random impact sites, drops in crater; requires divine worthiness; disables museum spawn
+- **Stendarr's Chosen - Stendarr's Hammer Reintegration** `2.0.0.0` modid=110617
+  - Places Stendarr's Hammer in world with level 15 requirement, random impact sites, drops in crater; requires divine worthiness; disables museum spawn
+- **Wearable Ayleid Wight Armor (The Cause CC - AE)** `1.0.0.0` modid=109330
+  - Adds wearable Ayleid Wight armor (light elven equivalent) craftable after completing The Cause, ESL‑flagged, with optional ESP for looting and using CC textures.
+- **SKYBLIVION Umbra - Tweaks and Fixes** `1.0.0.0` modid=105532
+  - Fixes unused cell, adjusts enchantment, corrects stats, adds missing tempering recipe.
+- **SKYBLIVION - Umbra CC ESL** `4.0.0.0` modid=98487
+  - Standalone/replacer for Creation Club Umbra weapon stand with new enchant animation and textures.
+- **GATE TO SOVNGARDE (GTS) - Small Mods and Resources - CC Plug-ins Universal Start Fix** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **EMPEROR - Giant Crab Overhaul** `1.1.0.0` modid=58612
+  - Overhauls the Ghost Emperor Crab encounter with updated animations, shaders, and audio adjustments.
+- **CC Farming - TnE - CC Fishing Patch** `1.5.7.0` modid=69029
+  - overhauls CC Farming with NoReset Goldenhills Plantation, new Unquiet Dead quest, recruit farmhands/guards, upgrade planters, hire carriage driver, connect to road, customize gold multiplier and prices via console; adds beggar recruitment, Dark Brotherhood integration; requires Unofficial Skyrim CC Patches; optional MCM.
+- **Creation Club Farming - Tweaks Enhancements and Quest Expansion - RS Children** `1.0.0.0` modid=69822
+  - Adds compatibility for Rin child from CC Farming with RS Children; install via Data folder or MO2; ANNIVERSARY EDITION upgrade; patch conflicts.
+- **CC Farming - Tweaks Enhancements and Quest Expansion** `1.5.7.0` modid=69029
+  - overhauls CC Farming with NoReset Goldenhills Plantation, new Unquiet Dead quest, recruit farmhands/guards, upgrade planters, hire carriage driver, connect to road, customize gold multiplier and prices via console; adds beggar recruitment, Dark Brotherhood integration; requires Unofficial Skyrim CC Patches; optional MCM.
+- **CC Dawnfang and Duskfang - No Forced Quest** `1.1.0.0` modid=57609
+  - Moves the quest note to a pillar, disables automatic quest trigger, and adds a patch for level scaling.
+- **Jewels of the Nords - Nordic Jewelry Reintegration - Bruma Patch** `1.0.1.0` modid=81500
+  - Adds Nordic-style jewelry to loot, crafting and keyword system; separates Nordic from other categories and enables crafting via console command Set MAKCircletCraftingEnabled to 0
+- **Jewels of the Nords - Nordic Jewelry Reintegration** `1.0.1.0` modid=81500
+  - Adds Nordic-style jewelry to loot, crafting and keyword system; separates Nordic from other categories and enables crafting via console command Set MAKCircletCraftingEnabled to 0
+- **Voiced Narrative - Bloodchill Manor (Creation Club)** `1.1.0.0` modid=107987
+  - Improves narrative of Guests for Dinner quest from Bloodchill Manor with new voiced dialogue generated by ElevenLabs.
+- **Extended Cut - Saints and Seducers - Mysticism Rebalance** `2.2.0.0` modid=81950
+  - Adept
+  - - Conjure Golden Saint Hunter (summons Golden Saint Hunter for 60s)
+  - - Conjure Dark Seducer Soldier (summons Dark Seducer Soldier for 60s)
+  - Expert
+  - - Conjure Golden Saint Champion (summons Golden Saint Champion for 60s)
+  - Master
+  - - Conjure Dark Seducer Assassin (summons Dark Seducer Assassin for 60s)
+  - - Conjure Staada (summons Staada for 60s)
+- **Extended Cut Saints and Seducers - Undeath - Bruma** `f1.01` modid=78834
+  - Compatibility patch for Extended Cut: Saints and Seducers and Undeath, adding Bruma support and fixing music issues.
+- **Skyrim Extended Cut - Saints and Seducers** `1.1.0.0` modid=72772
+  - Reimagines the Saints and Seducers quest with a fully voiced new adventure in the Shivering Isles, new dungeons, items, and multiple endings.
+- **Voiced Narrative - Redguard Elite Armaments (Creation Club)** `2.1.0.0` modid=67532
+  - Improves narrative of Interception quest from Redguard Elite Armaments with new voiced dialogue generated by ElevenLabs.
+- **CC Hendraheim - Tweaks and Enhancements - CC Fishing Patch** `2.1.5.0` modid=98688
+  - Removes alchemy lab & arcane enchanter, repurposes cellar as servant rooms, removes high‑level items, buffs Eydvina Shield‑Hearth, adds steward hire and 2nd/3rd floors for up to 15 followers, adds carpenter workbench for crafting stations, price adjustable via console, patches for fishing, necro, etc
+- **CC Hendraheim - Tweaks and Enhancements** `2.1.5.0` modid=98688
+  - Removes alchemy lab & arcane enchanter, repurposes cellar as servant rooms, removes high‑level items, buffs Eydvina Shield‑Hearth, adds steward hire and 2nd/3rd floors for up to 15 followers, adds carpenter workbench for crafting stations, price adjustable via console, patches for fishing, necro, etc
+- **CC Gray Cowl Returns - Thief Delay** `1.0.1.0` modid=57412
+  - Delays the Gray Cowl thief NPC spawn until the player completes all four Thieves Guild special jobs.
+- **Voiced Narrative - The Gray Cowl Returns (Creation Club)** `2.1.0.0` modid=67439
+  - Improves narrative of The Gray Cowl Returns quest with new voiced dialogue generated by ElevenLabs.
+- **The Cause - Mysticism Rebalance** `1.0.0.0` modid=82203
+  - Anniversary Edition upgrade for The Cause.
+- **The Cause - Rare Curios Patch** `1.0.0.0` modid=60405
+  - Swaps duplicate Welkynd Stones in The Cause for Rare Curios counterparts and adds related patches.
+- **FPS Boost for Quest Mods - The Cause** `1.1.0.0` modid=122050
+  - Provides occlusion plane patches for quest mods to improve FPS on low‑end systems; .ESL flagged; compatible with many mods; optional VR settings; safe to install mid‑game
+- **The Cause - Reduced Cut** `1.0.1.1` modid=66676
+  - Removes Cause questline, retains dungeons and adds dormant Oblivion gate to Shrine of Mehrunes Dagon, compatible with related mods.
+- **Catir Club - Immersive Creation Club Integration - Goldbrand** `1.1.0.0` modid=66864
+  - Integration hub removing vanilla quests; adds content for The Contest, Goldbrand, Sivdur’s Respite; requires CC files; compatible with AE
+- **Catir Club - Immersive Creation Club Integration - The Contest** `1.1.0.0` modid=66864
+  - Integration hub removing vanilla quests; adds content for The Contest, Goldbrand, Sivdur’s Respite; requires CC files; compatible with AE
+- **Menagerie - A Creation Club Pet Overhaul - Mysticism Add-on** `1.2.0.0` modid=97669
+  - Overhauls Creation Club pets into combat‑ready companions, assigning them stats, names, and enabling them to fight.
+- **Menagerie - A Creation Club Pet Overhaul - Extended Cut - Saints and Seducers Patch** `1.2.0.0` modid=97669
+  - Overhauls Creation Club pets into combat‑ready companions, assigning them stats, names, and enabling them to fight.
+- **Menagerie - A Creation Club Pet Overhaul** `1.2.0.0` modid=97669
+  - Overhauls Creation Club pets into combat‑ready companions, assigning them stats, names, and enabling them to fight.
+- **Necromantic Grimoire - Thaumaturgy Robes** `1.2.1.0` modid=78651
+  - Rebalances spells and enchantments of Necromantic Grimoire using Mysticism magic overhaul; marked as Anniversary Edition upgrade.
+- **Necromantic Grimoire - Mysticism Rebalance** `1.2.1.0` modid=78651
+  - Rebalances spells and enchantments of Necromantic Grimoire using Mysticism magic overhaul; marked as Anniversary Edition upgrade.
+- **CC Bone Colossus Skeleton Fix** `1.0.0.0` modid=63167
+  - Corrects the T‑pose skeleton of the Bone Colossus from Necromantic Grimoire.
+- **Ghosts of the Tribunal Occlusion addon** `1.1.0.0` modid=122050
+  - Provides occlusion plane patches for quest mods to improve FPS on low‑end systems; .ESL flagged; compatible with many mods; optional VR settings; safe to install mid‑game
+- **Voiced Narrative - Ghosts of the Tribunal (Creation Club)** `2.1.0.0` modid=67374
+  - Improves narrative of Ghosts of the Tribunal questline with new voiced dialogue generated by ElevenLabs.
+- **Civil War Champions - Reduced Cut** `2.0.0.0` modid=94999
+  - Removes the Battle of Champions quest, granting champion sets before the final siege.
+- **CC Staves - Mysticism Consistency Patch** `1.7.0.0` modid=78659
+  - Provides variable visual styles for Mysticism staves using new unique models, integrates them into leveled lists, adjusts spell scaling, and removes nonsensical unique staves.
+- **CC Pets Addon - Spiders Spin Webs** `1.1.3.0` modid=83201
+  - Applies spider‑web trap to all spiders; paralyzes victim 5 s and weakens to fire; immunity 5 s; patches for Echatere SE and PPB Updated
+- **Ayleid Lich Crown - Cut Content Restored (Anniversary Edition - The Cause)** `1.0.0.0` modid=58398
+  - Implements the cut Ayleid Lich crown as a dropable wearable model adapted for all races; requires Anniversary Edition or The Cause.
+- **Carriages and Stables Dialogue Bundle - CC Wild Horses Add-on** `1.0.0.0` modid=79297
+  - Adds voiced dialogue for carriage drivers and horse armor, enhancing immersion without requiring CC.
+- **CC Arcane Archer - Tweaks and Enhancements - Bound Quiver Tweaks** `1.1.3.0` modid=95716
+  - Fixes Arcane Archer issues, adjusts arrow damage, crafting requirements, and enhances telekinesis arrow mechanics
+- **CC Arcane Archer - Tweaks and Enhancements** `1.1.3.0` modid=95716
+  - Fixes Arcane Archer issues, adjusts arrow damage, crafting requirements, and enhances telekinesis arrow mechanics
+- **Morihaus' Refuge - Lord's Mail Reintegration** `1.0.0.0` modid=68558
+  - Replaces Lord's Mail quest with new dungeon, boss fight to obtain the mail
+- **Knight of the North - Divine Crusader Reworked** `3.0.1.0` modid=45869
+  - Reworks Relics of the Crusader quest with an Honor ranking system (Peerless to Infamous) and Pilgrimage mechanic for relic usage
+- **Voiced Narrative - Bittercup (Creation Club)** `1.1.0.0` modid=159925
+  - Improves narrative of Bittercup quest with new voiced dialogue generated by ElevenLabs.
+- **CC Bittercup - Tweaks and Enhancements** `1.5.0.0` modid=81665
+  - Polishes the Bittercup mod with value adjustments, NPC fixes, pit accessibility upgrades, and navmesh improvements
+- **Dawnguard - Tweaks and Enhancements - Serana Necro Dialogue** `0.2.0.0` modid=53364
+  - Expands Dawnguard and Vampire questlines with radiant progression, extra dialogue, and configurable siege scaling via globals.
+- **Dawnguard - Hall of Vigilant Requirement** `1.0.0.0` modid=23617
+  - Adds requirement to have visited Hall of Vigilant before starting Dawnguard.
+- **Thwack - Crossbow Collection Reworked** `3.0.0.0` modid=42653
+  - Overhauls crossbows, rewards new high‑level variants after final Ancient Technology quest, ties to The Night Hunter, integrates with Anniversary Edition, requires perks.
+- **AFDI - TG Alternative Endings Patch** `1.7.1.0` modid=114021
+  - Enables item destruction by dropping them into the Aetherium Forge lava.
+- **AFDI - Aetherium Forge Destroys Items** `1.7.1.0` modid=114021
+  - Enables item destruction by dropping them into the Aetherium Forge lava.
+- **Old Blood** `1.2.0.0` modid=89554
+  - Post‑Dawnguard expansion quest adding new story, characters, and factions; ~3+ hours of voiced dialogue; dark, morally grey path; exclusive to Volkihar.
+- **A new Debt Alternate Routes** `2.0.0.0` modid=148427
+  - Adds four fully voiced alternate solutions to the "A New Debt" quest.
+- **Varona Nelas Lives Longer - Reluctant Steward Delayed - Mysticism Patch** `1.1.0.0` modid=145593
+  - Delays Varona Nelas’s death until required favor quests are completed.
+- **Varona Nelas Lives Longer - Reluctant Steward Delayed** `1.1.0.0` modid=145593
+  - Delays Varona Nelas’s death until required favor quests are completed.
+- **Solstheim without Miraak - Timing is Everything Patch** `1.0.3.0` modid=145694
+  - Defers Miraak's influence on Solstheim until after Main Quest Dragon Rising, with staged corruption after each milestone; cultist attacks 5% chance after Level 25 and Dragonslayer; configurable via Timing is Everything; compatible with Standing Stones, sleepwalking, and related patches; edits scripts of DLC2MQ02, DLC2MQ07 and related NPCs
+- **Solstheim without Miraak - Pilgrim (Go to Bed) Patch** `1.0.3.0` modid=145694
+  - Defers Miraak's influence on Solstheim until after Main Quest Dragon Rising, with staged corruption after each milestone; cultist attacks 5% chance after Level 25 and Dragonslayer; configurable via Timing is Everything; compatible with Standing Stones, sleepwalking, and related patches; edits scripts of DLC2MQ02, DLC2MQ07 and related NPCs
+- **Solstheim without Miraak - Sensible Sleepwalking Patch** `1.0.3.0` modid=145694
+  - Defers Miraak's influence on Solstheim until after Main Quest Dragon Rising, with staged corruption after each milestone; cultist attacks 5% chance after Level 25 and Dragonslayer; configurable via Timing is Everything; compatible with Standing Stones, sleepwalking, and related patches; edits scripts of DLC2MQ02, DLC2MQ07 and related NPCs
+- **Solstheim without Miraak - Skyrim Landscape and Water Fixes Patch** `1.0.3.0` modid=145694
+  - Defers Miraak's influence on Solstheim until after Main Quest Dragon Rising, with staged corruption after each milestone; cultist attacks 5% chance after Level 25 and Dragonslayer; configurable via Timing is Everything; compatible with Standing Stones, sleepwalking, and related patches; edits scripts of DLC2MQ02, DLC2MQ07 and related NPCs
+- **Solstheim without Miraak - DLC2PillarBuilderActorScript Replacer** `1.0.3.0` modid=145694
+  - Defers Miraak's influence on Solstheim until after Main Quest Dragon Rising, with staged corruption after each milestone; cultist attacks 5% chance after Level 25 and Dragonslayer; configurable via Timing is Everything; compatible with Standing Stones, sleepwalking, and related patches; edits scripts of DLC2MQ02, DLC2MQ07 and related NPCs
+- **Solstheim without Miraak - Dragonborn DLC for Non-Dragonborn** `1.0.3.0` modid=145694
+  - Defers Miraak's influence on Solstheim until after Main Quest Dragon Rising, with staged corruption after each milestone; cultist attacks 5% chance after Level 25 and Dragonslayer; configurable via Timing is Everything; compatible with Standing Stones, sleepwalking, and related patches; edits scripts of DLC2MQ02, DLC2MQ07 and related NPCs
+- **Black Book Quest Tweaks** `1.0.0.0` modid=145689
+  - Renames Black Book quests, adds dedicated quests for Waking Dreams and Epistolary Acumen, and improves location naming and clearing
+- **Destroy the Acolyte Priests** `1.0.0.0` modid=145580
+  - Adds quest to locate and kill three Solstheim Dragon Priests (Ahzidal, Dukaan, Zahkriisos) before Miraak, triggered by a courier note.
+- **Cult of the True Dragonborn - Immersive Miraak Difficulty** `1.0.1.0` modid=83458
+  - Alduin gains massive buffs (−3500 health, 6 HP/s heal, 90% magic resistance) that are removed by killing named Dragon Priests
+  - - Morokei (Labyrinthian): 20% magic resistance
+  - - Nahkriin (Skuldafn): 500 health
+  - - Krosis (Shearpoint): 2 HP/s heal
+  - - Hevnoraak (Valthume): 2 HP/s heal
+  - - Otar the Mad (Ragnvald): 2 HP/s heal
+  - - Rahgot (Forelhost): 1500 health
+  - - Vokun (High Gate Ruins): 20% magic resistance
+  - - Volsung (Volskygge): 1500 health
+- **Sensible Sleepwalking - Wake up at nearest All-Maker Stone** `1.0.0.0` modid=64680
+  - Prevents sleepwalking on Solstheim from sending player to random island locations, waking only at nearest All-Maker Stone
+- **Severin Manor Has A price** `1.0.0.0` modid=62165
+  - Makes Severin Manor purchasable after Served Cold quest, instead of free
+- **Redeeming Fultheim - A Blades Quest Addon** `1.2.0.0` modid=136788
+  - Adds 90+ voiced dialogue lines and a short quest with two endings for Fultheim.
+- **GATE TO SOVNGARDE (GTS) - Small Mods and Resources - Delay Bleak Falls Barrow Voiced** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Call of Valor - Tweaks - DS reqs - PQE Patch** `1.1.6.0` modid=113754
+  - Call of Valor summons all 3 heroes; duration 120 s; buffed stats/outfits; optional Dragonsoul cost to unlock words; patches for USSEP and Stormcrown
+- **Paarthurnax - Quest Expansion** `1.12.0.0` modid=51711
+  - Fully voiced quest expansion that reimagines the Paarthurnax quest, giving both the Blades and Paarthurnax compelling reasons for their stances and presenting the Dragonborn with the final moral choice.
+- **Andrealphus' Harder Quests - Malborn Container Limiter** `1.2.9.0` modid=27939
+  - Increases quest objectives (e.g., 30 pamphlets, 40 nirnroot, 100k debt)
+  - Adds weight limits for Malborn containers
+  - Adjusts thaneship requirements, removes shortcuts
+  - ESL flagged
+- **Main Quest Delay Reminder** `1.0.0.0` modid=64856
+  - Adds a courier who delivers a note after level 14 to prompt speaking with Farengar, delaying the main quest
+- **End Times** `2.51.0.0` modid=39201
+  - Adds a customizable timer that forces the player to defeat Alduin within a set period, includes MCM menu.
+- **Cult of the World Eater - Dragon Priests Buff Alduin SPID** `1.3.0.0` modid=83274
+  - Increases Alduin's stats with buffs removed by killing named Dragon Priests
+  - - Morokei (Labyrinthian): 20% magic resistance
+  - - Nahkriin (Skuldafn): 500 health
+  - - Krosis (Shearpoint): 2 HP/s heal
+  - - Hevnoraak (Valthume): 2 HP/s heal
+  - - Otar the Mad (Ragnvald): 2 HP/s heal
+  - - Rahgot (Forelhost): 1500 health
+  - - Vokun (High Gate Ruins): 20% magic resistance
+  - - Volsung (Volskygge): 1500 health
+  - Base magic resistance 50% plus 40% from priests = 90% total.
+- **Defeat the Dragon Cult** `1.0.0.0` modid=86625
+  - Adds quests to hunt and kill Dragon Priests before facing Alduin, complementing Cult of the True Dragonborn.
+- **Dungeon Quests are not Miscellaneous** `1.0.0.0` modid=123559
+  - Converts most miscellaneous dungeon quests into full side quests with journal entries for titles such as Angarvunde, Ansilvund, Blind Cliff Bastion, etc.
+- **Timing is Everything SE** `2.2.0.0` modid=25464
+  - Lets you delay or expedite quest starts (Dragonborn, Dawnguard, Hearthfire) and lower level requirements to begin quests earlier.
+- **The Choice is Yours** `2.7.0.0` modid=3850
+  - Prevents quests from starting automatically, allowing players to pursue only desired quests.
+- **GATE TO SOVNGARDE (GTS) - Small Mods and Resources - Alcoholic Lite Effects** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Skyrim on Skooma** `69.69.0.0c` modid=80975
+  - Transforms skooma into a drug with 69 trip scenarios, addiction mechanics, console‑customizable effects, and visual/audio variations.
+- **Reading Is Good (SKSE)** `1.1.2.0` modid=42026
+  - Reworks skill books to grant permanent leveling speed boost instead of instant levels.
+- **Dova Jump** `0.6.1.0` modid=125550
+  - Custom unisex jump animations for Dragonborn; under active development; animation variety may change.
+- **Vampire Lords Can Fly (With Collision)** `1.0.0.0` modid=46023
+  - Allows vampire lords to fly using a simple collision‑free method.
+- **Jump Behavior Overhaul SE** `1.5.0.0` modid=36889
+  - Overhauls jumping with new animations, height‑based landing variations, motion adjustments, and Nemesis patches; script‑free
+- **Better Jumping AE** `1.8.6.0` modid=18967
+  - Allows sprint jumping, double jump, and configurable jump height multiplier via an SKSE64 plugin with no ESP.
+- **Container Weight Restrictions** `4.1.0.0` modid=13826
+  - Adds weight limits to containers and displays current/max weight in the menu.
+- **Civil War Couriers Framework** `1.0.1.0` modid=81546
+  - Adds fully voiced Imperial and Stormcloak couriers via adapted scripts.
+- **Dapper Deliveries - A Courier Overhaul** `1.0.0.0` modid=64057
+  - Improves courier appearance and behavior, adding better clothing, gear, and realistic deliveries.
+- **Courier Delivers to NPCs** `1.0.4.0` modid=42928
+  - Courier now occasionally delivers letters to NPCs.
+- **Fish Anywhere - Streamlined Fishing (Patch)** `1.0.0.0` modid=85070
+  - Ensures compatibility between Fish Anywhere With Water and Streamlined Fishing by overwriting the fishing script.
+- **Streamlined Fishing** `1.0.0.0` modid=80683
+  - Opens a selection menu for fishing rods or equips any available rod when fishing starts
+- **Immersive Fishing** `1.5.0.0` modid=115249
+  - Adds cast/idle/catch fishing animations, shows rod and caught fish on hands, requires Simple Fishing Overhaul and Open Animation Replacer, must be loaded after those mods, uses Immersive Equipment Displays optionally
+- **Fish Anywhere With Water** `0.5.0.0` modid=60915
+  - Enables fishing from any position facing a body of water; respects water detection, dynamic fish populations; optional VR settings; .ESL flagged
+- **Vanilla Style UI for Fancy Fishing** `1.0.1.0` modid=109041
+  - Redesigns the Fancy Fishing UI to match vanilla style, providing a more integrated visual experience.
+- **Fancy Fishing - Minigame and Tweaks** `1.5.0.0` modid=89352
+  - Adds fishing config options and an optional Stardew‑style minigame with VR support, configurable via MCM, compatible with numerous fishing mods.
+- **Simple Fishing Overhaul - FLM Addon** `1.2.0.0` modid=104569
+  - Makes various ingredients usable as bait for Simple Fishing Overhaul via FormList Manipulator, without direct conflicts
+- **Simple Fishing Overhaul - Animations and Improved Quest Dialogue - Tiny Patch for FK Diverse Racial Skeletons** `1.1.0.0` modid=103440
+  - Adds first- and third-person fishing animations and new dialogue lines for fishing quests.
+- **Simple Fishing Overhaul - Animations and Improved Quest Dialogue** `1.1.0.0` modid=103440
+  - Adds first- and third-person fishing animations and new dialogue lines for fishing quests.
+- **Random Mining** `1.7.2.0` modid=4476
+  - Configurable mining that lets you set ore amount and strikes, scale ore gain by skill, and optionally gain smithing or magic XP.
+- **Campfire - Script Optimization - Go to bed Patch** `1.0.0.0` modid=149913
+  - Fixes Papyrus script errors; improves script handling; patch for Campfire Script Optimization - Go to bed Patch
+- **Use Those Blankets Campfire Patch** `2.11.0.0` modid=75481
+  - Adds blanket support for NPCs and players to cover themselves while sleeping.
+- **Use Those Blankets** `2.11.0.0` modid=75481
+  - Adds blanket support for NPCs and players to cover themselves while sleeping.
+- **Go to bed - Patches** `2.0.7.0` modid=4224
+  - Allows character to sleep in beds by lying down after activation; uses Wait(T) to open sleep menu and advance time for jail; select sleepwear via MCM; NPCs may use sleepwear; follower sleep support WIP.
+- **Go to bed** `2.0.7.0` modid=4224
+  - Allows character to sleep in beds by lying down after activation; uses Wait(T) to open sleep menu and advance time for jail; select sleepwear via MCM; NPCs may use sleepwear; follower sleep support WIP.
+- **Take a Nap - Sleep on Chairs** `f1.02` modid=113255
+  - Sleep on chairs with shift‑activate, limited to 3 h, possible back pain, NPC reactions, fully animated via DAR/OAR, compatible with all mods, optional Mfg Fix to close eyes
+- **Wait Carriage in Inns - Fast Travel Improvement** `1.3.0.0` modid=83044
+  - Allows player to wait for a carriage driver in any inn across Tamriel, improving fast travel.
+- **Boats - Operational Animated Travel** `1.6.2.0` modid=110882
+  - Adds animated moving boats and ferries, providing immersive travel across specific water locations
+- **Improved Innkeepers** `1.2.0.0` modid=46659
+  - Features:
+  - - Customizable inn prices
+  - - Customizable room availability
+  - - Innkeepers sleep at night, renting disabled while asleep
+  - - Option to disable sleep/prices
+  - - Register custom inns (5 slots) via MCM
+  - - Voiced with edited vanilla lines
+- **Rent a room for 12 hours** `1.0.0.0` modid=96135
+  - Minor tweak which changes the amount of hours you rent a room in an inn for 12 hours instead of 24.
+- **Journeyman - A Fast Travel Overhaul** `1.1.5.0` modid=92220
+  - Fast travel overhaul requiring crafted travel packs (1L,2LS,2FW,1T); integrates with Survival Mode and Gourmet; conflicts with Obsidian Weathers
+- **Respect for the Legate** `1.0.1.0` modid=30185
+  - Imperial patrols cease harassment after promotion to Legate.
+- **Civil War Overhaul - Redux** `1.1.1.0` modid=37906
+  - Rebuilds civil war questline with radiant missions, diverse enemy troops (spellcasters, archers, monsters), configurable siege outcomes and unique weapons via MCM; requires frequent saving and includes 'Get CWO Unstuck' option
+- **Serious Civil War Consequences for Jarl Balgruuf - Jarl Balgruuf Dilemma Extended** `1.2.0.0` modid=81554
+  - Extends Jarl Balgruuf Dilemma, allowing Balgruuf to join Imperials or Stormcloaks and adding Whiterun Defense quest and extra dialogue
+- **Serious Civil War Fort Personnel** `1.0.3.0` modid=137106
+  - Adds quartermasters, healers, servants, prisoners to nine forts and improves soldier AI packages
+- **Serious Civil War Fort Commanders** `1.1.0.0` modid=81541
+  - Fort commanders wear officer armor, have double level, must be killed in fort sieges, and retain faction titles.
+- **Jarl Balgruuf Dilemma SSE** `0.1.4.0` modid=41132
+  - Adds a civil war overhaul that omits the main quest and enables Jarl Balgruuf to join the Stormcloaks.
+- **After the Civil War - Siege Damage Repairs** `2.6.5.0` modid=20668
+  - Quests to repair city damage post-Civil War
+  - Donations speed up reconstruction, affect repair time
+  - Optional patches for Immersive Citizens, JK's Temple, etc.
+  - ESL flagged
+- **Kynareth Replaces Talos - Civil War Consequence** `2.0.0.0` modid=91440
+  - Replaces the Statue of Talos with a Kynareth statue after Whiterun's capture and replaces associated shrines.
+- **Civil War Aftermath SE** `1.9.0.0` modid=3484
+  - Expands the civil war by adding combat against enemy encampments throughout Skyrim.
+- **Campfire - Reskin Skill Tree** `1.0.0.0` modid=160163
+  - Reskin of Campfire skill tree with journal‑style UI; credit to Chesko; install over original
+- **Campfire - Dynamic Activation Key** `1.5.0.0` modid=124401
+  - Shift+E to light/upgrade campfire or access skills; pick up objects; requires Campfire; optional OAR animation
+- **Campfire Animations** `1.5.1.0` modid=112322
+  - Adds animations for campfire interactions; requires Campfire, OAR, FLM; optional Immersive Equipment Displays; YouTube preview
+- **Simple Campfire Additions** `1.0.2.0` modid=21956
+  - Adds extra craftable items like furniture and workbench options in Campfire
+- **Igniting Animation for Campfire** `1.2.0.0` modid=83142
+  - Adds animated fire‑lighting interaction to campfires; flagged as ESL and updated to version 82
+- **Hearth Craft** `1.0.3.0` modid=6601
+  - Adds craftable placeable furniture, clutter, and buildings via Campfire framework
+  - Includes Rustic/Fine/Noble furniture, breakdown recipes, MCM toggle, integrates with Campfire and other mods.
+- **Campfire Dynamic Collisions - Normal Collisions** `1.2.0.0` modid=125636
+  - Adds dynamic collisions to all objects placed with Campfire, allowing NPCs to recognize them as obstacles.
+- **Campfire - Pilgrim Patch - Halved Version** `1.0.0.0` modid=57888
+  - Adjusts amulet backpack effects to mirror Pilgrim mod
+- **Campfire Camping Synergy** `1.1.0.0` modid=98872
+  - Patch enabling CC Camping Expansion integration; version 1 places unlit fire, version 2 adds Scroll/Staff Enchanter; optional fire‑out refund
+- **Campfire - Script Optimization** `1.0.0.0` modid=149913
+  - Fixes Papyrus script errors; improves script handling; patch for Campfire Script Optimization - Go to bed Patch
+- **CC's Camping Expansion** `1.3.0.0` modid=73354
+  - Modular camping assets and kits (tents, equipment); craftable at workbench; integrates with Campfire; adds fishing tanks; full basic/intermediate/advanced camping system
+- **Campfire and Frostfall - Unofficial SSE Update - Campfire only** `f1.02` modid=17925
+  - Restores MCM, Interface widgets; full functional Campfire & Frostfall; requires SKSE, PapyrusUtil; install overwrite
+- **Campfire - Use Straw for Tinder** `1.2.0.0` modid=101113
+  - Breaks straw bundles into tinder to light campfires; requires Campfire
+- **Campfire Cabin** `1.0.0.0` modid=13372
+  - Buildable cabin with see‑through windows/skylight; includes bed, table, containers, stove, alchemy workstation; can be moved
+- **Campfire - Complete Camping System** `1.12.1.0SEVR` modid=667
+  - Full survival camping with fire building, cooking, skill tree; no persistent scripts; skill gain bonuses; integrates with Frostfall; extensive crafting
+- **Helmet Toggle 2** `3.6.0.0` modid=100617
+  - Toggles helmets/hoods with animations on location/weather changes using Dynamic Armor Variants; requires Open Animation Replacer, DLH, SkyUI; supports many armor packs.
+- **Dynamic Lowered Hoods** `1.0.0.0` modid=65964
+  - Enables hoods to be raised/lowered dynamically for player and NPCs using Dynamic Armor Variants, with optional hidden‑helmet add‑on via config mapping.
+- **Simple Dual Sheath** `1.5.7.0` modid=50049
+  - Makes equipped left-hand weapons and staves visible on the player or NPCs, with a lightweight SKSE64 plugin and no scripts or ESPs.
+- **Weapon Switch Animations Complete** `1.1.0.0` modid=154132
+  - Provides complete draw/sheathe animations for many weapon and hand combos, supporting Immersive Weapon Switch.
+- **Weapon Styles - DrawSheathe Animations for IED** `3.0.1.0` modid=85085
+  - Adds equip/unequip animations for weapons with Immersive Equipment Displays using Open Animation Replacer.
+- **Lights On - Wearable Lanterns for Immersive Equipment Displays** `2.5.1.0` modid=85575
+  - Provides wearable lanterns via Immersive Equipment Displays; 16 models; configurable conditions, placement, and hotkeys
+- **Missile's IED Preset - Immersive Equipment Displays - Better Head Hunter Displays while mounted** `1.3.2.0` modid=67770
+  - Provides presets for item displays, weapon positioning, quiver attachment, and customization options
+- **Missile's IED Preset - Immersive Equipment Displays** `1.3.2.0` modid=67770
+  - Provides presets for item displays, weapon positioning, quiver attachment, and customization options
+- **Open Animation Replacer - IED Conditions** `1.0.2.0` modid=98308
+  - Adds conditions to Open Animation Replacer for use with Immersive Equipment Displays and Simple Dual Sheath to enable style‑fitting draw/sheath animations.
+- **Immersive Equipment Displays - Extra Skeleton Nodes** `1.5.0.0` modid=92244
+  - Adds extra skeleton nodes for positioning swords, maces, and shields in IED.
+- **Immersive Equipment Displays** `1.7.4.0` modid=62001
+  - Displays all equipped and unequipped gear on player and NPCs, supports every item type, offers configurable positioning, physics, real‑time UI, import/export presets, conditional overrides, requires SKSE64, Address Library, Simple Dual Sheath; optional Weapon Styles; physics based on CBP, CPU‑efficient with sub‑stepping
+- **Tales of Skyrim - Berserkyr Patch Collection** `1.8.0.0` modid=103318
+  - Patch collection for JPSteel's Berserkyr including Artificer,
+  - Fabled Forests,
+  - Gourmet,
+  - Manbeast,
+  - Pilgrim,
+  - Rare Curios (CC),
+  - SkyTEST,
+  - Survival Mode (CC),
+  - and other compatibility patches.
+- **Tales of Skyrim - Berserkyr - Book Covers Skyrim Add-on** `1.3.0.0` modid=103559
+  - Adds werebear transformation and perk tree with Bestial Resistance (25‑90% phys dmg reduction),
+  - Thick Skin (arrow/bolt immunity),
+  - Chilling Roar (frost stun),
+  - Ice Claws (freeze chance),
+  - Frenzied Warrior (axebuff),
+  - Sweet Tooth (disease cure),
+  - Bear Kinship (summon bear),
+  - Berserker Rage (triple dmg); new Berserker enemies, shamans, quests Curse of the Berserker/Berserksgangr, Bear Fur Helmet/Armor, absorption, silence, fear, etc.
+- **Tales of Skyrim - Berserkyr** `1.3.0.0` modid=103559
+  - Adds werebear transformation and perk tree with Bestial Resistance (25‑90% phys dmg reduction),
+  - Thick Skin (arrow/bolt immunity),
+  - Chilling Roar (frost stun),
+  - Ice Claws (freeze chance),
+  - Frenzied Warrior (axebuff),
+  - Sweet Tooth (disease cure),
+  - Bear Kinship (summon bear),
+  - Berserker Rage (triple dmg); new Berserker enemies, shamans, quests Curse of the Berserker/Berserksgangr, Bear Fur Helmet/Armor, absorption, silence, fear, etc.
+- **Werewolf Revert Effect and Animation** `2.0.0.0` modid=76472
+  - Adds an immersive revert animation and sound for werewolf form change, replacing instant poof.
+- **Werewolf Hunger** `2.3.1.0` modid=28209
+  - Adds werewolf hunger tracking with periodic notifications and four hunger levels (Sated, Restless, Ravenous, Famished) that modify HP, stamina, magicka regen and other stats, with bonuses linked to perks, totems, moon phase, and optional lesser beast form mechanics.
+- **Canis Hysteria - The Werewolf Disease** `1.0.7.0` modid=52397
+  - New contractible lycanthrope disease; morphs to lycanthropy if untreated; lore book; cure quest; recommend with More Werewolves mods
+- **Manbeast - A Werewolf Overhaul** `2.1.1.0` modid=44746
+  - Overhauls werewolf system, balances mechanics, adds new lycanthropic abilities
+- **Scion - A Vampire Overhaul** `2.2.2.0` modid=41639
+  - Complete overhaul of Skyrim's Vampire system, balancing mechanics and adding new vampiric abilities
+- **Edmond's Cursed - An Alternate Death Mod** `1.0.0.0` modid=90800
+  - Alternate death for werewolves and vampires that triggers transformation instead of death, configurable core files, compatible with other werewolf/vampire mods.
+- **DVA - Dynamic Vampire Appearance** `1.3.0.0` modid=96817
+  - Visually alters vampire appearance based on blood hunger, with configurable effects via MCM.
+- **SimplyVampireToAshpile** `2.6.0.0` modid=10490
+  - Adds effect that turns vampires to dust when they die or are killed.
+- **Vampire Feeding Tweaks** `1.13.0.0` modid=47225
+  - Adds three vampire feeding options — feed on kneeling, unaware, or recently killed enemies via Shift+Activate, restores HP, lightweight standalone mod
+- **Sun Affects NPC Vampires** `2.1.0.0` modid=47277
+  - Makes NPC vampires take sun damage (2HP/s) outdoors 6AM‑8PM not in shadows; configurable for player/NPCs/both, can exclude Serana or nullify with helmet; damage scales with vampirism stage
+- **Mundus - A Standing Stone Overhaul** `1.14.2.0` modid=33411
+  - Overhauls Standing Stones with balanced passive abilities, replaces powers, adds new stone effects
+- **Vigil Enforcer and Gallows Hall - Pilgrim Tweaks - Vigil Enforcer** `1.5.0.0` modid=82069
+  - Patches Pilgrim and Vigil Enforcer Creation to align shrine textures for consistency, enabling worship of Molag Bal with appropriate visuals.
+- **Vigil Enforcer and Gallows Hall - Pilgrim Tweaks - Gallows Hall** `1.5.0.0` modid=82069
+  - Patches Pilgrim and Vigil Enforcer Creation to align shrine textures for consistency, enabling worship of Molag Bal with appropriate visuals.
+- **Pilgrim and Daedric Shrines Consistency and Tweaks - Map Markers** `2.1.0.0.MM` modid=63617
+  - Patch ensuring Daedric Shrines - All‑in‑One works with Pilgrim, adding map markers and optional statue patches.
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - Teleport Only In Tamriel - Pilgrim** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Pilgrim - A Religion Overhaul** `1.2.2.0` modid=54099
+  - Adds many new deities with Restoration perks, shrine effects, prayer ability, priest vendors selling themed items, and standing stone bonuses.
+- **Contraband Confiscation** `1.0.0.0` modid=34903
+  - Guards confiscate illegal items upon arrest.
+- **Wait I know You - Forcegreet Tweak - Bruma** `1.3.1.0` modid=74287
+  - Makes guards forcegreet the player after they say “Wait... I know you!”.
+- **Wait I know You - Forcegreet Tweak** `1.3.1.0` modid=74287
+  - Makes guards forcegreet the player after they say “Wait... I know you!”.
+- **Sensible Bribes - Based on Speechcraft Not Level** `1.0.0.0` modid=55450
+  - Adjusts bribery values to depend on speechcraft rather than character level.
+- **Sanctified Stolen Goods** `1.0.1.0` modid=128597
+  - Allows fences to clear stolen flag from items for a price
+- **Turn in Contraband** `1.2.0.0` modid=124767
+  - allows turning in drugs (skooma, moon sugar, etc.) to guards for gold rewards (100 gold for skooma, 50 for moon sugar, 200 for double-distilled skooma, redwater skooma, or sleeping tree sap); configure reward via console command set aaa_GoldReward to x; no MCM; simple dialogue option added
+- **Thugs Not Assassins** `1.1.1.0` modid=34028
+  - Prevents thugs from killing, adds conversation options (fight, surrender, bribe, persuade), may take gold/items instead, escape via stealth/persuasion, victim opinion worsens unless bribed/persuaded.
+- **Locked Chests Have Keys - Patches - 3DNPC** `f1.00` modid=74718
+  - ESL patches for Locked Chests Have Keys integrating with mods like Inigo, JK's Interiors, and others
+- **Locked Chests Have Keys - Patches - Inigo** `f1.00` modid=74718
+  - ESL patches for Locked Chests Have Keys integrating with mods like Inigo, JK's Interiors, and others
+- **Locked Chests Have Keys** `f1.02` modid=74565
+  - Many locked chests now have hidden nearby keys, allowing opening via key in addition to lockpicking.
+- **Sure of Stealing** `1.1.4.0` modid=93682
+  - SKSE plugin requiring double‑tap activate to steal, sit, or open containers without sneaking
+- **Crime Bounty Decay SE - Bruma Compatibility** `1.1.0.0` modid=25457
+  - Bounties decay over time when away from a hold, configurable via MCM.
+- **Stealth Detection Fixes - Light** `2.2.0.0` modid=145336
+  - Fixes sleeping NPC detection, stealth kill detection radius, attack detection, sneak spell light, and killmove detection; configurable via MCM; requires SPID, MCM Helper, Papyrus Extender, Scrambled Bugs; generally compatible
+- **Stealth Detection Fixes** `2.2.0.0` modid=145336
+  - Fixes sleeping NPC detection, stealth kill detection radius, attack detection, sneak spell light, and killmove detection; configurable via MCM; requires SPID, MCM Helper, Papyrus Extender, Scrambled Bugs; generally compatible
+- **Take a Peek - New Stealth Mechanic - Simply Knock Mini Patch** `1.30.0.0` modid=66908
+  - Peek through keyholes to see behind doors, MCM configurable, Shift+E activation, NPC reactions, compatible with SKSE/DAR
+- **Take a Peek - New Stealth Mechanic** `1.30.0.0` modid=66908
+  - Peek through keyholes to see behind doors, MCM configurable, Shift+E activation, NPC reactions, compatible with SKSE/DAR
+- **Realistic AI Detection (RAID) - High Interior High Exterior** `3.1.0.0` modid=2345
+  - Script‑free overhaul enhancing sneaking realism with improved detection formulas.
+- **Meg's Eversnow (Gourmet) - Eating Animations and Sounds patch** `2.1.0.0` modid=124398
+  - Remodels the drug Eversnow from Gourmet with 1K/2K textures and optional patches for UAPNG or EAS, without a plugin.
+- **Meg's Eversnow (Gourmet) - 1k** `2.1.0.0` modid=124398
+  - Remodels the drug Eversnow from Gourmet with 1K/2K textures and optional patches for UAPNG or EAS, without a plugin.
+- **Gourmet Patches by Missile** `1.0.4.0` modid=97285
+  - Offers various Gourmet patches for compatibility with LOTD, WACCF, and other mods.
+- **Gourmet Patch Page - 3DNPC** `1.0.0.0` modid=97050
+  - Library of patches for Gourmet; includes patches for Beyond Skyrim, AI Overhaul, Rare Curios, and many other mods; soft requirements.
+- **Gourmet Patch Page - AI Overhaul** `1.0.0.0` modid=97050
+  - Library of patches for Gourmet; includes patches for Beyond Skyrim, AI Overhaul, Rare Curios, and many other mods; soft requirements.
+- **Gourmet - Beyond Skyrim - Wares of Tamriel Patch** `1.0.0.0` modid=97809
+  - Patches food and drink effects from BS Wares of Tamriel to match Gourmet’s changes.
+- **Gourmet Patch Page - Bruma** `1.0.0.0` modid=97050
+  - Library of patches for Gourmet; includes patches for Beyond Skyrim, AI Overhaul, Rare Curios, and many other mods; soft requirements.
+- **Gourmet - Eating Animations and Sounds Patch** `2.0.0.0` modid=98185
+  - Adds eating animations and sounds for all Gourmet foods; includes combo patches for Survival, Fishing, Bruma, Wyrmstooth, USSEP, etc.
+- **Gourmet Patch Page - Remiel** `1.0.0.0` modid=97050
+  - Library of patches for Gourmet; includes patches for Beyond Skyrim, AI Overhaul, Rare Curios, and many other mods; soft requirements.
+- **Gourmet Patch Page - Wyrmstooth** `1.0.0.0` modid=97050
+  - Library of patches for Gourmet; includes patches for Beyond Skyrim, AI Overhaul, Rare Curios, and many other mods; soft requirements.
+- **Gourmet Patch Page - Vigilant** `1.0.0.0` modid=97050
+  - Library of patches for Gourmet; includes patches for Beyond Skyrim, AI Overhaul, Rare Curios, and many other mods; soft requirements.
+- **Gourmet - A Cooking Overhaul - USSEP Patch** `1.1.12.0` modid=96876
+  - Complete cooking system overhaul; adds food distribution, new recipes, cookbooks, and buffs for health, stamina, magicka; integrates with Survival Mode; adds chef NPCs, new drinks, drugs, and modifies vendor inventories.
+- **Gourmet - A Cooking Overhaul - Survival Patch** `1.1.12.0` modid=96876
+  - Complete cooking system overhaul; adds food distribution, new recipes, cookbooks, and buffs for health, stamina, magicka; integrates with Survival Mode; adds chef NPCs, new drinks, drugs, and modifies vendor inventories.
+- **Gourmet - A Cooking Overhaul - Fishing Patch** `1.1.12.0` modid=96876
+  - Complete cooking system overhaul; adds food distribution, new recipes, cookbooks, and buffs for health, stamina, magicka; integrates with Survival Mode; adds chef NPCs, new drinks, drugs, and modifies vendor inventories.
+- **Gourmet - A Cooking Overhaul - Extended Cut Saints and Seducers Patch** `1.1.12.0` modid=96876
+  - Complete cooking system overhaul; adds food distribution, new recipes, cookbooks, and buffs for health, stamina, magicka; integrates with Survival Mode; adds chef NPCs, new drinks, drugs, and modifies vendor inventories.
+- **Gourmet - A Cooking Overhaul** `1.1.12.0` modid=96876
+  - Complete cooking system overhaul; adds food distribution, new recipes, cookbooks, and buffs for health, stamina, magicka; integrates with Survival Mode; adds chef NPCs, new drinks, drugs, and modifies vendor inventories.
+- **Alchemy Requires Bottles - Empty Potions at the Alchemy Lab - Show Empty Bottes in the Menu** `1.1.0.0` modid=137443
+  - Discard potions/poisons at Alchemy Lab to receive empty bottles
+  - ESL flagged
+- **Patch for Project AHO and Apothecary - An Alchemy Overhaul** `1.2.0.0` modid=52357
+  - Adjusts Project AHO potions to match Apothecary's effects and magnitudes, ensuring consistency with the alchemy overhaul.
+- **aljos Apothecary Patches** `4.8.0.0` modid=79641
+  - Provides assorted Apothecary patches not otherwise available.
+- **Addons for 'Alchemy Requires Bottles Redux' - Venom Requires Empty Bottles** `1.0.0.0` modid=45336
+  - Adds empty bottle model, optional integration for crafting, no permissions required, ESL‑flagged
+- **Addons for 'Alchemy Requires Bottles Redux' - Empty Bottle Patch** `1.0.0.0` modid=45336
+  - Adds empty bottle model, optional integration for crafting, no permissions required, ESL‑flagged
+- **Apothecary - An Alchemy Overhaul - CC Saints and Seducers Patch** `1.3.9.0` modid=52130
+  - Rebalances potions and poisons, standardizing magnitudes and adding new effects such as Fortify Health Regeneration; removes useless effects; adds utility potions (Invisibility, Waterwalking); requires Scrambled Bugs for poison resistance; compatible with Mysticism; adjusts durations and resistances.
+- **Apothecary - An Alchemy Overhaul - CC Rare Curios Patch** `1.3.9.0` modid=52130
+  - Rebalances potions and poisons, standardizing magnitudes and adding new effects such as Fortify Health Regeneration; removes useless effects; adds utility potions (Invisibility, Waterwalking); requires Scrambled Bugs for poison resistance; compatible with Mysticism; adjusts durations and resistances.
+- **Apothecary - An Alchemy Overhaul - CC Fishing Patch** `1.3.9.0` modid=52130
+  - Rebalances potions and poisons, standardizing magnitudes and adding new effects such as Fortify Health Regeneration; removes useless effects; adds utility potions (Invisibility, Waterwalking); requires Scrambled Bugs for poison resistance; compatible with Mysticism; adjusts durations and resistances.
+- **Apothecary - An Alchemy Overhaul - Bruma Patch** `1.3.9.0` modid=52130
+  - Rebalances potions and poisons, standardizing magnitudes and adding new effects such as Fortify Health Regeneration; removes useless effects; adds utility potions (Invisibility, Waterwalking); requires Scrambled Bugs for poison resistance; compatible with Mysticism; adjusts durations and resistances.
+- **Apothecary - An Alchemy Overhaul - Wyrmstooth Patch** `1.3.9.0` modid=52130
+  - Rebalances potions and poisons, standardizing magnitudes and adding new effects such as Fortify Health Regeneration; removes useless effects; adds utility potions (Invisibility, Waterwalking); requires Scrambled Bugs for poison resistance; compatible with Mysticism; adjusts durations and resistances.
+- **Alchemy recipe view mode - Show in UI** `1.0.2.0` modid=141094
+  - Overhauls Ancient Nord armors into gender-neutral heavy/light variants
+  - Adds Nord Hero sets, Stalhrim, Ebony, Hero counterparts
+  - Integrates with Skyforge, optional modules for Stalhrim/Ebony
+  - ESL flagged
+- **Alchemy recipe view mode SE** `1.0.1.0` modid=135485
+  - Special Edition port of recipe view mode
+  - Allows viewing effects of ingredients not carried
+  - Press backslash to toggle
+  - ESL flagged
+- **Alchemy Requires Bottles - Empty Potions at the Alchemy Lab** `1.1.0.0` modid=137443
+  - Discard potions/poisons at Alchemy Lab to receive empty bottles
+  - ESL flagged
+- **Seasonal Alchemy Add-on** `1.3.0.0` modid=83636
+  - Extends seasonal changes to critters, fungi, and farm crops with visual variations.
+- **Nature's Bounty - An Immersive Lore-Friendly Resource Gathering Integration Overhaul Redux for Good Guys Mod - Don't Leave me Hanging - Plants** `1.0.0.0` modid=72194
+  - Adds integration for resource gathering via small mods like Pheasant Encounters and Dreugh Remains, expanding loot options.
+- **Seasonal Alchemy** `1.0.0.0` modid=63969
+  - Alchemy plants have seasonal cycles, dying in winter and reappearing in spring, summer, autumn
+- **Crafting Recipe Distributor** `4.1.0.0` modid=52276
+  - Auto‑generates smelting and tempering recipes for weapons, armor, and clutter via SKSE, requiring no manual patches.
+- **Alchemical Appraisal Services** `1.7.1.0` modid=107344
+  - Lets alchemists identify ingredient effects for gold, pricing per effect, requires SKSE, ESL‑flagged, works with new ingredients
+- **Recipe Auto-Learn** `1.1.1.0` modid=84909
+  - SKSE plugin that auto‑learns ingredient effects from recipes, corrects misspellings, works with all recipes, no lasting save changes.
+- **Alchemy Requires Bottles Redux** `1.0.1.0` modid=44053
+  - Require empty bottle to craft potions/poisons
+  - Purchase empty bottles from apothecaries, retrieve after use
+  - Supports Mortar and Pestle, ESL flagged
+- **Apothecary - An Alchemy Overhaul** `1.3.9.0` modid=52130
+  - Rebalances potions and poisons, standardizing magnitudes and adding new effects such as Fortify Health Regeneration; removes useless effects; adds utility potions (Invisibility, Waterwalking); requires Scrambled Bugs for poison resistance; compatible with Mysticism; adjusts durations and resistances.
+- **Alchemy Plus** `1.1.0.0` modid=80882
+  - Improves alchemy with dynamic models and better names
+  - Impurities subtract from cost, rounded effects to nearest 5
+  - UI hints hide combos when known
+  - ESL flagged
+- **Skyforge Immersion Addon** `1.0.0.0` modid=144420
+  - Enhances the Skyforge with dialogue, a 5% improvement to weapons and armor, and optional access restriction via quest completion.
+- **Hammer and Whetstone - Portable Tempering** `1.0.2.0` modid=89808
+  - Allows tempering armor and weapons anywhere
+- **Honed Thaumaturgy (FLM)** `1.1.0.0` modid=104295
+  - Patch enabling Honed Metal to use Thaumaturgy enchantments via FormList Manipulator; requires Honed Metal and Thaumaturgy; optional plugin for non‑FLM usage
+- **Mystical Materials** `1.1.0.0` modid=81808
+  - Adds mystical material properties that boost matching enchantments, with material categories and bonuses
+- **Enchantments Price Formula Fix - Fixed Formula** `1.0.2.0` modid=62144
+  - Fixes enchanting cost formula to be independent of skill level, offers fixed and reversed variants, improves price stability, compatible with enchantment mods.
+- **Thaumaturgy - Weapon Enchantment XP Tweak** `1.4.5.0` modid=57138
+  - Overhauls enchanting with new weapon effects (Fire Damage 30, Frost Damage 30, Shock Damage 30, Chaos Damage 50% chance, Magicka Damage 10/sec, Stamina Damage 10/sec, Absorb Health 30, etc.) and armor effects (Fortify Alteration Cost, Fortify Destruction Power, etc.), removes useless enchantments, balances power creep.
+- **Thaumaturgy - An Enchanting Overhaul** `1.4.5.0` modid=57138
+  - Overhauls enchanting with new weapon effects (Fire Damage 30, Frost Damage 30, Shock Damage 30, Chaos Damage 50% chance, Magicka Damage 10/sec, Stamina Damage 10/sec, Absorb Health 30, etc.) and armor effects (Fortify Alteration Cost, Fortify Destruction Power, etc.), removes useless enchantments, balances power creep.
+- **Rune Perk Fix - Adamant** `1.1.1.0` modid=83381
+  - Fixes rune placement perk bug by scripting iMaxPlayerRunes, works with Adamant/Ordinal, requires SKSE.
+- **Adamant - Bard Perks Addon - Pilgrim Integration** `5.9.2.0` modid=30191
+  - Overhauls all perk trees, balances skills, adds powerful new perks
+  - Requires Mysticism for magic perks
+  - Optional Hand to Hand addon adds Security and Hand to Hand tree
+  - Adds new perks across Alchemy, Alteration, Conjuration, etc.
+  - Integrates with Adamant's systems
+  - ESL flagged
+- **Adamant - Bard Perks Addon** `5.9.2.0` modid=30191
+  - Overhauls all perk trees, balances skills, adds powerful new perks
+  - Requires Mysticism for magic perks
+  - Optional Hand to Hand addon adds Security and Hand to Hand tree
+  - Adds new perks across Alchemy, Alteration, Conjuration, etc.
+  - Integrates with Adamant's systems
+  - ESL flagged
+- **Fearsome Fists - Hand to Hand Patch** `1.0.0.0` modid=62710
+  - Patch giving Brawler gloves base unarmed damage that scales with perk tree, enabling non‑beast races to match Khajit/Argonians in unarmed combat.
+- **Hand to Hand Blocking Animation - DAR Version** `1.0.0.0` modid=43199
+  - SE port of Zartar's hand‑to‑hand blocking animation
+- **Hand to Hand - An Adamant Addon - Trainers and Skill Books Addon** `1.5.8.0` modid=59790
+  - Addon for Adamant that merges Lockpicking & Pickpocketing into a Hand‑to‑Hand skill, adds a new perk tree, adjusts Light & Heavy Armor trees, adds Hand‑to‑Hand perks (Pugilist, Light Feet, Bracer, etc.), changes Alteration, Block, Heavy Armor, Light Armor mechanics, requires Address Library for SKSE, SPID, KID, Scrambled Bugs, and Hand‑to‑Hand Weapon Speed Scaling
+- **Hand to Hand - An Adamant Addon** `1.5.8.0` modid=59790
+  - Addon for Adamant that merges Lockpicking & Pickpocketing into a Hand‑to‑Hand skill, adds a new perk tree, adjusts Light & Heavy Armor trees, adds Hand‑to‑Hand perks (Pugilist, Light Feet, Bracer, etc.), changes Alteration, Block, Heavy Armor, Light Armor mechanics, requires Address Library for SKSE, SPID, KID, Scrambled Bugs, and Hand‑to‑Hand Weapon Speed Scaling
+- **Adamant - A Perk Overhaul - Simonrim Attack Speed Fix** `5.9.2.0` modid=30191
+  - Overhauls all perk trees, balances skills, adds powerful new perks
+  - Requires Mysticism for magic perks
+  - Optional Hand to Hand addon adds Security and Hand to Hand tree
+  - Adds new perks across Alchemy, Alteration, Conjuration, etc.
+  - Integrates with Adamant's systems
+  - ESL flagged
+- **Adamant - A Perk Overhaul** `5.9.2.0` modid=30191
+  - Overhauls all perk trees, balances skills, adds powerful new perks
+  - Requires Mysticism for magic perks
+  - Optional Hand to Hand addon adds Security and Hand to Hand tree
+  - Adds new perks across Alchemy, Alteration, Conjuration, etc.
+  - Integrates with Adamant's systems
+  - ESL flagged
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - Meditation Stone - Stormcrown Overhaul** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Stormcrown - Capstone Perk Consistency** `1.0.0.0` modid=148487
+  - Swaps capstone perk positions in Stormcrown for consistency with branch perks
+- **Stormcrown - Wyrmstooth - Original Phantom Form** `1.0.0.0` modid=104701
+  - Patches Dragon Aspect Overhaul with Wyrmstooth's Phantom Form, adds fall‑damage negation via meditation; base effects take priority, Black Book Epistolary Acumen benefits stack, fixes oddities
+- **Stormcrown - Dragon Aspect Overhaul** `1.0.0.0` modid=104701
+  - Patches Dragon Aspect Overhaul with Wyrmstooth's Phantom Form, adds fall‑damage negation via meditation; base effects take priority, Black Book Epistolary Acumen benefits stack, fixes oddities
+- **Call of Valor - Tweaks - Stormcrown Patch** `1.1.6.0` modid=113754
+  - Call of Valor summons all 3 heroes; duration 120 s; buffed stats/outfits; optional Dragonsoul cost to unlock words; patches for USSEP and Stormcrown
+- **Stormcrown - A Shout Overhaul** `1.1.17.0` modid=90659
+  - Adds new Shouts Lightning Breath and Poison Breath, expands Dragonborn perk tree with Meditate, Dragon of the North, Sky Above, Voice Within, Deep Breath, etc., adds perks like Dragonborn (2/2), Dragon Aspect, etc.; requires Address Library and Custom Skills Framework; must start before Paarthurnax meditation
+- **Call of Valor - Tweaks - USSEP Patch** `1.1.6.0` modid=113754
+  - Call of Valor summons all 3 heroes; duration 120 s; buffed stats/outfits; optional Dragonsoul cost to unlock words; patches for USSEP and Stormcrown
+- **Call of Valor - Tweaks - Alduin's Bane Fix Patch** `1.1.6.0` modid=113754
+  - Call of Valor summons all 3 heroes; duration 120 s; buffed stats/outfits; optional Dragonsoul cost to unlock words; patches for USSEP and Stormcrown
+- **Call of Valor Tweaks** `1.1.6.0` modid=113754
+  - Call of Valor summons all 3 heroes; duration 120 s; buffed stats/outfits; optional Dragonsoul cost to unlock words; patches for USSEP and Stormcrown
+- **Dragon Aspect Overhaul** `2.0.0.0` modid=29941
+  - Features
+  - - Removed the sound that plays when Dragon Aspect is active
+  - - Removed the chance to summon an Ancient Dragonborn
+  - - A tail grows on your character when the 3rd word is used
+  - - Overall buff to the shout
+  - - If SPID installed, Miraak benefits from all changes
+  - - Vanilla: cooldown 5 5 5s, once/day, duration 10m
+  - - Shout: cooldown 60 120 360s, unlimited uses, duration 5m
+  - - Dragon Aspect: 300-600s, Power attacks 25-50-75% stronger, physical attacks 20-35-50% more damage, Alteration/Conjuration/Illusion spells 20-35-50% longer, Destruction spells 20-35-50% more damage, Restoration cost 20-35-50% less, Health/Magicka/Stamina regen 25-50-100%, incoming physical damage -25-50%, Magic Resistance +20-35%, Shout cooldown -25%
+- **Custom Shout Cooldown Notifications** `0.9.0.0` modid=50870
+  - Adds customizable visual, audio, or haptic notifications for shout cooldowns via MCM.
+- **Male Argonian Shouts - Revoiced** `2.0.0.0` modid=44124
+  - Revoices male Argonian shouts to sound gruffer and more authentic to Argonians
+- **YASTM - Yet Another Soul Trap Manager** `3.0.0.0` modid=56144
+  - Advanced SKSE‑based soul trap manager offering displacement, relocation, shrinking, splitting, redirection, leveling, and configurable behavior for soul gems.
+- **Sorcerer Patch Page - The Great City of Winterhold Patch** `1.0.0.0` modid=95212
+  - Provides Synthesis‑based patches for Sorcerer to generate compatibility patches with other spell mods
+- **Sorcerer Patch Page - Obscure's College of Winterhold Patch** `1.0.0.0` modid=95212
+  - Provides Synthesis‑based patches for Sorcerer to generate compatibility patches with other spell mods
+- **Sorcerer Patch Page - ELFX Patch** `1.0.0.0` modid=95212
+  - Provides Synthesis‑based patches for Sorcerer to generate compatibility patches with other spell mods
+- **Misc Sorcerer Patches - Praedy's Staves** `1.3.0.0` modid=95219
+  - Provides patches for the Sorcerer overhaul, adjusting staff and scroll mechanics for better compatibility and balance.
+- **Sorcerer - A Staff and Scroll Overhaul** `1.0.0.0` modid=95196
+  - Adds two new crafting tables: a scroll enchanter and a staff enchanter
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - Teleport Only In Tamriel - Mysticism and Sorcerer** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Subtler Illusions for Mysticism** `1.0.0.0a` modid=127152
+  - Makes selected illusion spells hitscan, removes collision physics and glow; affects Calm, Command, Fear, Frenzy, Paralyze, Silence; compatible with Mysticism; requires SkyUI
+- **I Just Want to Sit Down and Read** `1.8.2.0` modid=121282
+  - Enables book reading animations in additional contexts such as riding or sitting by allowing mod patches.
+- **Immersive Spell Learning - DESTified** `1.4.5.0` modid=45514
+  - Study spell tomes via selectable time prompt, retain progress across copies, only one spell at a time, affected by spell level, skill, mental aptitude, location bonuses; induces fatigue with Survival Mode or SunHelm, MCM supported.
+- **Elemental Weathers LITE** `1.1.0.0` modid=76435
+  - Simplified weather effects that modify magic resistances during rain or snow, script‑free, ESL‑flagged, no world edits.
+- **Use Telekinesis on Traps - po3's Papyrus Extender Version** `0.2.3.0` modid=59350
+  - Allows telekinesis on soul gem traps, trip wires, pressure plates, and similar objects.
+- **Frozen Electrocuted Combustion** `6.1.1.0` modid=3532
+  - Applies visual effects to NPCs and player when killed by magic status effects, with elemental variations like frost, shock, poison, etc.
+- **Simonrim I4 Addons - Mysticism** `1.0.0.0` modid=87608
+  - Adds I4 support for various Simonrim mods
+- **Mysticism - A Magic Overhaul - Survival Spells Add-on** `2.4.2.0` modid=27839
+  - Overhauls magic system, adds new spells across schools, fixes bugs, expands spell list
+- **Mysticism - A Magic Overhaul** `2.4.2.0` modid=27839
+  - Overhauls magic system, adds new spells across schools, fixes bugs, expands spell list
+- **Married NPCs Wear Wedding Bands (SPID - Left Hand Rings)** `1.1.0.0` modid=69048
+  - Distributes left‑handed wedding rings to over 85 married NPCs via Spell Perk Item Distributor for immersion
+- **NPCs Wear Amulets of Mara PLUS** `f2.03` modid=66125
+  - Adds NPCs wearing amulets of Mara enabling marriage proposals following Nord tradition.
+- **Heart-To-Heart - Conversations Among Family** `1.1.0.0` modid=133173
+  - Adds over 280 conversation scenes using spliced dialogue to liven up family interactions.
+- **Immersive Rejections** `1.13.0.0` modid=67930
+  - Fully voiced rejection dialogues for marriage proposals (~100 lines, 50 voice types) triggered for NPCs wearing an Amulet of Mara and who have spoken to Maramal; does not alter vanilla marriage or gameplay.
+- **Trade and Barter - Patches** `1.1.0.0` modid=23220
+  - Provides compatibility patches for Trade and Barter with mods such as Beyond Skyrim, YASH, and Keld‑Nar.
+- **Trade and Barter** `2.1.0.0` modid=23081
+  - Adds extensive customization to merchant pricing, gold, inventory respawn, and relationship‑based discounts via an MCM menu.
+- **Gibberish - Currency Swapper for Skyrim Extended Cut - Saints and Seducers** `1.0.8.0` modid=127871
+  - Fix/patch for currency swapping in Skyrim Extended Cut with Description Framework options.
+- **Elven Supremacy - Currency Swapper for Thalmor** `1.0.3.0` modid=129717
+  - Introduces Thalmor currency sancar, replaces septims in Thalmor areas, integrates with C.O.I.N. exchange, fully functional.
+- **Morrowind Mint - Currency Swapper for Solstheim** `1.0.10.0` modid=129387
+  - Adds dram currency system, exchange with NPC, adjusts prices for realism
+- **C.O.I.N. - Treasury Exchange** `1.0.2.0` modid=131682
+  - Introduces a voiced NPC in Markarth’s Treasury to trade ancient coins for gold
+- **C.O.I.N. - Coins of Interesting Natures** `3.2.1.0` modid=51439
+  - Adds distinct ancient coins with varied values and lower worth, reshaping Skyrim’s economy to be more challenging
+- **Ghastly's Open World Loot Equipment Patches - Warmonger Armory** `1.0.0.0` modid=50491
+  - Provides open world loot patches adding items from various mods to leveled lists.
+- **Garbage Loot - Barrels and Sacks - CC Survival Patch** `4.0.0.0` modid=18047
+  - Updated version with FOMOD options and patches; conflicts as intended; includes patches for various mods; updated notes.
+- **Garbage Loot - Barrels and Sacks** `4.0.0.0` modid=18047
+  - Updated version with FOMOD options and patches; conflicts as intended; includes patches for various mods; updated notes.
+- **Open World Loot - Encounter Zone and Loot Overhaul - Reforging - For the Masses Patch** `1.3.5.0` modid=49681
+  - Overhauls loot and encounter zones for progression‑based loot; balanced tiered weapons/armor; no world deleveling; easy integration for modded gear.
+- **Open World Loot - Encounter Zone and Loot Overhaul - Faction Crossbows Patch** `1.3.5.0` modid=49681
+  - Overhauls loot and encounter zones for progression‑based loot; balanced tiered weapons/armor; no world deleveling; easy integration for modded gear.
+- **Open World Loot - Encounter Zone and Loot Overhaul - Common Clothes and Armors** `1.3.5.0` modid=49681
+  - Overhauls loot and encounter zones for progression‑based loot; balanced tiered weapons/armor; no world deleveling; easy integration for modded gear.
+- **Open World Loot - Encounter Zone and Loot Overhaul - Armor Variants Expansion Patch** `1.3.5.0` modid=49681
+  - Overhauls loot and encounter zones for progression‑based loot; balanced tiered weapons/armor; no world deleveling; easy integration for modded gear.
+- **Open World Loot patches for various small armor mods - Nordic Leather Armor** `1.0.0.0` modid=81050
+  - Integrates various armor mods (Mercenary Light Armor, Black Bear Ancient Nord Armor, Nord Vagabond Armor, Nord Raven Battle Armor, Nord Tribal Armor, Nordic Carved Light Armor, Nordic Leather Armor, Dwarven Lite Armor, Eastern Dwemer Armor, Dwemer Armor SE) into Open World Loot's leveled list, appearing in hide, nordic, leather, scaled, and Dwarven categories; requires leveled‑list patch.
+- **Open World Loot patches for various small armor mods - Nord Vagabond Armor** `1.0.0.0` modid=81050
+  - Integrates various armor mods (Mercenary Light Armor, Black Bear Ancient Nord Armor, Nord Vagabond Armor, Nord Raven Battle Armor, Nord Tribal Armor, Nordic Carved Light Armor, Nordic Leather Armor, Dwarven Lite Armor, Eastern Dwemer Armor, Dwemer Armor SE) into Open World Loot's leveled list, appearing in hide, nordic, leather, scaled, and Dwarven categories; requires leveled‑list patch.
+- **Open World Loot patches for various small armor mods - Nord Raven Battlemage Armor** `1.0.0.0` modid=81050
+  - Integrates various armor mods (Mercenary Light Armor, Black Bear Ancient Nord Armor, Nord Vagabond Armor, Nord Raven Battle Armor, Nord Tribal Armor, Nordic Carved Light Armor, Nordic Leather Armor, Dwarven Lite Armor, Eastern Dwemer Armor, Dwemer Armor SE) into Open World Loot's leveled list, appearing in hide, nordic, leather, scaled, and Dwarven categories; requires leveled‑list patch.
+- **Open World Loot patches for various small armor mods - Eastern Dwemer Armor** `1.0.0.0` modid=81050
+  - Integrates various armor mods (Mercenary Light Armor, Black Bear Ancient Nord Armor, Nord Vagabond Armor, Nord Raven Battle Armor, Nord Tribal Armor, Nordic Carved Light Armor, Nordic Leather Armor, Dwarven Lite Armor, Eastern Dwemer Armor, Dwemer Armor SE) into Open World Loot's leveled list, appearing in hide, nordic, leather, scaled, and Dwarven categories; requires leveled‑list patch.
+- **Open World Loot patches for various small armor mods - Dwemer Armor SE** `1.0.0.0` modid=81050
+  - Integrates various armor mods (Mercenary Light Armor, Black Bear Ancient Nord Armor, Nord Vagabond Armor, Nord Raven Battle Armor, Nord Tribal Armor, Nordic Carved Light Armor, Nordic Leather Armor, Dwarven Lite Armor, Eastern Dwemer Armor, Dwemer Armor SE) into Open World Loot's leveled list, appearing in hide, nordic, leather, scaled, and Dwarven categories; requires leveled‑list patch.
+- **Open World Loot - Encounter Zone and Loot Overhaul - Randomized Special Loot** `1.3.5.0` modid=49681
+  - Overhauls loot and encounter zones for progression‑based loot; balanced tiered weapons/armor; no world deleveling; easy integration for modded gear.
+- **Open World Loot - Various Patches - NordwarUA Variants** `1.2.0.0` modid=50057
+  - Patches various mods to align with Open World Loot logic; compiled by JaySerpa.
+- **Some OWL patches - Artefakes** `1.0.0.0` modid=60889
+  - Quick patches for C.O.I.N artifacts.
+- **Open World Loot - Encounter Zone and Loot Overhaul** `1.3.5.0` modid=49681
+  - Overhauls loot and encounter zones for progression‑based loot; balanced tiered weapons/armor; no world deleveling; easy integration for modded gear.
+- **Encounter Zones Unlocked SE** `1.5.4.0` modid=19608
+  - Prevents Skyrim from freezing encounter zone levels upon first visit.
+- **Encounter Zone Informer** `1.0.4.0` modid=124456
+  - Displays a warning when entering encounter zones whose minimum level exceeds the player's current level.
+- **Locational Encounter Zones** `1.0.2.0` modid=85212
+  - SKSE plugin that makes exterior enemies scale to interior level by assigning encounter zones; patches actor references
+- **Immersive World Encounters SE** `3.6.1.0` modid=18330
+  - Adds ~100 random wilderness and settlement encounters with new voiced NPCs and quests, diversifies exploration, modifies vanilla events, includes faction‑specific encounters and new follower.
+- **Extended Encounters ESL** `1.7.0.0` modid=44810
+  - Adds 300+ new random road, wilderness, location encounters; includes faction raids and immersive danger; lightweight, ESL flagged; configurable via MCM; compatible with Immersive World Encounters, Immersive Patrols, Radiance, etc.
+- **GATE TO SOVNGARDE (GTS) - Small Mods and Resources - Sleeping Heals Diseases** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Next-Gen Decapitations** `1.4.3.0` modid=135254
+  - Fixes decapitation crashes, adds helmet ejection, spin effects, configurable via .ini; fully configurable, works with SE/AE/VR; requires SKSE, Address Library; fully compatible.
+- **Dismembering Framework - Creature Asset Pack - My patches by Xtudo - Falmer Overhaul** `3.7.0.0` modid=126608
+  - Provides creature-specific texture patches for Draugr, Falmer, and other entities, enabling realistic dismemberment visuals.
+- **Dismembering Framework - Creature Asset Pack - My patches by Xtudo - Draugrs - Dry Blood** `3.7.0.0` modid=126608
+  - Provides creature-specific texture patches for Draugr, Falmer, and other entities, enabling realistic dismemberment visuals.
+- **Dismembering Framework - Creature Asset Pack - My patches by Xtudo - CC Plague of the Dead** `3.7.0.0` modid=126608
+  - Provides creature-specific texture patches for Draugr, Falmer, and other entities, enabling realistic dismemberment visuals.
+- **Dismembering Framework - Creature Asset Pack - My patches by Xtudo - CC Goblins** `3.7.0.0` modid=126608
+  - Provides creature-specific texture patches for Draugr, Falmer, and other entities, enabling realistic dismemberment visuals.
+- **Dismembering Framework - Creature Asset Pack - My patches by Xtudo - CC Bone Wolf** `3.7.0.0` modid=126608
+  - Provides creature-specific texture patches for Draugr, Falmer, and other entities, enabling realistic dismemberment visuals.
+- **Dismembering Framework - Official Humanoid Asset Pack** `1.0.1.0` modid=126327
+  - Allows dismemberment of all humanoid races; covers many armors; install to Data folder, activate .esp.
+- **Dismembering Framework - Official Creature Asset Pack** `1.0.2.0` modid=126328
+  - Enables creature dismemberment for Draugr, Falmer, Troll, Wolf; extends to all creatures; install to Data folder, activate .esp.
+- **Dismembering Framework** `1.2.2.0` modid=126203
+  - Real-time dismemberment system with adaptive blood and sound based on armor/weapon, engine-level integration, extensive MCM customization.
+- **Bows Can Break** `1.1.2.0` modid=104758
+  - SKSE plugin that makes low‑level bows breakable via power attacks, affecting both player and NPCs, similar to Requiem’s bow mechanics.
+- **Ice skating fixed for real - No more attack sliding movement (NEMESIS compatible)** `1.4.0.0` modid=55417
+  - Fixes vanilla attack‑movement sliding by adjusting behavior files, compatible with Nemesis.
+- **Simple Archery Animations** `1.0.3.0` modid=153153
+  - Adds simple first- and third-person archery animations, including optional skill-based variants.
+- **Angi's Camp Tweaks** `1.1.0.0` modid=44914
+  - Reworks Angi's archery challenge XP gain to be skill‑independent and grants extra XP for practice.
+- **Crosshair-aligned Crossbow** `1.0.1.0` modid=42267
+  - Replaces first‑person crossbow animations to align with the target reticle.
+- **Non-Exploitable Crossbow Reloading SE** `1.3.0.0.SE` modid=29869
+  - Adds manual crossbow reloading without SKSE; optional stamina drain based on weight and skill; compatible with Requiem; prevents auto‑reload exploits.
+- **Sanguine Symphony** `1.2.1.0` modid=148388
+  - Overhauls combat with visceral visual effects, adaptive blood splatters, decals, HD wound textures, custom sounds, slow-motion kills, hit impulses, physics tweaks, body mass adjustments, configurable via MCM
+- **Taunt Your Enemies - Taunting Matters** `f1.03` modid=72023
+  - Adds NPC taunt mechanic granting damage bonus, player can taunt NPCs and hiss.
+- **Simple Dual Wield and Unarmed Block** `1.0.0.0` modid=35718
+  - Allows blocking while dual‑wielding or unarmed, with MCM options, replaces left attack, works with controllers, but not with staves or spells
+- **Shield debuff Half effect** `2.0.0.0` modid=47285
+  - Sets a weak point on shields to increase effectiveness of one‑handed weapons without a shield
+- **Parrying RPG** `2.0.1.0` modid=81356
+  - Reimplementation of Parrying -- Weapons Bounce on Impact with RPG mechanics that let stronger characters or power attacks break parries; configurable via .ini; compatible with Precision.
+- **MaxsuBlockOverhaul** `d2024.12.4.0`
+  - A block overhaul that requires a customized .meta file and is not available on Nexus.
+- **Paulicus Poison Block (PPB) Updated - Patch Collection** `2.23.0.0` modid=51046
+  - Makes poisons and diseases blockable with shields, weapons, or wards; includes patches for various alchemy mods; no scripts.
+- **Paulicus Poison Block (PPB) Updated** `2.23.0.0` modid=51046
+  - Makes poisons and diseases blockable with shields, weapons, or wards; includes patches for various alchemy mods; no scripts.
+- **Precision - Attack Collision Fixes** `1.13.0.0` modid=177313
+  - Fixes dual‑wield and unarmed combo hit count and unarmed attack timing issues in Precision.
+- **Precision Creatures** `2.4.0.0` modid=74887
+  - Extends Precision hitboxes and pitch adjustments to werewolves, vampires, and draugr for better combat responsiveness.
+- **Precision** `2.0.4.0` modid=72347
+  - Adds physically accurate melee collision detection, trails, hitstop, and configurable combat mechanics.
+- **Blade and Blunt - A Combat Overhaul** `3.8.3.0` modid=34549
+  - Overhauls combat difficulty with active resource management
+  - - Base regen: Health 1%, Magicka 3%, Stamina 5%
+  - - Combat regen: Health 0.5%, Magicka 1.5%, Stamina 2.5%
+  - - No stamina regen while attacking/blocking/casting; bow aims drain stamina, crossbow halts regen
+  - - Power‑attack stamina costs: Hand 40, Dagger 40, One‑hand 50, Two‑hand 75, Dual‑wield 125 (25% off‑hand reduction)
+  - - Ranged stamina: Bow 5 stamina/s, Crossbow 15 stamina
+  - - Bash costs: Bash 40, Power Bash 60
+  - - Exhausted stamina: 25% slower attack/block, 25% less damage, 50% larger stagger, no regen for 3 s
+  - - Movement stamina: Sprint +1 stamina per light armor piece (max 12) and +2 per heavy (max 16) in combat, Jump +1/2 per armor, Swim +0.5/1 per armor, Sneak +0.5/1 per armor plus 50% less effective sneaking & sneak dmg when exhausted
+  - - Attacks of opportunity: +50% dmg & stagger on enemies power‑attacking/drawing bow/casting, ignore stagger cooldown, ward spells protect
+  - - Stagger: +50% dmg to staggered, +50% dmg taken when staggered
+  - - Compatibility via Address Library, Spell Perk Item Distributor, Scrambled Bugs, Dual Casting Fix
+  - Boats - Operational Animated Travel: Adds animated boats that move on water routes with ferry support
+  - - Covers major docks and ferry routes: Solitude Docks, Icewater Jetty ↔ Volkihar, Septimus Signus Outpost → Winterhold, Guardian Stones → Lady Stone, Dawnguard ferries
+  - - Compatibility patches for Great City of Solitude SSE, Winterhold, Redbag's Solitude, Great City of Winterhold, COTN Morthal, COTN Dawnstar, etc.
+  - - Uses vanilla meshes (x Vanilla) and optional misc patches
+  - - Requires Address Library for SKSE; compatible with many city overhaul mods
+  - Boethiah's Calling - Alternate Questline: Fully voiced alternate questline (70+ lines) to obtain Ebony Mail
+  - - Starts with Dark Elf Rudin Filaro at Braidwood Inn in Kynesgrove, masquerading as Mara priest, leads to sacrifice ritual
+  - - Player survives, tracks clues, deals with traps, hunts deceiver, obtains revenge
+  - - Version 2.0 adds voiced encounter where Mia hunts player if Ebony Mail detected and murder count <5
+  - - Consequence based on murder count; compatible with Requiem and Great Village of Kynesgrove patch; no quest‑spoiler content; patch disables “Start quest at any level” option
+  - Book Covers Skyrim SE - Desaturated: Retextures all readable books, journals, and notes with unique covers
+  - - Offers Original or Desaturated textures; optional language packs: English, French, German, Italian, Polish, Russian, Spanish
+  - - Installed via BAIN/FOMOD, Wrye Bash, NMM, or manual copy to Skyrim/Data; LOOT‑registered for correct load order
+  - - Known issues: Weightless Books compatibility; source files released for non‑English texture creation with credit required
+  - Bound Daedric Armor: Adds Bound Armor and Bound Armor – Other spells to summon Daedric armor (60 s) and armor for allies; unique transparent blue‑flame visual
+  - - Crafted via Atronach Forge using Human Flesh and Filled Black Soul Gem; 5% chance NPCs use spell
+  - - Lightweight scripts, no vanilla modifications, maximum compatibility; can be crafted at College of Winterhold; Xbox version includes tutorial video; fully compatible with most mods
+- **True Directional Movement - Modernized Third Person Gameplay** `2.2.6.0` modid=51614
+  - Move and attack in any direction while in third-person perspective
+  - Vanilla-style movement mode also available
+  - Target lock tailored for directional movement with multiple target points
+  - MCM configurable features including rotation multipliers, camera speed, aim support for projectiles/spells, mount support and directional camera adjustments
+- **Casual Dog Animations (DAR-OAR)** `1.0.2.0` modid=132398
+  - Adds new idle animations for dogs, such as head-tilting and yawning, via animation replacer.
+- **MFA Vampire Lord Update SE** `1.0.0.0` modid=68245
+  - Updates Vampire Lord headparts using Monster Facial Animation improvements
+- **Monster Facial Animation (MFA) - Monster Lipsync Vanilla** `2.8.0.0b` modid=22878
+  - Adds facial animation and lip sync to werewolves, werebears, vampire lords
+- **New Husky Animations SE - DAR OAR** `1.2.0.0` modid=128862
+  - Modifies Dawnguard husky follower animations with confident stance and curved tails via animation replacer.
+- **Draugr Spear Animation (AMR)** `1.3.0.0` modid=72794
+  - Adds spear combat animations for Draugr with keyword support for Heavy Armory and similar mods; requires Animation Motion Revolution, etc.
+- **Draugr One-handed Attack Animation** `1.3.0.0` modid=74685
+  - Provides new attack animations, Precision Creatures and Vanilla versions; includes YouTube previews.
+- **Draugr Greatsword Animation** `1.1.0.0` modid=114721
+  - Adds 7 attack animation; compatible with Precision Creatures; includes video previews.
+- **Comprehensive First Person Animation Overhaul - CFPAO** `1.0.4.0` modid=87169
+  - Adds thousands of first‑person weapon‑specific animations replacing vanilla, requires DAR or OAR, install via FOMOD or manual mesh copy, no Nemesis/FNIS needed.
+- **Eating Animations and Sounds - First Person Patch** `1.2.2.0` modid=133246
+  - Adds first‑person animations to the eating animations and sounds.
+- **First Person Unarmed Animation** `1.1.0.0` modid=87971
+  - Adds first‑person unarmed animations for idle, running, random blocking, and dodging.
+- **First Person Interactions** `1.7.6.0` modid=123129
+  - Adds context‑aware first‑person animations for greetings, pickpocketing, lockpicking, harvesting, looting, etc.; requires OAR and animation replacer; configurable via MCM; includes many actions
+- **Death Animations from Underdog Animations** `1.0.0.0` modid=96603
+  - Replaces spinning death animations with Underdog's death animations via OAR.
+- **Weapon Animation (Miraak's Sword)** `1.1.0.0` modid=52390
+  - Adds an animation to Miraak's Sword via mesh changes, compatible with weapon draw and sheath animations.
+- **BadAss Get-Up Animation - Combat Only Version** `1.0.0.0` modid=54368
+  - Replaces vanilla get‑up animations with faster, combat‑oriented variants that include a hitframe, providing a more immediate and interactive recovery in combat
+- **Cross and Jab Speed fix** `1.1.0.0` modid=35003
+  - Fixes the Cross and Jab unarmed animation mod to match in-game unarmed combat speed.
+- **Dynamic Block Hit** `1.7.0.0` modid=100570
+  - Adds separate block hit animations for normal and power attacks with random animations per weapon group and additional special animations.
+- **Feral - Go for the Throat SSE v2.0** `2.0.0.0` modid=34552
+  - Overview:
+  - - Restores unarmed attack animations for beast races, vampires, werewolves using Open Animation Replacer
+  - - Includes optional cosmetic claws that can be crafted, tempered, enchanted, no skill advancement
+  - - Affected: beast races, vampires, werewolves, claw weapon users
+  - - No conflicts, distributed via SPID/KID
+- **Random parry and block idle** `1.1.0.0` modid=75440
+  - Adds random parry and block idle animations for one‑handed swords in third‑person view.
+- **Shield animations (Captain America)** `1.0.0.0` modid=50299
+  - Provides new shield and unarmed combat animations, including idle, block, bash, and power attack variations.
+- **Simple Pistol Shooting Animation by Loop(Include standalone pistol and crossbow) - SSE** `3.0.0.0` modid=44201
+  - Adds third-person left-hand pistol and crossbow animations, including standalone pistols, with forward aiming when running.
+- **Vanargand Animations - Sneak Archery** `1.4.0.0` modid=56788
+  - Provides animation pack improving sneak archery with smoother animations.
+- **Reanimated NPC Animations - Unofficial Addon** `1.0.0.0` modid=100100
+  - Expands on the original reanimated NPC animation set with additional variants.
+- **Reanimated NPC Animations** `1.2.0.0` modid=79079
+  - Adds new idle, walk, run, sprint animations for reanimated NPCs to appear more soulless.
+- **Artifact Animation Replacer - Wabbajack** `0.9.0.0` modid=34197
+  - Adds custom idle and casting animations to Wabbajack via Dynamic Animation Replacer; requires YY animation replacer for movement; compatible with Mystic Knight.
+- **Goetia Animations - Magic Spell Casting** `1.4.0.0` modid=70204
+  - Overhauls 3rd‑person spell casting with 110 hand‑crafted animations; works for all spell categories and spellblade/hybrid builds; requires DAR.
+- **Conditional Expressions - Subtle Face Animations** `1.29.0.0` modid=45148
+  - Adds subtle condition‑based face animations (idle, eating, sneaking, swimming, hurt, combat, drunk, high, embarrassed, cold) configurable via MCM; requires SKSE, MFG Fix, Address Library; lightweight and compatible with animation mods
+- **Expressive Facial Animation -Male Edition-** `1.21.0.0` modid=19532
+  - Updates male facial expression morphs for all animations, affecting lips, eyebrows, and eyes.
+- **Expressive Facial Animation -Female Edition-** `1.7.0.0` modid=19181
+  - Updates female facial expression morphs for all animations, affecting lips, eyebrows, and eyes.
+- **Expressive Facegen Morphs SE** `1.0.0.0` modid=35785
+  - Replaces facial morph targets for human and elf characters and adds support for Racemenu.
+- **Simple Diving System (SDS) - Dive Into Water Animations and Modder Resource** `1.0.3.0-NoAnims` modid=154534
+  - Adds diving state detection and animations for player, includes modder resource for animation replacers
+- **Goetia Animations - Conditional Shouts** `1.2.0.0` modid=76388
+  - Adds conditional shout animations that vary by shout effect; works with vanilla and mod shouts (Thunderchild, Keysmash2c); requires Dynamic Animation Replacer (DAR) version matching SE/AE; includes separate packs for PC and NPC, optional momentum Whirlwind Sprint for PC only; provides female/male animation packs.
+- **Improved Idle Laydown Animations** `1.1.0.0` modid=99691
+  - Fixes broken arms in idle laydown animation and adds female‑specific animation and ground clipping fixes.
+- **EVG Conditional Idles** `1.42.0.0` modid=34006
+  - Adds idle animations for player/NPCs under conditions (cold, shield cover, modesty, etc.), zero gameplay changes, uses SKSE and OAR, toggle via MCM.
+- **EVG CLAMBER - Slope Animations** `1.0.0.0` modid=114753
+  - Adds slope traversal animations (run, walk, duck, etc.) with configurable MCM options, angle detection via OAR, supports extreme accuracy mode, works with navmesh.
+- **EVG Animation Variance** `1.1.0.0` modid=38534
+  - Adds variety to animations based on NPC personality, conditions, or random factors.
+- **New Praying Animations (OAR) - idlepray.hkx replacer for females** `1.1.0.0` modid=76889
+  - Adds lengthy female-specific praying animations (idlepray.hkx, idlepraycrouched_loop.hkx) that are 25× longer than vanilla and work with Wintersun and similar mods.
+- **Improved Table Sit Transition Animations** `1.3.0.0` modid=84160
+  - Adds animations to prevent knocking items off tables when sitting.
+- **Immersive Interactions - Pilgrim FLM** `1.0.0.0` modid=92593
+  - Uses Immersive Interactions idle animations when praying at shrines added by the Pilgrim mod.
+- **Immersive Interactions - Eating ingredients and apply poison animations** `1.4.0.0` modid=117983
+  - Adds varied animations for eating ingredients and applying poisons, triggered via keyword items.
+- **Immersive Interactions - Integration Patch** `2.2.2.0` modid=76862
+  - Compatibility patch that adds script adjustments to enable Immersive Interactions to work with Hunterborn, The Dark Arts, Better Vampires, Dynamic Things Alternative, Diverse Firewood, Survival Mode, Wintersun, Extensible Follower Framework, Just Knock, Synergy and other interaction mods.
+- **Dynamic Horse Petting Animations for Immersive Interactions** `1.11.0.0` modid=111767
+  - Provides varied horse petting animations based on player angle, requiring Open Animation Replacer and Immersive Interactions, with integration patch.
+- **Immersive Interactions - Animated Actions** `1.78.0.0` modid=47670
+  - Adds context‑aware character animations for interactions (greeting NPCs, pickpocketing, lockpicking, harvesting, opening doors, etc.) with narrative weight; MCM‑customizable; requires FNIS/Nemesis, Dynamic Animation Replacer, Activation Key (1.70+); includes quick interactions: Mourning Friends, Touch Standing Stones, Pet Horse/Dog, Applaud Bards, Pray, Salute Jarls/Commanders, Wave to Children, Open Containers, Harvest flowers, Read Books, Give Gold to Beggars, Loot Animals/NPCs, Pickpocket NPCs, Lockpicking, Pick‑up Items, Follower salute, Spouse hug; special interactions: Woodpiles, Kegs, Put Out Fires.
+- **Ultimate Animated Potions NG** `2.8.0.0` modid=97674
+  - Rewrites Ultimate Potion for SE/AE with updated animations, behavior, and support for all potion models.
+- **Lively cart driver animation OAR** `2.0.1.0` modid=70595
+  - Replaces the cart driver animation with a 50‑second detailed animation, installable at any time as a .hkx file.
+- **Super Fast Get Up Animation** `1.0.0.0` modid=46714
+  - Provides quick standing animations for actors knocked off their feet, reducing downtime
+- **Pristine Vanilla Movement - Sprint - No Camera Shake** `1.1.0.0` modid=66635
+  - Updates run, walk, and sprint animations to remove jitter and provide a smoother, more casual look.
+- **Assorted Animation Fixes** `f1.02` modid=93271
+  - Fixes minor vanilla animation issues like jarring loops and compression artifacts; optional OAR/DAR support; compatible with other replacers.
+- **Pristine Vanilla Movement** `1.1.0.0` modid=66635
+  - Updates run, walk, and sprint animations to remove jitter and provide a smoother, more casual look.
+- **Immersive Equipping Animations** `f2.02` modid=77187
+  - Adds animations for equipping/unequipping necklaces, helmets, cuirass, gloves, and boots on the player and followers.
+- **Followers Salute Casually (OAR)** `1.1.0.0` modid=95093
+  - Adds seven informal salute animations for followers in Immersive Interactions.
+- **Eating Animations - Xelzaz** `1.0.0.0` modid=95746
+  - Adds eating animations for edibles from Sweets and Such and the Xelzaz follower, independent and ESL‑flagged.
+- **Dynamic Looting and Harvesting Animations** `1.7.0.0` modid=114547
+  - Adds dynamic animations for harvesting flora and looting containers, with various plant-specific animations and optional integrations.
+- **Eating Animations - Fishing Patch** `1.1.0.0` modid=63309
+  - Patch adding eating animations and sound effects for all fish items from Creation Club Fishing mod, includes various food animations, compatible with Survival Mode.
+- **Eating Animations - Patch Collection** `2.10.0.0` modid=63741
+  - Collection of compatibility patches for Eating Animations with many food‑adding mods, requires AnimObjectSwapper, provides food‑specific animations for numerous items.
+- **Simple Bosmer Harvesting - Eating Animations and Sounds Patch** `2.0.0.0` modid=112722
+  - Allows Bosmer to follow the Green Pact.
+- **Eating Animations and Sounds SE** `1.9.4.0` modid=42602
+  - Adds exclusive eating animations and sound effects for all vanilla SE foods, 98+25 animations, supports seated/moving/combat, integrates with KID and AnimObjectSwapper.
+- **Bound hands - Helgen attack DAR animations** `1.0.0.0` modid=89247
+  - Adds bound‑hands animations during the Helgen attack sequence until Ralof or Hadvar frees the player.
+- **Arm Movement Animations (OAR) - Shield Patch** `2.2.0.0` modid=62849
+  - Adds over 80 dynamic arm movement variants based on armor type, personality, or role, enhancing NPC animation variety.
+- **Arm Movement Animations (OAR)** `2.2.0.0` modid=62849
+  - Adds over 80 dynamic arm movement variants based on armor type, personality, or role, enhancing NPC animation variety.
+- **More powerful mining animations SE** `1.0.0.0` modid=72929
+  - Adds a more powerful mining animation replacer that enhances mining animations.
+- **Skill Based Dynamic Animations** `1.12.0.0` modid=99842
+  - Adds skill‑based animations for player and NPCs in magic, archery, and sneaking, with race‑specific variations and dynamic stamina integration.
+- **Relaxed Sneak Animations** `1.0.0.0` modid=37260
+  - Adds relaxed sneak animations with raised center of gravity and no bent wrists.
+- **Look Around - Searching Animations For NPCs** `1.1.0.0` modid=79958
+  - Adds searching animations for NPCs to detect hidden players, with various weapon stances, available via OAR or DAR.
+- **Wade In Water Redone** `1.1.2.0` modid=71418
+  - SKSE plugin that slows actors in water at the engine level, supporting SSE and AE.
+- **Loki's Wade In Water** `1.0.0.0` modid=42854
+  - SKSE plugin that slows actors based on how much of them is submerged in water.
+- **EVG Conditional Idles - Wade in Water Animations (beta)** `1.42.0.0` modid=34006
+  - Adds idle animations for player/NPCs under conditions (cold, shield cover, modesty, etc.), zero gameplay changes, uses SKSE and OAR, toggle via MCM.
+- **DAR - Dynamic Swimming - Argonian Mastery** `1.0.0.0` modid=34853
+  - Adjusts swimming animations based on stamina and armor weight.
+- **DAR - Dynamic Swimming** `1.0.0.0` modid=34853
+  - Adjusts swimming animations based on stamina and armor weight.
+- **Animated Whistling** `1.11.0.0` modid=76733
+  - Adds a whistling animation for the player, usable mid‑playthrough with appropriate patches.
+- **Blind people DAR animations** `1.2.0.0` modid=90947
+  - Adds animations that depict blindness for certain NPCs, giving them appropriate visual cues.
+- **NPC Animation Remix (OAR) - Shield Patch** `2.2.0.0` modid=63471
+  - Adds 22 new idle animations for NPCs to improve variety and prevent synchronization.
+- **NPC Animation Remix (OAR)** `2.2.0.0` modid=63471
+  - Adds 22 new idle animations for NPCs to improve variety and prevent synchronization.
+- **Gesture Animation Remix (OAR) - Shield Patch** `2.3.0.0` modid=64420
+  - Adds dialogue gesture animations based on NPC personality, role, and armor type.
+- **Gesture Animation Remix (OAR)** `2.3.0.0` modid=64420
+  - Adds dialogue gesture animations based on NPC personality, role, and armor type.
+- **Conditional tavern cheering (OAR)** `1.3.0.0` modid=63029
+  - No esp/esl! 4 new applause animations and 3,5 new ways of cheering while bard sings. OAR folders by NPC demographic, voice types, worn armor to add personality to taverns guests. Sam Guevenne included!
+- **Drunk or drugged animations (DAR)** `1.6.0.0` modid=62191
+  - OAR mod enabling visible intoxication via various needs systems; conflicts as intended.
+- **Dynamic Crafting Animations** `1.2.2.0` modid=116422
+  - Adds new crafting animations for grindstones, workbenches, and enchanters using SkyUI, Open Animation Replacer, and Immersive Equipment Displays.
+- **Jarl Sitting Animation Replacer** `2.0.0.0` modid=37801
+  - Replaces Jarl sitting animation with Arch Curate Vyrthur's animations, randomized via OAR.
+- **Take a Seat - New Sitting Animations for OAR** `f1.01` modid=54193
+  - Adds 14 new sit/meditate animations via DAR/OAR that play randomly for NPCs and player.
+- **Lively Children Animations (OAR)** `2.2.0.0` modid=67557
+  - Replaces children animations with over 10 idles and 10 dialogue gestures plus a secret bonus, safe mid‑playthrough.
+- **Male Player Animations (OAR)** `1.1.0.0` modid=89225
+  - Adds 12 new idle animations for the male player character, including various gestures and weight shifts
+- **Female Player Animations (OAR)** `1.1.0.0` modid=85073
+  - Adds 12 new idle animations for female characters
+- **Open Animation Replacer - Math Plugin** `1.0.3.0` modid=92607
+  - Plugin adds a complex condition to Open Animation Replacer via exprtk, serving mainly as a programmer example with limited practical use.
+- **Offset Movement Animation** `1.0.0.0` modid=110408
+  - Provides a framework for playing movement-enabled animations that blend with other actions, usable with Nemesis, DAR, or OAR.
+- **Paired Animation Improvements** `1.0.2.0` modid=99621
+  - SKSE plugin that enables paired animations to work like normal animations, freeing animation slots for replacers.
+- **Animation Motion Revolution** `1.5.3.0` modid=50258
+  - Removes mismatch between displacement and custom animations; enables true unique movements per weapon, enemy, or creature; uses animation annotations (e.g., [time] animmotion [x] [y] [z]) to inject displacement; supports rotation annotations; works with behaviors having bAllowRotation or bAnimationDriven; requires Moder Combat Overhaul for full potential; annotation format similar to Bethesda's animationdatasinglefile.txt; see example with numOriginalFrames, duration, etc.
+- **Open Animation Replacer** `3.0.0.0` modid=92109
+  - SKSE framework to replace animations based on configurable conditions; backward compatible, extensible, supports SE/AE/VR, in‑game editor.
+- **Ingredients Restore Hunger** `1.0.2.0` modid=146361
+  - Eating ingredients restores hunger—high (40), medium (20), low (10); vanilla‑compatible; works with Survival Mode Improved and includes CACO ingredients.
+- **Waterskin - Stay Hydrated In Tamriel - Gourmet Compatibility** `1.0.0.0` modid=110895
+  - Adds craftable waterskins that can be filled in water, restore a small hunger amount, grant a 12‑minute Hydrated buff that boosts food effects by 20 %, with optional integrations.
+- **Waterskin - Stay Hydrated In Tamriel** `1.0.0.0` modid=110895
+  - Adds craftable waterskins that can be filled in water, restore a small hunger amount, grant a 12‑minute Hydrated buff that boosts food effects by 20 %, with optional integrations.
+- **Survival Mode Improved - SKSE** `1.6.0.0` modid=78244
+  - Provides C++ implementation of Survival Mode Improved with faster needs updates, configurable via ini (e.g., bAutoEnableSMOnNewGame), compatible with patches like Campfire, Campsite, Wyrmstooth, etc., requires Address Library, SKSE64, and CC Survival Mode
+- **Simple Bosmer Harvesting** `2.0.0.0` modid=112722
+  - Allows Bosmer to follow the Green Pact.
+- **Poisonous Bear Traps** `1.0.0.0` modid=120964
+  - Allows applying potions or poisons to bear traps (max 10), compatible with trap‑related mods.
+- **Immersive Carcass Carrying - Simple Hunting Overhaul** `f1.00` modid=99867
+  - Adds new carrying animations for carcasses, improving hunting interaction without weight penalty.
+- **Simple Hunting Overhaul - Bruma Patch** `1.16.0.0` modid=95943
+  - What it is:
+  - - Inspired by RDR2, focuses on immersion and lightweight hunting
+  - - Lets you loot carcasses with Shift+E and sell them to shops
+  - - NPCs react with voiced greetings and may question poaching
+  - - Configurable time‑pass and fade effects via console commands
+- **Simple Hunting Overhaul - Eating Animations and Sounds Patch** `1.0.0.0` modid=98077
+  - Adds eating animations and sounds for two new food items from Simple Hunting Overhaul.
+- **Immersive Hunting Animations** `2.3.1.0` modid=96961
+  - Adds skinning, harvest, butcher, retrieve arrow, pick‑up animations for animal looting, requires Open Animation Replacer and SkyUI, optional IED and Papyrus Extender, works with carcass types and conditional triggers
+- **Simple Hunting Overhaul** `1.16.0.0` modid=95943
+  - What it is:
+  - - Inspired by RDR2, focuses on immersion and lightweight hunting
+  - - Lets you loot carcasses with Shift+E and sell them to shops
+  - - NPCs react with voiced greetings and may question poaching
+  - - Configurable time‑pass and fade effects via console commands
+- **U Can't Touch Fish (Chance Edition)** `1.1.0.0` modid=94605
+  - blocks player ability to grab fish; basic edition toggles touching, chance edition gives 5% touch chance for non-Argonian/Khajiit with 25% fish escape, optional Immersive Interactions patch, addresses Salmon Roe problem, compatible with various fishing mods
+- **Useful Dogs** `1.0.0.0` modid=1666
+  - Allows giving commands to dogs, wolves, and similar companions to fetch items, food, etc.
+- **Followers Sit on Carriages** `1.5.0.0` modid=166738
+  - Allows followers to sit on carriages after destination choice, an offshoot of Convenient Carriages.
+- **Dynamic Mercenary Fees** `2.0.0.0` modid=45677
+  - Adjusts mercenary prices based on speechcraft, reputation, race, etc.; starts at 2000 gold with up to 50 % discount; formula provided.
+- **GATE TO SOVNGARDE (GTS) - Small Mods and Resources - Administer Potions to NPCs - Follower Dialogue** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Administer Potions and Poisons to Friendly NPCs** `3.4.0.0` modid=24127
+  - Adds power to give potions/poisons to NPCs for buffing or poisoning, requires Papyrus Extender, works mid‑game, console tweaks available
+- **Show Follower Carry Weight** `0.1.0.0` modid=99878
+  - Displays follower's current carry weight in the trading menu
+- **Horses for Followers** `1.3.0.0` modid=45500
+  - Adds obtainable horses for followers to ride with the player, allowing followers to mount and travel on horseback.
+- **Follower Stats - in a nutshell** `f5.01` modid=66826
+  - Provides a messagebox showing follower stats via additional dialogue.
+- **Follower Death Injury - Skyrim Bandages Patch** `3.51.0.0` modid=38043
+  - Allows followers to die or incur injuries with low probabilities; mini, serious, fatal outcomes; uses SPID for compatibility; can resurrect via MCM
+- **Follower Death and Injury Chance - Followers Can Die - SPID** `3.51.0.0` modid=38043
+  - Allows followers to die or incur injuries with low probabilities; mini, serious, fatal outcomes; uses SPID for compatibility; can resurrect via MCM
+- **Press E to Heal Followers SKSE** `1.1.0.0` modid=171733
+  - SKSE‑based patch that instantly heals followers when pressing E, removing script lag.
+- **Press E to Heal Followers** `1.0.0.0` modid=101823
+  - Allows healing downed companions by activating them with a healing potion, triggering voiced responses.
+- **Simple Follower Sandbox** `1.1.0.0` modid=48636
+  - Adds a simple follower system to vanilla, letting followers perform sandbox activities similar to Serana.
+- **Aetherius - A Race Overhaul** `2.14.1.0` modid=26686
+  - Balances racial passives, adds powerful new race abilities
+  - Each race has unique major/minor skills and bonuses
+  - Adds NPC spell absorption for Bretons, racial spells for five races
+  - Lowers starting skill levels, optional NPC spell absorption addon
+  - Requires Mysticism for spells
+  - ESL flagged
+- **Why I Came to Skyrim** `f2.02` modid=167166
+  - Provides 40 radiantly‑generated origin quests giving motivation and purpose at game start, compatible with Alternate Start mods.
+- **Adventurer's Start - Serious Civil War Fort Personnel Patch** `1.0.1.0` modid=145599
+  - Adds numerous alternate beginnings for Alternate Perspective; includes Roadside Ambush
+  - - ambush by 3 level 1 bandits at locations such as Bruma, Eastmarch, etc.
+  - Fell in a Spike Pit
+  - - starts in spike pit at half health in Halted Stream Camp
+  - Bounty Hunter
+  - - starts at bandit camp with bounty quest and potions
+  - Bandit Prisoner
+  - - starts in cell in bandit fort, can escape with lockpicks
+  - Orc Stronghold
+  - - starts at Orc stronghold as Blood‑Kin
+  - Saved by Vigilants
+  - - starts in cell to be sacrificed, saved by vigilantes
+  - Out in the Wilderness
+  - - starts in wild, optional removal of items via global variable; compatible with many add‑ons.
+- **Bruma Adventurer's Start Addon** `1.0.1.0` modid=145599
+  - Adds numerous alternate beginnings for Alternate Perspective; includes Roadside Ambush
+  - - ambush by 3 level 1 bandits at locations such as Bruma, Eastmarch, etc.
+  - Fell in a Spike Pit
+  - - starts in spike pit at half health in Halted Stream Camp
+  - Bounty Hunter
+  - - starts at bandit camp with bounty quest and potions
+  - Bandit Prisoner
+  - - starts in cell in bandit fort, can escape with lockpicks
+  - Orc Stronghold
+  - - starts at Orc stronghold as Blood‑Kin
+  - Saved by Vigilants
+  - - starts in cell to be sacrificed, saved by vigilantes
+  - Out in the Wilderness
+  - - starts in wild, optional removal of items via global variable; compatible with many add‑ons.
+- **Alternate Perspective - Project AHO Start** `1.2.0.0` modid=165341
+  - Enables starting the Project AHO questline via an alternate perspective where the player begins as a captured slave
+- **Adventurer's Start - An Alternate Perspective Addon** `1.0.1.0` modid=145599
+  - Adds numerous alternate beginnings for Alternate Perspective; includes Roadside Ambush
+  - - ambush by 3 level 1 bandits at locations such as Bruma, Eastmarch, etc.
+  - Fell in a Spike Pit
+  - - starts in spike pit at half health in Halted Stream Camp
+  - Bounty Hunter
+  - - starts at bandit camp with bounty quest and potions
+  - Bandit Prisoner
+  - - starts in cell in bandit fort, can escape with lockpicks
+  - Orc Stronghold
+  - - starts at Orc stronghold as Blood‑Kin
+  - Saved by Vigilants
+  - - starts in cell to be sacrificed, saved by vigilantes
+  - Out in the Wilderness
+  - - starts in wild, optional removal of items via global variable; compatible with many add‑ons.
+- **New Beginnings - Alternate Perspective Extension** `1.3.3.0` modid=57818
+  - Ports New Beginnings mod to work with Alternate Perspective, fixing compatibility.
+- **Start in Bruma (an addon for Alternate Perspective)** `1.2.0.0` modid=100522
+  - Provides three Bruma start locations—edge of map, cathedral, hidden Talos shrine—requiring the Bruma mod.
+- **Alternate Perspective - Voiced Addon for Version 3.1.1** `1.11.0.0` modid=96865
+  - Voices every line of the Alternate Perspective alternate start mod.
+- **Alternate Perspective - Alternate Start Version 3.1.1** `3.1.1.0` modid=50307
+  - New Alternate Start experience
+  - Spawns in Helgen inn, choose from various scenarios (roadside ambush, bounty hunter, etc.)
+  - Preserves Helgen as functional town until main quest
+  - Safe mid-game, expands gameplay options
+  - ESL flagged
+- **BA Bard Songs** `1.3.0.0` modid=47202
+  - Adds random bard instrumental songs (drum, flute, lute) to taverns without replacing existing music.
+- **Chapter II - Jeremy Soule Inspired Music** `4.0.0.0` modid=37792
+  - Adds several exploration and town tracks inspired by Jeremy Soule, with new music regularly updated.
+- **Tavern Games - Cards Retexture - Forgotten Myths** `1.0.0.0` modid=63326
+  - Redesigns tavern cards with Bilibin's lore‑friendly artwork, using folklore illustrations and ancient giant art.
+- **Tavern Games - Alt Camera Patch and No Silent Voices Fixes** `1.0.0.0` modid=106873
+  - Fixes issues with Alt Camera Patch and ensures compatibility of No Silent Voices by updating assets and providing optional fixes.
+- **Tavern Games - Mini Games in Skyrim** `1.2.1.0` modid=1668
+  - Adds tavern mini‑games (lotteries, card/dice games) requiring gold, works in any tavern, ESL flagged.
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - GTS Dwemer Override Hacking Minigame Addon** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Animunculi Override - Custom Skills Framework** `1.0.2.0` modid=114546
+  - Adds hacking minigame to disable Dwemer automatons by tracing a path within 8 seconds; requires Surge Module; optional perks via Custom Skills Framework; compatible patches for Ordinator/Vokrii; ESP-FE, no vanilla edits.
+- **Animunculi Override - Dwemer Automaton Hacking Minigame** `1.0.2.0` modid=114546
+  - Adds hacking minigame to disable Dwemer automatons by tracing a path within 8 seconds; requires Surge Module; optional perks via Custom Skills Framework; compatible patches for Ordinator/Vokrii; ESP-FE, no vanilla edits.
+- **Holidays -x- Light Placer** `1.0.0.0` modid=160128
+  - Adds subtle pulsing lights to lanterns and pumpkins via Light Placer configurations.
+- **Fixed Script for Holidays** `1.0.0.0` modid=88254
+  - Patches a script in Isoku’s Holidays mod to prevent infinite recursion in inns with fewer than 7 beds.
+- **Holidays** `2.20.0.0A1` modid=1533
+  - Makes villages/cities reflect holidays with NPC participation.
+- **Stay In Shape - A Pumping Iron Addon - Patch for Immersive Interactions (Boxing)** `f2.01` modid=50371
+  - Adds weight loss and push‑up ability to Pumping Iron, with strength‑based animations (Weak/Average/Strong); compatible with DAR and Immersive Interactions; requires Pumping Iron; adds muscle gain/loss mechanics
+- **Stay In Shape - A Pumping Iron Addon** `f2.01` modid=50371
+  - Adds weight loss and push‑up ability to Pumping Iron, with strength‑based animations (Weak/Average/Strong); compatible with DAR and Immersive Interactions; requires Pumping Iron; adds muscle gain/loss mechanics
+- **GATE TO SOVNGARDE (GTS) - Small Mods and Resources - Pumping Iron and Hand to Hand (Adamant) Patch** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Pumping Iron - Dynamic Muscle Growth** `1.0.0.0` modid=13434
+  - Dynamically increases character muscle size based on combat/smithing skill gains and sleep duration.
+- **SPID for Footprints fix** `3.0.1.0` modid=70978
+  - Fixes SPID for Footprints by reza9892, addressing file conflicts as intended.
+- **SPID for Footprints** `3.4.0.0` modid=54924
+  - Uses SPID to distribute the footprints spells from the footprints mod, instead of the cloak spell of the original mod
+- **Footprints** `1.6.1.0` modid=3808
+  - Adds footprints to player, NPCs, and creatures with particle FX for snow and ash; custom footprints hook for third‑party races; heavily optimized since v1.00; conflicts as intended.
+- **The Dragonborn Dreams** `1.3.2.0` modid=60384
+  - Allows character to occasionally wake up having had a written dream.
+- **Stress and Fear - A Dynamic Sanity System** `f2.07` modid=116522
+  - Adds dynamic stress that reduces stamina/magicka when hurt, reducible via alcohol, food, sleep, etc., and fears/phobias (wolves, dragons, etc.) that can be overcome for damage buffs; configurable via MCM, keywords Stress_Reduce10/25/50 etc
+- **Wash That Blood Off** `2.1.0.0` modid=62358
+  - Allows cleaning blood off armor and weapons via rain or water using a SKSE64 plugin.
+- **Sink of Scrubbing - Interactive Wash Basins** `1.2.0.0` modid=92844
+  - Adds usable washbasins that grant small buffs to Resist Disease and Speechcraft after four hours of cleaning.
+- **Dirt and Blood HD Retexture** `1.2.0.0` modid=44162
+  - provides high‑resolution retextures for the dirt and blood overlays, with optional shader tweaks.
+- **Dirt and Blood - Dynamic Visual Effects** `2.38.0.0` modid=38886
+  - Adds visual dirt and blood accumulation on player and NPCs, cleanable via swimming, rain, or washing, with configurable stages.
+- **Biggie Traits** `1.0.19.0` modid=136384
+  - Adds a collection of new character traits with diverse mechanical effects, reminiscent of Fallout New Vegas, influencing stats and abilities
+- **Wounds - Eternal Cuts Bug Fix** `1.0.0.0` modid=162436
+  - Bug‑fix for Wounds that resolves cuts that otherwise never disappear, using per‑limb and spell detection.
+- **Common Injuries of the Everyday Adventurer - A Simple Wounds Addon** `1.4.0.0` modid=140466
+  - Delays the Treat Wounds power until a found book is obtained, adding immersive wound mechanics, ESL flagged with CID/Bruma compatibility.
+- **Wounds Injury Animations - Leg animations IDLE WALKING AND RUN port from UNDERDOG** `1.0.0.0` modid=85230
+  - Provides dynamic injury animations via DAR, playing unique animations for each injury state including combos.
+- **Wounds injury animations DAR add-on** `1.1.1.0` modid=54870
+  - Adds over 5000 DAR animations covering all Wounds injury states and movements for visual feedback.
+- **GATE TO SOVNGARDE (GTS) - Small Mods and Resources - Wounds Misc Objects (I4) Icons** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - Wounds Addon Patch** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Wounds** `4.0.0.0` modid=17581
+  - Adds a wound system where combat injuries cause localized trauma requiring time and treatment to heal, affecting stats and requiring bandaging, stitching, cauterizing, etc.
+- **Equipment Durability System NG** `2.2.0.0` modid=109899
+  - Durability system using CommonLib‑NG that degrades weapons and armor on use, configurable rates, includes widgets, works with SKSE and SkyUI.
+- **SkyParkour v2 - Procedural Parkour Framework (SPPF)** `3.4.0.0` modid=132292
+  - Provides a procedural parkour framework with vaulting, sliding, stamina system, dynamic ledge detection, and first/third‑person support.
+- **EVGAT Content Package - Flat-Footed** `2.1.0.0` modid=63232
+  - Framework adding new player movement animations (climbing, squeezing, ledge interactions), used by other mods, requires SKSE, Open Animation Replacer, Animation Motion Revolution, compatible with SE/AE.
+- **EVGAT - Dynamic Climb-able Ladder Doors** `1.3.1.0` modid=108900
+  - Converts ladder doors into animated climbable ladders using BOS and EVGAT for enhanced immersion.
+- **EVG Animated Traversal** `2.1.0.0` modid=63232
+  - Framework adding new player movement animations (climbing, squeezing, ledge interactions), used by other mods, requires SKSE, Open Animation Replacer, Animation Motion Revolution, compatible with SE/AE.
+- **Skyrim's Got Talent - Adamant Bard Perks Synergy** `1.0.1.0` modid=101206
+  - Integrates Adamant Bard Perks with Skyrim's Got Talent, adjusting perk requirements and buff mechanics.
+- **Skyrim's Got Talent - Improve As a Bard - Bruma Mini Patch** `1.76.0.0` modid=50357
+  - Adds bard progression with ~100 songs, NPC reactions, buff/debuff tiers, and skill rank advancement based on expertise.
+- **Beginner Bard Animations - For Skyrim's Got Talent** `1.0.0.0` modid=130776
+  - Adds animation packs that let bards play instruments according to the player's skill level.
+- **Skyrim's Got Talent - Player Reactions Addon (OMA) - Free Movement Patch** `f1.07` modid=78629
+  - Adds player animation reactions to bard performances based on skill level, requiring DAR or OMA patches.
+- **Skyrim's Got Talent - Player Reactions Addon (OMA)** `f1.07` modid=78629
+  - Adds player animation reactions to bard performances based on skill level, requiring DAR or OMA patches.
+- **Offset Movement Animation - Skyrim's Got Talent Demo Patch** `1.0.0.0` modid=110408
+  - Provides a framework for playing movement-enabled animations that blend with other actions, usable with Nemesis, DAR, or OAR.
+- **Skyrim's Got Talent - Improve As a Bard - Free Movement** `1.76.0.0` modid=50357
+  - Adds bard progression with ~100 songs, NPC reactions, buff/debuff tiers, and skill rank advancement based on expertise.
+- **Skyrim's Got Talent - Interesting NPCs (3DNPC) Addon** `1.21.0.0` modid=74466
+  - Adds follower reactions to player performances, compatible with SGT and 3DNPC, providing NPC-specific responses.
+- **Skyrim's Got Talent - Improve As a Bard - Auri reacts to your Music** `1.76.0.0` modid=50357
+  - Adds bard progression with ~100 songs, NPC reactions, buff/debuff tiers, and skill rank advancement based on expertise.
+- **Skyrim's Got Talent - Improve As a Bard - Inigo reacts to your Music** `1.76.0.0` modid=50357
+  - Adds bard progression with ~100 songs, NPC reactions, buff/debuff tiers, and skill rank advancement based on expertise.
+- **Skyrim's Got Talent - Improve As a Bard - Xelzaz reacts to your Music** `1.76.0.0` modid=50357
+  - Adds bard progression with ~100 songs, NPC reactions, buff/debuff tiers, and skill rank advancement based on expertise.
+- **Skyrim's Got Talent - Improve As a Bard** `1.76.0.0` modid=50357
+  - Adds bard progression with ~100 songs, NPC reactions, buff/debuff tiers, and skill rank advancement based on expertise.
+- **Open for Business - Lawbringer for Fort Icemoth** `1.0.6.0` modid=110277
+  - Expands on the excellent Lawbringer mod to make Fort Icemoth in the Hjorkvild Isles claimable. Also includes various tweaks for Siege at Icemoth that are not reliant on Lawbringer.
+- **lawbringer - guardsman - Ryn's Karthspire version** `1.0.37.0V3` modid=67003
+  - Extends Lawbringer to let player claim 44 locations for chosen faction; lists many specific sites
+- **Lawbringer - Guardsman** `1.0.37.0V3` modid=67003
+  - Extends Lawbringer to let player claim 44 locations for chosen faction; lists many specific sites
+- **House Rule - Lawbringer for Solstheim** `1.1.3.0` modid=57243
+  - Extends Lawbringer to enable claimable locations on Solstheim for three factions, adding new buildable sites.
+- **Lawbringer** `1.3.0.2` modid=29882
+  - Enables claiming bandit strongholds for chosen factions (Imperial, Stormcloak, etc.) using banner system; configurable patches and integrates with other mods
+- **SRC - Exclude from Radiant System** `1.1.0.0` modid=41881
+  - Provides multiple versions of the Exclude from Radiant System ESP for Skyrim Realistic Conquering series, offering compatibility options with various mods
+- **Skyrim Realistic Conquering - All In One** `0.76.0.0` modid=26396
+  - Adds dynamic world changes where cleared locations are repopulated and transformed, reflecting player actions and consequences.
+- **Skyrim Reputation - Manbeast - A Werewolf Overhaul patch** `1.1.2.0` modid=82691
+  - Compatibility patch linking reputation with the Manbeast werewolf overhaul.
+- **Skyrim Reputation Improved** `1.3.3.0` modid=52416
+  - Adds bugfixes, new features, and options such as black‑soul trap tracking and presets auto‑load.
+- **Skyrim Reputation - Fixed and Patched** `1.2.0.0` modid=42538
+  - Fixes typos and oddities in the reputation dialogue and patches for related mods.
+- **Skyrim Reputation** `2.4.0.0` modid=22374
+  - Introduces a reputation system that influences NPC greetings, titles, prices, and dialogue based on player actions and moral score.
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - Undeath - Phylactery Limits** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Undeath - Classical Lichdom - The Cause Ayleid Lich Model Patch** `3.60.0.0` modid=40802
+  - Adds lich transformation with spells such as Necrotic Rejuvenation, Bane of Life, Enslave Mind, Enslave Undead, Mass Reanimate, Summon Diilonthur, Devour Soul, and grants fire weakness, no health regen, resistances, and perks like Transcendence (20% faster XP) and Lich Barrier (armor and spell absorption).
+- **Prelude to Purgatory - A Lich Custom Skill Tree** `3.0.0.0b.-6` modid=53143
+  - Adds a 12‑perk skill tree for lich abilities (e.g., scaling Bound Weapons, Mirror Weave, Reconstruct Form) via Custom Skills Framework.
+- **Undeath - Classical Lichdom - Hardcore Mode** `3.60.0.0` modid=40802
+  - Adds lich transformation with spells such as Necrotic Rejuvenation, Bane of Life, Enslave Mind, Enslave Undead, Mass Reanimate, Summon Diilonthur, Devour Soul, and grants fire weakness, no health regen, resistances, and perks like Transcendence (20% faster XP) and Lich Barrier (armor and spell absorption).
+- **Undeath Remastered** `1.7.0.0` modid=6180
+  - Expands lich gameplay with new spells (Ice Coffin, Necrotic Rejuvenation), abilities (fire weakness, resistances), phylactery progression, and extensive bug fixes, adding deep lich mechanics and questline.
+- **Undeath - Classical Lichdom** `3.60.0.0` modid=40802
+  - Adds lich transformation with spells such as Necrotic Rejuvenation, Bane of Life, Enslave Mind, Enslave Undead, Mass Reanimate, Summon Diilonthur, Devour Soul, and grants fire weakness, no health regen, resistances, and perks like Transcendence (20% faster XP) and Lich Barrier (armor and spell absorption).
+- **Skills of the Wild - Reskin Skill Tree** `1.0.0.0` modid=160166
+  - Reskins the skill trees from Skills of the Wild with a Dovahkiin‑themed visual style resembling sketches.
+- **Skills of the Wild - New Campfire Survival Skill Trees - RE-enable Map GPS (Visible Map Cursor)** `2.17.0.0` modid=37693
+  - Adds four campfire survival skill trees — Art of the Hunt, Knower of the Land, Beast Handler, Culinary Arts — with tiered perks and mechanics integrated with the Campfire mod.
+- **Get Lost - A Player Map Marker Hider** `1.0.0.0` modid=119736
+  - Hides player map markers completely (no transparency, no centering), compatible with UI replacers; introduces alternative marker exploration where markers appear only in cities/towns/home, when far away, or with active magic effect RevealsKnownMapMarkers; configurable via SKSE plugin; compatible with many UI and worldspace mods; includes papyrus function PutMapMarkersOnMap to reveal markers.
+- **Skills of the Wild - New Campfire Survival Skill Trees - Menagerie Patch** `2.17.0.0` modid=37693
+  - Adds four campfire survival skill trees — Art of the Hunt, Knower of the Land, Beast Handler, Culinary Arts — with tiered perks and mechanics integrated with the Campfire mod.
+- **Skills of the Wild - New Campfire Survival Skill Trees - Inventory Injector Patch** `2.17.0.0` modid=37693
+  - Adds four campfire survival skill trees — Art of the Hunt, Knower of the Land, Beast Handler, Culinary Arts — with tiered perks and mechanics integrated with the Campfire mod.
+- **Skills of the Wild - New Campfire Survival Skill Trees - Toggle Compass Hotkey Patch** `2.17.0.0` modid=37693
+  - Adds four campfire survival skill trees — Art of the Hunt, Knower of the Land, Beast Handler, Culinary Arts — with tiered perks and mechanics integrated with the Campfire mod.
+- **Skills of the Wild - New Campfire Survival Skill Trees** `2.17.0.0` modid=37693
+  - Adds four campfire survival skill trees — Art of the Hunt, Knower of the Land, Beast Handler, Culinary Arts — with tiered perks and mechanics integrated with the Campfire mod.
+- **AJO - Andrealphus' Jobs Overhaul** `1.6.0.0` modid=109363
+  - Employed in many jobs (Acolyte, Alchemist, Blacksmith, etc.)
+  - Earn gold and rewards based on skill, reputation, job difficulty
+  - Requires tools, may have reputation penalties
+  - Payment varies by performance
+  - ESL flagged
+- **Soldier of Stendarr - Voiced** `1.0.1.0` modid=128739
+  - Adds voice acting to Soldier of Stendarr dialogues; requires original mod.
+- **Soldier of Stendarr** `1.0.3.0` modid=97984
+  - Allows turning in vampire dust (5=200g), werewolf pelts (2=300g), daedra hearts (1=500g) to Vigilants for gold when wearing Stendarr amulet; repeatable with no quest tracker; dialogue only with Vigilant faction; ESL‑flagged; generally compatible
+- **Missives - Voice and Quest Expansion** `1.6.2.0` modid=166094
+  - Adds 20 new quest types and expanded voiced responses for immersion
+- **Missives - Notes Retexture - Bruma Patch** `1.0.0.0` modid=46201
+  - Adds nine textured images to replace blank notes on Missive boards, providing visual variety without altering text.
+- **Missives - Notes Retexture - Solstheim Patch** `1.0.0.0` modid=46201
+  - Adds nine textured images to replace blank notes on Missive boards, providing visual variety without altering text.
+- **Missives - Worldspace Additions - Bruma** `2.11.1.0` modid=26788
+  - Adds Missives board to Solstheim and other regions, new location‑based quests
+- **Missives - Worldspace Additions - Wyrmstooth** `2.11.1.0` modid=26788
+  - Adds Missives board to Solstheim and other regions, new location‑based quests
+- **Missives - Worldspace Additions - Solstheim** `2.11.1.0` modid=26788
+  - Adds Missives board to Solstheim and other regions, new location‑based quests
+- **Missives - Notes Retexture** `1.0.0.0` modid=46201
+  - Adds nine textured images to replace blank notes on Missive boards, providing visual variety without altering text.
+- **Missives - Notes and Announcements** `1.4.0.0` modid=116028
+  - Adds about 90 quest‑aware notices and announcements for Missives, enhancing event feedback while remaining compatible.
+- **Missives - Unique Missive Boards** `1.0.0.0` modid=111375
+  - Adds unique missive board textures to Falkreath, Dawnstar, Morthal, and Winterhold inspired by COTN architecture.
+- **Missives** `f2.03` modid=17576
+  - Adds 264 radiant quests at missive boards, localized, with quest variety and quit option
+- **Ghosts of the Tribunal - Project Aho Integration** `1.0.0.0` modid=79163
+  - Adds clothing sets from Ghost of the Tribunal to NPCs in Sadrith Kegran.
+- **Project AHO - Misc Item Description** `1.0.0.0` modid=80969
+  - Provides modular texture tweaks and edits for Project AHO, including item descriptions, bestiary addons, and boss health bars.
+- **Unofficial Project AHO Patch** `1.3.0.0` modid=36915
+  - Patch fixes crashes in Project AHO after the "No Corpse, No Case" quest.
+- **Project AHO - Spell Crafting for Mysticism** `1.0.1.0.` modid=65891
+  - Adds Mysticism spell tomes to the Project AHO crafting station for consistent spell acquisition.
+- **Project AHO - Start when You want - ESL** `f2.00` modid=21386
+  - Provides an optional start quest triggered by a note at Braidwood Inn after reaching level 15.
+- **Project AHO - Start when You want** `f2.00` modid=21386
+  - Provides an optional start quest triggered by a note at Braidwood Inn after reaching level 15.
+- **Project AHO - Tweaks** `1.0.0.0` modid=80969
+  - Provides modular texture tweaks and edits for Project AHO, including item descriptions, bestiary addons, and boss health bars.
+- **Unofficial Project AHO - Bugfix and Improvement Patch - Table Mesh Fix** `1.7.1.0` modid=41751
+  - Fixes bugs and improves textures and meshes in Project AHO.
+- **Unofficial Project AHO - Bugfix and Improvement Patch** `1.7.1.0` modid=41751
+  - Fixes bugs and improves textures and meshes in Project AHO.
+- **GATE TO SOVNGARDE (GTS) - Small Mods and Resources - Project AHO - Less Jarring Structures** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Project AHO - Eastern Dwemer Towers of Solstheim Patch** `1.0.0.0` modid=72286
+  - Fixes clipping between Eastern Dwemer Towers of Solstheim and Project AHO by removing a mismatched tower.
+- **Project AHO - Saving The Oryses Tweaks** `1.0.1.0` modid=77967
+  - Re‑enables escaped NPCs in Windhelm and adds idle markers after Escape choice.
+- **Project AHO ESM Flag Edition** `2.0.0.0` modid=15996
+  - Adds extensive quest content exploring Great House Telvanni in Sadrith Kegran, with dozens of quests and locations.
+- **Project AHO** `2.0.0.0` modid=15996
+  - Adds extensive quest content exploring Great House Telvanni in Sadrith Kegran, with dozens of quests and locations.
+- **DAC0DA - English Translation** `1.0.5.0` modid=135682
+  - Provides an English translation of the DAc0da mod.
+- **DAc0da - CoMAP Addon** `1.4.0.0` modid=147698
+  - Adds custom map markers for the CoMAP addon to Vicn's mods.
+- **Dac0da - RS Children Patch** `5.0.0.0` modid=164145
+  - Patch fixing RS Children and Dac0da NPC issues, improving appearance and lore consistency.
+- **Animated Armoury Patch for DAc0da** `1.0.4.0a` modid=158468
+  - Updates DAc0da weapons to use Animated Armoury animations and adds required keywords.
+- **Dac0da English AI Voiced (Individual Voice Packs) - FemaleElfHaughty** `2.0.0.0` modid=154587
+  - Adds English synth voiced lines for Dac0da characters.
+- **Dac0da English AI Voiced (Individual Voice Packs) - MaleBruteAlternate** `2.0.0.0` modid=154587
+  - Adds English synth voiced lines for Dac0da characters.
+- **DAc0da - ElevenLabs Voiced** `1.0.5.0-3` modid=154663
+  - Adds high‑quality AI‑generated voice lines for DAc0da.
+- **DAc0da - Delayed Start** `1.1.0.0` modid=136031
+  - Delays the DAc0da questline until specified level or quest conditions; offers level triggers (Level 25, 30, 40) and multiple quest chains (Jurgen Windcaller, Eye of Magnus, Arniel's Endeavour, Yngol's Barrow, Discerning the Transmundane, Mind of Madness, Legends Lost) with escalating requirements, ESL‑flagged plugins, and configurable start level via Global variable zDcdGStartLevel.
+- **Dac0da** `1.0.5.0` modid=134405
+  - Logs Numidium appearance in Skyrim.
+- **VIGILANT - CoMAP Addon** `1.0.0.0` modid=174712
+  - Adds custom map markers for Coldharbour, providing distinct markers for descent.
+- **VIGILANT - Nerfed Jewelry Magic Effects** `1.0.0.0` modid=102544
+  - Provides tweaks for VIGILANT such as smaller shields, no early Daedric weapons, nerfed jewelry effects, etc.
+- **Vigilant's Molag Bal Dragon Retexture SE** `1.0.0.0` modid=82040
+  - Retextures the Dragon version of Molag Bal from Vicn's Vigilant SE.
+- **VIGILANT(missing lines) - ElevenLabs Voiced** `180.0.0.0-1.3` modid=161442
+  - Provides high‑quality AI voiceover for missing lines in VIGILANT 1.8.0.
+- **Vigilant - Coldharbour Landscape and Architecture Retexture** `1.0.0.0` modid=81411
+  - Provides a complete texture overhaul for Coldharbour in the Vigilant mod, enhancing its visual atmosphere.
+- **VIGILANT Voiced - English Addon Subtitle Patch** `1.4.0.0` modid=92405
+  - Aligns subtitles with voices in VIGILANT Voiced - English Addon.
+- **VIGILANT - Book Covers** `1.5.0.0` modid=32940
+  - Adds cover images to books, journals, and notes in VIGILANT, GLENMORIL, and UNSLAAD.
+- **Vigilant - Delayed Start** `2.3.0.0` modid=57961
+  - Delays the Vigilant questline until player reaches a set level or completes prerequisite quests.
+- **VIGILANT - NPC Overhaul** `2.8.3.0` modid=22146
+  - Overhauls NPC appearances in VIGILANT with mesh changes for over 120 NPCs, no ESP.
+- **aljos VIGILANT Tweaks - Armor Rebalance** `1.0.0.0` modid=92893
+  - A collection of tweaks and patches for Vicn's VIGILANT mod.
+- **aljos VIGILANT Tweaks - Pilgrim Patch** `1.0.0.0` modid=92893
+  - A collection of tweaks and patches for Vicn's VIGILANT mod.
+- **Vigilant Immersion Tweaks - All In One** `f1.00` modid=131649
+  - Collection of small tweaks to improve the Vigilant mod.
+- **VIGILANT SE - Adjustments and Addons - No Boss Summons** `1.1.0.0` modid=69400
+  - Rebalances VIGILANT rewards by reducing overpowered enchantments and adjusting progression.
+- **VIGILANT SE - Adjustments and Addons - Nerfed Rewards** `1.1.0.0` modid=69400
+  - Rebalances VIGILANT rewards by reducing overpowered enchantments and adjusting progression.
+- **VIGILANT - Tweaks - Smaller Dragon Knight Tower Shield** `1.0.0.0` modid=102544
+  - Provides tweaks for VIGILANT such as smaller shields, no early Daedric weapons, nerfed jewelry effects, etc.
+- **Vigilant Armors and Weapons Retexture SE - Mid Res 2k-1k (recommended)** `4.0.0.0` modid=45735
+  - Redesigns armors and weapons from the Vigilant mod with mid-resolution textures, recommended at 2k-1k for performance balance.
+- **VIGILANT Voiced - English Addon** `1.8.0.0` modid=11894
+  - English translation of VIGILANT with optional partial voice acting.
+- **VIGILANT - English Translation (Silent)** `1.8.0.0` modid=11894
+  - English translation of VIGILANT with optional partial voice acting.
+- **VIGILANT SEAE** `1.8.0.0` modid=11849
+  - Adds unique armor, weapons, jewelry, and creatures for the Vigilant of Stendarr quest.
+- **Scriptures x Armory of the Dragon Cult** `f1.00` modid=173764
+  - Quest to aid Farengar and Viarmo, bringing the Dragon Cult to life in story and song
+- **Scriptures x The Great Village of Kynesgrove** `f1.00` modid=173764
+  - Quest to aid Farengar and Viarmo, bringing the Dragon Cult to life in story and song
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - Teleport Only In Tamriel - The Frozen Heart** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Apocryphal Library and The Tale of Tsatampra Xiros Integration** `f1.00` modid=128621
+  - Provides a SWAP.INI file that integrates Apocryphal Library books into The Tale of Tsatampra Xiros areas.
+- **Fists of Fury - Redguard Elite Armaments Tweak** `1.3.0.0` modid=73835
+  - Brawling tournament quest in Windhelm, Riften, Morthal; defeat champions; optional Hand‑to‑Hand integration and AE support; includes arena and post‑quest packages
+- **Fists of Fury - AE Integration** `1.3.0.0` modid=73835
+  - Brawling tournament quest in Windhelm, Riften, Morthal; defeat champions; optional Hand‑to‑Hand integration and AE support; includes arena and post‑quest packages
+- **Valtheim EVGAT Leaps of Faith 2-Way Version** `1.0.0.0` modid=123365
+  - Adds EVG animated traversal vault marker for Leaps of Faith jumps in Valtheim Towers, with 2‑way/1‑way options; requires EVG Animated Traversal.
+- **Cale's Patch Compendium - The DoubtSuspended Quest Pack - Myrwatch Patch** `1.0.0.0` modid=66157
+  - Collects patches including DoubtSuspended Quest Pack and Myrwatch patch, intended for both AE and non‑AE versions.
+- **Meridia's Order - Hammet's Dungeon Pack 1 patch** `2.1.0.0` modid=106422
+  - Distributes Vigilant armor, weapons, ingredients, and consumables into Meridia's Order questline, replacing paladin gear.
+- **Meridia's Order - Pilgrim Synergy Patch** `2.1.0.0` modid=106422
+  - Distributes Vigilant armor, weapons, ingredients, and consumables into Meridia's Order questline, replacing paladin gear.
+- **Meridia's Order - Vigilant Synergy Patch** `1.2.0.0` modid=104653
+  - Integrates Vigilant items into Meridia's Order, giving paladins unique armor, swords, and gear based on the Summoner set.
+- **RS Children Patch Compendium - The Forgotten City** `1.0.0.0` modid=13409
+  - Collection of RS Children patches for many mods requiring RS Children Overhaul, may conflict as intended (ESLified Patch).
+- **The Forgotten City - Decree of the Arbiter spell music Fix** `1.0.0.0` modid=64730
+  - Fixes music for Decree of the Arbiter spell, stops lingering after effect.
+- **Forgotten City Music Fixer - Cassia's Plea Remover Add-on** `2.2.0.0` modid=54019
+  - Fixes the music bug that keeps the Forgotten City soundtrack playing after exiting by scripting removal of songs via formIDs.
+- **Forgotten City Music Fixer ESL** `2.2.0.0` modid=54019
+  - Fixes the music bug that keeps the Forgotten City soundtrack playing after exiting by scripting removal of songs via formIDs.
+- **Dwemer Armor SE - My patches and fixes by Xtudo - The Forgotten City Replacer** `3.1.0.0` modid=81046
+  - Provides patches with proper weight sliders, full beast races support, ESL flag, crafting recipes, bug fixes, optional textures, and optional light‑armor version.
+- **The Forgotten City - Good Ending Tweaks** `1.1.0.0` modid=77965
+  - After good ending, relocates NPCs (Safira, Marius, etc.), adds moss/vegetation, fixes water leak, changes bed ownership.
+- **Carved Brink Generic Assets Replacer (Stranger Mask and Corrupted Shade) ESL** `0.5.0.0` modid=25791
+  - Replaces generic Ebony Dragon Priest mask and Imperial Corrupted Shades in Carved Brink with custom assets.
+- **Unofficial Carved Brink Patch** `1.3.0.0` modid=36916
+  - Fixes xEdit errors, broken meshes causing CTDs, and adjusts boss music.
+- **Sirene Wispmother - A SIRENROOT Replacer** `1.0.0.0` modid=123252
+  - Replaces the texture of the SIRENROOT siren with a more detailed, lore‑friendly look using community assets.
+- **Carved Brink ESM Flag Edition** `1.1.0.0` modid=24351
+  - Large quest adding Peryite’s daedric plan, faceted stones, goblin cities; vertical gameplay; new quests, music, 40+ locations; requires DLCs; minimal engine impact
+- **The Forgotten City Entrance Extended Version** `1.0.5.0` modid=25730
+  - Provides a new concealed entrance to the Forgotten City, hiding its access.
+- **Ascend - Hidden Peaks of Skyrim - Add-on for Shrine to Kyne** `f1.01` modid=120802
+  - Adds 10 hidden peaks to climb; meditation grants resistances and passive bonuses; no landscape edits; compatible with most mods; includes wind guidance.
+- **Ascend - Hidden Peaks of Wyrmstooth** `1.0.2.2` modid=124169
+  - Adds support for climbing Wyrmstooth mountains; includes specific peaks and challenges; part of Gate To Sovngarde; compatible with related mods.
+- **Scriptures of the Dragon Cult** `f1.00` modid=173764
+  - Quest to aid Farengar and Viarmo, bringing the Dragon Cult to life in story and song
+- **The Frozen Heart** `0.9.1.0` modid=159911
+  - Enter cursed frozen realm via magical mirror, solve puzzles, complete 4 quests (require Slow Time & Fire Breath), new worldspace, weapons, armor, follower, 3‑4 h gameplay.
+- **Once We Were Here - Quest Mod** `1.0.2.0` modid=149820
+  - Quest mod following Bosmer scholar Sillas exploring Falmer history and Snow Elf lore across various sites.
+- **Sleepwalking Into A Nightmare - New Daedric Prince Quest** `1.0.9.0` modid=141047
+  - Introduces a new Daedric prince quest to rescue a missing woman, featuring nightmarish sequences, new weapons, spells, and multiple endings.
+- **The Tale of Tsatampra Xiros** `f1.04` modid=36707
+  - Explore a page‑bound world, earn Hermaeus Mora’s favor; new spell lets Antiquarian leave Annals and fight alongside Custodian; new dialogue with both; custodian gains boundless knowledge bonuses
+  - The Taste of Death - Quest Addon: Extends vanilla quest with 50+ voiced lines, new dialogue, enemies; adds quest “A Bitter Aftertaste”, optional Ring of Namira, new boss “Champion of Namira” with Daedric Parasite, curse of ring forces cannibalism for hunger, modular FOMOD install
+  - The Whispering Door - Quest Expansion: Extends Mephala’s Daedric quest with longer dialogue and darker tone; adds Jarl Balgruuf and son Nelkir, new “good guy” ending route, options to side with Jarl or betray, NPC reactions change, fully voiced with spliced lines
+  - Thieves Guild Alternative Endings: Adds 4 new voice‑acted endings – Defy Nocturnal, Betray Nocturnal, Exorcise the Key, Refuse to be Nightingale; new rewards, NPC recognition with Karliah/Brynolf, ESL‑compatible, install before Karliah’s request
+  - Thieves' Night On the Town: Overhauls Thieves Guild radiant jobs with hold selection, concurrent quests, targets in all holds; adds independent crime tracking, job‑specific failure conditions (Burglary, Shill, Numbers, Fishing, Sweep, Bedlam, Heist), fixes vanilla locations
+- **Before the End - Quest Mod** `1.0.2.0` modid=142238
+  - Lets the player converse with a death‑row prisoner to learn about his regrets and story.
+- **Bark and Bite - Witcher Inspired Quest** `1.0.4.0` modid=135087
+  - Adds a short Witcher‑style quest centered on a mysterious tree with two morally ambiguous endings.
+- **Fists of Fury** `1.3.0.0` modid=73835
+  - Brawling tournament quest in Windhelm, Riften, Morthal; defeat champions; optional Hand‑to‑Hand integration and AE support; includes arena and post‑quest packages
+- **The Breathing Abyss - Lovecraft Inspired Mod** `1.0.8.0` modid=141216
+  - Quest about mysterious underwater entity with high‑quality voice acting, unique story, new cavern, voiced by D.D. Rumin.
+- **Meridia's Order** `1.5.0.0` modid=102584
+  - Provides hours of new quests, choice‑driven gameplay, fully voiced characters, and new locations as the champion of Meridia.
+- **Heart of the Reach - High Resolution Textures** `1.0.6.0` modid=76494
+  - Quest to heal the Heart of the Reach in an underground swamp; adds new weapons, ring, and spell.
+- **Stendarr Rising - The Hall of the Vigilant Rebuild** `1.6.0.0` modid=49346
+  - Rebuilds Hall of the Vigilant after vampire attack; adds recruits, crafting, defenses, MCM customization; compatible with patches like Better Dynamic Snow 2, CACO, Cutting Room Floor, etc.; ESL‑flagged
+- **Fortune's Tradehouse** `2.0.0.0` modid=22755
+  - Adds a new Markarth location with five fully voiced quests for an Argonian cobbler to access Fortune's Tradehouse.
+- **Aran di Kono ESL** `1.1.0.0` modid=98194
+  - Offers a quest involving two Moon‑Priests and a branching narrative with immersive voice acting.
+- **SIRENROOT - Deluge of Deceit** `1.21.0.0` modid=70917
+  - Dialogue‑heavy dungeon quest with water puzzles, platforming, multiple endings, voiced dialogue (~1000 lines).
+- **The Gift Of Saturalia** `f1.04` modid=105697
+  - Holiday quest to spread Saturalia spirit, help NPCs, ~500 voiced dialogue lines, optional patches.
+- **Carved Brink** `1.1.0.0` modid=24351
+  - Large quest adding Peryite’s daedric plan, faceted stones, goblin cities; vertical gameplay; new quests, music, 40+ locations; requires DLCs; minimal engine impact
+- **Leaps of Faith - A Misc Quest** `f1.05` modid=53074
+  - Adds 12 epic Leaps of Faith across Skyrim with custom jump/fall animations and small bonuses.
+- **The DoubtSuspended Quest Pack - Merged** `1.4.0.0` modid=4929
+  - Adds three fully voiced, lore-friendly short quests involving assassination, missing fur trader, and smuggler crew vengeance.
+- **Morthal Barrow** `1.4.0.0` modid=90737
+  - Adds Nordic dungeon with voiced quest, new enemies, spells, artifacts, and dynamic changes
+- **The Forgotten City** `1.8.0.0` modid=1179
+  - Critics‑award winning murder mystery in ancient underground city, 6‑8 h, time‑loop mechanics, multiple endings, professional voice acting.
+- **Whispers of the Depths - Quest Mod** `1.0.4.0` modid=127087
+  - Quest centered on Argonian fisherman Slays‑Many‑Beasts with four unique encounters, fully voiced, teaching lore about sea monsters.
+- **More to do in the Soul Cairn - ESPFE Version** `1.1.0.0` modid=115962
+  - Adds a quest in the Soul Cairn to help three inhabitants through five stages of grief and retrieve memories.
+- **Mysteries of the Dwemer - Quest Mod** `1.0.3.0` modid=114863
+  - Adds a quest centered on Maro, a Dwemer researcher who explains aspects of Dwemer lore to the player.
+- **Gravewind** `1.2.0.0` modid=129582
+  - A quest about a realm lost to myth, an ancient city of ghosts, and a small house in the woods, featuring three new magic groups, unique boss fights, custom enemies, two endings, and more.
+- **Revealing Rune** `1.1.0.0` modid=120935
+  - Adds a quest to uncover the past of Rune, a Thieves Guild member.
+- **Unmasking Sybille** `1.2.0.0` modid=109265
+  - Adds a texture unveiling Sybille Stentor's secret and a quest to investigate her fate.
+- **Ascend - Hidden Peaks of Skyrim** `f1.01` modid=120802
+  - Adds 10 hidden peaks to climb; meditation grants resistances and passive bonuses; no landscape edits; compatible with most mods; includes wind guidance.
+- **More Racism in Windhelm SSE** `1.2.0.0` modid=14233
+  - Adds six voiced bigoted NPCs to Windhelm and a bookseller with unique books.
+- **My Little Hatchling SSE- Ram-Ku The Adoptable Argonian Boy** `1.1.0.0` modid=28633
+  - Adds an adoptable male Argonian child NPC named Ram‑Ku, fully voiced with a backstory.
+- **Khajiit Child Maisha SE** `f2.02` modid=8649
+  - Adds a Khajiit child named Ma'isha that can be adopted, with standalone facial textures and expressions, found in Crabber's Shanty, and contains a known neck glitch.
+- **Apocryphal Library and Val Serano Integration** `f1.00` modid=140630
+  - Adds a SWAP.INI patch that integrates Apocryphal Library books into Val Serano’s quest areas.
+- **OMEAR Addition - Val Serano 2** `1.8.2.0` modid=67968
+  - Replaces frequent OnMagicEffectApply calls to reduce VM overstress; supports many scripts and optional fixes for popular mods.
+- **Val Serano - Velehk Sain Patch** `2.3.0.0` modid=103669
+  - Adds a voiced pirate/thief character named Val Serano.
+- **Val Serano - Minimalist Creation Club Addon** `2.3.0.0` modid=103669
+  - Adds a voiced pirate/thief character named Val Serano.
+- **Val Serano - Minimalist USSEP Patch** `2.3.0.0` modid=103669
+  - Adds a voiced pirate/thief character named Val Serano.
+- **Val Serano - Minimalist** `2.3.0.0` modid=103669
+  - Adds a voiced pirate/thief character named Val Serano.
+- **Auri VIGILANT commentary patch tweaks** `1.0.0.0` modid=148207
+  - Fixes quest conditions, enables Auri to follow in inaccessible locations, updates dialogue; requires ESPFE.
+- **Auri's Unique Pod - Song of the Green Addon** `1.0.0.0` modid=128016
+  - Changes Auri's pod texture to match interior bark, useful with other texture packs.
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - Auri Optional Replacer** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Refined Auri SSE - Pointy Teeth Update** `1.1.0.0` modid=36444
+  - Overhauls Auri with a bosmeri style featuring pointy teeth and refined assets.
+- **Song of the Green (Auri Follower) - 3DNPC Banter Patch** `2.2.0.0` modid=11278
+  - Custom‑voiced Bosmer follower Auri with 1k+ dialogue lines, approval system, mini‑quest, romance independent of vanilla marriage, mount option; ESL‑flagged; conflicts with patches; install via MCM
+- **Song of the Green (Auri Follower) - Vigilant Commentary Patch** `2.2.0.0` modid=11278
+  - Custom‑voiced Bosmer follower Auri with 1k+ dialogue lines, approval system, mini‑quest, romance independent of vanilla marriage, mount option; ESL‑flagged; conflicts with patches; install via MCM
+- **Song of the Green (Auri Follower) - Inigo Banter Patch - sfts and Talwin fix** `2.2.0.0` modid=11278
+  - Custom‑voiced Bosmer follower Auri with 1k+ dialogue lines, approval system, mini‑quest, romance independent of vanilla marriage, mount option; ESL‑flagged; conflicts with patches; install via MCM
+- **Gourmet Patch Page - Auri** `1.0.0.0` modid=97050
+  - Library of patches for Gourmet; includes patches for Beyond Skyrim, AI Overhaul, Rare Curios, and many other mods; soft requirements.
+- **Song of the Green (Auri Follower)** `2.2.0.0` modid=11278
+  - Custom‑voiced Bosmer follower Auri with 1k+ dialogue lines, approval system, mini‑quest, romance independent of vanilla marriage, mount option; ESL‑flagged; conflicts with patches; install via MCM
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - Kaidan Revoiced Optional Replacer** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Kaidan Revoiced - Community Expansion (KRCE)** `1.2.0.0` modid=135345
+  - Fully voiced follower Kaidan with extensive lore‑rich quests, romance paths, custom armor, requires new save, incompatible with other follower managers
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - GTS - Gore Replacer Patch** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - Gore Replacer and HDT-SMP Vanilla Armors patch** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - Alchemy Requires Bottles and Gore Patch** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Gore - Another Replacer** `3.2.0.0` modid=101784
+  - Texture replacer for the Vigilant addon.
+- **Gore - A Companion Mod - RS Children Patch** `1.0.0.0` modid=106816
+  - Patch enabling children from Gore to be compatible with RS Children mod.
+- **Gore Replacer - Vigilant Addon** `3.2.0.0` modid=101784
+  - Texture replacer for the Vigilant addon.
+- **Gore - A Companion Mod** `1.8.11.0` modid=85298
+  - Lore‑friendly voiced follower with custom quest, optional survival‑lite camp system, death‑rescue mechanic, equips weapons/armor, and supports non‑binary dialogue.
+- **Lucien - Room Markers for Dumzbthar** `1.0.0.0` modid=49918
+  - Lucien adds room markers and occlusion planes to Dumzbthar to improve performance, especially with Dwemer Pipework Reworked
+- **GATE TO SOVNGARDE (GTS) - Small Mods and Resources - Lucien Dwemer Ruin Redux** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Lucien - Immersive Fully Voiced Male Follower - Bruma Patch** `1.6.3.0` modid=20035
+  - Fully voiced follower with 5,000+ lines, dynamic personality, training system, personal quests, and interactions with many mods
+- **Lucien - Immersive Fully Voiced Male Follower - Umbra Patch** `1.6.3.0` modid=20035
+  - Fully voiced follower with 5,000+ lines, dynamic personality, training system, personal quests, and interactions with many mods
+- **Lucien - Immersive Fully Voiced Male Follower - Staff of Sheogorath Patch** `1.6.3.0` modid=20035
+  - Fully voiced follower with 5,000+ lines, dynamic personality, training system, personal quests, and interactions with many mods
+- **Lucien - Immersive Fully Voiced Male Follower - Saturalia Patch** `1.6.3.0` modid=20035
+  - Fully voiced follower with 5,000+ lines, dynamic personality, training system, personal quests, and interactions with many mods
+- **Lucien - Immersive Fully Voiced Male Follower - Tundra Homestead Patch** `1.6.3.0` modid=20035
+  - Fully voiced follower with 5,000+ lines, dynamic personality, training system, personal quests, and interactions with many mods
+- **Lucien - Immersive Fully Voiced Male Follower - Stendarr's Hammer Patch** `1.6.3.0` modid=20035
+  - Fully voiced follower with 5,000+ lines, dynamic personality, training system, personal quests, and interactions with many mods
+- **Lucien - Immersive Fully Voiced Male Follower - Forgotten Seasons Patch** `1.6.3.0` modid=20035
+  - Fully voiced follower with 5,000+ lines, dynamic personality, training system, personal quests, and interactions with many mods
+- **Lucien - Immersive Fully Voiced Male Follower - Arcane Archer Patch** `1.6.3.0` modid=20035
+  - Fully voiced follower with 5,000+ lines, dynamic personality, training system, personal quests, and interactions with many mods
+- **Lucien - Immersive Fully Voiced Male Follower - Adventurer's Backpack Patch** `1.6.3.0` modid=20035
+  - Fully voiced follower with 5,000+ lines, dynamic personality, training system, personal quests, and interactions with many mods
+- **Lucien - Immersive Fully Voiced Male Follower - Alternative Armors - Elven Hunter Patch** `1.6.3.0` modid=20035
+  - Fully voiced follower with 5,000+ lines, dynamic personality, training system, personal quests, and interactions with many mods
+- **Lucien - Immersive Fully Voiced Male Follower - Alternative Armors - Silver Patch** `1.6.3.0` modid=20035
+  - Fully voiced follower with 5,000+ lines, dynamic personality, training system, personal quests, and interactions with many mods
+- **Lucien - Immersive Fully Voiced Male Follower - Bone Wolf Patch** `1.6.3.0` modid=20035
+  - Fully voiced follower with 5,000+ lines, dynamic personality, training system, personal quests, and interactions with many mods
+- **Lucien - Immersive Fully Voiced Male Follower - Camping Patch** `1.6.3.0` modid=20035
+  - Fully voiced follower with 5,000+ lines, dynamic personality, training system, personal quests, and interactions with many mods
+- **Lucien - Immersive Fully Voiced Male Follower - Goblins Patch** `1.6.3.0` modid=20035
+  - Fully voiced follower with 5,000+ lines, dynamic personality, training system, personal quests, and interactions with many mods
+- **Lucien - Immersive Fully Voiced Male Follower - Rare Curios Patch** `1.6.3.0` modid=20035
+  - Fully voiced follower with 5,000+ lines, dynamic personality, training system, personal quests, and interactions with many mods
+- **Lucien - Immersive Fully Voiced Male Follower - Myrwatch Patch** `1.6.3.0` modid=20035
+  - Fully voiced follower with 5,000+ lines, dynamic personality, training system, personal quests, and interactions with many mods
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - Lucien Optional Replacer** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Cosmos Lucien Replacer** `1.5.0.0` modid=71960
+  - Replaces Lucien's face with a rounder, fairer‑skinned version while preserving original features.
+- **Lucien - Immersive Fully Voiced Male Follower** `1.6.3.0` modid=20035
+  - Fully voiced follower with 5,000+ lines, dynamic personality, training system, personal quests, and interactions with many mods
+- **Snazzy Items for Inigo** `1.0.0.0` modid=57194
+  - Model and texture replacer for Inigo's unique items, providing custom meshes/textures for items such as the Muffle Tongue Necklace, Inigo's Ebony Bow, etc.
+- **High-Poly Inigo Replacer** `3.0.0.0` modid=38860
+  - Rebrands follower Inigo with higher‑poly head and recolored hair.
+- **INIGO** `2.4.0.0C` modid=1461
+  - Fully voiced Khajiit companion with 7,000+ unique dialogue lines who levels with the player, avoids traps, whispers when sneaking, can run out of arrows, skilled in archery/one‑handed, uses whistle key (SKSE64) to call; official patch fixes conflicts and enables placing Mr D on belt via console command
+- **Xelzaz - Custom Fully Voiced Argonian Telvanni Follower - Sirenroot Patch** `1.13.2.0` modid=62893
+  - Fully voiced Argonian lawman Xelzaz offers quests, cooking, potions, lore commentary, and unique interactions, with ~8500 voiced lines.
+- **Xelzaz - Custom Fully Voiced Argonian Telvanni Follower - Wyrmstooth Patch** `1.13.2.0` modid=62893
+  - Fully voiced Argonian lawman Xelzaz offers quests, cooking, potions, lore commentary, and unique interactions, with ~8500 voiced lines.
+- **Xelzaz - Custom Fully Voiced Argonian Telvanni Follower - AE CC Patch** `1.13.2.0` modid=62893
+  - Fully voiced Argonian lawman Xelzaz offers quests, cooking, potions, lore commentary, and unique interactions, with ~8500 voiced lines.
+- **Xelzaz - Custom Fully Voiced Argonian Telvanni Follower** `1.13.2.0` modid=62893
+  - Fully voiced Argonian lawman Xelzaz offers quests, cooking, potions, lore commentary, and unique interactions, with ~8500 voiced lines.
+- **The Practical Dwemechanic - A Remiel Replacer** `1.2.4.0` modid=63619
+  - Replacer for Remiel's appearance adding scarred face and Dwemer necklace, compatible with body textures, requires HLIORemi.esp, works with most follower overhauls
+- **Remiel-Custom Voiced Follower** `1.7.5.0` modid=51874
+  - Adds Breton engineer follower Remiel (~5k dialogue lines) with custom quest, spider companion, and upgrade system.
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - Orpheus Optional Replacer** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **eeekie's Orpheus - visual overhaul** `1.3.0.0` modid=130328
+  - Replaces appearance of a custom ANCIENT SNOW ELF vampire follower using BnP base, requires compatible skin, weight adjustable via console, ESL flagged, compatible only with base BnP skins
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - Orpheus Start Delay** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - Taliesin Optional Replacer** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **A Makeover for Taliesin - Yellow Sclera** `1.2.0.0` modid=94293
+  - Replaces textures for the follower Taliesen.
+- **A Makeover for Taliesin** `1.2.0.0` modid=94293
+  - Replaces textures for the follower Taliesen.
+- **GATE TO SOVNGARDE (GTS) - Small Mods and Resources - Mythos GtS Patch** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Pandorable's Mythos Replacer** `1.0.0.0` modid=56605
+  - Visual replacer for Mythos followers Karna and Bacchus, requiring Mythos and compatible with various texture packs.
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - Nessa Optional Replacer** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Cat Nessa Replacers - No RSV Version** `1.2.0.0` modid=77637
+  - Provides a high-poly head replacer for Nessa follower, with No RSV skin option.
+- **Simple Winterhold Housecarl** `1.2.0.0` modid=127474
+  - Adds a housecarl NPC to Winterhold, edits Jarl dialogue using Argis voice, includes dismissal line, and is compatible with most mods.
+- **Orpheus** `1.8.0.0` modid=128519
+  - Ancient Snow Elf vampire follower with custom combat system based on scaling Bound Weapons, full Vampire Lord form support, modular features; found near Haemar's Shame.
+- **The Thalmor's Shadow - Taliesin (Custom Voiced Follower)** `f1.03` modid=93413
+  - Adds a custom voiced Thalmor follower with unique dialogue and purpose.
+- **Mythos SE** `Redux` modid=51576
+  - Adds two fully voiced companions with unique quests, dialogue, and reactivity
+- **Nessa SE** `2.0.0.0` modid=77337
+  - Adds a quest‑full NPC named Nessa, a thief with 800+ dialogue lines, unique outfit, and sandbox toggles.
+- **Khash The Argonian (A Fully Custom Voiced Follower) (SOT - Sidekicks of Tamriel)** `1.9.3.7` modid=40122
+  - Adds a fully voiced Argonian follower named Khash with over 1600 lines of custom dialogue.
+- **Melana the War Maiden - An Evolving Custom Voiced Follower** `1.1.1.0` modid=129215
+  - Adds dynamic follower Melana with three evolution phases, voice changes, attribute upgrades, sparring system
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - 3DNPC - Text Fixes** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Interesting NPCs - Quest Requirement Tweaks** `1.3.0.0` modid=77341
+  - Adjusts dialogue and script requirements within Interesting NPCs to modify quest accessibility.
+- **Proper journal entries for 3dnpcs** `1.0.0.0` modid=157902
+  - Adds journal entries to 39 3DNPC quests, providing quest summaries from the player's perspective.
+- **Interesting NPCs - Melea Entius Tweaks - COTN Falkreath Patch** `1.0.0.0` modid=99612
+  - Makes Melea Entius die three weeks after first spoken to.
+- **Assorted 3DNPC Patches - Project AHO Patch** `1.0.0.0` modid=72309
+  - Provides a separate patch for 3DNPC adjustments related to Dungeons1.
+- **Assorted 3DNPC Patches - Vigilant Patch** `1.0.0.0` modid=72309
+  - Provides a separate patch for 3DNPC adjustments related to Dungeons1.
+- **Interesting NPCs (3DNPC) - Patches** `1.8.1.0` modid=89307
+  - Provides assorted patches for 3DNPC including AI Overhaul integration, navmesh fixes, marker relocations, and conflict resolutions; installable via mod manager; covers multiple compatibility updates.
+- **3dnpcs Fixes and Tweaks - Ashwood Wont be enabled until Dragon Rising** `6.2.0.0` modid=131274
+  - Adds Mojin merchant inventory
+  - Fixes Alassea werewolf dialogue
+  - Adds 3 new conjuration spells
+  - Adds alternate ending to \"That was always there\"
+  - Fixes Mannequin dialogue loop
+  - Removes ownership from Ariele basement items
+  - Adds alternate ending to \"To Bite the Hand that feeds you\"
+  - Fixes Axe of Forgotten Kings respawn
+  - Improves Deneris AI
+  - Expands dialogue recognition for fine clothes
+  - Adds Iron dagger to Kianna
+- **3dnpcs Fixes and Tweaks** `6.2.0.0` modid=131274
+  - Adds Mojin merchant inventory
+  - Fixes Alassea werewolf dialogue
+  - Adds 3 new conjuration spells
+  - Adds alternate ending to \"That was always there\"
+  - Fixes Mannequin dialogue loop
+  - Removes ownership from Ariele basement items
+  - Adds alternate ending to \"To Bite the Hand that feeds you\"
+  - Fixes Axe of Forgotten Kings respawn
+  - Improves Deneris AI
+  - Expands dialogue recognition for fine clothes
+  - Adds Iron dagger to Kianna
+- **GATE TO SOVNGARDE (GTS) - Small Mods and Resources - 3DNPC Zora Children Fair Unstuck Scene Fix** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Snazzy Items for Interesting NPCs (3DNPC)** `1.20.0.0` modid=58811
+  - Model and texture replacer for all unique items in Interesting NPCs (3DNPC).
+- **Interesting NPCs and Obscure's College of Winterhold - Mugnor Patch** `1.1.0.0` modid=94805
+  - Fixes sandbox package issue for the unusual mage in Winterhold.
+- **Interesting NPCs (3DNPC) Script Fixes** `2.1.0.0` modid=87245
+  - Improvements for a couple scripts in 3DNPC.
+- **Sleeping Expanded for Interesting NPCs (3DNPC)** `1.0.0.0` modid=76753
+  - Adds similar sleeping reaction animations and NPC interactions for 3DNPC followers.
+- **Tragedian's Interesting NPCs - 3DNPC Followers Reimagined** `1.4.0.0` modid=61669
+  - makeover mod for Interesting NPCs featuring unique, lore-friendly looks & improved combat skills
+- **Interesting NPCs Infinite Loading Screen Freeze Fix - Snapleg Cave - Rift Watchtower** `0.1.0.0` modid=131848
+  - Fixes infinite loading screen or freeze in specific locations.
+- **Interesting NPCs SE (3DNPC) - Alternative Locations** `4.5.0.0` modid=29194
+  - Adds 250+ voiced NPCs, 50+ quests, 25+ followers with location‑based commentary, and 15+ marriage NPCs, with extensive dialogue trees and role‑play choices; can disable base dialogue via console and enable unvoiced dialogue via console.
+- **Interesting NPCs Honed Metal Patch for Isobel** `1.26.0.0b` modid=102772
+  - Adds voiced dialogue for Isobel in Honed Metal blacksmithing using vanilla lines, conditional on relationship rank 4 after first date, and modifies Honed Metal records causing intrusive updates.
+- **Interesting Follower Requirements for Interesting NPCs** `f2.03` modid=45646
+  - Adds recruitable‑follower requirements based on criteria such as speechcraft; version 2.0 uses column A/B/C logic; compatible with older version 1.0; avoids recruiting low‑level followers.
+- **Immersive Rejections for Interesting NPCs (3DNPC)** `1.0.0.0` modid=75879
+  - Adds voiced rejection dialogues for NPCs in the Interesting NPCs mod.
+- **Interesting NPCs SE (3DNPC) - 4.54 Update** `4.5.0.0` modid=29194
+  - Adds 250+ voiced NPCs, 50+ quests, 25+ followers with location‑based commentary, and 15+ marriage NPCs, with extensive dialogue trees and role‑play choices; can disable base dialogue via console and enable unvoiced dialogue via console.
+- **Interesting NPCs SE (3DNPC)** `4.5.0.0` modid=29194
+  - Adds 250+ voiced NPCs, 50+ quests, 25+ followers with location‑based commentary, and 15+ marriage NPCs, with extensive dialogue trees and role‑play choices; can disable base dialogue via console and enable unvoiced dialogue via console.
+- **Frozen Familiar** `1.0.0.0` modid=113495
+  - Cold counterpart to Flaming Familiar spell; ESL flagged; safe for SE and AE; adds new spell.
+- **Lost Grimoire SSE - Adamant Patch** `1.4.0.0` modid=4455
+  - Adds 115+ balanced spells across all schools, with scrolls and staves; auto‑distributed, high‑quality VFX/SFX, no background scripts
+- **Bound Daedric Armor Sidegraded** `1.1.0.0` modid=119779
+  - Replacer that offers a more vanilla‑style bound armor spell set with modular spells and reduced armor overlap when wearing other gear
+- **Bound Daedric Armor - Beast Race Helmets** `1.2.0.0` modid=152148
+  - Remodels the helmets of Bound Daedric Armor to fit neglected races using Improved Close‑Faced Helmets meshes.
+- **Bound Daedric Armor** `2.2.0.0` modid=11268
+  - Adds spells to summon a temporary Daedric Armor set for the player and optionally allies, featuring unique visual effects
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - Teleport Only In Tamriel - Lost Grimoire** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Lost Grimoire SSE** `1.4.0.0` modid=4455
+  - Adds 115+ balanced spells across all schools, with scrolls and staves; auto‑distributed, high‑quality VFX/SFX, no background scripts
+- **Inconsequential Incantations - Mysticism Patch** `1.1.0.0` modid=145512
+  - Adds 26 new immersive spells across all five magic schools for use with Mysticism overhaul; distributed via SkyPatcher; V83: NEW; conflicts as intended (GtS-specific Patches).
+- **Inconsequential Incantations - Minor Immersive Spells** `1.1.0.0` modid=145512
+  - Adds 26 new immersive spells across all five magic schools for use with Mysticism overhaul; distributed via SkyPatcher; V83: NEW; conflicts as intended (GtS-specific Patches).
+- **Immersive Illusion Spells** `1.3.0.0` modid=142357
+  - Adds 16 new instant‑cast illusion spells across novice–master tiers (Distraction, Mind Trick, Mirror, Brain Fog, Tremor, etc), no projectiles, optional Blink/Cure Poison/Throw Voice, enabled via globals
+- **Elemental Mastery Magic** `1.35.0.0` modid=139953
+  - Adds new destruction spells for player and NPCs.
+- **Little Library - New Books in Skyrim - No LLOS Patch** `1.8.0.0` modid=135278
+  - Adds 50 lore‑friendly books with diverse genres; integrates via Leveled List Object Swapper and other frameworks for distribution
+- **Little Library - New Books in Skyrim** `1.8.0.0` modid=135278
+  - Adds 50 lore‑friendly books with diverse genres; integrates via Leveled List Object Swapper and other frameworks for distribution
+- **Apocryphal Library and Undeath Remastered Integration** `1.2.0.0` modid=128168
+  - Adds fully‑readable Black Book ‘Whispers of the Veil’ to Undeath Remastered; includes _SWAP.INI for Base Object Swapper; version 1.2 requires Apocryphal Library v1.2; adds necromancy‑focused books; ESL flagged; requires Undeath Remastered.
+- **Apocryphal Library** `1.53.0.0` modid=121654
+  - Adds Base Object Swapper support to make book stacks searchable; adds ~100 new books, notes, and lore from various TES titles; includes letters, spell tomes, and unique items; optional patches for Ordinator/Vokrii; ESL flagged; installs via Vortex or manual.
+- **Travelling Priest Robes - Clothing Version** `2.1.0.0` modid=118327
+  - Provides a simple vanilla light armor set for traveling priests/monks, compatible with Vanilla Bodies, HIMBO, and CBBE.
+- **Travelling Priest Robes - HDT Vanilla Scarf** `2.1.0.0` modid=118327
+  - Provides a simple vanilla light armor set for traveling priests/monks, compatible with Vanilla Bodies, HIMBO, and CBBE.
+- **Armors of the Velothi Pt. II - My patches SE by Xtudo - Indoril Bonesaint** `1.6.0.0` modid=130296
+  - Provides fixes and optimizations, optional non‑HDT version, text fixes, keyword additions, resolves clipping and texture issues.
+- **Armors of the Velothi (Beast Race Support)** `1.3.1.0` modid=63056
+  - Adds helmet adjustments for Argonian and Khajiit races to fit the Armors of the Velothi, requiring the original mod and loaded after it.
+- **HDT-SMP Ulag's Legacy** `1.0.0.0` modid=144728
+  - Adds realistic cloth physics to Ulag's Legacy armor sets (Apotheus Light, Blooded Heavy, Duskward Light) using HDT-SMP with fixes and conversion options
+- **Ancient Imperial Armor for Vigilant SE** `1.1.0.0` modid=142972
+  - Distributes the Ancient Imperial armor sets into Vigilant SE's Coldharbour enemies as generic gear.
+- **Warmonger Armory Tweaks - Loremonger Edition** `1.2.0.0` modid=35899
+  - Rebalances Warmonger Armory weapons and provides a plugin replacer, with intentional conflicts.
+- **New Legion Update** `1.0.0.0` modid=88495
+  - Offers standalone craftable Legion armor sets, including green Legion and Penitus Oculotus-inspired variants, using extra textures.
+- **New Legion Standalone Hotfix** `1.0.0.0` modid=88495
+  - Offers standalone craftable Legion armor sets, including green Legion and Penitus Oculotus-inspired variants, using extra textures.
+- **New Legion Green Female Leather Update** `1.0.0.0` modid=88495
+  - Offers standalone craftable Legion armor sets, including green Legion and Penitus Oculotus-inspired variants, using extra textures.
+- **Titus Mede I - My version SE by Xtudo - Emperor Civil War - 2k - Emperor Clothes Replacer Patch** `1.1.0.0` modid=69940
+  - Adds unisex light and heavy armor sets for Emperor Titus Mede I, craftable at any forge, no HDT required, with survival keyword and optional patches.
+- **Imperial Battlemage Robes for Imperial Battlemages - ESL** `1.0.0.0` modid=95233
+  - Adds craftable Imperial heavy and light robes using Steel smithing; heavy matches Dwarven protection, light matches Glass, includes cape and ceremonial sword as non‑protective clothing.
+- **Gryphonknight Regalia - Breton Noble Armor - SMP Patch** `1.3.0.0` modid=107437
+  - Adds a crafted Breton noble armor set with high protection and thematic heritage.
+- **HDT-SMP for Cloaks and Capes** `1.1.0.0` modid=55030
+  - Provides HDT-SMP physics support for Cloaks and Capes removing conflicts with city guard replacers
+- **Dwemer Armor SE - My patches and fixes by Xtudo - Fixes ESL** `3.1.0.0` modid=81046
+  - Provides patches with proper weight sliders, full beast races support, ESL flag, crafting recipes, bug fixes, optional textures, and optional light‑armor version.
+- **Alternative Open Face Wind Ruler Helmet - helm version (no hair mesh) - Male** `1.1.0.0` modid=63642
+  - Provides an open‑face helmet variant of the Wind Ruler Armor with optional hair meshes and updates.
+- **Alternative Open Face Wind Ruler Helmet - helm version (no hair mesh) - Female** `1.1.0.0` modid=63642
+  - Provides an open‑face helmet variant of the Wind Ruler Armor with optional hair meshes and updates.
+- **Alternative Open Face Wind Ruler Helmet - Beastfolk and Orc helm (no braided hair mesh)** `1.1.0.0` modid=63642
+  - Provides an open‑face helmet variant of the Wind Ruler Armor with optional hair meshes and updates.
+- **Alternative Open Face Wind Ruler Helmet - Helm Version** `1.1.0.0` modid=63642
+  - Provides an open‑face helmet variant of the Wind Ruler Armor with optional hair meshes and updates.
+- **Wind Ruler Armor - Male weight sliders SE** `1.2.0.0` modid=60893
+  - Adds feminine-themed patches including 2K textures, HD hair, bigger helmets, and no fur.
+- **Wind Ruler Armor - Female WS - More feminine SE** `1.2.0.0` modid=60893
+  - Adds feminine-themed patches including 2K textures, HD hair, bigger helmets, and no fur.
+- **Wind Ruler Armor SE - Fixes by Xtudo** `1.0.0.0` modid=60842
+  - Adds a unique heavy armor set and two‑handed sword unlocked after passing Kyne's Sacred Trials.
+- **Imperial Tribune Armor - SMP Physics for the cape** `1.26.0.0` modid=54294
+  - Adds Imperial armor set craftable with Steel smithing; heavy variant provides Dwarven‑level protection, light variant matches Glass, cape and ceremonial sword are clothing with no protection.
+- **Imperial Tribune Armor - General Tullius' outfit replacer** `1.26.0.0` modid=54294
+  - Adds Imperial armor set craftable with Steel smithing; heavy variant provides Dwarven‑level protection, light variant matches Glass, cape and ceremonial sword are clothing with no protection.
+- **Imperial Tribune Armor - Feet Fix** `1.26.0.0` modid=54294
+  - Adds Imperial armor set craftable with Steel smithing; heavy variant provides Dwarven‑level protection, light variant matches Glass, cape and ceremonial sword are clothing with no protection.
+- **Imperial Tribune Armor - ESL Plug-in** `1.26.0.0` modid=54294
+  - Adds Imperial armor set craftable with Steel smithing; heavy variant provides Dwarven‑level protection, light variant matches Glass, cape and ceremonial sword are clothing with no protection.
+- **Colovian Prince Set - My patches and tweaks SE by Xtudo - See Through Eyes Patch** `1.0.0.0` modid=110812
+  - Provides patches adding beast races support, female helmet, texture options, and various fixes to the Colovian Prince Set.
+- **Colovian Prince Set - My patches and tweaks SE by Xtudo - Fixes** `1.0.0.0` modid=110812
+  - Provides patches adding beast races support, female helmet, texture options, and various fixes to the Colovian Prince Set.
+- **Ysmir Armor - SE by Xtudo - Fixes ESL** `2.0.0.0` modid=112480
+  - Provides patches and fixes for Ysmir Armor, including beast race support, optional vanilla iron armor replacer, and various compatibility tweaks.
+- **Ysmir Armor - My patches SE by Xtudo** `2.0.0.0` modid=112480
+  - Provides patches and fixes for Ysmir Armor, including beast race support, optional vanilla iron armor replacer, and various compatibility tweaks.
+- **GATE TO SOVNGARDE (GTS) - Small Mods and Resources - Wizard Hats Lite Integration** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Lunar Guard Armor Rebalance** `1.0.0.0` modid=84100
+  - Rebalances armor stats for vanilla content, stabilizes strong armor stats
+- **Moon Monk's Robes Rebalanced** `1.0.0.0` modid=84100
+  - Rebalances armor stats for vanilla content, stabilizes strong armor stats
+- **Finally A Visually Distinct Falmer Hardened Armor for The Elder Scrolls V Skyrim Special Edition** `1.0.0.0` modid=168590
+  - Redesigns Falmer Hardened Armor to visually distinguish it from Falmer Heavy Armor with purple hues and varied coverage.
+- **sforzinda's Variations intergrated (AKA Standalone Sleeves of Skyrim) - Standalone Sleeved Imperials** `1.1.0.0` modid=42865
+  - Adds sleeved variants of many vanilla armors, integrated into leveled lists and craftable, includes Imperial armors and recommended patches for guards and cloaks
+- **sforzinda's Variations intergrated (AKA Standalone Sleeves of Skyrim)** `1.1.0.0` modid=42865
+  - Adds sleeved variants of many vanilla armors, integrated into leveled lists and craftable, includes Imperial armors and recommended patches for guards and cloaks
+- **Travelling Priest Robes - Vanilla HIMBO CBBE -** `2.1.0.0` modid=118327
+  - Provides a simple vanilla light armor set for traveling priests/monks, compatible with Vanilla Bodies, HIMBO, and CBBE.
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - Aetherium Minimalistic Addon** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Ancient Nord Armo(u)ry EXTREME AE** `2.0.0.0` modid=41265
+  - Overhauls Ancient Nord armors into unisex heavy/light variants with hero tiers, adds Skaalic, Ebony, Stalhrim sets, optional modules, keyword injections, crafting at Skyforge or Skaal forge, stat adjustments, and FOMOD options.
+- **Skyrim Spear Mechanic SE** `3.0.0.0` modid=25146
+  - Adds spear/javelin weapons with crafting, animations via DAR, custom skeleton, and usage by player and NPCs.
+- **Armory Extended - Saints and Seducers** `f1.03` modid=164993
+  - Extends the Saints & Seducers weapon sets with about 40 new weapons across various categories.
+- **Summerset Shadow Armor** `1.0.1.0` modid=64934
+  - Replaces generic Summerset Shadow Armor with a unique Elven Hunter‑inspired design and updates Linwe’s set
+- **Rough Leather Armor - Revisited** `1.0.0.0` modid=161264
+  - Adds both dark and brown variants of Rough Leather Armor with balanced stats, craftable via Advanced Armors perk.
+- **Scout Armor SE** `2.2.0.0z` modid=18910
+  - Adds a full light armor and weapon set with dragonscale stats, craftable and enchantable, converted from Legendary Edition.
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - NordWarUA Armor Variants (Fixed)** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Armors of the Velothi Pt. II** `1.0.0.0` modid=69996
+  - Adds 9 Dunmer‑themed armor sets and 7 weapons; requires SKSE/FSMP; includes optional world integration and crafting via specific smithing; adds boss encounters; optional patches.
+- **Real Silver Arrows** `1.0.0.0` modid=56874
+  - Adds craftable silver arrows that function like silver weapons, extra vs undead, cheaper than daedric, require steel smithing perk.
+- **Silver Bow** `1.2.0.0` modid=79302
+  - Adds craft-only version of InsanitySorrow's Silver Bow, now includes a leveled list addon
+- **ElSopa - Shields Redone (Standalone)** `1.0.0.0` modid=151532
+  - Provides standalone craftable shield textures and meshes, compatible with Sentinel patches and Skypatcher.
+- **Ulags Legacy - Loose Files 2k** `1.0.0.0` modid=20510
+  - Collection of armor mods including Apotheus Light Armor and Duskward's Armor Set at 2k resolution.
+- **Wolf Leather Armor** `1.1.0.0` modid=136189
+  - Introduces a new light armor set for the Companions.
+- **Forsworn_Headdress_Variants** `armor-1.1` modid=136342
+  - Adds 12 headdress/helmet and 6 armor variants for all races; edits leveled lists (LItemForswornHelmet50, SkinBriarHeart); rare versions lootable, can be tempered; no crafting; optional files planned.
+- **Forsworn Headdress And Armor Variants** `armor-1.1` modid=136342
+  - Adds 12 headdress/helmet and 6 armor variants for all races; edits leveled lists (LItemForswornHelmet50, SkinBriarHeart); rare versions lootable, can be tempered; no crafting; optional files planned.
+- **Ancient Imperial Armor SE** `2.0.0.0` modid=142655
+  - Adds two ancient Imperial armor sets—a heavy armor, sword, and shield—drawn from a forgotten state, with lore about aged, tarnished metal.
+- **Eyepatch Pt1** `1.0.0.0` modid=137892
+  - Adds three craftable eyepatches (Labourer’s, Sin’Dorei, Havi’s) for all races and genders, usable in face slot 55, ESL flagged, contains no armor
+- **Gold and Silver Reading Glasses** `1.1.0.0` modid=120188
+  - Adds craftable gold and silver reading glasses as wearable accessories.
+- **New Elven Helmets** `1.2.0.0` modid=137216
+  - Adds craftable elven helmets (Decorated, Simple, Visor) balanced with vanilla, requires Advanced Armors perk, uses vanilla textures.
+- **Dark Brotherhood Armor SE** `2.0.0.0` modid=57539
+  - Redesigns Dark Brotherhood armor as an ESL replacer without an ESP.
+- **FB - Master Thief 2k Textures** `1.0.0.0` modid=141700
+  - Provides new, lore‑friendly 2k armor textures for thieves, with optional replacement of vanilla Thieves Guild armor.
+- **Better Shrouded Armor SSE - Ancient Replacer Only** `1.0.0.0` modid=26111
+  - A texture replacer that only replaces the Ancient Shrouded Armor with a retextured version, improving cowl visibility for Argonians and Khajiit.
+- **Fur-lined Steel Armor - 2k** `1.2.0.0` modid=106305
+  - Adds a heavy fur‑lined steel armor set with 26 pieces, craftable and temperable, with SPID and CID integration for NPC distribution.
+- **Dawnstar Thane Armour** `4.0.0.0` modid=127570
+  - adds a heavy unisex armor set blending NordwarUA aesthetic with Witcher 3 meshes, mid‑tier rating, sash slot 46, helmet customizable at forges, optional HIMBO refit, credit list of mesh contributors.
+- **Warmonger Armory - Unofficial Fixed SSE Port** `1.1.0.0` modid=17809
+  - Port of Warmonger Armory to SSE with merged ESPs, fixed grammar, scaled enchantments, USSEP compatibility, and various bug fixes.
+- **New Legion Standalone And Extended AE** `1.0.0.0` modid=88495
+  - Offers standalone craftable Legion armor sets, including green Legion and Penitus Oculotus-inspired variants, using extra textures.
+- **Nirn Necessities - SMP Accessories** `f1.03` modid=112481
+  - Adds physics-enabled satchels, backpacks, cloaks with low‑fantasy designs; many color options, SMP physics; requires Faster HDT‑SMP, optional SPID/Bodyslide; compatible.
+- **Titus Mede I - My version SE by Xtudo - Emperor Civil War - 2k** `1.1.0.0` modid=69940
+  - Adds unisex light and heavy armor sets for Emperor Titus Mede I, craftable at any forge, no HDT required, with survival keyword and optional patches.
+- **Stormcloak Robes** `1.11.0.0` modid=39827
+  - Adds craftable Stormcloak blue robes for the player character.
+- **Imperial or Stormcloak Ranger Set SE** `1.0.0.0` modid=115132
+  - Adds Imperial and Stormcloak ranger armor sets with separate meshes for each side.
+- **Imperial Battlemage Robes for Imperial Battlemages** `1.0.0.0` modid=95233
+  - Adds craftable Imperial heavy and light robes using Steel smithing; heavy matches Dwarven protection, light matches Glass, includes cape and ceremonial sword as non‑protective clothing.
+- **Gryphonknight Regalia - Breton Noble Armor** `1.3.0.0` modid=107437
+  - Adds a crafted Breton noble armor set with high protection and thematic heritage.
+- **Elven Enforcer Armor** `1.31.0.0` modid=109638
+  - Adds a light armor set with multiple variants and textures, craftable and distributable through SPID.
+- **Wind Ruler Armor SE** `1.0.0.0` modid=60842
+  - Adds a unique heavy armor set and two‑handed sword unlocked after passing Kyne's Sacred Trials.
+- **Beyond Skyrim Morrowind - Bonemold Weapon Pack** `1.4.0.0` modid=66906
+  - Adds the Bonemold weapon set from Beyond Skyrim – Morrowind, obtainable at Traitor's Post, with integrated translations.
+- **Wrought Iron Weaponry - Leveled list integration** `1.2.0.0` modid=52878
+  - Adds standalone Wrought Iron weapons that are craftable and integrated into leveled lists.
+- **Archmage Khadgar's Robes SE** `1.4.0.0` modid=32348
+  - Adds Khadgar-themed robes from World of Warcraft in 2K/4K, craftable at the Skyforge, male-only.
+- **Volkihar Knight - Vampire Armor** `1.0.0.0` modid=4806
+  - Three standard variations (heavy ~ebony, light ~glass) can be crafted; legendary sets (cuirass, boots, gauntlets, hood) found after confronting Harkon grant bonuses: 10% chance to launch melee attackers (20 HP drain 4 s), muffled footsteps draining stamina/magicka/health in sunlight, and smoke‑form invisibility when sneaking.
+- **Animated Armoury - Precision Patch Complete** `1.0.0.0` modid=124195
+  - Ensures Animated Armoury works correctly with the Precision mod, preventing missed weapon swings.
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - Animated Armoury for GTS** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Animated Armoury All Geared Up Derivative (Meshes Only)** `2.3.0.0` modid=35978
+  - Provides mesh assets for the Animated Armoury mod tailored for DAR compatibility.
+- **Reforging - To the Masses (Weapons Expansion) - Animated Armoury Patch** `2.1.0.0` modid=49030
+  - Adds ~300 vanilla‑friendly weapons with crafting conditions, historical names, and varied acquisition methods.
+- **Reforging - To the Masses - Consistency patches - Tempering** `1.1.0.0` modid=50850
+  - Provides consistency patches to align the expansion with other mods.
+- **Reforging - To the Masses (Weapons Expansion)** `2.1.0.0` modid=49030
+  - Adds ~300 vanilla‑friendly weapons with crafting conditions, historical names, and varied acquisition methods.
+- **JS Badges of Office 1k** `1.0.0.0` modid=128579
+  - Wearable badges of office for Stewards that change with the civil war outcome, available in 1k and 2k resolutions.
+- **Left Hand Rings Modified SE** `4.5.0.0` modid=3240
+  - Adds left-hand rings, including six new variants and a Bond of Matrimony, with extensive compatibility support.
+- **Pierced Ears - Earrings SE** `1.0.0.0SE` modid=13571
+  - Adds 10 earrings (5 per ear) for many races, separate meshes, enchantable, three material options.
+- **Scarves Of Skyrim** `1.0.0.0` modid=109183
+  - Adds a brand-new scarf with six color variants.
+- **DX Faction Crossbows SE** `1.1.0.0` modid=4047
+  - Adds craftable faction‑specific crossbows, quivers, and bolts for Companions, Dawnguard, Dark Brotherhood, Thieves Guild, Imperial Legion, and Stormcloaks.
+- **More Varied Clothes - Firebrand Scarf** `1.0.0.0` modid=102467
+  - Adds the Firebrand Armor scarf.
+- **More Varied Clothes** `2.0.0.0` modid=102479
+  - Adds varied outfits for NPCs including farmer, noble, merchant, blacksmith, miner, prisoner, beggar sets, and introduces sandals and bandages using vanilla assets.
+- **Extended Amulet and Ring Pack** `1.1.0.0` modid=26377
+  - Adds missing gemstone combinations for amulets and rings—6 new rings and 8 new necklaces for crafting.
+- **Wizard Hats - Resources** `1.4.0.0` modid=2385
+  - Adds wizard/witch hats in ten colors that match vanilla mage robes and are craftable at forges.
+- **Wanderer's Backpacks** `1.0.0.0` modid=68965
+  - Adds two new backpacks to the game.
+- **Firebrand Scarf** `1.0.0.0` modid=102467
+  - Adds the Firebrand Armor scarf.
+- **Face Masks of Skyrim** `1.1.0.0` modid=1953
+  - Adds craftable face masks in eight colors with full beast‑race support, using slot 44 and compatible with helmets.
+- **Eastern Dwemer Armour SE - 2k** `1.1.0.0` modid=44443
+  - Texture pack for dwemer armor in Skyrim Special Edition.
+- **Eastern Brassplate Set** `1.0.0.0` modid=109000
+  - Adds a dwemer‑themed armor set and a matching weapon.
+- **Moon Monk's Robes - 2k** `f1.03` modid=82495
+  - Adds a new set of Khajiiti style light armor with multiple alternate colors, crafted from scratch using various 3D tools.
+- **Artifact of Might** `1.0.3.0` modid=104381
+  - Adds 8 new lore‑friendly weapons with unique locations, stats, and tempering requirements; hand‑placed; requires appropriate smithing; conflicts with location‑editing mods.
+- **Lunar Guard Armor 1k** `1.3.0.0` modid=75349
+  - Adds a craftable ebony-tier heavy armor inspired by Khajiit
+- **Armory Extended - Bonemold Weapon Pack** `1.1.0.0` modid=95179
+  - Adds six new weapons to the Bonemold Weapon Pack, including spears and staves, with patches for other weapon mods.
+- **Armor Variants Expansion Improved closefaced helmets Add-on** `2.0.0.0` modid=34100
+  - Adds new armor variants to leveled lists to increase variety; lore‑friendly; does not replace models, enhancing armor assortment.
+- **Armor Variants Expansion** `2.0.0.0` modid=34100
+  - Adds new armor variants to leveled lists to increase variety; lore‑friendly; does not replace models, enhancing armor assortment.
+- **East Empire Company Armor** `3.0.0.0` modid=54990
+  - Adds unique East Empire Company armor set for NPCs such as mercenaries and wardens, craftable after Rise in the East, light armor governed by Steel Smiting perk.
+- **Dust Adept Armor - Tweaks and Edits - Loremonger** `1.2.1.0b` modid=58411
+  - Provides tweaks and adjustments to Dust Adept Armor based on aureoy’s fixes.
+- **Common Clothes and Armors** `2.0.0.0` modid=21305
+  - Adds over 130 new clothes and armors for Skyrim’s common NPCs, with balanced stats and keywords.
+- **Armory of the Dragon Cult - Dragon Priest Armor - Half Res** `1.1.0.0` modid=94244
+  - Expands Dragon Priest armor with additional sets such as King‑Priest and Morokei; offers FOMOD variants.
+- **Armors of the Velothi Pt. I 2K** `1.2.4.0` modid=62752
+  - Adds eight Dunmer-themed armor sets with crafting requirements and patch compatibility.
+- **Ahzidal's Enchanted Armor** `1.0.0.0` modid=97845
+  - Provides a unique mesh replacer for Ahzidal’s armor for male and female beast races, with textures for vanilla‑style bodies
+- **Traveling Mage HDT-SMP Armor** `1.3.0.0` modid=69394
+  - Adds unisex HDT-SMP armor designed for mages.
+- **New Armory Series - Ash Spawn Weapons** `1.32.0.0` modid=72728
+  - Adds new Ashen weapons for Ash Spawn, chance to drop smothered or ignited weapons; 6 new weapons, shield, addons with Heavy Armory/Animated Armory; requires Glass/Arcane perks; compatible with audio patches and WACCF.
+- **Light Dragonbone Armor** `1.0.0.0` modid=105087
+  - Adds a new set of light armor with eight pieces, craftable and temperable, similar stats to Dragonscale.
+- **Dremora Markynaz Armor SE** `1.0.0.0` modid=79753
+  - Adds new heavy armor with Daedric‑themed design and lore‑consistent backstory.
+- **Stormcloak Warrior Armor (Performance)** `1.1.0.0` modid=71276
+  - Adds craftable Stormcloak Warrior heavy armor set; no perks required, upgrades via Advanced Armors; compatible with Survival Mode; tested on fresh install
+- **Imperial Tribune Armor** `1.26.0.0` modid=54294
+  - Adds Imperial armor set craftable with Steel smithing; heavy variant provides Dwarven‑level protection, light variant matches Glass, cape and ceremonial sword are clothing with no protection.
+- **Bone Cultist Armor** `1.0.0.0` modid=111224
+  - Adds a new heavy armor set with multiple variants, craftable and compatible with CBBE/HIMBO, distributed via SPID.
+- **Berserk Judeau Armor** `1.2.0.0` modid=51060
+  - Adds the character Judeau's armor set from Berserk, including boots, cape, cuirass, gauntlets, invisible helmet, and a cutlass (non‑weapon).
+- **Chevalier's Armor Set HDT-SMP** `1.1.0.0` modid=132629
+  - Adds 12‑piece heavy armor set with HDT‑physics, crests, craftable from level 18, found in chests/blacksmiths; supports CBBE/3BA/HIMBO bodies; optional no‑physics version
+- **Colovian Prince Set** `1.1.0.0` modid=79894
+  - Adds an imperial‑themed light armor set and a weapon, crafted via Advanced Armors smithing perk with loading screen in Falkreath Hold.
+- **Ysmir Armor SE** `1.0.0.0` modid=112454
+  - Adds unique heavy Ancient Nord armor from mythic era, lore about deeds buried under snow and serving the dragonborn, not supported for beast races, includes donation incentive
+- **Silver Armor SE** `1.0.0.0` modid=79088
+  - Adds two craftable heavy silver armor sets, requiring ebony equipment craft ability.
+- **Dwemer Armor SE** `1.0.0.0` modid=81043
+  - Adds new heavy armor inspired by Dwemer design, with optional patches for balance and crafting recipes.
+- **Dust Adept Armor SE** `ew` modid=53257
+  - Adds Dust Adept equipment to the game, introducing new gear associated with dust adepts.
+- **Stormlord Armor Reshaped** `2.0.0.0` modid=78223
+  - Reshapes Gechbal’s Stormlord Armor using cape meshes and textures from maty743’s Talos Housecarl Armor for male and female characters with full weight scaling
+- **Stormhold Warrior Armor SSE - Port Plus** `1.3.0.0` modid=96559
+  - Port of SoN6of6TrediS’ Argonian‑inspired Stormhold Warrior Armor with weight‑scaling fixes and Vanilla body support
+- **Skaal Heavy Armor SE** `1.0.0.0` modid=62256
+  - Adds a new heavy armor set based on Skaal Coat and Iron Armor, includes a custom backpack model and a mini‑boss encounter.
+- **Nord Raven Battle Armor** `1.0.0.0` modid=63402
+  - Adds lightweight, lore‑friendly Raven Clan-inspired leather armor set with male/female variants, craftable at the forge.
+- **Nord Vagabond Armor** `1.0.0.0` modid=63865
+  - Offers lightweight, lore‑friendly leather armor for mercenaries and adventurers, inspired by the Vagabond concept art.
+- **Barbarian Steel Armor** `1.0.0.0` modid=4458
+  - Adds a craftable light armor set with male/female versions, weight‑slider compatibility, and works with any race or body type.
+- **Hammet's Dungeon Pack 2 - Unique Rewards by Xtudo SE** `1.5.0.0` modid=102880
+  - Provides 12 unique weapons and 2 new robes as adventure rewards in ESL format
+- **Skyrim Bandit Expansion - Patches** `1.2.8.0` modid=154352
+  - Adds 14 bandit camps and 2 custom mines with regional themes, lore items, and compatibility patches.
+- **Assorted 3DNPC Patches - Hammets Dungeons1 Patch** `1.0.0.0` modid=72309
+  - Provides a separate patch for 3DNPC adjustments related to Dungeons1.
+- **Hammet's Dungeon Pack 1 - Unique Rewards by Xtudo SE** `2.2.0.0` modid=102864
+  - Replaces adventure rewards with 44 unique weapons, 3 armors, and 1 follower using visual replacers, ESL safe
+- **Hammet Dungeon Pack 2 SE** `2.0.0.0` modid=95339
+  - Adds 16 vanilla‑asset dungeons (Aldnzark Vault, Anchazgar, Blood Iron Veil, Brimspire, Btharkel, Darkfrost End, Darkleaf Grotto, Frey’s Dagger Mine, Hilleye Cabin, Narzak’s Vault, Nirnmire Grotto, Silent Vale, Silver Yol, Skullgrim Crypt, Twin Sonaak, Volengrim) with radiant‑quest support, difficulty normal‑hard, unique weapons & enchantments, requires AE v1.6.353+, not compatible with the nine standalone dungeons
+- **Skyrim Bandit Expansion** `1.2.8.0` modid=154352
+  - Adds 14 bandit camps and 2 custom mines with regional themes, lore items, and compatibility patches.
+- **Hammet's Dungeon Pack 1 SE** `f3.01` modid=12186
+  - Compiles 30 vanilla‑asset dungeons across Skyrim and Solstheim plus Desolate Veil world space, radiant‑quest enabled, difficulty normal‑hard, unique enchantments & new spells, includes five followers (Ginvur Nedalin, Arani Valestorm, Sirkvur Stonearm, Remzir, Tarven), Nexus‑exclusive, v3.0 adds Temple of Ankarith, fixes bugs, removes Desolate Veil
+- **Taarengrav Barrow** `1.3.0.0` modid=84371
+  - Lore
+  -
+  - Ancient Nordic ruin in Western Rift tied to Dragon Cult; Valdur entombed, spirit bound; Radiant Quest, Min Level 6; Lighting Options: Darker Version (Ambiance), Brighter Version (Vanilla‑like), Vanilla Version (Bleak Falls style); Compatibility: minor worldspace edits, optional patch for DeltaRider's Draugr Overhaul, Lux patch; Followers can follow throughout
+- **Lost Passages - New Dungeons for Skyrim** `1.3.0.0` modid=106061
+  - Adds 20 Radiant‑enabled dungeons across various holds.
+- **Unmarked Locations Pack - Soul Cairn - Custom Ruins Patch** `1.2.0.0` modid=103028
+  - Adds new unmarked locations in Soul Cairn with unique interactions and encounters.
+- **Unique Border Gates SE - Better DG Entrance Patch** `2.5.0.0` modid=4819
+  - Redesigns border gates across Cyrodiil, Hammerfell, and Morrowind with unique, immersive designs.
+- **Underwater Solstheim** `1.0.2.0` modid=157986
+  - Adds dozens of new underwater locations and points of interest in Solstheim.
+- **Unmarked Locations Pack - Apocrypha** `1.1.0.0` modid=144408
+  - Adds new unmarked locations in Apocrypha.
+- **Daedric Shrines - Jyggalag - 2k** `1.0.0.0` modid=80679
+  - Adds a Jyggalag shrine texture.
+- **Shrine to Kyne ESL** `1.0.0.0` modid=43737
+  - Adds a traditional shrine to Kyne on a high mountain peak above Windhelm.
+- **Ruins of the Ideal - New Ruins in Soul Cairn** `2.2.0.0` modid=33319
+  - Adds new ruins to Soul Cairn using edited Witcher 3 models with vanilla textures.
+- **Unique Border Gates SE** `2.5.0.0` modid=4819
+  - Redesigns border gates across Cyrodiil, Hammerfell, and Morrowind with unique, immersive designs.
+- **Hidden Hideouts of Skyrim - Merged** `1.0.0.0` modid=2625
+  - 21 small hideouts across Skyrim, available as merged or individual plugins; Standard/No Map Marker/Deep Immersion versions with varying amenities and map markers.
+- **Unmarked Locations Pack - Sovngarde** `1.0.0.0` modid=87899
+  - Adds new unmarked locations to Sovngarde.
+- **Unmarked Locations Pack - Soul Cairn** `1.2.0.0` modid=103028
+  - Adds new unmarked locations in Soul Cairn with unique interactions and encounters.
+- **Unmarked Locations Pack - Solstheim** `1.0.0.0DESC` modid=108527
+  - Adds new unmarked locations in Solstheim with unique loot and encounters.
+- **Unmarked Locations Pack - Forgotten Vale** `1.1.0.0` modid=95278
+  - Adds new unmarked locations in the Forgotten Vale.
+- **Unmarked Locations Pack - Blackreach** `1.0.0.0` modid=127468
+  - Adds new unmarked locations in Blackreach.
+- **Solstheim Lighthouse** `1.2.0.0` modid=14329
+  - Adds a custom Redoran-style lighthouse with collision to Solstheim docks, preventing crashes.
+- **Buyable Home Patch for Harborside** `1.0.1.0` modid=18305
+  - Makes Harborside – Solitude Bridge Home a purchasable property.
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - Container Exclusion for Caranthir Tower** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - Teleport Only In Tamriel - Caranthir Tower** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Caranthir Tower Reborn in Wyrmstooth** `1.2.0.0` modid=70311
+  - Moves tower to Wyrmstooth; requires main quest completion; replacer ESP; known dragon guardian issue; optional patches available
+- **Riverside Shack** `4.0.0.0` modid=20982
+  - Player home built from abandoned shack near Windhelm, with quest to rebuild and customize, includes mod patches.
+- **Harborside - Solitude Bridge Home** `1.1.0.0` modid=17959
+  - Adds a unique home overlooking Solitude harbor with no load doors
+- **Caranthir Tower Reborn SE** `3.2.0.0` modid=4269
+  - Large wizard tower quest; restore via Hearthfire‑style crafting; level 20 required; features spell creation, auto‑sort, portals; requires DLCs; optional patches
+- **Unmarked Locations Pack - Wyrmstooth Addon** `1.0.0.0` modid=169188
+  - Adds new unmarked locations to Wyrmstooth Isle.
+- **Stonehollow Overhaul for Wyrmstooth** `1.0.2.0` modid=131619
+  - Reworks Wyrmstooth's Stonehollow settlement for aesthetic unity, replacing farmhouses and hall with Nordic-Imperial style.
+- **King-Priest - Wyrmstooth Patch** `4.0.1.0` modid=59652
+  - Increases difficulty of Dragon Priest encounters, balancing them for high‑level play
+- **Wares of Wyrmstooth - Wares of Tamriel Alternate Location** `1.1.0.0` modid=59451
+  - Moves the Wares of Tamriel ship docking location to Wyrmstooth's Stonehollow, providing an alternative location.
+- **RS Children Patch Compendium - Wyrmstooth** `1.0.0.0` modid=13409
+  - Collection of RS Children patches for many mods requiring RS Children Overhaul, may conflict as intended (ESLified Patch).
+- **Mihail's Ice Titans in Wyrmstooth** `1.0.0.0` modid=110136
+  - Adds Ice Titans to Wyrmstooth coast, wearing shipwreck armor, anchor weapons, increasing creature variety
+- **Daedric Shrines - All in One - My Patches by Xtudo - Wyrmstooth** `4.3.0.0` modid=78809
+  - Provides comprehensive ESL patches and fixes for Daedric Shrines, including HD textures, map‑marker options, and compatibility patches with many other mods.
+- **Realistic Boat Bobbing Patch Hub - Wyrmstooth** `1.0.0.0` modid=44311
+  - Collection of patches for Realistic Boat Bobbing targeting various mods.
+- **Wyrm Tamer - Lawbringer for Wyrmstooth** `2.0.5.0` modid=55190
+  - Expands the Lawbringer mod to make several locations in Wyrmstooth claimable.
+- **Wyrmstooth - Brimstone and Wyrmstone Armory** `1.5.0.0` modid=74671
+  - Adds craftable Brimstone and Wyrmstone armor and weapons, plus an optional Legacy of the Dragonborn display patch.
+- **Wyrmstooth - Unique Weapons Reforged** `1.0.0.0` modid=92848
+  - Replaces the appearance of 12 unique weapons and adds unique armaments to select NPCs from Wyrmstooth.
+- **Wyrmstooth - Mysticism Consistency Patch** `1.0.0.0` modid=80993
+  - Replaces Wyrmstooth spells with matching Mysticism variants and rebalances summons to align with Mysticism.
+- **Wyrmstooth - Creation Club Ingredient Patches - Rare Curios** `1.0.0.0` modid=59459
+  - Patches Wyrmstooth ingredients for compatibility with Rare Curios and The Cause.
+- **Wyrmstooth - Creation Club Ingredient Patches - The Cause** `1.0.0.0` modid=59459
+  - Patches Wyrmstooth ingredients for compatibility with Rare Curios and The Cause.
+- **Wyrmstooth** `1.20.3.0` modid=45565
+  - Adds a large DLC‑size quest expansion with a new island, voiced NPCs, dungeons, music, and a player home.
+- **Fishing Extension for Beyond Skyrim - Bruma** `1.1.0.0` modid=152152
+  - Extends fishing into Bruma with custom biomes, new rods, fish, junk, and artifacts
+- **Bespoke Bruma Black and Brown Bears** `1.0.1.0` modid=135413
+  - Overhauls Bruma's bears to match Oblivion versions, adds missing pelts and replaces trophies.
+- **Beyond Skyrim - Bruma - Animated Doors Patch** `1.7.3.0` modid=103156
+  - Comprehensive bug‑fix patch for Bruma addressing meshes, navmeshes, quest issues, voice problems, and other compatibility fixes
+- **Beyond Skyrim - Bruma - CC The Contest Spider Patch** `1.7.3.0` modid=103156
+  - Comprehensive bug‑fix patch for Bruma addressing meshes, navmeshes, quest issues, voice problems, and other compatibility fixes
+- **BSHeartland - Ayleid Loot** `1.7.3.0` modid=103156
+  - Comprehensive bug‑fix patch for Bruma addressing meshes, navmeshes, quest issues, voice problems, and other compatibility fixes
+- **BSHeartland - Unofficial Subjective Tweaks** `1.7.3.0` modid=103156
+  - Comprehensive bug‑fix patch for Bruma addressing meshes, navmeshes, quest issues, voice problems, and other compatibility fixes
+- **Beyond Skyrim - Bruma - Unofficial Patch** `1.7.3.0` modid=103156
+  - Comprehensive bug‑fix patch for Bruma addressing meshes, navmeshes, quest issues, voice problems, and other compatibility fixes
+- **Morihaus' Refuge - Lord's Mail Reintegration - Bruma Ogrehaul** `1.0.0.0` modid=68558
+  - Replaces Lord's Mail quest with new dungeon, boss fight to obtain the mail
+- **Goblins - Bruma Patch** `2.2.0.0` modid=32182
+  - Adds a passage into Cyrodiil and spears for goblins in the Bruma expansion.
+- **Imperial Law - Lawbringer for Bruma** `1.0.2.0` modid=57099
+  - Expands Lawbringer to make several Cyrodiil locations claimable.
+- **Plague of the Dead - BS Bruma Synergy Patch** `2.0.0.0` modid=28630
+  - Swaps Bruma zombies with Plague of the Dead variants and updates related spell tomes in leveled lists.
+- **Rare Curios - BS Bruma Synergy Patch** `2.0.0.0` modid=60412
+  - Integrated Rare Curios items into the Beyond Skyrim – Bruma mod.
+- **Creation Club The Cause - BS Bruma Scamps Synergy** `1.0.0.0` modid=59591
+  - Adds Bruma Scamps to The Cause Deadlands and blocks Dremora aggression.
+- **CleverCharff's Bruma 1k** `1.0.0.0` modid=41316
+  - Replaces Bruma textures in Beyond Skyrim Bruma, including exteriors and interiors, requiring BS Bruma.
+- **Beyond Skyrim Bruma uses Creation Club Goblins (While keeping Falmer animations)** `1.2.0.0` modid=50840
+  - Makes goblins in Beyond Skyrim – Bruma visually consistent while preserving Falmer animations.
+- **IDDP - Beyond Skyrim - Bruma Patch** `1.0.3.0` modid=4126
+  - Adds a properly sized entrance to Bruma, eliminating the tiny cave entry from the original mod.
+- **The Halls of Rielle - Beyond Skyrim Bruma and The Cause Combined - Ayleid Consistency Suite - Equip - Wearable Armor** `1.3.3.0` modid=58213
+  - Adds a new cave connecting Rielle from Bruma and The Cause, creating a central concourse with doors to each ruin behind completed dungeons; seismic activity uncovers hidden chambers; includes Rielle's Temple of Merid‑Nunda, Great Vaults, and Whitestone Cave with views; integrates Ayleid city architecture and lavish vaults; offers optional exploration after completing individual dungeons.
+- **The Halls of Rielle - Beyond Skyrim Bruma and The Cause Combined - Ayleid Consistency Suite - Ayleid Equipment** `1.3.3.0` modid=58213
+  - Adds a new cave connecting Rielle from Bruma and The Cause, creating a central concourse with doors to each ruin behind completed dungeons; seismic activity uncovers hidden chambers; includes Rielle's Temple of Merid‑Nunda, Great Vaults, and Whitestone Cave with views; integrates Ayleid city architecture and lavish vaults; offers optional exploration after completing individual dungeons.
+- **The Halls of Rielle - Beyond Skyrim Bruma and The Cause Combined** `1.3.3.0` modid=58213
+  - Adds a new cave connecting Rielle from Bruma and The Cause, creating a central concourse with doors to each ruin behind completed dungeons; seismic activity uncovers hidden chambers; includes Rielle's Temple of Merid‑Nunda, Great Vaults, and Whitestone Cave with views; integrates Ayleid city architecture and lavish vaults; offers optional exploration after completing individual dungeons.
+- **Lawless Bruma - A Bandit Overhaul for Beyond Skyrim Bruma** `1.0.0.0` modid=91305
+  - Implements Lawless bandit overhaul in Bruma using Bruma‑specific assets and bug fixes
+- **Beyond Skyrim - Wares of Tamriel SE** `1.5.3.0` modid=31519
+  - Introduces a voiced merchant in Dawnstar offering unique items drawn from across Tamriel
+- **Beyond Skyrim - Bruma - DLC Integration Patch** `1.6.2.0` modid=10917
+  - Adds the Bruma region beyond Skyrim, featuring new quests, weapons, voiceover, music, and high‑resolution textures
+- **Beyond Skyrim - Bruma** `1.6.2.0` modid=10917
+  - Adds the Bruma region beyond Skyrim, featuring new quests, weapons, voiceover, music, and high‑resolution textures
+- **Beyond Skyrim - Assets** `1.6.2.0` modid=10917
+  - Adds the Bruma region beyond Skyrim, featuring new quests, weapons, voiceover, music, and high‑resolution textures
+- **Siege at Icemoth - Fishing and Survival Patch ESL** `1.4.5.0` modid=109541
+  - Adds small-scale new lands with islands, locations, dungeons, unique items, and voiced guard dialogue in the Sea of Ghosts
+- **Siege at Icemoth - ESM** `1.4.5.0` modid=109541
+  - Adds small-scale new lands with islands, locations, dungeons, unique items, and voiced guard dialogue in the Sea of Ghosts
+- **Guar Mount and Wild Guars SE** `sa2E` modid=38857
+  - Adds Guar mounts and wild guars as rideable creatures in specific locations.
+- **Merlin the Corgi** `2.0.7.0` modid=56433
+  - Adds a magical corgi companion that follows the player.
+- **Gladys the Corgi** `2.0.7.0` modid=50164
+  - Adds a friendly corgi companion as a follower.
+- **Mihail's Farm Geese - More accurate heads** `1.0.0.0` modid=158734
+  - Adjusts geese head shapes to be more realistic by making eyes smaller and cheeks puffier.
+- **Quiet Mammoth Babies - No Camera Shake - OAR DAR versions** `1.0.0.0` modid=123582
+  - Removes camera shake from mammoth calf walking animations across various mods.
+- **Khajiit Caravan Mules Enderal Donkey Model** `1.3.0.0` modid=49058
+  - Adds two pack mules per Khajiit caravan (six total) with custom AI, texture variants, optional recoloring or donkey conversion, essential status, designated resting spots with hay linked to caravan camp system, carries crates and unequips on rest; compatible with Cutting Room Floor and Caravan Children patches.
+- **Damaged Skeletons - Compatibility version** `1.0.0.0` modid=92930
+  - Adds compatibility patches for Mihail's damaged skeletons to leveled lists, ensuring proper weapon placement and addressing conflicts.
+- **House Cats - My version SE by Xtudo - Head tracking** `2.1.0.0` modid=100902
+  - Adds multiple cat variants with distinct colors and meow sounds, supporting petting interactions.
+- **House Cats - My version SE by Xtudo - Pet the cats** `2.1.0.0` modid=100902
+  - Adds multiple cat variants with distinct colors and meow sounds, supporting petting interactions.
+- **Standalone Dwarven Spider Elite** `1.0.0.0` modid=161224
+  - Gives Dwemer Spider and Sphere Animunculi a new look resembling those from Elder Scrolls Online.
+- **Standalone Dwarven Sphere Elite** `1.0.0.0` modid=161224
+  - Gives Dwemer Spider and Sphere Animunculi a new look resembling those from Elder Scrolls Online.
+- **Farm Geese- Mihail Monsters and Animals (SE-AE)** `1.0.0.0` modid=156242
+  - Adds Farm Goose (white/grey), new foods Goose Breast and Goose Roast, geese wander villages honking judgmentally, no known incompatibilities.
+- **Chub Loons- Mihail Monsters and Animals (SE-AE)** `1.0.0.0` modid=145507
+  - Chub Loons are plump, flightless, auk‑like birds of icy coasts in High Rock and Skyrim, passive, flee when approached, historically hunted by Nords, only a few flocks remain on Winterhold shores.
+- **GRAHL - The Ice Troll (Bloodmoon Creature Restoration Project) SE** `1.3.0.0` modid=9311
+  - Restores grahl creatures to Solstheim and surrounding areas with new models, stats, and leveled lists.
+- **The Blood Horker (Bloodmoon Creature Restoration Project) SE** `1.1.0.0` modid=13938
+  - Adds Blood Horker predatory creature on Solstheim, replaces all vanilla horkers, improves lore consistency.
+- **Fiendroth Beetles- Mihail Monsters and Animals (SE-AE version) (''eso daedra'')** `1.0.0.0` modid=70076
+  - Adds Fiendroth beetles—small harmless daedric insects that spawn via residual summoning energy, can accumulate, found in Necromancer/vampire areas and Soul Cairn; provides beetle and Torax ingredient; no known incompatibilities; part of Mihail’s lore‑rich creature series
+- **Storm Golem- Mihail Monsters and Animals (SE-AE version) (''atronach'')** `2.1.0.0` modid=24794
+  - Adds Storm Golem creature and Conjure Storm Golem spell; elite electricity‑based atronach with humanoid form, bracelets, core power, immune to electricity, found in Soul Cairn; created by Mihail
+- **Immersive Khajiit Caravan Mules** `1.3.0.0` modid=49058
+  - Adds two pack mules per Khajiit caravan (six total) with custom AI, texture variants, optional recoloring or donkey conversion, essential status, designated resting spots with hay linked to caravan camp system, carries crates and unequips on rest; compatible with Cutting Room Floor and Caravan Children patches.
+- **Goliath Groupers - (Animal Series Pt.8) SE** `1.0.0.0` modid=49523
+  - Adds large predatory fish up to 800 lb found in Skyrim seas, with 5 variants dropping distinct alchemical scales.
+- **New Dogs Replacers - with DLC animals** `2.6.0.0` modid=50753
+  - Replaces all Skyrim dogs with new breeds, offering multiple dog types and DLC animal options.
+- **Flying Crows SSE** `2.1.0.0b` modid=49270
+  - Adds flying crows that dynamically appear at 30+ locations, reacting to weather and time of day.
+- **Seagulls of Skyrim** `1.4.0.0` modid=52153
+  - Adds animated seagull models with sounds along Skyrim's coasts.
+- **Cliff Racers on Solstheim** `1.1.0.0` modid=2168
+  - Adds passive cliff racers to Solstheim, including a collectible food item and stew recipe.
+- **Ice Titans- Mihail Monsters and Animals** `2.0.0.0` modid=47181
+  - Adds Ice Titan creature (two variants) with blue‑skinned, warty appearance, Rusted Iron Anchor weapon and Titan Tripe ingredient; part of High Fantasy Pack, requires removing standalone ESP if using pack, no known incompatibilities, lore‑rich implementation by Mihail
+- **Veiltail Lobsterfish and Emean Triclops- Mihail Monsters and Animals (SE-AE version)** `1.0.0.0` modid=104365
+  - Adds Veiltail Lobsterfish and Emean Triclops creatures from the Shivering Isles with lore variants.
+- **Frogs- Mihail Monsters and Animals - 2k** `1.0.0.0` modid=120998
+  - Adds small frog critters to lakes and puddles to enhance world immersion.
+- **Damaged Skeletons- Mihail Monsters and Animals** `1.0.0.0` modid=89623
+  - Adds 16 new damaged skeleton variants with unique appearances such as decapitated or limbless skeletons.
+- **Coelacanth (Prehistoric Content Series Pt.14) SE** `1.0.0.0` modid=59493
+  - Adds two Coelacanth species (small and large) with aquatic AI and new cookable loot found in Reikling villages
+- **Sea of Spirits** `1.2.0.0` modid=4781
+  - Adds numerous animated sea creatures such as whales, narwhals, and sharks to the oceans.
+- **Mating Crabs- Mihail Monsters and Animals** `1.1.0.0` modid=51536
+  - Adds crab mating behavior on Skyrim coast, spawns as predator‑prey, tireless reproduction
+- **Sea Turtles- Mihail Monsters and Animals - 2k Version** `1.0.0.0` modid=122141
+  - Adds animated sea turtle critters that swim and eat kelp along coasts.
+- **Ring-necked Pheasants - Mihail Monsters and Animals** `1.0.0.0` modid=95121
+  - Adds live male ring‑necked pheasants to forests and fields.
+- **Bantam Guars- Mihail Monsters and Animals** `3.0.0.0` modid=27363
+  - Introduces the Bantam Guar, a small, docile reptilian creature from Morrowind, adds related foods and lore‑friendly integration
+- **Baby Mammoths - Mihail Monsters and Animals** `1.0.0.0` modid=100006
+  - Adds baby mammoths that graze near giant camps; standalone version; no known incompatibilities.
+- **House Cats- Mihail Monsters and Animals** `1.1.0.0` modid=30496
+  - Adds a house cat creature (common and named Puss in Boots) with 4K textures, animations, and lore‑rich description authored by Mihail, part of his creature series
+- **Ancient Skeletons- Mihail Monsters and Animals** `3.0.0.0` modid=34368
+  - Adds ancient skeleton creatures from Merethic Era
+  - Purpose-driven, fast, intelligent, target Dragonkin
+  - Includes various skeleton types, no scripts, ESL flagged
+- **Immersive Laundry - Animated** `1.3.0.0` modid=92814
+  - Lightweight add‑on that animates laundry meshes via Base Object Swapper, providing animated wood‑post textures from Immersive Laundry; no collision, showcased by community; requires no additional dependencies.
+- **Immersive Laundry** `1.0.0.0d` modid=2011
+  - Adds decorative clotheslines and washing items throughout Skyrim for realism.
+- **JS Rumpled Rugs SE** `1.44.0.0` modid=70534
+  - Adds over 50 new rug mesh variants for immersive interiors, including interactive fixing and tripping.
+- **Scarecrows of Skyrim - Elianora Version** `1.5.0.0` modid=39575
+  - Places scarecrows at crop locations across Skyrim
+- **Seasonal Unique Flowers and Plants - ESL Version** `1.1.0.0` modid=69130
+  - Hides unique flowers and plants during winter using Seasons of Skyrim.
+- **Official Unique Flowers and Plants SSE - No Landscape Edits** `1.0.0.0` modid=83623
+  - Provides an ESL esp replacer for Unique Flowers and Plants that removes landscape edits for greater compatibility.
+- **Edmond's Official Unique Flowers and Plants SSE** `1.4.0.0` modid=29154
+  - Adds hand‑placed new flowers and plants across Skyrim with updated meshes, textures, and a patched ESP for Skyrim SE.
+- **Reverb Interior Sounds Expansion** `1.5.0.0` modid=77947
+  - Adds improved reverb profiles and interior ambience for immersion.
+- **Quiet Muffle Footsteps For Player - Audio Overhaul Patch** `1.1.0.0` modid=41136
+  - Silences player footsteps when muffle effect is active, works on all surfaces except jumping into water, requires loading after AoS and ISC plugins, adds patches for those mods.
+- **Quiet Muffle Footsteps For Player** `1.1.0.0` modid=41136
+  - Silences player footsteps when muffle effect is active, works on all surfaces except jumping into water, requires loading after AoS and ISC plugins, adds patches for those mods.
+- **Audio Overhaul for Skyrim (4.1.2)** `4.1.3.0` modid=12466
+  - Comprehensive sound overhaul enhancing distance propagation, reverb, weapons, magic, and creatures; requires Sound Record Distributor and Engine Fixes; improves immersion and performance.
+- **Realistic Husky Sounds SSE** `1.2.0.0` modid=11038
+  - Adds over 60 new husky sounds for Dawnguard huskies.
+- **Potema Revoiced** `f1.01` modid=123877
+  - Revoices Potema to sound more ghostly, evil, clear, and unique.
+- **Nirnroot A Sound to live by** `1.2.0.0` modid=23026
+  - Replaces the Nirnroot sound with a subtle, improved audio cue, with optional FOMOD integration for Immersive Sounds Compendium.
+- **Arachnid -Spiders Sounds Rework SFX-** `2.0.0.0` modid=50706
+  - Provides reworked spider sound effects with unique attack, death, injury, and footstep sounds, replacing vanilla audio for immersive gameplay.
+- **Glowing Mushroom Collision Fixes** `1.2.1.0` modid=69558
+  - Increases hitbox size of glowing mushrooms for easier harvesting.
+- **Darker 3D Cathedral Grass - 1k Textures only** `1.2.0.0` modid=63881
+  - Provides darker 1k grass textures for Cathedral landscapes.
+- **ELFX Shadows - Official Patches Hub - USSEP Patch** `1.1.0.0` modid=64178
+  - Collection of patches for ELFX Shadows that resolves conflicts with other mods via an easy-to-use FOMOD, recommending manual selection for certain patches.
+- **ELFX Shadows - Official Patches Hub** `1.1.0.0` modid=64178
+  - Collection of patches for ELFX Shadows that resolves conflicts with other mods via an easy-to-use FOMOD, recommending manual selection for certain patches.
+- **Windhelm Fake Windows Fix** `2.31.0.0` modid=54923
+  - Replaces fake windows in Windhelm with actual window models.
+- **Skyland Happy Little Trees Bark 2k** `1.2.0.0` modid=82491
+  - Provides 1k‑4k tree bark textures, firewood, and chopping blocks for the Happy Little Trees mod.
+- **FK's Diverse Racial Skeletons - Aetherius Patch** `1.6.1.0` modid=38563
+  - Provides unique skeleton meshes and height modifiers for each playable race, rebuilt with XPMSSE v4.80 for better compatibility.
+- **FK's Diverse Racial Skeletons** `1.6.1.0` modid=38563
+  - Provides unique skeleton meshes and height modifiers for each playable race, rebuilt with XPMSSE v4.80 for better compatibility.
+- **Dust Effects by HHaleyy** `1.0.0.0` modid=2407
+  - Replaces HD dust effect textures from 128px to 3×1024px, providing higher‑resolution dust visuals.
+- **Undead FX - SPID Patch** `2.2.0.0` modid=71584
+  - Provides an SPID patch for Undead FX.
+- **Undead FX** `4.2.0.0` modid=5197
+  - Adds decayed zombie visuals, restoring undead appearances from earlier Elder Scrolls games.
+- **Fortified Imperial Fort Battlements (ESL)** `1.2.0.0` modid=66831
+  - Enhances the fortified appearance of Imperial forts for greater immersion.
+- **HFs - Aretino Family Heirloom - remodel** `1.0.0.0` modid=140723
+  - Mesh replacer for the Aretino Family Heirloom
+- **Notes with something to read SE by Xtudo - Text Version** `1.3.0.0` modid=35801
+  - Adds readable notes to animation sequences for character or NPC interactions.
+- **RUSTIC ANIMATED POTIONS and POISONS 1k** `1.1.0.0` modid=2276
+  - Adds subtle, colorful animations to Rustic Potions and Poisons.
+- **ElSopa - HD Iron Tools Redone Hotfix Patch 1.1** `1.0.0.0` modid=60495
+  - Adds 11 high‑resolution textures for iron tools, weapons, and related items with 4k‑2k options, performance‑friendly.
+- **ElSopa - HD Iron Tools Redone SE** `1.0.0.0` modid=60495
+  - Adds 11 high‑resolution textures for iron tools, weapons, and related items with 4k‑2k options, performance‑friendly.
+- **Gold Septim - Coins Retex** `1.0.0.0` modid=1358
+  - Reskin of coin textures for a fresh look.
+- **Kanjs - Gray Fox Bust and Cowl Animated 1k** `1.0.0.0` modid=106116
+  - Adds 4K remeshed and textured Gray Fox bust and cowl with animated emissive light that persists when static.
+- **JS Instruments of Skyrim 2k** `1.1.0.0` modid=51959
+  - Complete remake of lute, flute, and drum with 2k and 4k textures.
+- **Book Covers Skyrim - USSEP Update (DEPRECATED)** `1.1.0.0` modid=50615
+  - Updates Book Covers Skyrim to incorporate recent USSEP changes, superseded by a newer update.
+- **Book Covers Skyrim SE - Desaturated** `4.2.0.0` modid=901
+  - Retextures all books, journals, and notes with unique covers and optional desaturated variants, supporting multiple languages
+- **Fixed Lighting for Deathbell and Dragons Tongue for Maris Flora** `1.0.0.0` modid=99555
+  - Corrects improper glowing on deathbells and dragon tongues when using Mari's Flora by adjusting mesh lighting.
+- **Mari's flora** `1.1.0.0` modid=45952
+  - Provides a high‑definition plant texture pack with about 100 plant textures, intended for use with Mod Organizer
+- **Thicket and Dead Shrub Swapper** `f2.01` modid=86414
+  - Combines various dead shrub and thicket replacements, requiring Base Object Swapper
+- **Cathedral - 3D Clover Plant - Hybrid 3D** `4.0.0.0` modid=68793
+  - Performance-friendly 3D replacer for clover plants, using about 765 triangles for efficient rendering.
+- **Cathedral - 3D Mountain Flowers - Base Object Swapper** `0.2.0.0` modid=60756
+  - Uses Base Object Swapper to dynamically swap regular mountain flowers for snowy versions across popular mods without world‑space edits.
+- **Cathedral - 3D Mountain Flowers** `2.0.0.0` modid=41312
+  - High‑poly 3D columbine flower textures replace vanilla mountain flowers with improved performance over low‑res vanilla.
+- **Cathedral - 3D Pine Shrubs** `1.2.0.0` modid=94791
+  - 3D pine shrub textures replace vanilla models with higher‑poly geometry while preserving trunk structures and maintaining neutral performance.
+- **Better Blended Mushrooms** `1.1.0.0` modid=67725
+  - Replaces all mushroom types in mines and caves with improved blended versions via Base Object Swapper.
+- **Better Butterflies 1k** `1.1.0.0` modid=79332
+  - Replaces Skyrim's butterflies with higher‑detail meshes and textures, adding legs and antennae for a less sausage‑like look.
+- **Deathbrand Armor Replacer - Fixes and Beast Race Support** `1.0.0.0` modid=116527
+  - Fixes helmet drop issues and adds beast race support to Deathbrand armor.
+- **Deathbrand Armor and Weapons Replacer** `1.5.0.0` modid=93374
+  - Provides a Stalhrim Viking pirate aesthetic for Deathbrand armor and weapons.
+- **Civil War Champions - Proper Male Weighting** `1.0.0.0` modid=159016
+  - Fixes weight painting on male Imperial Dragon and Stormbear armors for realistic movement, providing a complete polished solution for both sets (V95 NEW ANNIVERSARY EDITION UPGRADE).
+- **HDT-SMP Creation Backpacks** `1.0.0.0a` modid=154157
+  - Adds Havok Dynamic Physics to Creation Club backpacks for dynamic movement.
+- **Racc's Headdress - Forsworn wear Fur Headdress** `1.0.0.0` modid=147060
+  - Replaces Forsworn fur-headdress helmet with an improved version, compatible with most configurations.
+- **Racc's Headdress** `1.0.0.0` modid=147060
+  - Replaces Forsworn fur-headdress helmet with an improved version, compatible with most configurations.
+- **HDT-SMP Vanilla Armors** `1.0.0.0` modid=142450
+  - Adds HDT-SMP physics to most vanilla and DLC armors supporting CBBE 3BA and HIMBO with an extensive armor list
+- **Skyforge Weapons Replacer - From Legacy of Ysgramor** `2.1.0.0` modid=110286
+  - Replaces skyforge weapons with models from Legacy of Ysgramor.
+- **Unique Thane Weapons** `1.3.0.0` modid=35497
+  - Replaces random thane weapons with unique weapons featuring custom models and enchantments.
+- **Savior's Hide Replacer** `1.1.0.0` modid=109940
+  - Replaces Savior's Hide appearance with matching boots, gauntlets, and mask, including CBBE 3BA and HIMBO v5 bodyslides.
+- **Hammerfell Garb HDT-SMP Cape (Replacer)** `0.4.0.0` modid=35602
+  - Adds physics to the Hammerfell Garb cape using HDT-SMP with BodySlide support and console spawn info
+- **Chrysamere by lautasantenni for SSE** `1.1.0.0` modid=82969
+  - Adds a broken legendary sword with forging recipes and elemental damage, spread across world locations.
+- **Usable Skyrim Bandages** `2.0.0.0` modid=98659
+  - Fixes head bandages to work for all player races.
+- **Reshaped Dwarven Armor** `4.0.0.0` modid=56608
+  - Reshapes Dwarven armor meshes for male and female variants, compatible with retextures
+- **Cuyi's Campfire Backpacks** `1.1.0.0` modid=49532
+  - Replaces Campfire backpack meshes and textures with higher‑resolution models and fixes collision.
+- **Improved closefaced helmets** `1.58.0.0` modid=824
+  - Opens eye sockets on close‑faced helmets, fully compatible with texture replacers.
+- **Stormfang - Blade of the Unending** `1.1.0.0` modid=24505
+  - Model replacer for the unique weapon Stormfang in Solstheim that adds a craftable unenchanted version after completing the Lost Legacy quest
+- **Frankly HD Dragonbone and Dragonscale - Armor and Weapons - 2k** `1.0.0.0` modid=25110
+  - Provides high‑resolution (up to 8k) textures for Dragonbone and Dragonscale sets and weapons, neural‑upscaled and BC7‑compressed.
+- **ElSopa - Shields Redone - Part I** `1.0.0.0` modid=99142
+  - Part I of shield retextures that converts ElSopa’s shield replacers into standalone assets for greater compatibility.
+- **aMidianBorn Book of Silence SE** `1.9.1.0` modid=35382
+  - Provides high‑resolution texture replacements for many armors, weapons, creatures and unique items, includes complete BSA with optional plugins for variants such as glass, ebony, unique items, and requires separate plugins for customization
+- **Lunar Weapon Replacers** `1.3.1.0` modid=43221
+  - Replaces generic Lunar weapons with new models and textures by ClipsyMoon
+- **Creation Club Open Helmets** `1.4.0.0` modid=70992
+  - Enables helmets from all Creation Club mods on all races.
+- **Creation Sunder and Wraithguard - Dwemer Armor Left Gauntlet replacer by Xtudo** `1.1.0.0` modid=83151
+  - Replaces left gauntlet with Dwemer Armor version, includes fixes and weight sliders, no ESP.
+- **ElSopa - Quivers Redone SE 1k** `1.0.0.0` modid=65921
+  - Replaces quiver meshes and textures with higher‑resolution versions, available in 1k and 4k‑2k packs, no ESP.
+- **JS Unique Utopia SE - Daggers - 1k Textures** `1.2.1.0` modid=65394
+  - Complete texture remake for unique daggers such as Alessandra's Dagger, Blade of Sacrifice, and others, with compatibility notes.
+- **Paragon of Mannimarco - Replacer for the Necromancer's Amulet - No Eyes Version** `1.0.0.0` modid=38084
+  - Replacer that changes the Necromancer's Amulet into an octagonal jade skull pendant with optional glowing eyes, daedric runes and bone‑shaped chain, provides a standalone Talisman of the Black Worm (ID FE000800), can be installed after conflicting mods, and offers both eye‑enabled and eye‑less versions using shared textures.
+- **JS Unique Utopia SE - Rings - 1k Textures** `1.21.0.0` modid=102226
+  - Complete texture remake for unique rings including Ahzidal's Ring of Arcana and others, with compatibility notes.
+- **Gemling Queen Jewelry SE** `4.1.0.0SE` modid=4294
+  - Ports Saerileth's Jewelry mod to Skyrim SE with textures and mesh optimizations.
+- **TDN Vampire Armor Retexture SE Port** `1.0.0.0` modid=115570
+  - Provides HD retextures for all Vampire armors, including main textures and optional plugins, with compatibility notes for Rustic Clothing.
+- **ElSopa - Iron Weapons Redone SE - Textures Only** `1.1.0.0` modid=52605
+  - Redesigns all iron weapons with new meshes and textures, offering multiple resolutions and no ESP.
+- **Praedy's Staves AIO - Unenchanted Staves Alternative** `1.3.0.0` modid=65481
+  - Overhauls staves with unique models, particles, and collisions, offering ~45 variants and support for popular magic mods.
+- **Praedy's Staves AIO - Patch Hub** `1.21.0.0` modid=65660
+  - Provides compatibility patches for Praedy's Staves AIO with numerous magic and visual mods.
+- **Praedy's Staves AIO - 1k** `1.3.0.0` modid=65481
+  - Overhauls staves with unique models, particles, and collisions, offering ~45 variants and support for popular magic mods.
+- **Hagraven - My patches SE by Xtudo - Vigilant Patch** `1.8.0.0` modid=160430
+  - Adds UI patches and unique appearances for Hagravens with multiple model updates and optional patches
+- **Hagraven - My patches SE by Xtudo - Wormpie Patch** `1.8.0.0` modid=160430
+  - Adds UI patches and unique appearances for Hagravens with multiple model updates and optional patches
+- **Hagraven - New models and Textures** `1.0.0.0` modid=160407
+  - Replaces hagraven models and textures without requiring an ESP
+- **Betty Netch** `2.0.0.0` modid=88777
+  - Overhauls the Betty Netch to restore its original jelly‑like translucent appearance with multilayer parallax and a smaller tail.
+- **Dynamic Animal Variants** `1.0.0.0` modid=34763
+  - Adds texture variants for animals, requiring Real Rabbits HD, with examples such as bears, chaurus, chickens, etc., applied via script.
+- **Flame Atronach SE** `1.0.0.0` modid=82382
+  - Redesigns Flame Atronach appearance; no .esp included.
+- **Automaton mesh improvements** `4.0.0.0` modid=105160
+  - Improves Dwarven robot mesh performance by reducing draw calls and smoothing geometry.
+- **Creature Size Variants SE** `f1.07` modid=17736
+  - Adds dynamic size variations for creatures and NPCs, configurable via MCM.
+- **Skeleton Replacer HD** `1.1.0.0` modid=52845
+  - Replaces all skeletons, static skeletons, skulls, armored skeletons, and related models with high‑resolution options and optional eye glow or animated effects.
+- **Durnehviir Redone -Graphics only** `1.2.0.0` modid=128325
+  - Remake of Durnehviir with larger undead form, new models/textures, 6 abilities, voiced shouts, improved stats, ally utility; mesh/texture replacer.
+- **Falmer Overhaul - New models and textures - 2k** `f1.01` modid=86338
+  - Replaces Falmer models and textures with new 2k assets, incompatible with other replacements.
+- **Skyrim Snow Dogs (Husky only)** `1.3.0.0` modid=54758
+  - Replaces dog models with a husky model (optionally for all dogs) and adds Dawnguard dog armor.
+- **Skyrim Snow Dogs (Husky)** `1.3.0.0` modid=54758
+  - Replaces dog models with a husky model (optionally for all dogs) and adds Dawnguard dog armor.
+- **Supreme Vampire Lords** `1.1.0.0` modid=19706
+  - Enlarges vampire lord wings, improves upper‑torso and leg animations, and fixes clipping during wing flapping
+- **More Hircinic Aspects of Hircine- Mihail's Shards of Immersion** `1.0.0.0` modid=89917
+  - Enhances the spectral appearances of Hircine's Aspects with more epic visuals while staying true to vanilla concepts.
+- **Savage Wolves** `1.3.0.0` modid=21075
+  - Replaces the vanilla wolf skeleton with a custom one for more realistic wolves.
+- **Vampire Lord Retextured (Demonic)** `1.0.0.0` modid=8402
+  - Re‑textures vampire lords with a demonic aesthetic.
+- **Wormpie's Hagravens (SE)** `f1.05` modid=91607
+  - Overhauls hagraven appearance with 80+ variations, unique models and textures, includes unique named hagravens and scaled challenges up to level 50.
+- **Draugrs - New models and textures - 2k Version** `1.1.0.0` modid=123170
+  - Replaces draugr models and textures with 2k assets; incompatible with other draugr model or texture mods.
+- **Wicked Werewolves** `1.3.0.0` modid=31757
+  - Transforms vanilla werewolves with a custom skeleton for a creepier, more realistic appearance.
+- **Deiform Alduin - 2k Potato** `1.2.0.0` modid=44329
+  - provides a high‑resolution texture overhaul for Alduin with optional particle‑lit eyes in multiple resolutions.
+- **Grandiose Giants** `1.2.0.0` modid=23889
+  - Replaces vanilla giant skeletons with more intimidating custom skeletons.
+- **Zombies Retexture - Desaturated and Less Wet** `1.0.0.0` modid=100372
+  - Provides a desaturated, less wet retexture for zombies.
+- **Hawk Replacer and Eagles- Mihail Monsters and Animals** `1.0.0.0` modid=55461
+  - Replaces vanilla low‑poly Hawks with high‑quality 2k models, detailed textures, custom nests, and new sounds; adds three eagle types (Golden, Black, Bald) with superior loot; fixes interactable Hawk activators, enables looting, adds destruction data, preserves nest quality, uses new models faithful to species
+- **Absolute Arachnophobia** `1.1.0.0` modid=24058
+  - Replaces Frostbite spider skeleton with a custom, terrifying model for heightened horror.
+- **Fancy Unique Lunar Forge** `1.4.0.0` modid=87686
+  - Adds a uniquely modeled, ENB‑lit Lunar Forge at Silent Moons Camp with optional lower intensity and compatibility patches.
+- **Dunmeri Furniture in Gray Quarter** `2.2.0.0` modid=60077
+  - Adds dark‑elf style furniture to Windhelm’s Gray Quarter interiors via Base Object Swapper, compatible with several interior mods.
+- **Shelter of Skaal - fadingsignal's Skaal Tent for Solstheim (Base Object Swapper)** `1.0.0.0` modid=139614
+  - Replaces several tents near Skaal Village with fadingsignal's Skaal tent mesh using Base Object Swapper.
+- **Animated Forge Water** `0.9.0.0` modid=52322
+  - Mesh-only animated water replacer with refraction, includes patches for Elsopa medieval and Embers.
+- **Project Porthole - Unique Doors For Unique Cities** `4.0.0.0` modid=149931
+  - Adds custom door assets to modded cities for architectural consistency.
+- **Windmills have Windows - Non Parallax** `1.1.0.0` modid=105465
+  - Adds real window meshes to windmills around Whiterun, allowing visibility through them.
+- **Windhelm Fence 3D** `0.2.0.0` modid=65346
+  - Replaces 2D fences in Windhelm with 3D fences.
+- **The Pebbles SE** `1.0.0.0SE` modid=49413
+  - Offers simple pebble mesh variations to reduce repetition, compatible with any other mod.
+- **Animated Dwemer Lift Doors** `1.2.0.0` modid=3489
+  - Revives animated Dwemer lift doors with functional animations.
+- **Mehrunes Dagon Unique Shrine** `0.1.2.0` modid=133264
+  - Swaps shrine objects with unique variants, including urns, chests, symbols, sconces, and doors that use Oht and Mehrunes Dagon motifs.
+- **RUGNAROK - Special Edition** `1.1.0.0` modid=5436
+  - Overhauls and expands rugs with unique textures and normal maps for each mesh.
+- **Daedric Shrines - All in One - My Patches by Xtudo - BS Bruma - Namira** `4.3.0.0` modid=78809
+  - Provides comprehensive ESL patches and fixes for Daedric Shrines, including HD textures, map‑marker options, and compatibility patches with many other mods.
+- **Daedric Shrines - All in One - My Patches by Xtudo - VIGILANT patch** `4.3.0.0` modid=78809
+  - Provides comprehensive ESL patches and fixes for Daedric Shrines, including HD textures, map‑marker options, and compatibility patches with many other mods.
+- **Daedric Shrines - All in One - My Patches by Xtudo - The Only Cure patch** `4.3.0.0` modid=78809
+  - Provides comprehensive ESL patches and fixes for Daedric Shrines, including HD textures, map‑marker options, and compatibility patches with many other mods.
+- **Daedric Shrines - All in One - My Patches by Xtudo - Fists of Fury - Skyrim patch** `4.3.0.0` modid=78809
+  - Provides comprehensive ESL patches and fixes for Daedric Shrines, including HD textures, map‑marker options, and compatibility patches with many other mods.
+- **Daedric Shrines AIO by Xtudo - FIXES** `4.3.0.0` modid=78809
+  - Provides comprehensive ESL patches and fixes for Daedric Shrines, including HD textures, map‑marker options, and compatibility patches with many other mods.
+- **Daedric Shrines - All in One** `f1.02` modid=78772
+  - Adds 16 handcrafted Daedric Lord shrine statues.
+- **Dwemer Pipework Reworked - Performance friendly textures** `5.0.0.0` modid=46507
+  - Reworks Dwemer pipes and boilers to be functional, transparent, animated fans, glowing; compatible with texture mods; version 5 available.
+- **Dwemer Pipework Reworked - Hotfix 3** `5.0.0.0` modid=46507
+  - Reworks Dwemer pipes and boilers to be functional, transparent, animated fans, glowing; compatible with texture mods; version 5 available.
+- **Dwemer Pipework Reworked - Hotfix 2** `5.0.0.0` modid=46507
+  - Reworks Dwemer pipes and boilers to be functional, transparent, animated fans, glowing; compatible with texture mods; version 5 available.
+- **Dwemer Pipework Reworked - Hotfix** `5.0.0.0` modid=46507
+  - Reworks Dwemer pipes and boilers to be functional, transparent, animated fans, glowing; compatible with texture mods; version 5 available.
+- **Dwemer Pipework Reworked** `5.0.0.0` modid=46507
+  - Reworks Dwemer pipes and boilers to be functional, transparent, animated fans, glowing; compatible with texture mods; version 5 available.
+- **Smoking Torches and Candles SSE** `1.76.0.0` modid=8607
+  - Adds smoke particle effects to torches and optionally to candles, with configurable load order.
+- **Snazzy Common Wardrobes - Base Object Swapper** `1.0.0.0` modid=92809
+  - Randomly distributes custom common wardrobes across vanilla and mod-added wardrobes via Base Object Swapper.
+- **Snazzy Noble Wardrobes - Base Object Swapper** `1.0.0.0` modid=92493
+  - Randomly distributes three custom noble wardrobes to all vanilla and added noble wardrobes via Base Object Swapper.
+- **Snazzy Upper Wardrobes - Base Object Swapper** `1.0.0.0` modid=92752
+  - Randomly distributes three custom upper wardrobes to all vanilla and added upper wardrobes via Base Object Swapper.
+- **Farmhouse Chimneys SE - USSEP Patch** `4.2.1.0` modid=8766
+  - Adds chimneys to farmhouse exteriors with smoke effects and optional snow shaders, supporting many compatible mods.
+- **Farmhouse Chimneys SE** `4.2.1.0` modid=8766
+  - Adds chimneys to farmhouse exteriors with smoke effects and optional snow shaders, supporting many compatible mods.
+- **Better Atronach Forge Offering Box - No More Dwemer Dresser - High Polygon Summoning Circle** `0.2.1.0` modid=132887
+  - Replaces the Dwemer dresser with a unique chest.
+- **Water in Wash Basins - Mesh-only Replacer** `1.2.0.0` modid=59333
+  - Adds lightly animated water to wash basins via a mesh-only replacer.
+- **SB - Pressure Plate Trap Blending - Base Object Swapper (BOS)** `2.0.0.0` modid=86053
+  - Rarely retextured Nordic trap blended consistently via Base Object Swapper, conflicts with mesh‑touching mods.
+- **Thalmor comforts - Aldmeri Cultured Furniture** `2.0.0.0` modid=132317
+  - Refurnishes Thalmor embassy and headquarters with Aldmeri-style furniture for comfort.
+- **Thrones of Skyrim** `1.0.0.0` modid=41198
+  - Replaces generic hold thrones with vanilla-textured meshes; no ESP required and compatible with texture mods.
+- **Renthal's waterwheel HD** `1.2.0.0` modid=26567
+  - High‑poly, cubemapped waterwheel with improved textures.
+- **Night Mother** `1.0.0.0` modid=83527
+  - Replaces the Night Mother character.
+- **Skyking Signs - Bruma Patch** `2.0.0.0` modid=112902
+  - Provides new meshes and textures for shop and inn signs made of wood, featuring dynamic wind sway.
+- **Skyking Signs - Interesting NPCs** `2.0.0.0` modid=112902
+  - Provides new meshes and textures for shop and inn signs made of wood, featuring dynamic wind sway.
+- **Skyking Signs** `2.0.0.0` modid=112902
+  - Provides new meshes and textures for shop and inn signs made of wood, featuring dynamic wind sway.
+- **Animated Carriage** `1.1.0.0` modid=112397
+  - Allows NPCs to travel via carriages on roads, supporting over 100 radiant quests.
+- **Animated Ships - Finer Sails** `1.2.0.0` modid=112517
+  - Enhances sail visuals with higher‑detail fabrics, stitching and stains while retaining low performance impact.
+- **Animated Ships** `1.2.0.0` modid=110260
+  - Adds animated ships that sail ports, beaches and oceans, allowing the player to ride them.
+- **Spider Egg and Sacs Retexture 2k** `1.0.0.0` modid=48802
+  - 2K/4K retextured spider eggs and sacs ingredient.
+- **CleverCharff's Photorealistic Ash Pile 2k** `1.3.0.0` modid=32720
+  - Retextures ash piles with bone pieces and sharper texture, available in 2K resolution.
+- **Proper Windmills of Skyrim** `1.1.0.0` modid=47374
+  - Scales and repositions windmill sails to proper size and placement using SMIM meshes for better visual fidelity.
+- **Hermaeus Mora - Eyes Water and Tentacles - My HD version SE by Xtudo** `1.2.0.0` modid=37330
+  - High‑definition version of Hermaeus Mora with detailed water and tentacles.
+- **Simple Snow Improvements - Skyrim Fixes (BOS)** `2.4.0.0` modid=78702
+  - Improves snow visuals on forgotten vanilla objects using Base Object Swapper support.
+- **Cathedral Snow - Snow and Glaciers (YALO T4R and RS) - Brighter** `4.6.0.0` modid=18033
+  - Retextures snow, ice, and glaciers with reduced tiling via mip‑map fading, offering mid‑range brightness and dynamic snow shader support.
+- **Fabled Forests - Exclude Morthal Marsh (Non-EL)** `2.0.0.0` modid=99137
+  - Disables Fabled Forests modifications in the Morthal Marsh area for compatibility, re‑enabling vanilla Reach Trees.
+- **Fabled Forests + Orc Strongholds - BOS Patch - MEG** `0.1.0.0` modid=119657
+  - Resolves clipping between Fabled Forests and Orc Strongholds via Base Object Swapper, no plugin required.
+- **Fabled Forests** `2.1.0.0A` modid=94462
+  - Adds 45,000 tree alterations with lush, dense forests, performance variants (2K/1K), compatibility selector, optional snow pine textures, LOD generation, and extensive compatibility patches
+- **Northern Roads Patch Collection** `1.19.0.0` modid=77386
+  - Collection of compatibility patches for Northern Roads with various mods; includes load order advice and credits.
+- **Northern Roads - Patches Compendium** `7.3.0.0` modid=77893
+  - Provides patches for Northern Roads compatibility with popular mods; includes load order and engine fix guidance.
+- **Nordic Northern Roads - Retexture - 2K** `2.1.0.0` modid=79468
+  - Retextures Northern Roads with landscape, architecture, and clutter textures in 2K/4K, supporting parallax.
+- **ElSopa - Northern Roads Resculpted 2k** `1.1.0.0` modid=83792
+  - Resculpts Northern Roads meshes and textures with reduced triangle counts, offers 4k/2k texture options, improves performance, includes custom LODs.
+- **Northern Roads** `1.3.1.0` modid=77530
+  - Overhauls all roads with diverse surfaces, unique bridges, totems, and runestones, reflecting Nordic cultural themes.
+- **Skyrim 3D Rocks Gray Retexture** `1.0.0.0` modid=93893
+  - Simple gray retexture of the 3D Rocks mod’s rocks to match vanilla aesthetics.
+- **Skyrim 3D Rocks** `1.0.3.0` modid=17732
+  - Replaces many rocks with highly detailed photogrammetry meshes and textures, optimized for performance.
+- **Majestic Mountains - More Accurate Collision - A Mountainous Experience Patch** `4.1.0.0` modid=65042
+  - Improves mountain collision meshes to match exact shapes, preventing floating and arrow bounce issues
+- **Skyrim - A Mountainous Experience** `1.6.0.0` modid=43866
+  - Improves and fixes mountain meshes, intended to be used with Majestic Mountains.
+- **Majestic Mountains - More Accurate Collision** `4.1.0.0` modid=65042
+  - Improves mountain collision meshes to match exact shapes, preventing floating and arrow bounce issues
+- **ELFX Shadows** `1.5.2.0` modid=63790
+  - Enhanced lighting addon that adds realistic window shadows, exceeds engine light limits, ESL‑flagged, includes fixes for ELFX, works with ENB, requires ELFX Enhancer, improves lighting without flicker.
+- **Skyrim Landscape and Water Fixes** `8.9.0.0` modid=26138
+  - Corrects graphic glitches in worldspace, with optional fixes for lights, meshes, and patches.
+- **Enhanced Lights and FX** `f3.06` modid=2424
+  - Enhances lighting with dynamic lights, shadows, smoke, and weather effects while maintaining performance.
+- **Skyland Bits and Bobs - A Clutter Overhaul - Performance Version** `1.91.0.0` modid=95032
+  - Adds hundreds of performance‑focused textures for clutter items like crates, barrels, furniture, and integrates with SMIM meshes.
+- **Cathedral - 3D Rocky Shores** `1.1.0.0` modid=33474
+  - Adds 3D rocky shoreline textures using low‑poly chamfered rock models distributed as grass, with minimal performance impact.
+- **Cathedral - 3D Vanilla Eastmarch Grass** `1.0.0.0` modid=141157
+  - Remasters Eastmarch tundra grass with efficient 3D models and BC3 textures, leaving _nograss untouched.
+- **Cathedral - 3D Vanilla Tundra Grass** `1.1.0.0` modid=141074
+  - Upgrades vanilla tundra grass with efficient 3D models and BC3 textures, requiring a grass density setting of 50.
+- **Cathedral - 3D Solstheim Grass** `1.0.0.0` modid=90945
+  - Provides a 3D grass overhaul for Solstheim using photo‑based grass models, requiring the Cathedral Grass Library meshes.
+- **Cathedral - 3D Pine Grass - Full 3D Coverage** `0.462.0.0` modid=42032
+  - Converts pine forest grass to fully 3D models via photographed assets, offering improved performance and density over traditional grass mods.
+- **Cathedral - 3D Grass Library - Meshes** `16.53.0.0` modid=80687
+  - Provides a grass library of resource models and textures for creating realistic 3D grass overhauls.
+- **Skyland AIO** `4.32.0.0` modid=34179
+  - Collection of all Skyland mods offering a high‑resolution texture overhaul for architecture and landscapes.
+- **Assorted mesh fixes** `0.139.2.0` modid=32117
+  - Addresses mesh rendering problems including shadows, collisions, UVs, and geometry errors.
+- **Majestic Bruma Mountains - BS-Bruma x Majestic Mountains Patch - Darkside** `2.0.0.0` modid=53152
+  - Updates a compatibility patch for Beyond Skyrim Bruma and Majestic Mountains, making it usable for version 3.2
+- **Majestic Mountains - Bloodchill Manor Patch AE** `1.0.1.0` modid=59802
+  - Patches Bloodchill Manor's entrance to resolve conflicts with Majestic Mountains in the Anniversary Edition
+- **Majestic Mountains Main** `f4.02` modid=11052
+  - Redesigns mountain textures with single 8k map, improved LOD, snow shader, optional packs; requires DynDoLOD for proper LOD generation
+- **DynDOLOD Resources SE** `Alpha-57` modid=52897
+  - Required texture resources for DynDOLOD 3 improving tree and object LOD generation, intended for early alpha testing.
+- **LeanWolf's Better-Shaped Weapons - All in One Installer** `2.1.3.0` modid=2017
+  - Reshapes weapon meshes for realistic proportions; optional texture patches; safe to install/uninstall
+- **Elegant Candlelight** `1.3.0.0` modid=64435
+  - Offers multiple candlelight radius options with optional ENB support for enhanced lighting.
+- **Shrubs of Snow - Seasons of Skyrim SKSE** `0.1.0.0` modid=63463
+  - Adds snowy versions of vanilla shrubs and winter aspens for Seasons of Skyrim SKSE.
+- **Seasonal Diverse Tundra Shrubs** `1.0.0.0` modid=112882
+  - Replaces vanilla tundra shrubs with higher‑poly 3D models matching original appearance.
+- **Turn of the Seasons** `1.0.8.0` modid=63623
+  - Adds separate Summer, Autumn, and Spring seasons for Seasons of Skyrim SKSE.
+- **Seasons of Skyrim - The Great Village of Mixwater Mill fix** `1.0.0.0` modid=73827
+  - Fixes missing building meshes when using Seasons of Skyrim with The Great Village.
+- **Seasons of Skyrim - The Great Village series missing building fix** `1.0.0.0` modid=73827
+  - Fixes missing building meshes when using Seasons of Skyrim with The Great Village.
+- **Seasons of Skyrim Support - Thicket and Dead Shrub Swapper** `f2.01` modid=86414
+  - Combines various dead shrub and thicket replacements, requiring Base Object Swapper
+- **Seasonal Wildlife Distribution** `1.4.0.0` modid=63700
+  - Adds seasonal wildlife lists to simulate hibernation and migration effects across seasons
+- **Seasons of Skyrim SKSE** `1.8.6.0` modid=62861
+  - Provides SKSE‑based seasonal framework that swaps models and adds dynamic snow coverage.
+- **Underwater Vision** `2.0.0.0` modid=27869
+  - Adds underwater vision blur with configurable MCM options for immersion.
+- **Depths of Skyrim - An Underwater Overhaul SSE** `1.1.7.0` modid=26913
+  - overhauls underwater environments and adds new content to the Sea of Ghosts.
+- **Simplicity of Sea - Water Mod with ENB Displacement Textures** `0.6.0.0` modid=56520
+  - A lightweight water mod with ENB-compatible displacement maps and an optional ESP that edits water records.
+- **GKB Waves** `1.0.0.0` modid=19077
+  - Adds new wave models and textures to Skyrim's coast up to Solitude; animated textures; minimal performance impact; designed for compatibility.
+- **Rainbows Remade - Hotfix Patch** `1.2.0.0` modid=88161
+  - Adds rainbows and moonbows with adjustable chances, using a remade script and upscaled textures.
+- **Rainbows Remade - No Initialization Notification Patch** `1.2.0.0` modid=88161
+  - Adds rainbows and moonbows with adjustable chances, using a remade script and upscaled textures.
+- **Rainbows Remade - No Notifications** `f1.01` modid=98742
+  - Removes on‑screen rainbow notifications to preserve immersion.
+- **Splashes of Skyrim** `1.4.1.0` modid=47710
+  - Adds SKSE plugin extending water splashes, ripples and underwater explosions for all projectile types.
+- **Volumetric Mists** `1.4.2.0` modid=29273
+  - Adds large‑scale, hand‑placed volumetric mist/fog to SSE that is not weather‑controlled; offers dense and performance‑optimized versions, works alongside other fog mods, and can resolve grid patterns by setting bUse64bitsHDRRenderTarget=1 in SkyrimPrefs.ini.
+- **ETHEREAL CLOUDS - Special Edition - 2k** `3.0.0.0` modid=2393
+  - Lore‑friendly cloud texture pack that blends with any lighting mods and adds visual interest.
+- **Ashbound - Solstheim Revisited** `2.0.0.0` modid=73278
+  - Expands ash coverage across Solstheim, updating the original Ashbound mod with improved visuals.
+- **Shooting Stars SE** `1.1.0.0` modid=73090
+  - Ports the Shooting Stars visual effect from Isoku into the game.
+- **Rainbows Remade - 1K Version** `1.2.0.0` modid=88161
+  - Adds rainbows and moonbows with adjustable chances, using a remade script and upscaled textures.
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - GTS Azurite - No Config Spell** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Azurite III CS** `1.1.2.0` modid=162153
+  - Applies HDR tonemapping from Community Shaders to deliver ENB‑like visuals with better performance.
+- **Dynamic Interior Ambient Lighting (DIAL)** `3.9.0.0` modid=149920
+  - Dynamically adjusts interior lighting by time of day using optional weather patches and SKSE/SkyPatcher, compatible with many lighting mods.
+- **Azurite Weathers and Seasons - Azurite Weathers III** `3.35.0.0` modid=42731
+  - Comprehensive weather mod enhancing lighting, storms, and atmospheric effects with high‑quality visuals.
+- **Terre's Body Fur Textures AIO - 2K** `2.0.0.0` modid=76568
+  - High-detail fur textures for Khajiits with compatibility across body options and enhanced normal mapping.
+- **Vanilla plus presets 2** `1.5.0.0` modid=113967
+  - Adds 73 additional presets focusing on beast races and males, expanding character customization options.
+- **Vanilla plus presets** `2.1.0.0` modid=101978
+  - Provides 88 character presets covering all races (except Argonians/Khajiits) designed for use with Gates to Sovngarde, requiring Racemenu and related mods.
+- **HammerHair V1.6.1** `1.15.0.0` modid=156562
+  - Adds 77 male and 77 female Redguard hairstyles (wigs included) for humanoid races, requiring texture mods for quality; includes extensive hair list and recommended texture mods.
+- **Kabu's Argonian Fins** `1.0.0.0` modid=65428
+  - Adds high‑poly Argonian fins using model‑space normal maps for consistent lighting, compatible with High Poly Head and combinable with base hairstyles.
+- **Vanilla hair remake SMP - Wigs** `1.0.3.0` modid=63979
+  - Replaces 146 vanilla hairstyles with detailed models
+  - Optional SMP physics via FSMP
+  - Lower performance cost; safe to install/uninstall; no ESP; optional NPC files
+  - Uses vanilla textures; hats may clip without FSMP option disableSMPHairWhenWigEquipped
+  - Compatible with High Poly Vanilla Hair and related patches
+  - Not compatible with Vanilla Hair Replacer
+- **Vanilla hair remake SMP** `1.0.3.0` modid=63979
+  - Replaces 146 vanilla hairstyles with detailed models
+  - Optional SMP physics via FSMP
+  - Lower performance cost; safe to install/uninstall; no ESP; optional NPC files
+  - Uses vanilla textures; hats may clip without FSMP option disableSMPHairWhenWigEquipped
+  - Compatible with High Poly Vanilla Hair and related patches
+  - Not compatible with Vanilla Hair Replacer
+- **Valkyr HDT-SMP Hairstyles 02** `1.0.0.0` modid=64259
+  - Adds three unisex HDT‑SMP hairstyles requiring Faster HDT‑SMP.
+- **Valkyr HDT-SMP Hairstyles 01** `1.1.0.0` modid=63181
+  - Adds six unisex HDT‑SMP hairstyles requiring Faster HDT‑SMP.
+- **Aquatic Elegance - Argonian Koi Whisker Addons HDT-SMP** `1.3.0.0-HDT` modid=97363
+  - Adds four koi‑style whisker options for Argonians, available with or without HDT‑SMP physics.
+- **Lion's Mane SMP** `1.0.0.0` modid=72166
+  - Adds lion‑like hairstyle and beard for male Khajiit; optional HDT‑SMP physics for gentle rustling
+- **SV Beards SE** `2.1.0.0` modid=20987
+  - Adds 120 new beard combinations to the male facial hair slider using vanilla assets.
+- **KS Hairdos Lite SE NoNPCs** `1.3.0.0` modid=1932
+  - Lite version adding 20 male/female hairstyles; does not apply to NPCs
+- **SC - Hairstyles of Argonia** `1.0.0.0` modid=68903
+  - Provides hairstyles for Beyond Skyrim: Argonia based on concept art, unisex, uses vanilla textures, no reupload permission.
+- **Modular SMP Hairstyles** `f1.031` modid=93608
+  - Offers over 100 unisex medium-length hairstyles in a semi‑modular SMP format.
+- **Vanilla hair - Salt and Wind** `1.0.0.0` modid=45147
+  - Offers softer, matte retextures for vanilla hairs, compatible with KS Hairdos and other mods, using accessories from Salt & Wind resources.
+- **Vanilla Hair Variety Plus SE** `8.1.0.0` modid=69046
+  - Adds several hairstyles to vanilla character presets, ported from LE to SE, expanding player hair options.
+- **Hvergelmir's Aesthetics - Brows** `4.1.0.0` modid=1062
+  - Replaces eyebrow textures with high‑resolution hand‑painted variants, a popular component of the Aesthetics series.
+- **Hvergelmir's Aesthetics - Beards** `5.0.1.0` modid=1067
+  - Overhauls beard textures with high‑resolution hand‑painted options, adding previously missing styles.
+- **Orc Shaved Ponytails for Humans SE** `2.0.0.0` modid=42864
+  - Adds multiple new human hairstyles including Viking long hair, aiming for a sexy look.
+- **Improved Eye** `1.0.0.0` modid=154829
+  - Fixes various eye mesh bugs and improves eye appearance, compatible with texture mods.
+- **Authentic Eyes** `1.1.0.0` modid=36063
+  - Overhauls eye textures for subtlety and realism; replaces all eye textures with higher‑resolution normal, glow, and reflection maps; reduces glow for men/mer; compatible with other eye mods.
+- **Additional Dremora Faces - Mysticism Patch** `1.3.12.0` modid=97946
+  - Adds female Dremora, unique faces up to 216, human brows, beards, vampire eyes, voice adjustments, unique key appearances, many compatibility patches
+- **Additional Dremora Faces** `1.3.12.0` modid=97946
+  - Adds female Dremora, unique faces up to 216, human brows, beards, vampire eyes, voice adjustments, unique key appearances, many compatibility patches
+- **Koralina's Freckles and Moles - 4k 2k** `1.1.0.0` modid=62508
+  - Adds 30 RaceMenu overlays with 4k or 2k freckles and moles in various configurations.
+- **Vanilla Makeup HD - HD Racial Colors and Makeup for all Races and Genders - 2k** `1.0.0.0` modid=24482
+  - Upgrades racial makeup and tintmaps to high-resolution textures for all races and genders, offering up to 4K quality.
+- **CoverKhajiits - Face Textures 2k** `1.3.0.0` modid=71067
+  - High‑quality cleaned and upscaled Khajiit face textures optimized for SE.
+- **K.C.C.E Khajiit Character Creation Extended** `1.2.0.0.` modid=95969
+  - Adds around 40 new character creation sliders for Khajiit, including ear, earring, and whisker controls, compatible with High Poly Head.
+- **New Beast Feet** `1.1.0.0` modid=107689
+  - Provides new foot meshes for Argonians and Khajiit, compatible with various body mods.
+- **Male Dragonic Argonian Textures 4k Vanilla** `1.0.0.0` modid=1443
+  - Provides new 4K textures for male Argonians with specular maps and compatibility notes.
+- **Female Dragonic Argonian Textures 4k UNP** `1.0.0.0` modid=1442
+  - Provides high‑resolution female Argonian textures for UNP and CBBE with optional seam fixes.
+- **Slof's Fluffy Khajiit Tails SSE** `1.1.0.0` modid=30397
+  - Replaces Khajiit tail model with a fluffy version for both male and female Khajiit.
+- **Better Claws and Gauntlets for Anniversary Edition** `0.1.0.0` modid=160444
+  - Extends the Better Claws and Gauntlets port to include AE‑specific gauntlet meshes and updates
+- **Better Claws and Gauntlets SSE** `1.2.3.0` modid=12595
+  - Fixes beast‑race claw appearance by porting the original mod to Skyrim Special Edition, ensuring proper claws regardless of equipped gloves and compatible with Immersive Armors
+- **Tempered Skins for Females** `1.31.0.0` modid=8505
+  - Provides female body and face textures with options for nude, dressed, topless, and varied age and skin conditions, requiring Tempered Skins.
+- **Tempered Skins for Males - Dressed Version** `f2.05` modid=7902
+  - Provides high-quality male body and face textures with options for hair, dirt, muscle smoothness, and various body types, requiring Tempered Skins.
+- **UNP Female Body Renewal** `4.6.0.0` modid=1699
+  - Female face and body replacer with realistic textures and various body options.
+- **Weathered Nordic Bodypaints - RaceMenu Overlays and Warpaints** `2.1.0.0` modid=19594
+  - Adds weathered body and face paints for RaceMenu, fitting both genders for a battle-worn look.
+- **Wounds Overlays For RaceMenu** `1.1.0.0` modid=38547
+  - Provides 13 new overlays for RaceMenu to display cuts and bruises as body‑paint injuries.
+- **Wounds Overlays Applied** `1.2.0.0` modid=107246
+  - Applies overlay textures to Wounds injuries for visual effect.
+- **Tempered Racial Textures - Ring of Disrobing Patch** `1.1.0.0` modid=54573
+  - Gives each vanilla race unique textures unified with Tempered Skins, focusing on muscle definition and body hair variance.
+- **Tempered Racial Textures** `1.1.0.0` modid=54573
+  - Gives each vanilla race unique textures unified with Tempered Skins, focusing on muscle definition and body hair variance.
+- **Character Menu SE - Hand to Hand Patch** `1.0.0.0` modid=173827
+  - Provides UI icon patches for Hand to Hand when using the Character Menu SE mod.
+- **Dragonborn's Bestiary - DAC0DA** `1.0.0.0` modid=136795
+  - Provides a bestiary patch for the DAc0da mod, integrating its creature data.
+- **Skull of Corruption Dream Counter - Artificer** `1.0.0.0` modid=130691
+  - Adds a HUD widget that displays the current dream count for the Skull of Corruption mechanic.
+- **Dynamic Activation Key - Addons Collection** `2.1.1.0` modid=96430
+  - Adds trade, training, and inventory functionalities for followers and horses, part of the Dynamic Activation Key suite.
+- **Player Name Randomizer - Show in UI** `1.0.5.0` modid=119235
+  - Adds a UI hint in the race menu indicating the insert key can generate a random name.
+- **The Dragonborn's Bestiary - Show In UI** `1.0.1.0` modid=161050
+  - Adds Bestiary entry to main menu.
+- **The Dragonborn's Bestiary - Quest Patch Compendium AIO (FOMOD)** `1.0.0.0` modid=138248
+  - Curated collection of Bestiary patches and images for various mods, packaged as a FOMOD installer.
+- **The Dragonborn's Fishiary - Bestiary Addon** `1.0.1.0` modid=134739
+  - Unlock Bestiary entries by fishing new fish, 30 entries, ESL flagged.
+- **The Dragonborn's Bestiary - Sun Spells Addon** `1.0.0.0` modid=123871
+  - Adds sun icon to undead creature weaknesses in Bestiary.
+- **The Dragonborn's Bestiary - Addons - CC Pets** `1.2.0.0` modid=123389
+  - Replaces Bestiary images with modded versions and adds new creature entries.
+- **The Dragonborn's Bestiary - Dragon Priests** `0.3.0.0` modid=125166
+  - Adds support for named Dragon Priests and Dragon Priest mods in Bestiary.
+- **The Dragonborn's Bestiary - Falmer Overhaul Add-on** `1.5.2.0` modid=123521
+  - Adds custom menu to collect creature info, unlock entries via kills/summons/transformations, includes counters, widescreen & gamepad support, SKSE plugin.
+- **The Dragonborn's Bestiary - Bruma Add-on** `1.5.2.0` modid=123521
+  - Adds custom menu to collect creature info, unlock entries via kills/summons/transformations, includes counters, widescreen & gamepad support, SKSE plugin.
+- **The Dragonborn's Bestiary - Addons - Mihail** `1.2.0.0` modid=123389
+  - Replaces Bestiary images with modded versions and adds new creature entries.
+- **Character Menu SE** `1.2.1.0` modid=173074
+  - Adds full character menu (press N); 4 tabs (Character, Skills, Factions, Stats); class system based on skill distribution; works with Constellations, Firmament; compatible with SkyUI, etc
+- **Rename Potions SKSE** `1.0.0.0` modid=152087
+  - SKSE plugin enabling renaming of crafted potions in alchemy menu, supports AE/SE, requires Address Library.
+- **Werewolf Transformation Timer - SkyUI Addon** `1.0.3.0` modid=45326
+  - Adds a SkyUI widget showing remaining werewolf transformation time, fully customizable via MCM.
+- **Patreons Menu** `1.0.3.0` modid=120505
+  - Adds a menu item to list Patreon supporters, with configurable label and texture.
+- **Skull of Corruption Dream Counter** `1.0.0.0` modid=130691
+  - Adds a HUD widget that displays the current dream count for the Skull of Corruption mechanic.
+- **Dynamic Activation Key - MCM** `2.1.0.0` modid=96408
+  - MCM interface to change the activation key shortcut without reloading, supporting controller input.
+- **Player Name Randomizer** `1.1.1.0` modid=92438
+  - Randomly generates player names based on race and gender using Tamrielic Names definitions.
+- **PhotoMode** `2.0.3.0` modid=91701
+  - Adds Photo Mode for taking screenshots, with camera controls, filters, overlays, and configurable settings.
+- **The Dragonborn's Bestiary** `1.5.2.0` modid=123521
+  - Adds custom menu to collect creature info, unlock entries via kills/summons/transformations, includes counters, widescreen & gamepad support, SKSE plugin.
+- **OxygenMeter2** `1.0.7.0` modid=64532
+  - Adds an on‑screen oxygen meter for underwater use via a custom UI and SKSE plugin.
+- **Console Commands Extender - Anniversary Edition Update** `1.12.0.0` modid=74390
+  - Updated DLL enabling Console Commands Extender compatibility with Skyrim SE 1.6.629+.
+- **ConsolePlusPlus** `1.5.0.0` modid=79975
+  - SKSE plugin that adds copy‑paste to console and caches console commands between game sessions.
+- **More Informative Console** `1.2.2.0` modid=19250
+  - Enhances console UI with detailed object info, mod source, and form data
+- **Security Overhaul SKSE - Some More Locks** `1.0.7.0` modid=59961
+  - Adds extra individual lock types like cages and strongboxes.
+- **Security Overhaul SKSE - Regional Locks** `1.0.1.0` modid=62781
+  - Adds region‑specific lock models such as Solitude, Whiterun, and Windhelm.
+- **Security Overhaul SKSE - Add-ons** `0.1.9.1` modid=59529
+  - Adds additional lock design variants to Security Overhaul.
+- **Security Overhaul SKSE - Lock Variations** `4.0.0.0` modid=58224
+  - Replaces common lock models with unique, animated designs via SKSE.
+- **GATE TO SOVNGARDE (GTS) - Small Mods and Resources - Description Framework for Holidays** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Descriptions for Various Mods - Only Usable Items** `2.6.0.0` modid=106229
+  - Provides descriptions for misc items across 200+ mods via Description Framework.
+- **Vanilla Item Descriptions - Uniques Only Version** `1.1.0.0-UO` modid=105970
+  - Adds descriptive UI text for about 400 unique items, enhancing immersion through detailed item information.
+- **Unmarked Locations Pack - Solstheim - Descriptions Add-on** `1.0.0.0DESC` modid=108527
+  - Adds new unmarked locations in Solstheim with unique loot and encounters.
+- **Creation Club Item Descriptions** `1.6.0.0` modid=106048
+  - Adds immersive flavor‑text descriptions to most Creation Club miscellaneous items.
+- **GATE TO SOVNGARDE (GTS) - Small Mods and Resources - Undeath Misc Descriptions** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **GATE TO SOVNGARDE (GTS) - Small Mods and Resources - Description Framework for Alchemy Requires Bottles** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **GATE TO SOVNGARDE (GTS) - Small Mods and Resources - Description Framework for Campfire** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **GATE TO SOVNGARDE (GTS) - Small Mods and Resources - Description Framework for Headhunter** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Description Framework** `2.1.1.0` modid=105799
+  - Allows mods to attach in‑game descriptions to items, supporting many types and customizable formatting.
+- **Stand still in RaceMenu (OAR)** `1.0.0.0` modid=96970
+  - Idle animation replacer for RaceMenu using OAR that overwrites other animated idle animations and disables when exiting.
+- **RaceMenu - Male Khajiit Mouth Expression Fix** `0.4.14.0` modid=39519
+  - Renames a mesh file to fix male Khajiit mouth expression in RaceMenu.
+- **RaceMenu** `0.4.19.16` modid=19080
+  - Complete overhaul of character creation menu with new customization features such as RGBA warpaints and body paints.
+- **Convenient Reading UI - SE** `1.1.0.0` modid=50202
+  - Improves book menu with faster page animations and configurable text size and bottom bar.
+- **Constructible Object Custom Keyword System** `1.1.1.0` modid=81409
+  - Adds a keyword‑based category system to the Constructible Object menu in SkyUI for better organization.
+- **Legendary Map** `1.0.2.0` modid=157397
+  - Adds an interactive map legend to toggle off undesired markers and remembers user preferences.
+- **Reachman Loading Screens** `1.0.0.0` modid=140207
+  - Adds 20 loading screens based on Reachman lore.
+- **Hold on a sec - Pause Dialogue Menus** `1.1.0.0` modid=123456
+  - SKSE plugin that pauses dialogue menus by pressing the system menu button (Esc/Start) during conversations.
+- **CoMAP - Common Marker Addon Project** `4.3.0.0` modid=56123
+  - Framework for custom map/compass marker designs, allowing edits without ESPs and offering various marker types.
+- **Knotwork Penitus Occulatus Consistency Patch** `1.0.0.0` modid=129414
+  - Applies Knotwork to quests added by the Penitus Occulatus mod.
+- **Knotwork** `2.0.1.0` modid=128235
+  - Adds custom journal knotwork for quests via INI mappings; compatible with SkyUI and Skyrim UI mods
+- **Simple Interface Tweaks** `1.1.0.0a` modid=82215
+  - Compiles interface addons for SkyUI, adding wider MCM menus, better sleep wait menu, remove quicksave button, improve dialogue controls, extended favorites, optional Nordic font, while preserving vanilla feel.
+- **Informed Mail Delivery** `2.0.0.0` modid=66339
+  - Shows names of delivered items; works in 1st/3rd person; SKSE required; compatible with vanilla, Provincial Courier Service, Better Courier (patch for Loot & Degradation); optional ESL; configurable text color (green/red/white).
+- **Notification Filter - Remove unwanted notifications** `1.2.1.0` modid=67925
+  - Allows players to hide notifications via customizable rules using a SKSE plugin.
+- **Subtitles** `0.6.2.0` modid=113214
+  - SKSE plugin that displays up to four subtitles simultaneously, configurable via Subtitles.ini
+- **Switch Camera During Dialogue** `1.1.0.0` modid=95269
+  - Allows switching camera perspective (1st/3rd) during dialogue via F or controller; requires SKSE; compatible with Improved Camera and similar mods; ESL‑flagged; safe to install mid‑game
+- **Toggle Compass Hotkey** `1.4.0.0` modid=63247
+  - Allows toggling the compass/floating markers via a hotkey (default X) and also hides related HUD elements such as shouts and temperature indicators.
+- **Unarmed Hotkey - Dual Unarmed** `1.0.0.0` modid=15459
+  - Adds an unarmed weapon that can be hotkeyed to unequip equipped weapons.
+- **Smart Optimal Salves - SKSE** `1.1.0.0` modid=172207
+  - SKSE port of Smart Optimal Salves MCM mod.
+- **Smart Optimal Salves - Optimal Potion Hotkey MCM** `0.3.0.0` modid=42402
+  - Use MCM to assign hotkeys to drink health/stamina/magicka potions; will use optimal potion to avoid over‑heal; requires SkyUI and SKSE64; ESL‑flagged; compatible only if potion keywords unchanged
+- **Which Key NG** `1.1.0.0` modid=78971
+  - Replaces lock level display with key name when the key is in inventory, implemented as an SKSE plugin.
+- **Hotkey Reminder** `1.0.5.0` modid=115853
+  - A UI menu (default F11, configurable) that displays all keybinds, lets you label keys, saves to interface/hotkeysreminder_data.json, can lock editing via MCM, is an ESP-FE plugin with no load‑order conflicts
+- **B612 - my little asteroid of useful UI components** `1.0.19.0` modid=127701
+  - Provides UI components like QuantitySlider, List, ItemSelect, SpellSelect for modders; repurposed from vanilla UI; compatible with most mods.
+- **Dialogue Movement Enabler** `2.2.1.0` modid=43708
+  - enables player movement within dialogue menus.
+- **Alternate Conversation Camera** `2.4.6.0-AE` modid=21220
+  - Overhauls dialogue camera with zoom and face focus
+  - Configurable INI, dynamic zoom, auto lock-on, third-person position
+  - Supports sitting and lock-on states
+  - ESL flagged
+- **Phenomenally Enriched and Nuanced Ingredients for SkyUI** `1.1.0.0` modid=90526
+  - Adds new item types, colors, and icons for alchemical ingredients in SkyUI.
+- **Skyrim Souls RE - Updated** `2.4.0.0` modid=27859
+  - Unpauses game menus, letting the world keep running while accessing inventory, books, or map.
+- **Stay At The System Page NG** `1.6.0.0` modid=76927
+  - Converts Stay At The System Page to CLib-NG DLL for SE/AE, ensuring journal opens at system page tab
+- **Persistent Favorites** `1.0.4.0` modid=118174
+  - Automatically re‑favorites or hotkeys any item or spell added to inventory, with optional tracking/untracking.
+- **Better Grabbing** `1.17.0.0` modid=134769
+  - Replaces the vanilla grab with a more flexible system allowing rotation, translation, and gamepad control, configurable via an INI file
+- **Contextual Crosshair** `1.3.2.0` modid=63980
+  - Provides a contextual crosshair that appears only when targeting, aiming, or using spells, with smooth fading transitions.
+- **Better Third Person Selection - Clearly Activation** `0.1.0.0` modid=127137
+  - Fix that ensures the Better Third Person Selection mod activates properly and resolves related conflicts.
+- **Better Third Person Selection - BTPS** `0.8.9.0` modid=64339
+  - SKSE DLL that overhauls 3rd‑person object selection with a 3D widget, filter presets, and horseback support for precise targeting
+- **Favorite Misc Items** `4.0.0.0` modid=42750
+  - SKSE plugin to favorite books, soul gems, keys, and other misc items.
+- **Aura's Scrumptious Supplement (A.S.S. for B.O.O.B.I.E.S.)** `1.3.0.0` modid=89823
+  - Adds item types, colors, and icons for food and ingestibles; requires O.C.F., B.O.O.B.I.E.S., and SKSE; supports many mods; optional P.E.N.I.S. for ingredient icons.
+- **B.O.O.B.I.E.S (aka Immersive Icons)** `2.1.2.0` modid=89241
+  - Enhances SkyUI icons with additional types, colors, and personality for better inventory visuals.
+- **Simonrim I4 Addons - Artificer** `1.0.0.0` modid=87608
+  - Adds I4 support for various Simonrim mods
+- **Wounds - I4 and Wheeler patch** `1.2.0.0` modid=92614
+  - Provides icons for Wounds injuries and patches for add‑ons, with no ESP required.
+- **Racial Abilities - I4 icons** `1.4.2.0` modid=93219
+  - Assigns icons to racial abilities and powers, compatible with overhauls such as Aetherius, Imperious, Survival Mode, and others.
+- **Standing Stones - I4 icon** `1.0.0.0` modid=92780
+  - Assigns icons to Standing Stone abilities; compatible with Mundus, Andromeda, Evenstar, Mundustar, Freyr; ESP-FE
+- **The Handy Icon Collection Collective** `1.7.0.0` modid=90508
+  - Provides SWF icon assets for UI mods using I4 or COCKS, requires I4 for item/spell icons or COCKS for crafting category icons, lists compatible and incompatible mods, no plugins, load after conflicting mods, optional requirements include I4 or COCKS NG for specific Skyrim SE versions.
+- **Diseases - I4 icon** `1.2.0.0` modid=94076
+  - Provides appropriate icons for disease effects, compatible with various disease mods.
+- **Inventory Interface Information Injector - Alchemy Fix** `1.1.0.0-AF` modid=141883
+  - Enables keyword matching in alchemy menu, fixing missing icons for alchemy mods such as AIT and KIT.
+- **Inventory Interface Information Injector** `1.1.0.0` modid=85702
+  - Injects item icons and info into inventory UI while ignoring other interface mods.
+- **UIExtensions** `1.2.0.0` modid=17561
+  - Adds custom menus: Cosmetic Menu (RaceMenu overlay) for NPC overlays, Dye Menu for dyeing armor, List Menu for variable info lists, Magic Menu to display/trade spells, Selection Menu for favorites, Stats Menu for actor stats, Text Entry Menu for script input, Wheel Menu for 8‑option radial menu with optional actor stats.
+- **moreHUD SE** `5.2.2.0` modid=12688
+  - Enhances HUD with detailed info on targeted objects, enemies, ingredients, potions, books, and enemy level
+- **TrueHUD - HUD Additions** `1.1.9.0` modid=62775
+  - floating info bars for any amount of actors, boss health bars, moveable/scalable player health/magicka/stamina bars with shout cooldown and enchantment meter, recent loot log, API for other plugins, all modular and configurable via MCM
+- **SkyUI** `6.8.0.0` modid=12604
+  - Elegant PC‑friendly interface mod with advanced UI features, requiring SKSE for functionality.
+- **Fully Harvest Hanging Carcasses and Coin Purses** `1.13.0.0` modid=86751
+  - Fixes harvesting of dead animal carcasses; makes them disappear; fixes collision for hanging salmons and coin purses; improves interaction; requires Papyrus Extender; conflicts with certain flora fixes.
+- **Carry Your Carcasses - Simple Hunting Overhaul** `1.1.0.0` modid=62628
+  - Carries animal carcasses in inventory; supported list (deer, elk, wolf, etc); displays on horse backs; integrates with IED; optional horse mods
+- **More Craftable Equipment** `1.4.0.0` modid=44666
+  - Adds Weaving Loom crafting station and new craftable clothing/gear via quests
+- **Upscaling - Community Shaders** `1.2.0.0` modid=156952
+  - Provides a full upscaling suite with native integration, DLSS 4, FSR 3.1, frame generation, and performance improvements.
+- **Cloud Shadows - Community Shaders** `1.2.0.0` modid=139185
+  - Community Shaders feature adding cloud‑based shadows, supporting SE, AE, and VR.
+- **Terrain Blending - Community Shaders** `1.0.1.0` modid=157076
+  - Adds community shaders that realistically blend terrain into objects.
+- **Sky Sync** `1.0.0.0` modid=153543
+  - Synchronizes lighting and volumetric lighting with the sun and moon cycles, including an alternate sun path and AE/SE/VR support.
+- **Terrain Variation** `1.0.1.0` modid=148123
+  - Fixes terrain tiling with stochastic sampling, works with all texture types, LOD support, runtime toggle, ~3‑5% performance impact.
+- **CS Light** `1.9.4.0` modid=138443
+  - Config hub for Light Placer with pre‑configured JSON for candles, lanterns, fires, etc.; works with Community Shaders; customizable fade/radius; supports ISL and True Light
+- **Screen Space Global Illumination (SSGI)** `4.0.1.0` modid=130375
+  - Adds screen-space ambient occlusion and indirect lighting via Community Shaders, supporting SE and AE.
+- **Skylighting** `1.2.3.0` modid=139352
+  - Adds advanced world‑space ambient occlusion via Community Shaders, creating soft shadows and realistic lighting.
+- **Wetness Effects** `3.0.0.0` modid=112739
+  - Adds realistic wetness and weather effects such as rain‑wetness, puddles, raindrop impacts, and shore wetness, supporting SE, AE, and VR.
+- **Subsurface Scattering** `3.0.1.0` modid=114114
+  - Adds screen‑space subsurface scattering to characters via Community Shaders, configurable for human and beast races
+- **Screen-Space Shadows** `2.0.0.0` modid=93209
+  - Adds screen-space shadows enabling grass, map, distant, and self-shadows through Community Shaders.
+- **Grass Lighting** `2.0.0.0` modid=86502
+  - Replaces grass shaders with advanced shading, complex grass support, and lighting fixes.
+- **Grass Collision** `3.0.2.0` modid=87816
+  - Adds actor collision to grass, causing it to bend when stepped on.
+- **Auto Parallax** `1.0.27.0` modid=79473
+  - SKSE plugin that disables parallax on meshes lacking height textures or conflicting with shaders to improve performance.
+- **Community Shaders** `1.4.11.0` modid=86492
+  - Open‑source SKSE plugin enabling advanced graphics modifications for Skyrim AE, SE, and VR.
+- **Ambient Templates for Lighting Mods** `2.6.0.0` modid=153425
+  - Neutralizes ambient light colors and reduces interior fog with eight brightness options for modular lighting.
+- **Target Focus** `1.2.1.0` modid=67996
+  - SKSE plugin adds targeting depth‑of‑field effect in combat and dialogue, supports vanilla and ENB, configurable sliders, patchable via Web Patcher.
+- **Grass Sampler Fix** `1.0.1.0` modid=91285
+  - Improves grass density and sharpness using anisotropic filtering and enhances upscaling.
+- **Fishing Extension Framework** `1.0.0.0` modid=139626
+  - Framework that modifies fishing system to allow new rods, biomes, keyword weather options; .ESL flagged
+- **Hair Colour Sync** `1.0.0.0` modid=121751
+  - SKSE plugin that syncs hair color to a character's true hair, affecting player and NPCs
+- **Injected Animated Armoury** `1.1.5.0` modid=74737
+  - Adds OAR‑compatible injected keywords for Animated Armoury via Update.esm master; lists keywords (e.g., OCF_WeapTypePole1H_Thrust) and condition files; requires OAR files; enables AA animations without full AA master; compatible with other mods using those keywords.
+- **Auto Resolution** `1.1.0.0` modid=122915
+  - Automatically sets the game resolution to the Windows display resolution.
+- **SkyPatcher** `6.2.2.0` modid=106659
+  - Offers a data‑patch system based on SKSE and CommonLibSSE that lets mod authors modify records such as leveled lists, formlists, and containers via simple config files.
+- **Save & Load Accelerator for SKSE Cosaves (S.L.A.C.K.)** `1.3.2.0` modid=163969
+  - Accelerates SKSE cosave saving up to 150x and loading up to 15x faster
+- **FuzzBeed's Fabulous Resource Repository** `5.1.0.0` modid=134092
+  - Collection of resources for personal mods and public use.
+- **Core Impact Framework (CIF)** `1.2.8.0` modid=146873
+  - Script‑free modular impact system managing effects like blood, sound, and visuals, fully customizable via JSON filters.
+- **Light Placer** `4.2.0.0` modid=127557
+  - Framework to attach real lights to objects and actors via JSON configs; supports static, dynamic, worn, and FX lights; requires Address Library
+- **SkyInteract** `1.0.1.0` modid=143311
+  - Utility that shows contextual action keybindings in the HUD for mod authors.
+- **Dynamic Things Alternative - Base Object Swapper** `0.4.1.0` modid=60741
+  - Makes many static objects interactable (e.g., mammoth skulls, crates, taproots, hay bales, firewood piles, fishing rods, etc.), adds comprehensive swapping list, ESL‑flagged, requires Base Object Swapper and Papyrus Extender, compatible with SMIM.
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - Faster HDT - Preconfigured Settings** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Faster HDT-SMP** `3.0.2.0` modid=57339
+  - Provides fast physics simulation for capes, clothing, and hair.
+- **Dynamic Animation Casting - NG** `3.2.4.0` modid=73293
+  - Framework for new spell‑casting mods via SKSE plugin.
+- **FPS Boost for Quest Mods** `1.1.0.0` modid=122050
+  - Provides occlusion plane patches for quest mods to improve FPS on low‑end systems; .ESL flagged; compatible with many mods; optional VR settings; safe to install mid‑game
+- **Sound Record Distributor** `1.4.0.0` modid=77815
+  - SKSE framework enabling runtime distribution of sounds, simplifying audio mods and patches.
+- **Nemesis Creature Behaivour - WereWolf Addon** `1.3.0.0` modid=45966
+  - Provides compatibility resource for Nemesis to edit creature behaviour; does not enable creature sex/FNIS animations; includes optional patches for Ultimate Combat and Ultimate Dragons; excludes horses; lists base game creature behaviours.
+- **Nemesis Creatures BEHAVIOUR compatibility** `1.3.0.0` modid=45966
+  - Provides compatibility resource for Nemesis to edit creature behaviour; does not enable creature sex/FNIS animations; includes optional patches for Ultimate Combat and Ultimate Dragons; excludes horses; lists base game creature behaviours.
+- **Left Hand Equipment Overhaul** `1.1.1.0` modid=120078
+  - Adds left-hand equipment swap animation and enables movement of the shield bone.
+- **Media Keys Fix SKSE** `1.0.1.0` modid=92948
+  - Fixes media keys (volume, play/next/mute, Windows key, Alt+F4, etc.) by removing the game's exclusive keyboard access, with options to fix deadkeys and enable the Windows key.
+- **Papyrus Tweaks NG** `4.1.1.0` modid=77779
+  - Collection of configurable fixes and performance tweaks for Skyrim's script engine, with optional experimental settings.
+- **powerofthree's Papyrus Extender** `6.3.0.0` modid=22854
+  - Extends Papyrus script functionality with over 374 new functions and 37 events.
+- **Crash Logger SSE AE VR - PDB support** `1.20.1.0` modid=59818
+  - Generates detailed crash logs with PDB support, hotkeys, and optional upload for AE/VR.
+- **No Furniture Camera** `1.0.0.0` modid=100515
+  - Removes the furniture camera, leaving the previous camera mode in control.
+- **Recursion Monitor** `1.2.0.0` modid=76867
+  - Detects and prevents Papyrus script recursion that can cause severe performance drops.
+- **ImGui Icons** `1.2.0.0` modid=114790
+  - Provides ImGui icons and font assets required by UI mods like Photo Mode and Dialogue History.
+- **Grass Cache Helper NG** `1.0.1.0` modid=101095
+  - SKSE plugin that fixes grass precache bugs and supports seasonal grass files.
+- **Fort Takeovers Framework - Core** `3.1.0.0` modid=25143
+  - Framework to clear dungeons and let factions take control; supports up to 5 factions; scripts/quests/keywords/location ref types; compatible with vanilla; conflicts only if two mods edit same location; documentation available.
+- **Auto Input Switch** `1.2.3.0` modid=54309
+  - Allows on‑the‑fly switching between gamepad and keyboard/mouse while respecting INI settings.
+- **Rogue's Gallery** `1.0.0.1` modid=99482
+  - A miscellaneous Papyrus library for personal and public use.
+- **Survival Control Panel** `1.1.2.0` modid=41891
+  - Framework to customize Survival Mode features like sleep leveling up and cloak support; does not require Survival Mode installed
+- **SSE Display Tweaks** `0.5.16.0` modid=34705
+  - All-in-one solution for smooth FPS-unlocked gameplay with physics fixes, borderless fullscreen, refresh rate control, and frame rate limiting.
+- **Currency Swapper** `2.0.0.0` modid=127686
+  - SKSE framework enabling dynamic currency changes, with functions like SetCurrency and training overrides.
+- **Dynamic Armor Variants** `1.0.5.0` modid=65963
+  - Framework allowing dynamic armor variants by swapping addons at runtime; uses JSON configs; supports UIExtensions and hidden equipment add‑ons.
+- **Object Categorization Framework** `6.1.0.0` modid=81469
+  - Framework that assigns keywords and FormLists to items for other mods to use; requires KID, FLM, SPID; optional patches available; widely used.
+- **FormList Manipulator - FLM** `1.8.1.0` modid=74037
+  - SKSE plugin that adds Forms to FormLists at startup via config files to reduce mod conflicts.
+- **Dynamic Activation Key - DLL NG Edition** `1.12.0.0` modid=96273
+  - Enables customizable Shift+Activate behaviors and contextual activations, serving as a base for many of the author's mods.
+- **MCM Recorder** `1.0.7.0` modid=61719
+  - Allows recording and replaying MCM configuration settings to automatically set up mod menus across playthroughs
+- **MCM Helper** `1.6.1.0` modid=53000
+  - Provides a framework for creating Mod Configuration Menus with persistent INI settings, hotkey support, and simplified Papyrus scripting
+- **NPCs Names Distributor - Patches for Various Mods** `1.6.0.0` modid=119090
+  - Patches popular mods so NPCs get proper name distribution via SPID
+- **NPCs Names Distributor** `2.6.2.0` modid=73081
+  - Framework to generate and distribute custom names to NPCs via SPID, with titles and obscurity
+- **Behavior Data Injector Universal Support** `0.13.0.1` modid=78159
+  - Latest BDI plugin adds Anniversary and VR support plus a PDB for debugging.
+- **Behavior Data Injector** `0.13.0.0` modid=78146
+  - SKSE plugin that injects custom animation variables and events via config files without needing a Nemesis patch.
+- **Keyword Item Distributor** `3.3.0.0` modid=55728
+  - SKSE plugin that assigns keywords to weapons, armor, magic effects, ingestibles and other items via configuration files
+- **Custom Skills Framework** `3.1.0.0` modid=41780
+  - Enables unlimited custom skills and their perk trees for mods.
+- **Container Distribution Framework** `3.0.2.0` modid=120152
+  - SKSE framework that dynamically distributes items to containers based on location, type, or keyword rules.
+- **Spell Perk Item Distributor (SPID)** `7.2.1.0` modid=36869
+  - SKSE plugin that adds spells, perks, items, shouts, and keywords to NPCs via config; examples include granting 3000 gold to NPCs, adding perks from test.esp, applying Flames spell to NPCs, etc.; requires SKSE64 and Address Library; logs details in My Games/Skyrim Special Edition/SKSE/po3_SpellPerkItemDistributor.log
+- **ConsoleUtilSSE NG** `1.5.1.0` modid=76649
+  - Enables Papyrus scripts to execute console commands via a unified CLib‑NG DLL for SE and AE.
+- **Payload Interpreter** `1.1.0.0` modid=65089
+  - SKSE plugin enabling runtime interpretation of animation payloads for mod authors.
+- **Fuz Ro D-oh - Silent Voice** `2.5.0.0` modid=15109
+  - SKSE64 plugin that forces a silent voice for unvoiced dialogue to prevent rapid zooming in the UI.
+- **Base Object Swapper** `3.4.1.0` modid=60805
+  - SKSE framework that lets modders swap objects via config files, supporting property overrides, location‑based swaps, and conditional chances
+- **AnimObject Swapper** `1.1.0.0` modid=75167
+  - SKSE plugin and framework for swapping AnimObjects via config files
+  - Allows random variations, conditional swaps, keyword filters
+  - ESL flagged
+- **Andrealphus' Papyrus Functions** `1.6.1.0` modid=85252
+  - Adds a library of custom Papyrus functions accessible via SKSE for mod developers.
+- **JContainers SE** `4.2.9.0` modid=16495
+  - Provides JSON‑based serializable data structures (arrays, maps, nested containers) and embedded Lua for Papyrus scripts, allowing complex data storage and loading.
+- **Disk Cache Enabler** `1.2.0.0` modid=100975
+  - Backported disk cache enabler mod.
+- **Address Library for SKSE Plugins** `11.0.0.0` modid=32444
+  - Provides header file and database allowing SKSE plugins to be version‑independent
+- **Skyrim Script Extender (SKSE64)** `2.2.6.0` modid=30379
+  - Tool that expands scripting capabilities, enabling many mods to run; launched via skse64_loader.exe and verified with getskseversion.
+- **Stuck Underwater Visuals and Sounds Fix SKSE** `0.1.2.0` modid=173716
+  - Prevents underwater visuals and sounds from sticking after camera exit; fixes Dragonsreach pool bug; SKSE64 plugin requiring SKSE64, Address Library, VC++ Redistributable
+- **Sprint Stuttering Fix** `1.0.0.0` modid=140804
+  - Removes twitching/stuttering when running in first-person through an SKSE plugin.
+- **First Person Height Fix SKSE** `1.0.0.0` modid=169904
+  - Adjusts first‑person camera height using an SKSE plugin similar to other height‑fix mods.
+- **CritterSpawn - Script Call Reduction** `6.0.0.0` modid=141745
+  - Refactors critter scripts into a centralized master, cutting script load by ~83.7% and improving performance.
+- **USSEP Nemesis or Pandora Patch** `1.1.0.0` modid=139572
+  - Collects updated armor sets from legacy Skyrim LE mods.
+- **Quest Fixes** `1.3.0.0` modid=140181
+  - Various quest fixes for Kolskeggr Mine, Bleak Falls Barrow, Civil War, The Blessings of Nature, Cidhna Mine, Served Cold, Flight or Fight, and more.
+- **Stormcloaks Fight With Thalmor** `4.0.0.0` modid=159287
+  - Makes Stormcloak NPCs fight Thalmor and Penitus Oculatus on sight; adds random encounter WE33; requires SPID; compatible with USSEP; affects both vanilla and mod‑added NPCs using those factions
+- **The Clever Prisoner** `1.3.1.0` modid=84348
+  - Gives prisoners intelligent behavior in specific quests, enabling them to escape, fight, or assist the player.
+- **Truly Neutral Prisoners** `0.1.1.0` modid=73873
+  - Prevents prisoners from snitching, enhancing immersion.
+- **Skyrim Cell load Freeze fix NG** `0.0.4.0` modid=160704
+  - Prevents deadlock freezes by reordering lock acquisition in cell loading code, reordering Thread1 to acquire lock2 before lock1.
+- **Some Creature Behavior Bug Fixes** `2.0.4.0` modid=68469
+  - Nemesis patch fixing creature behavior bugs such as stagger transitions for Draugr, Giants, Spriggan, Dwarven Spider, Frost Atronach, and Dwarven Steam Centurion.
+- **Death Drop Overhaul** `1.2.4.0` modid=151590
+  - Makes weapons and shields drop as physical objects with momentum upon death, stay sheathed logically, and be interactable, with configurable cleanup via INI.
+- **Inertia (Floating Gear Fix)** `1.1.0.0` modid=148746
+  - Fixes NPC equipment freezing on death by temporarily disabling collision capsule calculation; enables realistic item falls; works for all NPCs/creatures; requires SKSE64 and Address Library; no noticeable performance impact; compatible with all mods.
+- **JaySerpa's Small Mods and Resources (Mostly for GTS) - T-Pose Animal Fix by SpinPigeon** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Death Idle Fix** `1.0.1.0` modid=152344
+  - Restores proper ragdoll physics to dead NPCs after loads, preventing unnatural standing poses.
+- **You Can Sleep SKSE Remake** `1.0.2.0.ng` modid=36057
+  - Remake of SKSE plugin enabling sleeping and waiting anywhere regardless of restrictions.
+- **Non-Horse Mount Animation Fix** `0.4.0.0` modid=151793
+  - Improves mounting and swimming animations for non-horse mounts.
+- **invisible rune explosion fix** `1.0.4.0` modid=151113
+  - Fixes invisible rune explosions by deleting runes that trigger outside the player's current cell.
+- **Swimming Mount Animation Fix** `1.0.1.0` modid=150241
+  - Fixes swimming mount animation bugs by replacing broken animations with correct ones via Open Animation Replacer, requiring no ESP or additional tools.
+- **Dragonactorscript infinite loop fix** `1.4.2.0` modid=87940
+  - Fixes stuck dragon soul scripts by either silently ending loops or auto‑absorbing souls after death, ensuring all dragons yield souls.
+- **Script Effect Archetype Crash Fix** `21.0.0.0` modid=43532
+  - Collection of engine bug fixes and patches
+- **FUS RO DON'T - PushActorAway Crash Prevention Script Tweak** `1.0.0.0` modid=57816
+  - Prevents crashes from PushActorAway by adding checks that both caster and target are fully loaded before execution; affects vanilla scripts voicepusheffectscript and mq101voicepusheffectscript.
+- **Proving Honor Companions Quest Progression Fix** `1.0.0.0` modid=66128
+  - Ensures Vilkas greets the player when returning with the Fragment of Wuuthrad regardless of entry gate, enabling Companions quest progression.
+- **Dragonborn DLC fixes** `1.1.0.0` modid=141587
+  - Fixes followers getting stuck in Tel Mithryn and Fire Wyrm aggression bug, marked ESL.
+- **Very Important Cannibal Bug Fix** `1.0.0.0` modid=122411
+  - Fixes a bug in the “A Taste Of Death” quest where cannibals eat bread instead of meat, using AnimObjectSwapper to replace bread with meat.
+- **Fix Toggle Walk Run (SKSE plugin)** `3.0.0.0` modid=61671
+  - Fixes the run key getting stuck after opening menus or loading doors, compatible with Skyrim Souls RE.
+- **Horns Are Forever (Persistent Argonian Horns)** `1.1.0.0` modid=1139
+  - Ensures Argonian horns stay visible except when wearing full‑head gear; implemented via skin partitions on hair/NRs, compatible with most custom Argonians; maintains horns when helmets are equipped
+- **Vanilla Eating Animation Fixes** `1.2.0.0` modid=120727
+  - Fixes NPC eating animations to move mouths, chew, lower sounds, and disable head tracking; works with any mod using vanilla eating animations; sets AnimVarInt NPCC_Chew and requires Payload Interpreter, Behavior Data Injector, Spell Perk Item Distributor, MFG Fix
+- **Enchantments and Potions Work for NPCs - EPW4NPCs (SKSE64) (SPID Plugin ini)** `1.0.2.0` modid=37607
+  - SPID INI distributes PerkSkillBoosts and AlchemySkillBoosts to all NPCs so potions and enchantments affect them, requires Spell Perk Item Distributor, highly compatible.
+- **ENB Light Inventory Fix (ELIF)** `1.2.0.0` modid=66411
+  - SKSE plugin that fixes inventory 3D item view zoom and rotation broken by NiBillboardNodes used for ENB particle lights, recomputes bounding spheres, requires SKSE and Address Library.
+- **Dynamic Collision Adjustment** `1.1.0.0` modid=76783
+  - Adjusts character controller collision while sneaking and swimming to allow fitting under objects, fixing race-specific scaling issues.
+- **Ash Pile Expiration - Special Edition** `2.0.0.0` modid=5710
+  - Removes ash piles after a set game time to prevent long-term clutter.
+- **Fleeting Torches SE - 30 Minutes** `1.0.0.0` modid=71482
+  - Prevents the torch duration reset exploit by locking torch decay timer.
+- **Unofficial Skyrim Creation Club Content Patches** `8.2.0.0` modid=18975
+  - Applies USSEP fixes to Creation Club content, resolving bugs and conflicts.
+- **Actually flat flat snow drifts - fix hovering snow drift shadow with ENB** `1.0.0.0` modid=71437
+  - Turns flat snow drifts into decals to eliminate shadows when using ENB.
+- **Loading Screen Truce AE** `f0.01-AE1.2` modid=104522
+  - AE and VR support for loading screen truce; SKSE plugin disables NPC combat during loading screens
+- **No More Swimming In Air - Fixed Floating SwimIdle** `1.0.0.0` modid=73421
+  - Fixes swim idle animation to play below water; adjusts bone angles and Z‑axis; only conflicts with other SwimIdle replacements.
+- **Scripts Carefully Reworked Optimized and Tactfully Enhanced (SCROTE) - Simply Optimized Scripts AIO - BSA** `1.0.2.0` modid=97155
+  - dunFolgunthurBossBattle Script Fix prevents infinite loop in Folgunthur boss battle
+  - Shroud Hearth Barrow Script Fix prevents door loop in Shroud Hearth Barrow
+  - Soul Cairn Script Tweaks reduce FPS drop via periodic updates
+  - The Taste of Death Improved Shutdown optimizes post‑quest shutdown
+  - DLC2TribalWerebearScript Fix stops unnecessary updates and cleans stuck scripts
+  - DLC2dunNchardakDoorSeal Script Infinite Loop Fix stops updates when seal disabled
+- **FYX - Water Mesh Optimization - A 32** `1.0.2.0` modid=97713
+  - Reduces unnecessary water mesh triangles for performance, without loss of visual quality.
+- **FYX - The Temple of Mara** `1.0.3.0` modid=73063
+  - Fixes UVs and mesh defects and adds minor details to the Temple of Mara, no ESP.
+- **FYX - Nordic Doors and Traps Collisions** `1.0.0.0` modid=100295
+  - Fixes collision issues with Nordic doors and traps, allowing ranged attacks through bars; no ESP required
+- **Whirlwind Sprint Delayed Voice Fix - SSE** `1.0.0.0` modid=92799
+  - Fixes delayed voice for the second and third words of the Whirlwind Sprint shout, ensuring they play without lag.
+- **OMEAR Addition - Skyrim Extended Cut S-and-S** `1.8.2.0` modid=67968
+  - Replaces frequent OnMagicEffectApply calls to reduce VM overstress; supports many scripts and optional fixes for popular mods.
+- **OnMagicEffectApply Replacer** `1.8.2.0` modid=67968
+  - Replaces frequent OnMagicEffectApply calls to reduce VM overstress; supports many scripts and optional fixes for popular mods.
+- **Nchuanthumz Papyrus Load Fix** `1.0.0.0` modid=73820
+  - Reduces Papyrus load caused by Nchuanthumz Dwarven Home when moving large inventory amounts.
+- **NARC Remade - No Animals Report Crimes** `1.1.0.0` modid=17946
+  - Prevents animals from reporting crimes, removes animal bounty reporting
+- **No Grassias - A Universal Grass Fix For Grass Mods** `1.1.0.0` modid=35639
+  - Fixes overgrown grass and clipping issues by restoring vanilla land textures.
+- **Brawling - No Hitting Bystanders** `1.0.0.0` modid=116941
+  - Prevents bystanders from being hit during brawls, stopping accidental bounties.
+- **1st Person Greatsword Idle Animation Fix** `1.0.0.0` modid=75031
+  - Fixes the first-person greatsword idle animation by repurposing and slowing the walk cycle to create a smoother idle.
+- **Horsemen Torch Wield Fix and Mount Tweaks SE** `1.3.0.0` modid=77303
+  - Adds proper torch wielding for riders and extra mount benefits; requires Nemesis or Pandora behavior engine; safe install/remove; may conflict with mods editing HorseBehavior hkx; generally compatible otherwise
+- **Enhanced Reanimation** `1.5.1.0` modid=43500
+  - SKSE plugin that fixes and enhances reanimation effects—dead thralls persist, decapitated corpses can be reanimated, rideable mounts, configurable via INI.
+- **Vanilla Scripting Enhancements - BSA Version** `3.0.0.0` modid=68139
+  - Optimizes vanilla scripts via PO3 Extender to reduce script lag from numerous cloak spells in heavy modlists.
+- **powerofthree's Tweaks** `1.15.1.0` modid=51073
+  - SKSE plugin providing numerous engine bug fixes and optional tweaks, configurable via po3_Tweaks.ini, covering distant reference loading, projectile range, combat dialogue fixes, and other gameplay enhancements
+- **Dragon Priest Fix - Behaviour Overhaul** `1.6.1.0` modid=51608
+  - Overhauls dragon priest behaviour, fixes bugs, enables casting in one hand while using another spell, adds rudimentary sprinting, requires Nemesis and compatibility mods, installed via Nemesis engine
+- **Drunk Sinking Head Idle Fix SE** `1.0.0.0` modid=22143
+  - Fixes the drunk sinking head idle animation by replacing idle replacers; no ESP required.
+- **Floating Ash Pile Fix** `0.3.0.0` modid=63434
+  - Fixes floating ash piles by making them fall to the ground.
+- **Dual Casting Fix** `1.0.0.0` modid=92454
+  - SKSE plugin fixes vanilla bug treating dual‑cast spells as single casts.
+- **Sprint Sneak Movement Speed Fix** `1.1.2.0` modid=86631
+  - Fixes movement speed glitches when drawing, sheathing, or shouting while sprinting or sneaking; SKSE64 plugin
+- **Equip Enchantment Fix** `1.3.6.0` modid=42839
+  - SKSE plugin that ensures enchantments are correctly applied when items are equipped or equipped from inventory/followers, preventing common engine bugs.
+- **NPC AI Process Position Fix - NG** `1.1.1.0` modid=69326
+  - Updates NPC AI position processing to support SE, AE, and VR, fixing NPCs blocking doors.
+- **RemoveAllItems Freeze Fix** `1.1.0.0` modid=90734
+  - SKSE plugin that fixes random freezes caused by corrupted game state.
+- **Opening Scene Horse Stagger** `1.1.0.0` modid=83723
+  - Ensures horses in the opening scene remain evenly spaced to prevent premature advancement of the opening sequence.
+- **Prisoner Cart Opening Fix SE and AE** `1.1.0.0` modid=60968
+  - Fixes the chaotic opening scene of the prisoner cart when many mods are loaded.
+- **LOD Unloading Bug Fix** `0.2.0.0` modid=61251
+  - Fixes LOD unloading bug by forcing worldspace reload via ConsoleUtil; offers unaggressive, somewhat aggressive, and aggressive options.
+- **Mfg Fix** `1.6.1.0` modid=11669
+  - Fixes the 'mfg' console command and adds additional fixes.
+- **SMP-NPC crash fix** `1.0.0.0` modid=91616
+  - Fixes random crash with SMP hair by patching a single byte in SkyrimSE.exe, required for SMP hair mods.
+- **Navigator - Navmesh Fixes** `1.8.0.0` modid=52641
+  - Provides navmesh improvements for numerous vanilla locations to fix pathing issues.
+- **Motionless Rocks Killing People Fix - For Player Too** `1.2.0.0` modid=87111
+  - Fixes motionless rocks that could kill NPCs by preventing them from falling on characters.
+- **Unaggressive Dragon Priests Fix** `1.3.1.0` modid=69026
+  - Fixes unaggressive dragon priests by forcing them to draw spells when they enter combat, preventing them from getting stuck in a non‑combat state.
+- **Alduin Bane Fix** `1.3.0.0` modid=80927
+  - Fixes Alduin landing on wall, Hakon weapon draw, Felldir stuck in body
+  - Ensures proper dialogue and scroll reading
+  - ESL flagged
+- **Acoustic Space Improvement Fixes** `1.2.1.0` modid=78992
+  - Standardizes interior acoustic settings so small spaces don't sound overly large.
+- **Face Discoloration Fix** `1.0.3.0` modid=42441
+  - Fixes the “dark face” issue caused by FaceGen errors.
+- **First Person Animation Teleport Bug Fix** `1.0.0.0` modid=92795
+  - Fixes a bug that teleports the player when starting first‑person interaction animations; implemented as a lightweight Nemesis patch compatible with other behavior edits.
+- **Adoption Spouse and Moving Fixes** `1.2.0.0` modid=92845
+  - Adds empty bottle model, retrieval after use
+  - Supports harvesting spider venom with bottle
+  - Description Framework support
+  - ESL flagged
+- **Actor Limit Fix** `9.0.0.0` modid=32349
+  - Raises actor limits for movement, facial expressions, and lip-syncing to improve performance.
+- **Zero Bounty Hostility Fix** `0.5.0.0` modid=95989
+  - Clears player hostility when bounty is zero on vanilla holds, applied on location change, does not affect bounty‑less factions, allows jail access, can be extended to custom crime factions via ESP form list
+- **Werewolf Feral Beast Run - Vanilla Werewolf Sprint Fix** `2.1.1.0` modid=23996
+  - Makes werewolves run on all fours by default and fixes leg spazz issues in vanilla sprinting.
+- **Stagger Effect Fix** `1.0.3.0` modid=110508
+  - Fixes magic effect stagger direction bug affecting SE, AE, and VR
+- **Horse Save Load Fix** `0.2.0.0` modid=132110
+  - Prevents horse from flying away on load, keeping rider mounted.
+- **GATE TO SOVNGARDE (GTS) - Small Mods and Resources - Orc Stalkers Fix** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **GATE TO SOVNGARDE (GTS) - Small Mods and Resources - Delphine Attic Room Stuck Fix** `1.0.0.0` modid=97490
+  - Collection of patches and small mods for GTS; fixes attic room, injectors, patches for various mods; optional files; conflicts as intended.
+- **Flute Animation Fix** `1.3.0.0` modid=69609
+  - Fixes flute animation alignment for players and NPCs across various skeletons (XP32, diverse racial skeletons); uses animation replacers; .ESL flagged; improves upon telepathic or nose‑playing issues
+- **Esbern Voice Consistency Fix** `0.1.0.0` modid=88503
+  - Replaces inconsistent Esbern voice lines with a single AI‑generated voice for uniformity.
+- **Animation Queue Fix** `1.0.1.0` modid=82395
+  - Fixes animation queue overload when many animations are loaded simultaneously.
+- **Wood Chopping Camera Glitch Fix** `1.0.0.0` modid=123984
+  - Fixes a camera bug where the camera follows the wood block during wood chopping animations.
+- **Edmond's Assassin of Old - Immersive Vanilla Bug Fix** `1.0.0.0` modid=126561
+  - Fixes the visual inconsistency of the ancient Assassin of Old by remastering him as a proper skeleton; marked as an ESL plugin.
+- **Hunters Not Bandits** `4.2.0.0` modid=1547
+  - Adjusts NPC dialogue to behave realistically when hunting animals, removes out‑of‑context taunts, improves immersion, and is ESL‑compatible, requiring placement after dialogue‑changing mods
+- **LeveledList Crash Fix** `1.1.0.0` modid=129136
+  - SKSE mod that prevents crashes by limiting leveled list additions to 255 forms
+- **Script Optimization and Fixes Compilation - Modern Brawl Bug Fix Loose** `1.3.3.0` modid=105144
+  - Compiles various script optimizations and bug fixes into a BSA and ESPFE for easier management.
+- **Script Optimization and Fixes Compilation** `1.3.3.0` modid=105144
+  - Compiles various script optimizations and bug fixes into a BSA and ESPFE for easier management.
+- **Scrambled Bugs** `21.0.0.0` modid=43532
+  - Collection of engine bug fixes and patches
+- **Bug Fixes SSE** `10.0.0.0` modid=33261
+  - Implements engine‑level bug fixes for magic effect condition updates, movement speed handling, and speech experience calculation
+- **Unofficial Skyrim Special Edition Patch - USSEP** `4.3.8.0a` modid=266
+  - Comprehensive bug‑fix for Skyrim SE addressing hundreds of bugs.
+- **SSE Engine Fixes (skse64 plugin) Part 2** `7.0.19.0` modid=17230
+  - skse64 plugin that fixes various Skyrim Special Edition engine issues, including patches for performance, crashes, and memory management, with configurable INI settings for various fixes
+- **SSE Engine Fixes (skse64 plugin) Part 1** `7.0.19.0` modid=17230
+  - skse64 plugin that fixes various Skyrim Special Edition engine issues, including patches for performance, crashes, and memory management, with configurable INI settings for various fixes

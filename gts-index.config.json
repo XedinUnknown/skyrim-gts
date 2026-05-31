@@ -1,0 +1,11 @@
+{
+  "gts_path": "/mnt/e/games/GTSAV",
+  "profile_path": "/mnt/e/games/GTSAV/profiles/Gate to Sovngarde Anniversary Edition Upgrade",
+  "db_path": "cache/gts-index/gts.sqlite",
+  "index_dir": "cache/gts-item-recipe-index",
+  "mod_metadata_dir": "cache/gts-mod-metadata-index",
+  "mod_metadata_cache_db": "/home/owner/.cache/skyrim-gts/mod-metadata-cache.sqlite",
+  "dotnet": "/mnt/e/games/util/dotnet/dotnet",
+  "max_seconds": 120,
+  "exporter_project": "tools/GtsItemRecipeExporter/GtsItemRecipeExporter.csproj"
+}

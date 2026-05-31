@@ -1,0 +1,36 @@
+services:
+  tools:
+    build: .
+    working_dir: /workspace
+    user: "${UID:-1000}:${GID:-1000}"
+    environment:
+      DOTNET: /usr/bin/dotnet
+      DOTNET_CLI_HOME: /tmp/dotnet
+      GTS_PATH: /gts
+      GTS_PROFILE_PATH: /gts/profiles/Gate to Sovngarde Anniversary Edition Upgrade
+      GTS_DB: /workspace/cache/gts-index/gts.sqlite
+      GTS_MOD_METADATA_CACHE_DB: /home/owner/.cache/skyrim-gts/mod-metadata-cache.sqlite
+      NEXUS_API_KEY: ${NEXUS_API_KEY}
+      HOME: /tmp/home
+    volumes:
+      - .:/workspace
+      - ${GTS_HOST_PATH:-/mnt/e/games/GTSAV}:/gts:ro
+      - ${MOD_METADATA_CACHE_HOST_DIR:-${HOME}/.cache/skyrim-gts}:/home/owner/.cache/skyrim-gts
+      - /home/owner/.opencode/bin/opencode:/usr/local/bin/opencode
+      - /home/owner/.config/opencode:/tmp/home/.config/opencode:ro
+      - /home/owner/.local/share/opencode:/tmp/home/.local/share/opencode
+
+  progress-poller:
+    build: scripts/progress-poller
+    depends_on:
+      - tools
+    volumes:
+      - ${PROGRESS_REPO_HOST_PATH:-./gts-progress}:/progress
+    environment:
+      - POLL_INTERVAL=60
+      - PROGRESS_REPO=/progress
+      - SKYRIM_MCP_URL=http://host.docker.internal:8765/mcp
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    user: "${UID:-1000}:${GID:-1000}"
+    restart: unless-stopped

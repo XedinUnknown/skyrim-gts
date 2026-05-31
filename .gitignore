@@ -1,0 +1,8 @@
+cache/
+.env
+.idea/
+**/__pycache__/
+*.pyc
+tools/__pycache__/
+tools/GtsItemRecipeExporter/bin/
+tools/GtsItemRecipeExporter/obj/

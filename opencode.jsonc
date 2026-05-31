@@ -1,0 +1,26 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "skyrim": {
+      "type": "local",
+      "command": ["python3", "/home/owner/projects/xedinunknown/skyrim-gts/scripts/mcp-gateway/stdio-proxy.py"],
+      "timeout": 30000
+    }
+  },
+  "provider": {
+    "ollama": {
+      "api": "openai",
+      "options": {
+        "baseURL": "http://host.docker.internal:11434/v1",
+        "apiKey": "ollama"
+      },
+      "models": {
+        "qwen3-coder:latest": {
+          "id": "qwen3-coder:latest",
+          "name": "Qwen3 Coder",
+          "family": "qwen3"
+        }
+      }
+    }
+  }
+}
