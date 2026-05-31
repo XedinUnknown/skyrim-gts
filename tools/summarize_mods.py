@@ -18,6 +18,7 @@ Usage
 from __future__ import annotations
 
 import argparse
+import html
 import json
 import os
 import re
@@ -130,13 +131,26 @@ def strip_urls(text: str) -> str:
     return re.sub(r"https?://\S+", "", text)
 
 
+def clean_nexus_desc(text: str) -> str:
+    text = strip_urls(text)
+    text = re.sub(r"\[/?font[^\]]*\]", "", text, flags=re.I)
+    text = re.sub(r"\[/?youtube[^\]]*\]", "", text, flags=re.I)
+    text = re.sub(r"\[img[^\]]*\].*?\[/img\]", "", text, flags=re.I | re.S)
+    text = re.sub(r"\[/?video[^\]]*\]", "", text, flags=re.I)
+    text = re.sub(r"\[/?(?:b|i|u|center|left|right|size|color|spoiler|list|\*)[^\]]*\]", "", text, flags=re.I)
+    text = html.unescape(text)
+    text = re.sub(r"[ \t]+", " ", text)
+    text = re.sub(r"\n{3,}", "\n\n", text)
+    return text.strip()
+
+
 def format_text(row: sqlite3.Row) -> str:
     parts = []
     important = (row["mod_class"] or "other") in {"gameplay", "quest"}
     if row["nexus_summary"]:
         parts.append(f"Nexus: {strip_urls(row['nexus_summary'])}")
     if row["description_text"]:
-        desc = strip_urls(row["description_text"]) if important else strip_urls(row["description_text"][:MAX_DESC])
+        desc = clean_nexus_desc(row["description_text"]) if important else strip_urls(row["description_text"][:MAX_DESC])
         parts.append(f"Description: {desc}")
     if row["comments"]:
         parts.append(f"Comments: {strip_urls(row['comments'][:500])}")
